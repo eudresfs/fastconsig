@@ -1,0 +1,2 @@
+﻿<%@ Control ClassName="WebUserControlGerencial" Language="C#" AutoEventWireup="true" CodeBehind="WebUserControlGerencial.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlGerencial" %>
+<div><center><br/><br/><br/><br/><img id="Img1" runat="server" src="~/Imagens/Funcionarios.png" /></center></div>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FastConsigCenterModeloStoreContainer" CdmEntityContainer="FastConsigCenterEntities">
+    <EntitySetMapping Name="Consignataria">
+      <EntityTypeMapping TypeName="FastConsigCenterModelo.Consignataria">
+        <MappingFragment StoreEntitySet="Consignataria">
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="FastConsigCenterModelo.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioConsignante">
+      <EntityTypeMapping TypeName="FastConsigCenterModelo.UsuarioConsignante">
+        <MappingFragment StoreEntitySet="UsuarioConsignante">
+          <ScalarProperty Name="IDUsuarioConsignante" ColumnName="IDUsuarioConsignante" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioConsignataria">
+      <EntityTypeMapping TypeName="FastConsigCenterModelo.UsuarioConsignataria">
+        <MappingFragment StoreEntitySet="UsuarioConsignataria">
+          <ScalarProperty Name="IDUsuarioConsignataria" ColumnName="IDUsuarioConsignataria" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consignante">
+      <EntityTypeMapping TypeName="FastConsigCenterModelo.Consignante">
+        <MappingFragment StoreEntitySet="Consignante">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="BancoDados" ColumnName="BancoDados" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

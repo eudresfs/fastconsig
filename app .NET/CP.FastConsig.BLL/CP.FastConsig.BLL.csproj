@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B68F87CC-8B5B-492A-BD55-40D616880BE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP.FastConsig.BLL</RootNamespace>
+    <AssemblyName>CP.FastConsig.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.WebApplication\bin\DevExpress.Web.ASPxEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consignantes.cs" />
+    <Compile Include="Consignatarias.cs" />
+    <Compile Include="Averbacoes.cs" />
+    <Compile Include="Fakes.cs" />
+    <Compile Include="FluxoAprovacoes.cs" />
+    <Compile Include="Importacoes.cs" />
+    <Compile Include="ObjectDataSource\ODS_AuditoriaAcesso.cs" />
+    <Compile Include="ObjectDataSource\ODS_Perfil.cs" />
+    <Compile Include="ObjectDataSource\ODS_EmpresaSuspensao.cs" />
+    <Compile Include="Parametros.cs" />
+    <Compile Include="Permissoes.cs" />
+    <Compile Include="Empresas.cs" />
+    <Compile Include="Funcionarios.cs" />
+    <Compile Include="Geral.cs" />
+    <Compile Include="Gerencial.cs" />
+    <Compile Include="Modulos.cs" />
+    <Compile Include="ObjectDataSource\ODS_FuncHistoricos.cs" />
+    <Compile Include="ObjectDataSource\ODS_FuncAutorizacoes.cs" />
+    <Compile Include="ObjectDataSource\ODS_EmpresaContato.cs" />
+    <Compile Include="ObjectDataSource\ODS_Produto.cs" />
+    <Compile Include="ObjectDataSource\ODS_Usuario.cs" />
+    <Compile Include="ObjectDataSource\ODS_Averbacao.cs" />
+    <Compile Include="ObjectDataSource\ODS_Funcionario.cs" />
+    <Compile Include="ObjectDataSource\ODS_Empresa.cs" />
+    <Compile Include="Perfis.cs" />
+    <Compile Include="Pessoas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Produtos.cs" />
+    <Compile Include="Recursos.cs" />
+    <Compile Include="Solicitacoes.cs" />
+    <Compile Include="Usuarios.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CP.FastConsig.Common\CP.FastConsig.Common.csproj">
+      <Project>{60EB6FEE-A3E0-4506-974A-D6E15D8AA372}</Project>
+      <Name>CP.FastConsig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.DAL\CP.FastConsig.DAL.csproj">
+      <Project>{4C3324BB-A106-4CF4-A6CC-9EB1BE4DD249}</Project>
+      <Name>CP.FastConsig.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Util\CP.FastConsig.Util.csproj">
+      <Project>{704936C1-EAB8-4763-B4B5-B0A8DC46EB83}</Project>
+      <Name>CP.FastConsig.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

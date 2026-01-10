@@ -1,0 +1,48 @@
+﻿/* Estilos para IMPRESSAO (media="print") */
+
+h1.TituloTermoImpressao 
+{ 
+   font-size:12pt;
+   font-weight:bold;  
+}
+
+h1.TituloTermoImpressaoDados 
+{ 
+   font-size:11pt;
+   font-weight:bold;  
+}
+
+
+.TabelaTermoDeImpressao
+{
+   border:1px solid #000000; 
+   margin:5px 0px; 
+   font-size:12pt; 
+    
+}
+
+
+
+.TabelaTermoDeImpressaoPrimeirosDados TD
+{
+     padding:5px;
+    
+}
+
+
+.TabelaTermoDeImpressao TD
+{
+   padding:5px;  
+}
+
+.TituloNegritoTermoDeImpressao
+{    
+  font-weight:bold;
+}
+
+.TextoAverbacao
+{
+   text-align:justify;
+   font-size:12px;   
+}
+

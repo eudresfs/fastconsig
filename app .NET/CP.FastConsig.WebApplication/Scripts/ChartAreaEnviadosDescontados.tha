@@ -1,0 +1,52 @@
+﻿<script language='javascript' type='text/javascript'>
+$(document).ready(function() {
+   var chart = new Highcharts.Chart({
+      chart: {
+         renderTo: 'containerArea', 
+         defaultSeriesType: 'area'
+      },
+      title: {
+         text: '#titulo'
+      },
+      subtitle: {
+         text: '#subTitulo'
+      },
+      xAxis: {
+         categories: [#categorias]
+      },
+      yAxis: {
+         title: {
+            text: '#eixoY'
+         },
+         labels: {
+            formatter: function() {
+               return Highcharts.numberFormat(this.value, 0, 0, '.');
+            }
+         }
+      },
+	  
+	  tooltip: {
+        formatter: function() {
+            return '<b>'+Highcharts.numberFormat(this.y, 0, 0, '.') +'</b>';
+        }
+    },	  
+      plotOptions: {
+         area: {
+            marker: {
+               enabled: false,
+               symbol: 'circle',
+               radius: 2,
+               states: {
+                  hover: {
+                     enabled: true
+                  }
+               }
+            }
+         }
+      },
+      series: [#dados]
+   });
+   
+   
+});
+</script>

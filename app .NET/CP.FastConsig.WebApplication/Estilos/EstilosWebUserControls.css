@@ -1,0 +1,1387 @@
+﻿/* Estilos para  os UsersControls */
+
+/* Estilos para o Gridview do Asp.NET Tool Kit */
+ 
+ .EstilosGridView
+ {
+	 border:1px solid #a3c0e8;
+	 margin-top:8px;            
+ }
+ 
+ .EstilosGridViewResultadoPesquisa {border:1px solid #a3c0e8;}
+  
+ .FooterGridView, .CabecalhoGridView
+ {
+	 background-color:#2ba5c9;
+	 height:25px;     
+ }
+ 
+ .FooterGridView th, .FooterGridView td
+ {
+	 border: solid 1px #cde4eb;
+	 text-align:left;
+	 padding:5px;
+	 color:#ffffff;     
+ }
+ 
+ .CabecalhoGridView th, .CabecalhoGridView td 
+ {
+	 text-align:left;
+	 padding:5px;
+	 color:#ffffff;     
+ }
+ 
+ .FooterGridView a, .CabecalhoGridView a
+ {     
+	 color:#ffffff;
+	 text-decoration:none;  
+	 font-size:12px;
+ }
+ 
+ .LinhaListaGridView
+ {
+	 background-color:#dbebff;
+	 height:25px;
+	 padding:5px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;     
+ }
+ 
+ .LinhaListaGridView:hover
+ {
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6; 
+	 
+ }
+ 
+ .LinhaAlternadaListaGridView
+ {
+	 background-color:#ffffff;
+	 height:25px;
+	 padding:5px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;
+	 
+ }
+  
+ .LinhaAlternadaListaGridView:hover
+ {     
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6;  
+	 
+ }
+ 
+ .LinhaListaGridView
+ {     
+	 background-color:#f4f4f4;
+	 height:25px;
+	 padding:5px;     
+	 
+ }
+ 
+  .LinhaAlternadaListaGridView
+ {     
+	 background-color:#ffffff;
+	 height:25px;
+	 padding:5px;    
+	 
+ }
+ 
+  .LinhaListaGridView td, .LinhaAlternadaListaGridView td {padding:5px;}
+  
+ .PaginadorGridView
+ {
+	 background-color:#f4f4f4;   
+	 height:25px;
+	 padding:5px;
+	 font-size:11px;     
+ }
+ 
+ .PaginadorGridView a
+ {
+	 text-decoration:none;
+	 color:#004D63;     
+ }
+ 
+  .PaginadorGridView a:hover {text-decoration:underline;}
+  .PaginadorGridView TD {padding:2px;}
+ 
+/* Fim */
+ 
+#TituloNovoUsuario
+ {
+	 
+   background-color:#2ba5c9;
+   padding:10px;
+   color:#ffffff; 
+	 
+ }
+ 
+ /*.WebUserControlTabela TD
+ {
+	 padding:3px;
+	 background-color:#eff9fc;     
+ }*/
+ 
+ 
+ .WebUserControlTabela {background-color:#ffffff;}
+ 
+ .WebUserControlTabela TD
+ {
+	 padding:5px;
+	 border-bottom:1px solid #f0f0f0;
+	 text-align:left;
+	 font-size:12px !important
+		  
+ }
+ 
+ 
+  .WebUserControlTabelaCoeficienteEmprestimo {background-color:#ffffff;}
+ 
+ .WebUserControlTabelaCoeficienteEmprestimo TD
+ {
+	 text-align:left;
+	 font-size:12px !important
+	 
+		  
+ }
+ 
+ 
+ 
+ .CelulaRotulo {font-weight:bold;}
+ 
+.dxeErrorFrame .dxeControlsCell TD
+ {
+	 padding:0;
+	 margin:0;
+	 
+ }
+ 
+  /* Estilos para o User Control Resultado da Busca */
+ 
+ .TituloResultadoBusca
+ {
+	font-size:12px;
+	font-weight:bold;   
+	 
+ }
+ 
+  /* Estilos para o menu dinâmico do user control Configurações */
+ 
+ /*.MenuConfiguracoes
+ {
+	 
+	padding:10px;     
+	 
+ }
+ 
+.MenuConfiguracoes
+ {
+	padding: 0;
+	list-style-type: none; 
+	margin: 0;
+	width: 640px;
+	height: 140px; 
+	padding-top: 0px
+}
+
+.Menuconfiguracoes li
+{
+	width: 150px;
+	float: left; 
+	margin-right: 7px
+}
+
+.Menuconfiguracoes li a
+ {
+	width: 150px;
+	display: block;
+	height: 140px; 
+	text-decoration: none;
+}*/
+
+
+/*
+.menuLista ul
+{
+	padding: 0;
+	list-style-type: none;
+	margin:0;
+	width: 800px;
+	height: 140px;
+	line-height:140px;
+	margin:0 auto;
+
+
+}
+.menuLista ul li
+ {
+	width: 200px;
+	float: left;
+	margin-right: 5px;
+	height:140px;
+   
+}
+.menuLista ul li a
+ {
+	width: 200px; 
+	display: block; 
+	height: 140px; 
+	text-decoration: none;
+}
+
+*/
+
+.MenuConfiguracoesBtn 
+{
+	float:left;
+	text-align:center;
+	color:#004d63;
+	
+}
+
+
+/* Estilos para o user control WebUserControlFuncionarios_Consulta..ascx */
+
+#DivDadosPessoais
+{
+   float:left;
+   width:49.5%;     
+}
+
+#DivDadosFuncionais
+{
+	width:49.1%;
+	float:left;
+	margin-left:10px;    
+}
+
+.DivImagem
+{
+	
+	float:left;
+	margin-top:5px;
+	padding-top:10px;
+	width:22%;
+	margin-right:3px;
+	text-align:center;      
+	
+}
+
+.DivTabelaDadosPessoais
+{
+	float:left;
+	width:77%;    
+	
+}
+
+.TabelaDadosPessoaisFuncionais TD {padding:4px;}
+
+/* Fim  -- Estilos para o user control WebUserControlFuncionarios_Consulta..ascx */
+
+
+/* Web User Control Funcionários */
+
+#DivBusca
+{
+  background-color:#ffffff;
+  padding:5px 0px 5px 0px;
+  height:50px;
+ /* border:1px solid #a3c0e8;  */ 
+	
+}
+
+#DivBusca2
+{
+  background-color:#ffffff;
+  margin-top:10px;
+  padding:15px;
+  height:50px;
+  border:1px solid #6CCFE9;     
+	
+}
+
+#TituloItemPesquisa
+{
+	font-size:18px;
+	display:inline;    
+	
+}
+
+#TituloPesquisa
+{
+	font-size:16px;
+	display:inline;
+	color:#083772 !Important
+}
+
+
+.float-divider
+{
+	float:left;
+	margin-left:5px; 
+	padding-right:5px;
+}
+
+
+.TextBoxBuscaFuncionario table
+{
+	background:none;
+	border:none;
+	outline:none;    
+}
+
+.MargemTopoDivBusca
+{
+	margin-top:5px;
+	
+}
+
+.ZeraPreenchimento td
+{
+	
+  padding:0;  
+	
+}
+
+
+
+
+.compraDivida fieldset{ margin:10px 5px;width: 46%; float: left}
+.compraDivida fieldset.primeiroFieldset{width: 90%}
+.compraDivida fieldset.segundoFieldset{ margin-top:20px;width: 90%}
+
+/**** Estilos para o WebUserControlConsignatariasEdicao *****/
+
+/* CSS Jquery Toogle Button */
+
+h2.trigger {
+	padding:0px 0px 0px 18px;
+	/*margin:5px 0px 2px 0px;*/
+	background: url(../Imagens/plus.png) no-repeat;
+	height: 16px;
+	cursor:pointer;
+	line-height: 16px;
+	width: 90%;
+	font-size: 11px;
+	font-weight: normal;
+	float: left;
+}
+
+h2.trigger2 {
+	padding:0px 0px 0px 18px;
+	/*margin:5px 0px 2px 0px;*/
+	background: url(../Imagens/plus.png) no-repeat;
+	height: 16px;
+	cursor:pointer;
+	line-height: 16px;
+	width: 90%;
+	font-size: 11px;
+	font-weight: normal;
+	float: left;
+}
+
+h2.trigger a {
+	color: #004d7c;
+	text-decoration: none;
+	display: inline;
+	cursor:pointer;
+
+}
+
+h2.trigger2 a {
+	color: #004d7c;
+	text-decoration: none;
+	display: inline;
+	cursor:pointer;
+
+}
+
+h2.trigger a:hover { color: #004d7c;cursor:pointer; }
+h2.active {background-position: left bottom;} /*--When toggle is triggered, it will shift the image to the bottom to show its "opened" state--*/
+.toggle_container {
+	margin: 0;
+	padding: 0;
+	/*border-top: 1px solid #d6d6d6;*/
+	/*background-color: #f0f0f0;*/
+	overflow: hidden;
+	/*font-size: 1.2em;*/
+	width: 100%;
+	clear: both;
+}
+.toggle_container .block {
+	 /*padding: 20px;--Padding of Container--*/
+	/*background: url(toggle_block_btm.gif) no-repeat left bottom; /*--Bottom rounded corners--*/
+}
+
+h2.trigger2 a:hover { color: #004d7c;cursor:pointer; }
+h2.active {background-position: left bottom;} /*--When toggle is triggered, it will shift the image to the bottom to show its "opened" state--*/
+.toggle_container2 {
+	margin: 0;
+	padding: 0;
+	/*border-top: 1px solid #d6d6d6;*/
+	/*background-color: #f0f0f0;*/
+	overflow: hidden;
+	/*font-size: 1.2em;*/
+	width: 100%;
+	clear: both;
+}
+.toggle_container2 .block {
+	 /*padding: 20px;--Padding of Container--*/
+	/*background: url(toggle_block_btm.gif) no-repeat left bottom; /*--Bottom rounded corners--*/
+}
+
+/* Pager Template dos Grid Views */
+
+/*
+.TabelaPaginador TD
+{
+	padding:5px;    
+}
+
+*/
+
+
+.TabelaPesquisa TD
+{
+   padding:5px;    
+	
+}
+
+.TituloNegrito
+{
+	
+  font-weight:bold;
+  color:#083772;
+	
+}
+
+.CalendarioEstilos TD,  .dxeCalendarButton_Aqua TD
+{
+	border:none;   
+	padding:0;
+	margin:0;    
+}
+
+.CalendarioEstilos TD
+{
+	border:none;   
+	padding:3px;
+	margin:0;    
+}
+
+.PaddingFieldset
+ {
+	 padding:0% 2% 2% 2%;
+	 text-align:left;
+ 
+ 
+ 
+ }
+
+.EstilosLegend
+{
+	margin-bottom: 10px;
+	padding:5px;
+	text-align:left;    
+}
+
+.DivResultadoEstilos
+{
+	
+   height:auto;
+   min-height:100%;
+   width:100%;
+   margin-top:10px;
+   padding-bottom:10px; 
+}
+
+.dxpControl_Aqua
+{
+	
+  margin-left:auto;
+  margin-right:auto;
+   
+	
+}
+
+
+
+.RoundPanelEstilos TD, LABEL, SPAN, H1
+{
+	   
+	font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif;
+	
+}
+
+.dxic
+{
+  border:none !important  
+}
+
+.dxeControlsCell
+{
+	
+   padding:0 !important    
+	
+}
+
+/* Estilos para o SubMenu Repeater */
+
+.tela
+{   
+	/*width:100%;
+	height:150px;*/
+	padding-top:40px;
+}
+
+
+
+#RepeaterSubMenuEstilos 
+{
+	
+   width:250px;
+   height:140px;
+   background:transparent url(../Imagens/BgMenuConfiguracoesBtn.png) repeat-x;
+   margin:5px; 
+   padding :0; 
+   float:left;  
+   display:inline-block;
+   border:1px solid #6ccfe9;
+	
+}
+
+#RepeaterSubMenuEstilos:hover
+{
+ 
+ background:transparent url(../Imagens/BgMenuConfiguracoesOverBtn.png) repeat-x;
+ cursor:pointer;
+	
+}
+
+.TituloBotao
+{
+ 
+  font-weight:bold;
+  font-size:14px; 
+  display:block;
+  top:10px; 
+  word-spacing:0.1em; 
+  
+	
+}
+
+/* Estilos para o GridView das telas de dashboard e consiliação */
+
+ .EstilosGridViewDashBoardConsiliacao 
+ {
+	 border:1px solid #a3c0e8;
+	 margin-top:8px;   
+	 font-size:12px;
+	 font-weight:normal !important
+			 
+ }
+ 
+ .EstilosGridViewResultadoPesquisa {border:1px solid #a3c0e8;}
+  
+ .FooterGridViewDashBoardConsiliacao , .CabecalhoGridViewDashBoardConsiliacao 
+ {
+	 background-color:#2ba5c9;
+	 height:25px;     
+ }
+ 
+ .FooterGridViewDashBoardConsiliacao th, .FooterGridViewDashBoardConsiliacao td
+ {
+	 border: solid 1px #cde4eb;
+	 text-align:left;
+	 padding:5px;
+	 color:#ffffff !important   
+ }
+ 
+ .CabecalhoGridViewDashBoardConsiliacao th, .CabecalhoGridViewDashBoardConsiliacao td 
+ {
+	 text-align:left;
+	 padding:5px;
+	 color:#ffffff !important   
+ }
+ 
+ .FooterGridViewDashBoardConsiliacao a, .CabecalhoGridViewDashBoardConsiliacao a
+ {     
+	 color:#ffffff !important;
+	 text-decoration:none;  
+	 font-size:12px;
+ }
+ 
+ .LinhaListaGridViewDashBoardConsiliacao
+ {
+	 background-color:#dbebff;
+	 height:25px;
+	 padding:5px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;     
+ }
+ 
+ .LinhaListaGridViewDashBoardConsiliacao:hover
+ {
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6; 
+	 
+ }
+ 
+ .LinhaAlternadaListaGridViewDashBoardConsiliacao
+ {
+	 background-color:#ffffff;
+	 height:25px;
+	 padding:5px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;
+	 
+ }
+  
+ .LinhaAlternadaListaGridViewDashBoardConsiliacao:hover
+ {     
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6;  
+	 
+ }
+ 
+ .LinhaListaGridViewDashBoardConsiliacao
+ {     
+	 background-color:#f4f4f4;
+	 height:25px;
+	 padding:5px;     
+	 
+ }
+ 
+  .LinhaAlternadaListaGridViewDashBoardConsiliacao
+ {     
+	 background-color:#ffffff;
+	 height:25px;
+	 padding:5px;    
+	 
+ }
+ 
+  .LinhaListaGridViewDashBoardConsiliacao td, .LinhaAlternadaListaGridViewDashBoardConsiliacao td {padding:5px;}
+  
+ .PaginadorGridView
+ {
+	 background-color:#f4f4f4;   
+	 height:25px;
+	 padding:5px;
+	 font-size:11px;     
+ }
+ 
+ .PaginadorGridView a
+ {
+	 text-decoration:none;
+	 color:#004D63;     
+ }
+ 
+  .PaginadorGridView a:hover {text-decoration:underline;}
+  .PaginadorGridView TD {padding:2px;}
+ 
+/* Fim */
+ 
+#TituloNovoUsuario
+ {
+	 
+   background-color:#2ba5c9;
+   padding:10px;
+   color:#ffffff; 
+	 
+ }
+ 
+ /* Estilos Hicharts.com */
+ 
+ .highcharts-axis
+ {
+	 
+   font-size:10px !important
+	 
+ }
+
+.highcharts-subtitle
+{
+	
+	font-size:11px !important
+	
+}
+
+.MargemTop
+{
+  padding-top:15px;   
+	
+}
+
+
+.dxeErrorCell
+{
+	
+   width:70px; 
+   background-color:Green;   
+	
+	
+}
+
+.DashBoardTabSimulacaoEmprestimos TD
+{
+	
+   color:#000000 !important;
+   font-size:11px;
+   padding:1px;
+
+
+}
+
+.dxic TD
+{
+  padding:0 !important;
+  width: 70% !important; 
+}
+
+.DashBoardTabSimulacaoCompra
+{
+   color:#000000 !important;
+   font-size:11px;
+   margin-bottom:5px; 
+   height:auto; 
+	
+}
+
+
+
+.TabelaRepeaterMenuBotao
+{
+	
+	width: 250px;
+	margin: 0 auto;
+	height:140px;
+	
+}
+
+
+.DescricaoObjetivo
+{
+	margin:5px;
+	font-size:12px;
+	font-weight:normal;   
+	
+}
+
+
+#LarguraCelulaBotao
+{
+    
+    width:95px;
+    height:140px;
+    text-align:center;
+  
+}
+
+#AlinhamentoDescricaoObjetivo {text-align:center;}
+
+#AlturaLinha 
+{
+	height:40px;
+	text-align:center;
+	
+}
+
+.FlutuaEsquerda {float:left;}
+.MargemTopo {margin-top: 5px;}
+
+.FlutuaEsquerdaMargemDireita
+{
+   float: left; 
+   margin-right: 5px;
+}
+
+.ConfiguraMenu
+{
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center; 
+   display: block; 
+   height: 40px;
+   margin-top: 10px;    
+}
+
+.MargemTopoTabela{margin-top: 3px; }
+
+.BordaBase
+{
+   border-bottom: 2px solid #083772 !Important;
+   padding: 7px 0px 2px 0px !Important
+}
+
+.TituloTabela
+{
+	font-size: 14px !Important;
+	font-weight: bold !Important;
+	color:#083772 !Important  
+}
+
+.LarguraBordaCelula
+{
+	width: 75px;
+	border: none !Important 
+}
+
+.CelulaBotaoMaisDetalhes
+{
+   padding: 7px 7px 7px 95px;
+   text-align: left;  
+}
+
+.TituloBotaoMaisDetalhes {font-size: 10px;}
+.UltimaCelulaSemBordaBase, #UltimaCelulaSemBordaBaseSituacao, #UltimaCelulaSemBordaBaseCelular , #UltimaCelulaSemBordaBaseUsuarioConsignataria {border: none !important;}
+.PreencherGridView {padding: 7px 0px;}
+.PreencheBaseTela {padding-bottom:10px;}
+.MargemTopoDiv{margin-top: 5px;}
+
+.UltimaCelulaSemBordaBase TD
+{
+	
+	border:none;
+	padding:3px;
+	margin:0;
+	
+}
+
+.FlutuaMargemEsquerda
+{
+   float: left;
+   margin-left: 5px;   
+}
+
+.EliminaFlutuacao
+{
+  clear:both;
+  overflow:hidden;
+  width:100%;
+  height:15px;    
+}
+
+.TextoAlinhaEsquerda {text-align: left;}
+
+.BoxConfiguraSenha
+{
+   float:left;
+   padding:2px 0px;
+   width:69.5%;
+   margin-left:0.5%
+  
+}
+
+.BoxPerfilAlterarSenha
+{
+	float:left;
+	width:30%;
+	margin-top:10px;       
+}
+
+.BoxBotaoExibirAverbacoesConsignadas {padding:7px 0px;}
+
+.BoxConteudoEsquerdoDashboard
+{
+	width:50.5%;
+	height:100%;   
+	float:left;
+}
+
+.BoxConteudoDireitoDashboard
+{
+	
+  width: 46.5%;
+  margin-left:0.5%;
+  margin-top:5px;
+  margin-right:2.5%;
+  float:right;
+	
+}
+
+.ZeraFlutuacaoDashBoard
+{
+	clear:both;
+	overflow:hidden;   
+	
+}
+
+
+ .WebUserControlTabelaDashboard 
+ {
+	/* background:transparent url(../Imagens/Familia1.png) no-repeat top right; */
+	 font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif !Important
+	 
+  }
+ 
+ .WebUserControlTabelaDashboard TD
+ {
+	 padding:3px;
+	 text-align:left;
+	 font-size:11px !important;
+	 color:#083772 !important
+		  
+ }
+ 
+ .TituloPrazoDesejado
+ {
+   font-size:13px;
+   font-weight:bold;
+   color:#000;           
+ }
+ 
+ .LabelObjetivoCompraDivida
+ {
+   font-size:13px;
+   font-weight:bold;
+   margin-right:5px;
+   color:#083772 !important
+	 
+ }
+ 
+ 
+ .BoxResumoSimulacao
+ {
+	 
+	 width: 75%;
+	 float: left;
+	 background-color: Yellow;     
+ }
+ 
+ 
+ .BoxObjetivo
+ {
+   padding:10px 0px;
+   margin-bottom:10px;        
+ }
+ 
+ 
+  .WebUserControlTabelaConfirmaAverbacoes TD
+ {
+	 padding:3px;
+	 font-size:12px;  
+		  
+ }
+  
+ 
+  
+ .WebUserControlTabelaDadosFuncionariosAverbacoes TD
+ {
+	 padding:4px;
+	 font-size:11px;  
+	 border-bottom:1px solid #ebf4fd;       
+ }
+	
+  
+  
+  
+ .BoxMatriculaProdutos
+ {     
+	 width: 99.2%;
+	 background-color: #e2f0ff; 
+	 padding: 2px; 
+	 border: 1px solid #aecaf0;     
+ }
+ 
+ .BoxDadosFuncionario
+ {
+	 width: 99.8%;
+	 border: 1px solid #aecaf0;
+	 background-color: #e2f0ff;
+	 margin: 5px 0px;   
+	 
+ }
+ 
+ .TituloNegritoAverbacoes
+ {
+	 font-weight:bold;
+	 text-align: right;
+	 color:#083772;     
+ }
+ 
+ 
+ #TituloDadosFuncionario 
+ {
+	 font-size: 12px;
+	 font-weight: bold;       
+ }
+ 
+ .BoxPerfil 
+ {
+	 padding: 3px;
+	 background-color:#eef5fd;
+	 margin:1px;
+	 
+ } 
+ 
+ 
+ .WebUserControlTabelaDadosAverbacoes
+ {
+	/* background:transparent url(../Imagens/Familia1.png) no-repeat top right; */
+	 font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif !Important
+	 
+  }
+ 
+ .WebUserControlTabelaDadosAverbacoes TD
+ {
+	 padding:3px;
+	 text-align:left;
+	 font-size:11px !important;
+	 color:#083772 !important
+		  
+ }
+	  
+  /* Estilos para o GridView da Pagina de Registro de Averbações (Em dados do Usuário) */
+ 
+
+ .EstilosGridViewAverbacoesDadosFuncionario
+ {
+	 border:1px solid #a3c0e8;
+	 margin-top:8px;   
+	 font-size:11px;
+	 font-weight:normal !important
+			 
+ }
+ 
+ .EstilosGridViewResultadoPesquisa {border:1px solid #a3c0e8;}
+  
+ .FooterGridViewAverbacoesDadosFuncionario , .CabecalhoGridViewAverbacoesDadosFuncionario
+ {
+	 background-color:#2ba5c9;
+	 height:20px;     
+ }
+ 
+ .FooterGridViewAverbacoesDadosFuncionario th, .FooterGridViewAverbacoesDadosFuncionario td
+ {
+	 border: solid 1px #cde4eb;
+	 text-align:left;
+	 padding:2px;
+	 color:#ffffff !important   
+ }
+ 
+ .CabecalhoGridViewAverbacoesDadosFuncionario th, .CabecalhoGridViewAverbacoesDadosFuncionario td 
+ {
+	 text-align:left;
+	 padding:2px;
+	 color:#ffffff !important   
+ }
+ 
+ .FooterGridViewAverbacoesDadosFuncionario a, .CabecalhoGridViewAverbacoesDadosFuncionario a
+ {     
+	 color:#ffffff !important;
+	 text-decoration:none;  
+	 font-size:11px;
+ }
+ 
+ .LinhaListaGridViewAverbacoesDadosFuncionario
+ {
+	 background-color:#dbebff;
+	 height:20px;
+	 padding:2px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;     
+ }
+ 
+ .LinhaListaGridViewAverbacoesDadosFuncionario:hover
+ {
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6; 	 
+ }
+ 
+ .LinhaAlternadaListaGridViewAverbacoesDadosFuncionario
+ {
+	 background-color:#ffffff;
+	 height:20px;
+	 padding:2px;
+	 border-top:1px solid #a3c0e8;
+	 border-bottom:1px solid #a3c0e8;      
+	 cursor: pointer;
+	 
+ }
+  
+ .LinhaAlternadaListaGridViewAverbacoesDadosFuncionario:hover
+ {     
+	 background-color:#cde4eb;
+	 border-top:1px solid #e6e6e6;   
+	 border-bottom:1px solid #e6e6e6;  
+	 
+ }
+ 
+ .LinhaListaGridViewAverbacoesDadosFuncionario
+ {     
+	 background-color:#f4f4f4;
+	 height:20px;
+	 padding:2px;     
+	 
+ }
+ 
+  .LinhaAlternadaListaGridViewAverbacoesDadosFuncionario
+ {     
+	 background-color:#ffffff;
+	 height:20px;
+	 padding:2px;    
+	 
+ }
+ 
+  .LinhaListaGridViewAverbacoesDadosFuncionario td, .LinhaAlternadaListaGridViewAverbacoesDadosFuncionario td {padding:5px;}
+  
+ 
+ 
+ /* Fim */
+ 
+
+h1.TextoAncora a
+{
+	
+ font-size:10px;
+ padding-left:15px; 
+ margin:5px; 
+ margin-bottom:5px; 
+ font-weight:normal !important;
+ float:right;
+ line-height:16px;
+ background:transparent url(../Imagens/up.png) no-repeat;
+	
+}
+
+#MenuAverbacao
+{
+	padding:0px;
+	margin:0px;
+	float: left;
+	width: 100%;   
+}
+
+#MenuAverbacao ul {list-style-type:disc;padding-left:12px;}
+
+/*#MenuAverbacao ul li { display: inline;list-style-type:circle; }*/
+
+/**** Estilos para o termo de impressão ****/
+
+h1.TituloTermoImpressao 
+{ 
+   font-size:14pt;
+   font-weight:bold;  
+}
+
+h1.TituloTermoImpressaoDados 
+{ 
+   font-size:11pt;
+   font-weight:bold;  
+}
+
+
+.TabelaTermoDeImpressao
+{
+   border:1px solid #000000; 
+   margin:5px 0px;  
+   font-size:10pt; 
+}
+
+.TabelaTermoDeImpressaoPrimeirosDados TD
+{
+	 padding:5px;
+	
+}
+
+
+.TabelaTermoDeImpressao TD
+{
+   padding:5px;  
+}
+
+.TituloNegritoTermoDeImpressao
+{    
+  font-weight:bold;
+}
+
+.BoxCapturaFoto
+{
+   width: 260px;
+	
+}
+
+.WebUserControlTabelaAnaliseAverbacao TD
+{
+ 
+  padding:0;
+  margin:0;
+	
+}
+
+.DivFotoUploadTabela
+{
+	background-color:#d9ecf4;
+	border:1px solid #c0dfe8;  
+	
+}
+
+.DivFotoUploadTabela TD
+{
+   border:none; 
+	
+}
+
+.WebUserControTabelaUpload TD
+{    
+   border:none;     
+}
+
+.TituloUpload
+{
+   font-size:12px;    
+   font-weight:bold;
+	
+}
+
+
+.TabelaWebUserControlGerenciarAverbacao TD
+{
+	
+  padding:0;
+  border:none;  
+	
+}
+
+.TextoAverbacao
+{
+   text-align:justify;
+   font-size:12px;   
+}
+
+.SemBordaBase {border:none !important}
+
+#SemBordaBaseHum, #SemBordaBaseDois, #SemBordaBaseTres, #SemBordaBaseQuatro, #SemBordaBaseCinco, #SemBordaBaseSeis{border:none;}
+#TamanhoCelulaHum, #TamanhoCelulaDois, #TamanhoCelulaTres, #TamanhoCelulaQuatro, #TamanhoCelulaCinco {width: 20%;}
+
+.WebUserControlTabelaInformarQuitacao TD {border: none;}
+.WebUserControlTabelaInformarQuitacaoUploadComprovante TD {border: none;}
+.WebUserControlTabelaInformarSaldoDevedor TD {border: none;}
+/*.ConfiguraCamadaCapturaFoto {z-index:52;}*/
+
+/* Estilos para o WebUser Control Chart Volume de Averbações*/
+
+.WebUserControlTabelaChatVolumeAverbacoes TD {padding:3px;}
+.WebUserControlTabelaChatVolumeAverbaocesSpinMeses TD {padding:1px;}
+
+/* Fim */
+
+.LimpaFloatDiv
+{
+    clear: both;
+    overflow: hidden;    
+}
+
+.DivFlutuaEsquerda 
+{
+    float: left; 
+    width: 50%;
+    margin-top: 1%;
+    clear: both;  
+    
+}
+
+/*float: left; width: 49%; margin-top: 1%; clear: both;*/
+
+.DivFlutuaDireita
+{
+    float: right; 
+    width: 49%; 
+    margin-left: 0%; 
+    margin-top: 1%;    
+}
+
+/* style="float: right; width: 50%; margin-left: 0%; margin-top: 1%; margin-bottom: 1%;" */
+
+
+.AlturaLimpaFloatDiv
+{
+   height: 1px; 
+   clear: both; 
+   overflow: hidden;
+    
+}
+
+.TamanhoAlturaMargemLimpaDiv
+{
+   width: 100%;
+   margin-top: 1%; 
+   clear: both;
+    
+}
+
+.LarguraMargem
+{
+   width: 100%; 
+   margin-left: 0%; 
+   margin-top: 1%;    
+}
+
+.AlturaDiv {height:5px;}
+
+/*
+.DivFlutuaEsquerdaConsignante
+{
+    
+    float: left; 
+    width: 49%;
+    margin-top: 1%;
+    height: 400px;    
+}
+
+.DivFlutuaDireitaConsignante
+{
+    
+   float: right; 
+   width: 50%; 
+   margin-left: 0%;
+   margin-top: 1%;
+   height: 400px;
+   margin-bottom: 1%;
+    
+}
+*/
+
+.LimpaFlutuaDiv
+{
+    height:2px;
+    clear: both; 
+    overflow: hidden; 
+}
+
+.EstiloCampoObrigatorio
+{
+   color:Red;
+   font-size:13px;
+   padding-left:2px;    
+}
+
+.TituloCamposObrigatorios
+{
+    
+    color:Red;
+    
+}
+
+#upPrincipal
+ {
+     padding-top:10px;
+     
+ }
+ 
+ .AplicaPaddingMensagem 
+ {
+        padding:8px 4px !important;
+     
+ }

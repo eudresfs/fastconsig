@@ -1,0 +1,24 @@
+﻿<script language='javascript' type='text/javascript'>
+
+  var obj = document.getElementById("aTitulo");
+
+  $(".toggle_container").hide();
+
+  var aTitulo = obj;
+
+  $('#h2.trigger').removeAttr("onclick").unbind("click");
+
+  $("h2.trigger").click(function () {
+
+    if (aTitulo.innerHTML == "Perfis Cadastrados - Mais Detalhes") {
+      aTitulo.innerHTML = "Perfis Cadastrados - Menos Detalhes";
+      $(".toggle_container").show();
+    }
+    else {
+      aTitulo.innerHTML = "Perfis Cadastrados - Mais Detalhes";
+      $(".toggle_container").hide();
+    }
+
+  });
+
+</script>

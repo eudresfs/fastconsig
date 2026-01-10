@@ -1,0 +1,465 @@
+﻿
+/*** Topo da Aplicação ***/
+
+.TopoFixo
+{
+	position: fixed;
+	width: 100%;
+	background:url(../Imagens/bgTopoFixo.png) repeat-x top left;
+	height: 60px;
+	top:0px;
+	z-index:54;
+	
+}
+
+.TopoMenu
+{
+	Width:100%;
+	margin:0 auto;     
+	
+}
+ 
+ .LogoBusca
+ {     
+	 width:83%;
+	 height:60px;
+	 float:left;     
+ }
+ 
+ .ClearDiv {clear:both;}
+ .ClearDivGlobal {clear:both;padding: 10px;}
+ .GloboOver:hover {background: url(../Imagens/GloboBtnTopoOver.png) no-repeat;}
+ .NotificacaoOver:hover{background: url(../Imagens/NotificacaoBtnTopoOver.png) no-repeat;}
+ .ConfiguracaoOver:hover {background: url(../Imagens/ConfiguracaoBtnTopoOver.png) no-repeat;}
+ .BuscaOver:hover{background: url(../Imagens/BuscaBtnOver.png) no-repeat;}
+ .SairOver:hover {background: url(../Imagens/SairBtnOver.png) no-repeat;}
+ 
+ 
+ #DivLogomarca
+ {
+	width:226px;
+	height:60px;
+	margin-left:5px;
+	background:transparent url(../Imagens/BgDivLogomarca.png) no-repeat top left; 
+	float:left;   
+	 
+ }
+ 
+ a#Logomarca 
+{
+	width: 169px;
+	float:left;
+	margin-left:32px;
+	margin-top:9px;
+	background: url(../Imagens/logo.png) no-repeat;
+	height: 43px;
+	
+}
+
+#Busca
+{    
+	margin-left:6px;
+	float:left;
+	padding-top:16px;
+	height:40px;
+	   
+}
+
+#BuscaBtn
+{    
+	float:left;
+	margin-left:5px;
+	width:35px;
+	margin-top:10px;
+	height:35px;   
+	   
+}
+
+#DivBarraBusca
+{
+	margin-top:12px;
+	width:2px;
+	height:30px;
+	background: url(../Imagens/BarraMenu.png) no-repeat;
+	float:left;    
+}
+
+#DivBarraSair
+{
+	width:2px;
+	height:30px;
+	background: url(../Imagens/BarraMenu.png) no-repeat;
+	float:left;    
+}
+
+
+#DivNotificacao
+{
+	height:35px;
+	/*background:transparent url(../Imagens/GloboBtnTopo.png) no-repeat top left; */
+	margin-top:15px;
+	margin-left:8px;
+	float: left;     
+}
+
+#DivMensagem
+{
+	width:35px;
+	height:35px;
+	margin-top:10px;
+	float: left;        
+}
+
+.DivisorFlutuaEsquerda{float: left;}
+
+#ConfigSair
+{
+   width:43px;
+   height:35px;    
+   float:right; 
+   margin-top:10px;
+}
+
+/*#LogoBanco
+{    
+	float:right;  
+	margin-top:12px;
+	margin-right:10px;
+	height:20px;   
+}
+
+#ConfigBtn
+{
+	width:40px;
+	height:60px;
+	float:left;
+	margin-bottom:5px;     
+}*/
+
+#SairBtn
+{
+	width:35px;
+	height:35px;
+	float:right;
+	margin-right:1px;	
+}
+
+.Divisor
+{
+	float: left; 
+	margin-left: 3px;  	
+}
+
+#Global
+{
+	margin: 0 auto;
+	/*top: 60px;*/
+	/*top:60px;*/
+	min-width:980px;
+	min-height:100%;
+	/*background:#bfdbff url(../Imagens/BgConteudoLiquido.png) repeat-x top left;*/
+	
+}
+
+#BoxMensagemTituloPagina
+{
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    background:transparent url(../Imagens/BgTopoMensagemTituloPagina.png) repeat-x top left; 
+    z-index:53; 
+    top:60px; 	
+}
+
+#EsquerdoFixo
+{    
+	width:170px;
+   background-color:#0f3566;
+   float:left;
+   height:100%;   
+   position:fixed; 
+   top:100px; 
+   border-right: 1px solid #81a2be;      
+}
+
+#DivConteudoEsquerdo
+{
+   background:#ffffff url(../Imagens/BgDivConteudoEsquerdo.png) repeat-x top left;
+   /*border:1px solid #81a2be;*/
+	   
+}
+
+h1#MensagemUsuario
+{
+	
+  color:#ffffff;
+  font-size:9px;
+  font-weight:500;     
+}
+
+h1#MensagemBoasVindas
+{
+	
+  color:#ffffff;
+  font-size:9px;
+  font-weight:500;      
+}
+
+#BoxLogoOrgaoPublico
+{    
+	padding:20px 0px 15px 5px     
+   
+}
+
+a#LogoOrgaoPublico
+{
+	width:111px;
+	height:65px; 
+	display:block;         
+ }
+ 
+ #BoxPerfil
+ {     
+	 height:67px;
+	 padding-top:20px;
+   
+ }
+ 
+ #ImagemFloat
+ {
+	float:left;
+	margin-right:6px; 
+	margin-left:7px;	 
+ }
+ 
+ #TextoNome
+ {     
+	 font-size:12px;
+	 display:inline;
+	 font-weight:bold;
+	 margin-top:15px;
+	 
+ }
+ 
+ #TextoCargo
+ {
+	 font-size:11px;
+	 display:inline;
+	 font-weight:500;       
+ }
+ 
+ #TextoEditarNome
+ {     
+	 font-size:10px;
+	 display:inline;
+	 font-weight:500;    
+ }
+ 
+ /* Estilos para o Menu */
+ 
+ #BoxMenuGlobal {width:100%;}
+  
+ .BordasMenu {border-bottom: 1px solid #81a2be;}
+ 
+ .AplicaEstilosMenuEsquerdo
+ {
+	 background-color: #053343; /* url(../Imagens/BgDivTopoEsquerdoDois.png) no-repeat top left;*/
+	 padding: 20px 0px 5px 0px;
+	 height: 100%;       
+ }
+ 
+#Menu 
+ {   
+	list-style-type: none; 
+	margin: 0; 
+	padding :0;
+	font: normal 12px arial, helvetica, sans-serif;  
+ }
+ 
+ #Menu li
+ {     
+   width:100%;
+   line-height:31px;  
+   background:transparent url(../Imagens/Menu/MenuBtn.png) repeat-x ; 
+   vertical-align:middle;     
+ }
+ 
+ #Menu li:visited
+ {
+   background-color:#ffffff;
+   vertical-align:middle;    
+	 
+ }
+ 
+  #Menu li a:active
+ {
+   background-color:#ffffff;
+   vertical-align:middle;    
+	 
+ } 
+ 
+.BotoesHover:hover
+ {        
+   background:transparent url(../Imagens/Menu/MenuBtnOver.png) repeat-x!important;
+   vertical-align:middle;     
+ }
+  
+/* Fim Estilos Menu */
+
+/***** Conteúdo Liquido  Masterpage ******/
+
+#BoxConteudoLiquido
+{
+  /* background:transparent url(../Imagens/BgConteudoLiquido.png) repeat-x top left;*/
+   margin-left:170px;
+   padding:7px 10px 50px 10px;   
+   height:100%;
+   height:auto;
+   top: 60px;
+  
+}
+
+#BoxTituloPaginaLogoBanco
+{
+	height:45px;
+	width:90%;
+	line-height:45px;
+	  /*margin-left:172px;
+  border-top:1px dotted #27819b;
+	border-bottom:1px dotted #27819b;*/      
+	
+ }
+
+ 
+ #DivBtnVoltarFechar
+ {     
+		float:right;
+		height:45px;
+		line-height:45px;  
+		padding-right:10px;         
+ }
+ 
+ #BoxLogoBanco
+{
+	
+
+  width:100px;   
+	
+} 
+ 
+.ImgVoltarFechar {vertical-align:middle;}
+ 
+.TituloPagina
+ {
+	font-size:22px;
+	line-height:45px;
+	margin-left:4px;
+	font-weight:bold;	 
+ }
+ 
+ #BoxContentPlaceHolder
+ {
+   background-color:#FFFFFF; 
+   width:auto;
+   min-height:100%;
+   padding-top:95px;
+   height:auto;
+ 
+ }
+
+/***** Fim  Conteúdo Líquido Masterpage *****/
+
+/* Rodapé da Aplicação */
+
+#Footer
+{
+	background: url(../Imagens/Footer.png) repeat-x;
+	height:52px;
+	bottom:0;
+	position:fixed;
+	left:0;
+	width:100%;  
+	visibility:visible;  
+	z-index:51;   
+}
+
+
+#DivGlobo
+{
+  margin:8px 8px 0px 0px;
+  float:left;   
+	
+}
+
+#LogoCasePartners
+{
+	float:left;
+	padding:0px 8px;
+	padding-top:8px;  
+}
+
+.IconeSuporte
+{
+	/*float:right;*/
+	padding-top:17px;
+	 
+}
+
+.EstilosDivPageControl
+{    
+	float: left;
+	margin-top: 10px; 
+	margin-right: 8px;
+	width: 70%;    
+}
+
+.FlutuaDireitaLargura
+{
+	float:right;	
+	width:270px;
+	height:51px;
+	
+}
+
+.DivBotaoMensagem
+{
+	float:left;
+	margin:8px 8px 0px 0px;    
+	
+}
+
+.DivImagemDivisor
+{
+	padding-top:5px; 
+	width:2px;
+	height:28px;
+	float: left;
+	text-align: center;    
+}
+
+/* Estilos para o menu Dinâmico do Rodapé */
+ 
+ .menuRodape
+ {
+	 background-color:#f2f2f2; 
+	 border: 1px solid #a2a2a2;  
+	 padding:5px;  
+	 
+ }
+ 
+ .EspacoItem
+ {
+	 margin-right:5px;
+	 
+ }
+ 
+ a.BotaoFechar 
+ {
+   color:#000;
+   font-size:10px; 
+	 
+ }
+ 
+
+ 
+ 

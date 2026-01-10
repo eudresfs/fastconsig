@@ -1,0 +1,6 @@
+D:\devrosil\fastconsig\CP.FastConsig.Services\bin\CP.FastConsig.Services.dll
+D:\devrosil\fastconsig\CP.FastConsig.Services\bin\CP.FastConsig.Services.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Services\bin\Microsoft.VisualStudio.Web.Runtime.dll
+D:\devrosil\fastconsig\CP.FastConsig.Services\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.Services\obj\Debug\CP.FastConsig.Services.dll
+D:\devrosil\fastconsig\CP.FastConsig.Services\obj\Debug\CP.FastConsig.Services.pdb

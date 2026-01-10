@@ -1,0 +1,62 @@
+﻿<script language='javascript' type='text/javascript'>
+
+	$(document).ready(function () {
+
+	var chart = new Highcharts.Chart({
+
+	chart: {
+	renderTo: 'containerBarra',
+	defaultSeriesType: 'column'
+	},
+
+	title: {
+	text: '#titulo'
+	},
+
+	subtitle: {
+	text: '#subTitulo'
+	},
+
+	xAxis: {
+	categories: [#categorias]
+	},
+
+	yAxis: {
+	min: 0,
+	labels: {enabled: false},
+	title: {
+	text: '#eixoY', enabled: false
+	}
+	},
+
+	legend: {
+	layout: 'vertical',
+	backgroundColor: '#FFFFFF',
+	align: 'right',
+	verticalAlign: 'top',
+	x: -10,
+	y: 10,
+	shadow: true
+	},
+
+	tooltip: {
+	formatter: function () {
+	return '' +  this.x + ': ' + this.y;
+	},
+	enabled: false
+	},
+
+	plotOptions: {
+	column: {
+	pointPadding: 0.2,
+	borderWidth: 0
+	}
+	},
+
+	series: [#dados]
+
+	});
+
+	});
+
+</script>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE16708D-A75A-4DB9-A47A-0DC48ED144B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP.FastConsig.ThirdParty</RootNamespace>
+    <AssemblyName>CP.FastConsig.ThirdParty</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Referencias\AjaxControlToolkit.dll" />
+    <Content Include="Referencias\DBauer.Web.UI.WebControls.DynamicControlsPlaceholder.dll" />
+    <Content Include="Referencias\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="Referencias\DevExpress.Data.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="Referencias\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="Referencias\DevExpress.Utils.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxEditors.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxGridView.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxGridView.v11.1.Export.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxPivotGrid.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll" />
+    <Content Include="Referencias\DevExpress.Web.ASPxTreeList.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.Web.v11.1.Linq.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.Design.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.Extensions.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.UI.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.Web.Design.dll" />
+    <Content Include="Referencias\DevExpress.XtraCharts.v11.1.Web.dll" />
+    <Content Include="Referencias\DevExpress.XtraEditors.v11.1.Design.dll" />
+    <Content Include="Referencias\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="Referencias\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="Referencias\FlashControl.dll" />
+    <Content Include="Referencias\ImageResizer.dll" />
+    <Content Include="Referencias\Intelligencia.UrlRewriter.dll" />
+    <Content Include="Referencias\Microsoft.VisualStudio.Web.Runtime.dll" />
+    <Content Include="Referencias\PdfViewer.dll" />
+    <Content Include="Referencias\Phantom.dll" />
+    <Content Include="Referencias\SpreadsheetGear.dll" />
+    <Content Include="Referencias\System.Web.Routing.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Programas\EntityFramework41.rar" />
+    <None Include="Programas\SQLConnect.vsix" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

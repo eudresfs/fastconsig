@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if not exist \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\" mkdir \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\":*)"
+    ]
+  }
+}

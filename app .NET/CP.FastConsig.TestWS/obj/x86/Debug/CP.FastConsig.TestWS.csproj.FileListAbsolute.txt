@@ -1,0 +1,6 @@
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\bin\Debug\CP.FastConsig.TestWS.exe.config
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\bin\Debug\CP.FastConsig.TestWS.exe
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\bin\Debug\CP.FastConsig.TestWS.pdb
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\obj\x86\Debug\CP.FastConsig.TestWS.exe
+D:\devrosil\fastconsig\CP.FastConsig.TestWS\obj\x86\Debug\CP.FastConsig.TestWS.pdb

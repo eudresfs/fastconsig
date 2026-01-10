@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FastConsigCenterModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FastConsigCenterModeloStoreContainer">
+          <EntitySet Name="Consignante" EntityType="FastConsigCenterModelo.Store.Consignante" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Consignataria" EntityType="FastConsigCenterModelo.Store.Consignataria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="FastConsigCenterModelo.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioHistorico" EntityType="FastConsigCenterModelo.Store.UsuarioHistorico" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioVinculo" EntityType="FastConsigCenterModelo.Store.UsuarioVinculo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vinculo" EntityType="FastConsigCenterModelo.Store.Vinculo" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Usuario_Consignataria" Association="FastConsigCenterModelo.Store.FK_Usuario_Consignataria">
+            <End Role="Consignataria" EntitySet="Consignataria" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioHistorico_Usuario" Association="FastConsigCenterModelo.Store.FK_UsuarioHistorico_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioHistorico" EntitySet="UsuarioHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioVinculo_Usuario" Association="FastConsigCenterModelo.Store.FK_UsuarioVinculo_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="UsuarioVinculo" EntitySet="UsuarioVinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioVinculo_Vinculo" Association="FastConsigCenterModelo.Store.FK_UsuarioVinculo_Vinculo">
+            <End Role="Vinculo" EntitySet="Vinculo" />
+            <End Role="UsuarioVinculo" EntitySet="UsuarioVinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vinculo_Consignante" Association="FastConsigCenterModelo.Store.FK_Vinculo_Consignante">
+            <End Role="Consignante" EntitySet="Consignante" />
+            <End Role="Vinculo" EntitySet="Vinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vinculo_Consignataria" Association="FastConsigCenterModelo.Store.FK_Vinculo_Consignataria">
+            <End Role="Consignataria" EntitySet="Consignataria" />
+            <End Role="Vinculo" EntitySet="Vinculo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Consignante">
+          <Key>
+            <PropertyRef Name="IDConsignante" />
+          </Key>
+          <Property Name="IDConsignante" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="Logo" Type="varchar" MaxLength="50" />
+          <Property Name="BancoDados" Type="varchar" MaxLength="50" />
+          <Property Name="URL" Type="varchar" MaxLength="150" />
+          <Property Name="Tipo" Type="varchar" MaxLength="1" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Consignataria">
+          <Key>
+            <PropertyRef Name="IDConsignataria" />
+          </Key>
+          <Property Name="IDConsignataria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="Logo" Type="varchar" MaxLength="50" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Name="IDUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CPF" Type="varchar" MaxLength="14" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Telefone" Type="varchar" MaxLength="20" />
+          <Property Name="Login" Type="varchar" MaxLength="50" />
+          <Property Name="Senha" Type="varchar" MaxLength="50" />
+          <Property Name="Ativo" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedByType" Type="varchar" MaxLength="1" />
+          <Property Name="CreatedByName" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="IDConsignataria" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioHistorico">
+          <Key>
+            <PropertyRef Name="IDUsuarioHistorico" />
+          </Key>
+          <Property Name="IDUsuarioHistorico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="UsuarioSerializado" Type="text" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedByName" Type="varchar" MaxLength="300" />
+          <Property Name="ModifiedByType" Type="varchar" MaxLength="1" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+          <Property Name="Acao" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="UsuarioVinculo">
+          <Key>
+            <PropertyRef Name="IDUsuarioVinculo" />
+          </Key>
+          <Property Name="IDUsuarioVinculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDUsuario" Type="int" Nullable="false" />
+          <Property Name="IDVinculo" Type="int" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vinculo">
+          <Key>
+            <PropertyRef Name="IDVinculo" />
+          </Key>
+          <Property Name="IDVinculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDConsignataria" Type="int" Nullable="false" />
+          <Property Name="IDConsignante" Type="int" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Usuario_Consignataria">
+          <End Role="Consignataria" Type="FastConsigCenterModelo.Store.Consignataria" Multiplicity="1" />
+          <End Role="Usuario" Type="FastConsigCenterModelo.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignataria">
+              <PropertyRef Name="IDConsignataria" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IDConsignataria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioHistorico_Usuario">
+          <End Role="Usuario" Type="FastConsigCenterModelo.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioHistorico" Type="FastConsigCenterModelo.Store.UsuarioHistorico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioHistorico">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioVinculo_Usuario">
+          <End Role="Usuario" Type="FastConsigCenterModelo.Store.Usuario" Multiplicity="1" />
+          <End Role="UsuarioVinculo" Type="FastConsigCenterModelo.Store.UsuarioVinculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioVinculo">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioVinculo_Vinculo">
+          <End Role="Vinculo" Type="FastConsigCenterModelo.Store.Vinculo" Multiplicity="1" />
+          <End Role="UsuarioVinculo" Type="FastConsigCenterModelo.Store.UsuarioVinculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Vinculo">
+              <PropertyRef Name="IDVinculo" />
+            </Principal>
+            <Dependent Role="UsuarioVinculo">
+              <PropertyRef Name="IDVinculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vinculo_Consignante">
+          <End Role="Consignante" Type="FastConsigCenterModelo.Store.Consignante" Multiplicity="1" />
+          <End Role="Vinculo" Type="FastConsigCenterModelo.Store.Vinculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignante">
+              <PropertyRef Name="IDConsignante" />
+            </Principal>
+            <Dependent Role="Vinculo">
+              <PropertyRef Name="IDConsignante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vinculo_Consignataria">
+          <End Role="Consignataria" Type="FastConsigCenterModelo.Store.Consignataria" Multiplicity="1" />
+          <End Role="Vinculo" Type="FastConsigCenterModelo.Store.Vinculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignataria">
+              <PropertyRef Name="IDConsignataria" />
+            </Principal>
+            <Dependent Role="Vinculo">
+              <PropertyRef Name="IDConsignataria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FastConsigCenterModelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FastConsigCenterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Consignantes" EntityType="FastConsigCenterModelo.Consignante" />
+          <EntitySet Name="Consignatarias" EntityType="FastConsigCenterModelo.Consignataria" />
+          <EntitySet Name="Usuarios" EntityType="FastConsigCenterModelo.Usuario" />
+          <EntitySet Name="UsuarioHistoricos" EntityType="FastConsigCenterModelo.UsuarioHistorico" />
+          <EntitySet Name="UsuarioVinculos" EntityType="FastConsigCenterModelo.UsuarioVinculo" />
+          <EntitySet Name="Vinculos" EntityType="FastConsigCenterModelo.Vinculo" />
+          <AssociationSet Name="FK_Vinculo_Consignante" Association="FastConsigCenterModelo.FK_Vinculo_Consignante">
+            <End EntitySet="Consignantes" Role="Consignante" />
+            <End EntitySet="Vinculos" Role="Vinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vinculo_Consignataria" Association="FastConsigCenterModelo.FK_Vinculo_Consignataria">
+            <End EntitySet="Consignatarias" Role="Consignataria" />
+            <End EntitySet="Vinculos" Role="Vinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioHistorico_Usuario" Association="FastConsigCenterModelo.FK_UsuarioHistorico_Usuario">
+            <End EntitySet="Usuarios" Role="Usuario" />
+            <End EntitySet="UsuarioHistoricos" Role="UsuarioHistorico" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioVinculo_Usuario" Association="FastConsigCenterModelo.FK_UsuarioVinculo_Usuario">
+            <End EntitySet="Usuarios" Role="Usuario" />
+            <End EntitySet="UsuarioVinculos" Role="UsuarioVinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioVinculo_Vinculo" Association="FastConsigCenterModelo.FK_UsuarioVinculo_Vinculo">
+            <End EntitySet="Vinculos" Role="Vinculo" />
+            <End EntitySet="UsuarioVinculos" Role="UsuarioVinculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuario_Consignataria" Association="FastConsigCenterModelo.FK_Usuario_Consignataria">
+            <End Role="Consignataria" EntitySet="Consignatarias" />
+            <End Role="Usuario" EntitySet="Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Consignante">
+          <Key>
+            <PropertyRef Name="IDConsignante" />
+          </Key>
+          <Property Name="IDConsignante" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nome" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Logo" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="BancoDados" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="URL" MaxLength="150" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Tipo" MaxLength="1" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Ativo" Nullable="false" Type="Boolean" />
+          <NavigationProperty Name="Vinculos" Relationship="FastConsigCenterModelo.FK_Vinculo_Consignante" FromRole="Consignante" ToRole="Vinculo" />
+        </EntityType>
+        <EntityType Name="Consignataria">
+          <Key>
+            <PropertyRef Name="IDConsignataria" />
+          </Key>
+          <Property Name="IDConsignataria" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nome" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Logo" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Ativo" Nullable="false" Type="Boolean" />
+          <NavigationProperty Name="Vinculos" Relationship="FastConsigCenterModelo.FK_Vinculo_Consignataria" FromRole="Consignataria" ToRole="Vinculo" />
+          <NavigationProperty Name="Usuario" Relationship="FastConsigCenterModelo.FK_Usuario_Consignataria" FromRole="Consignataria" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="IDUsuario" />
+          </Key>
+          <Property Name="IDUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="CPF" MaxLength="14" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Nome" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Email" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Telefone" MaxLength="20" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Login" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Senha" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Ativo" Nullable="false" Type="Int32" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedByType" MaxLength="1" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="CreatedByName" MaxLength="100" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <NavigationProperty Name="UsuarioHistoricos" Relationship="FastConsigCenterModelo.FK_UsuarioHistorico_Usuario" FromRole="Usuario" ToRole="UsuarioHistorico" />
+          <NavigationProperty Name="UsuarioVinculos" Relationship="FastConsigCenterModelo.FK_UsuarioVinculo_Usuario" FromRole="Usuario" ToRole="UsuarioVinculo" />
+          <Property Type="Int32" Name="IDConsignataria" Nullable="false" />
+          <NavigationProperty Name="Consignataria" Relationship="FastConsigCenterModelo.FK_Usuario_Consignataria" FromRole="Usuario" ToRole="Consignataria" />
+        </EntityType>
+        <EntityType Name="UsuarioHistorico">
+          <Key>
+            <PropertyRef Name="IDUsuarioHistorico" />
+          </Key>
+          <Property Name="IDUsuarioHistorico" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="IDUsuario" Nullable="false" Type="Int32" />
+          <Property Name="UsuarioSerializado" MaxLength="Max" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="ModifiedOn" Type="DateTime" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedByName" MaxLength="300" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="ModifiedByType" MaxLength="1" FixedLength="false" Unicode="false" Type="String" />
+          <Property Name="Ativo" Nullable="false" Type="Boolean" />
+          <NavigationProperty Name="Usuario" Relationship="FastConsigCenterModelo.FK_UsuarioHistorico_Usuario" FromRole="UsuarioHistorico" ToRole="Usuario" />
+          <Property Type="String" Name="Acao" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsuarioVinculo">
+          <Key>
+            <PropertyRef Name="IDUsuarioVinculo" />
+          </Key>
+          <Property Name="IDUsuarioVinculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="IDUsuario" Nullable="false" Type="Int32" />
+          <Property Name="IDVinculo" Nullable="false" Type="Int32" />
+          <Property Name="Ativo" Nullable="false" Type="Boolean" />
+          <NavigationProperty Name="Usuario" Relationship="FastConsigCenterModelo.FK_UsuarioVinculo_Usuario" FromRole="UsuarioVinculo" ToRole="Usuario" />
+          <NavigationProperty Name="Vinculo" Relationship="FastConsigCenterModelo.FK_UsuarioVinculo_Vinculo" FromRole="UsuarioVinculo" ToRole="Vinculo" />
+        </EntityType>
+        <EntityType Name="Vinculo">
+          <Key>
+            <PropertyRef Name="IDVinculo" />
+          </Key>
+          <Property Name="IDVinculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="IDConsignataria" Nullable="false" Type="Int32" />
+          <Property Name="IDConsignante" Nullable="false" Type="Int32" />
+          <Property Name="Ativo" Nullable="false" Type="Boolean" />
+          <NavigationProperty Name="Consignante" Relationship="FastConsigCenterModelo.FK_Vinculo_Consignante" FromRole="Vinculo" ToRole="Consignante" />
+          <NavigationProperty Name="Consignataria" Relationship="FastConsigCenterModelo.FK_Vinculo_Consignataria" FromRole="Vinculo" ToRole="Consignataria" />
+          <NavigationProperty Name="UsuarioVinculos" Relationship="FastConsigCenterModelo.FK_UsuarioVinculo_Vinculo" FromRole="Vinculo" ToRole="UsuarioVinculo" />
+        </EntityType>
+        <Association Name="FK_Vinculo_Consignante">
+          <End Type="FastConsigCenterModelo.Consignante" Multiplicity="1" Role="Consignante" />
+          <End Type="FastConsigCenterModelo.Vinculo" Multiplicity="*" Role="Vinculo" />
+          <ReferentialConstraint>
+            <Principal Role="Consignante">
+              <PropertyRef Name="IDConsignante" />
+            </Principal>
+            <Dependent Role="Vinculo">
+              <PropertyRef Name="IDConsignante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vinculo_Consignataria">
+          <End Type="FastConsigCenterModelo.Consignataria" Multiplicity="1" Role="Consignataria" />
+          <End Type="FastConsigCenterModelo.Vinculo" Multiplicity="*" Role="Vinculo" />
+          <ReferentialConstraint>
+            <Principal Role="Consignataria">
+              <PropertyRef Name="IDConsignataria" />
+            </Principal>
+            <Dependent Role="Vinculo">
+              <PropertyRef Name="IDConsignataria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioHistorico_Usuario">
+          <End Type="FastConsigCenterModelo.Usuario" Multiplicity="1" Role="Usuario" />
+          <End Type="FastConsigCenterModelo.UsuarioHistorico" Multiplicity="*" Role="UsuarioHistorico" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioHistorico">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioVinculo_Usuario">
+          <End Type="FastConsigCenterModelo.Usuario" Multiplicity="1" Role="Usuario" />
+          <End Type="FastConsigCenterModelo.UsuarioVinculo" Multiplicity="*" Role="UsuarioVinculo" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="IDUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioVinculo">
+              <PropertyRef Name="IDUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioVinculo_Vinculo">
+          <End Type="FastConsigCenterModelo.Vinculo" Multiplicity="1" Role="Vinculo" />
+          <End Type="FastConsigCenterModelo.UsuarioVinculo" Multiplicity="*" Role="UsuarioVinculo" />
+          <ReferentialConstraint>
+            <Principal Role="Vinculo">
+              <PropertyRef Name="IDVinculo" />
+            </Principal>
+            <Dependent Role="UsuarioVinculo">
+              <PropertyRef Name="IDVinculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuario_Consignataria">
+          <End Type="FastConsigCenterModelo.Consignataria" Role="Consignataria" Multiplicity="1" />
+          <End Type="FastConsigCenterModelo.Usuario" Role="Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignataria">
+              <PropertyRef Name="IDConsignataria" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IDConsignataria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FastConsigCenterModeloStoreContainer" CdmEntityContainer="FastConsigCenterEntities">
+          <EntitySetMapping Name="Consignantes">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.Consignante">
+              <MappingFragment StoreEntitySet="Consignante">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="BancoDados" ColumnName="BancoDados" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Consignatarias">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.Consignataria">
+              <MappingFragment StoreEntitySet="Consignataria">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByName" ColumnName="CreatedByName" />
+                <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioHistoricos">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.UsuarioHistorico">
+              <MappingFragment StoreEntitySet="UsuarioHistorico">
+                <ScalarProperty Name="Acao" ColumnName="Acao" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="ModifiedByType" ColumnName="ModifiedByType" />
+                <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="UsuarioSerializado" ColumnName="UsuarioSerializado" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="IDUsuarioHistorico" ColumnName="IDUsuarioHistorico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioVinculos">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.UsuarioVinculo">
+              <MappingFragment StoreEntitySet="UsuarioVinculo">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="IDVinculo" ColumnName="IDVinculo" />
+                <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+                <ScalarProperty Name="IDUsuarioVinculo" ColumnName="IDUsuarioVinculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vinculos">
+            <EntityTypeMapping TypeName="FastConsigCenterModelo.Vinculo">
+              <MappingFragment StoreEntitySet="Vinculo">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+                <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+                <ScalarProperty Name="IDVinculo" ColumnName="IDVinculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FastConsigCenter">
+        <EntityTypeShape EntityType="FastConsigCenterModelo.Consignante" PointX="0.75" PointY="1" Width="1.5" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="FastConsigCenterModelo.Consignataria" PointX="0.75" PointY="5.25" Width="1.5" Height="1.9802864583333317" />
+        <EntityTypeShape EntityType="FastConsigCenterModelo.Usuario" PointX="3" PointY="6.75" Width="1.5" Height="3.7109993489583317" />
+        <EntityTypeShape EntityType="FastConsigCenterModelo.UsuarioHistorico" PointX="5.25" PointY="7.125" Width="1.5" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="FastConsigCenterModelo.UsuarioVinculo" PointX="5.25" PointY="1.125" Width="1.5" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="FastConsigCenterModelo.Vinculo" PointX="3" PointY="1" Width="1.5" Height="2.3648893229166674" />
+        <AssociationConnector Association="FastConsigCenterModelo.FK_Vinculo_Consignante">
+          <ConnectorPoint PointX="2.25" PointY="2.1824446614583337" />
+          <ConnectorPoint PointX="3" PointY="2.1824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FastConsigCenterModelo.FK_Vinculo_Consignataria">
+          <ConnectorPoint PointX="2.25" PointY="5.25" />
+          <ConnectorPoint PointX="2.625" PointY="4.875" />
+          <ConnectorPoint PointX="2.625" PointY="2.1824446614583337" />
+          <ConnectorPoint PointX="3" PointY="2.1824446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FastConsigCenterModelo.FK_UsuarioHistorico_Usuario">
+          <ConnectorPoint PointX="4.5" PointY="8.4997460937500016" />
+          <ConnectorPoint PointX="5.25" PointY="8.4997460937500016" />
+        </AssociationConnector>
+        <AssociationConnector Association="FastConsigCenterModelo.FK_UsuarioVinculo_Usuario">
+          <ConnectorPoint PointX="4.5" PointY="6.75" />
+          <ConnectorPoint PointX="4.875" PointY="6.375" />
+          <ConnectorPoint PointX="4.875" PointY="2.2112939453125016" />
+          <ConnectorPoint PointX="5.25" PointY="2.2112939453125016" />
+        </AssociationConnector>
+        <AssociationConnector Association="FastConsigCenterModelo.FK_UsuarioVinculo_Vinculo">
+          <ConnectorPoint PointX="4.5" PointY="1.6056469726562508" />
+          <ConnectorPoint PointX="5.25" PointY="1.6056469726562508" />
+        </AssociationConnector>
+        <AssociationConnector Association="FastConsigCenterModelo.FK_Usuario_Consignataria" >
+          <ConnectorPoint PointX="2.25" PointY="7.0862939453125" />
+          <ConnectorPoint PointX="3" PointY="7.0862939453125" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

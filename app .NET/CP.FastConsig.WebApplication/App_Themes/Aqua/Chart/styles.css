@@ -1,0 +1,21 @@
+/* -- WebChartControl -- */
+.dxchartsuiLoadingDiv_Aqua
+{
+	background-color:Gray;	
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxchartsuiLoadingPanel_Aqua
+{
+	font: 9pt Tahoma;
+	color: #2C4D79;
+    background-color: White;
+	border: solid 1px #67A2C6;
+}
+.dxchartsuiLoadingPanel_Aqua td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 20px 8px;
+}
+

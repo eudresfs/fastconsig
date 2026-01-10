@@ -1,0 +1,13 @@
+﻿<script language='javascript' type='text/javascript'>
+
+  $(function () {
+    $("input[id*=ASPxGridViewCentralSimulacaoContratosRefinanciar]").click(function () {
+      $(".checksCetralSimulacao").attr("disabled", true);
+    });
+    });
+
+    function disableChecksCetralSimulacao() {
+    $(".checksCetralSimulacao").removeAttr("disabled");
+    }
+
+</script>

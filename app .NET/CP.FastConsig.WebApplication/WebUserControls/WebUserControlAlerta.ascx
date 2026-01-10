@@ -1,0 +1,1 @@
+﻿<%@ Control ClassName="WebUserControlAlerta" Language="C#" AutoEventWireup="true" CodeBehind="WebUserControlAlerta.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlAlerta" %>

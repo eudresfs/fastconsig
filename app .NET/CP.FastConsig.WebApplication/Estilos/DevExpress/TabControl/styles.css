@@ -1,0 +1,4830 @@
+/* InternalCheckBox */
+.dxICBFocused_Aqua_TabControl {
+	background-color: #ffcc00!important;
+}
+.dxICheckBox_Aqua_TabControl {
+	margin: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+/* -- ASPxCallbackPanel -- */
+.dxcpLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxcpLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxcpLoadingPanelWithContent_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+	border: solid 1px #9F9F9F;
+	background-color: White;
+}
+.dxcpLoadingPanelWithContent_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxcpLoadingDiv_Aqua_TabControl
+{
+	background-color: Gray;
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+/* Disabled */
+.dxcpDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxCloudControl -- */
+.dxccControl_Aqua_TabControl a:hover
+{
+    text-decoration:underline!important;
+}
+.dxccControl_Aqua_TabControl a
+{
+	text-decoration:none!important;
+	color: #1E3695;	
+}
+.dxccControl_Aqua_TabControl
+{
+	font-family: Tahoma, Verdana, Arial;
+	text-decoration:none;
+	color: #1E3695;
+	background-color: #FFFFFF;
+}
+/* Disabled */
+.dxccDisabled_Aqua_TabControl
+{
+	color: #808080;
+	cursor: default;
+}
+
+/* -- ASPxDataView -- */
+.dxdvControl_Aqua_TabControl 
+{
+	font: 9pt Tahoma;
+	color: black;
+}
+.dxdvControl_Aqua_TabControl td.dxdvCtrl_Aqua_TabControl
+{
+	padding: 12px 40px 12px 40px;
+}
+.dxdvLoadingPanel_Aqua_TabControl
+{
+	border: solid 1px #9F9F9F;
+	background-color: white;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxdvLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxdvContent_Aqua_TabControl
+{
+}
+.dxdvItem_Aqua_TabControl,
+.dxdvFlowItem_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #787878;
+	border: solid 1px #A8A8A8;
+	background-color: #F0F0F0;
+	padding: 12px 12px 12px 14px;
+	height: 180px; /*if IE*/
+	height: expression("154px");
+}
+.dxdvFlowItem_Aqua_TabControl
+{
+	float: left;
+	overflow: hidden;
+}
+.dxdvFlowItemsContainer_Aqua_TabControl 
+{
+}
+.dxdvEmptyItem_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #787878;
+	text-align: left;
+	vertical-align: top;
+	padding: 12px 12px 12px 14px;
+	height: 180px;
+	/*if IE*/
+	height:expression("154px");
+}
+.dxdvPagerPanel_Aqua_TabControl
+{
+}
+.dxdvEmptyData_Aqua_TabControl
+{
+    color: Gray;
+}
+/* Disabled */
+.dxdvDisabled_Aqua_TabControl
+{
+	color: #808080;
+	cursor: default;
+}
+/* -- ASPxHeadline -- */
+.dxhlControl_Aqua_TabControl 
+{
+	font: 10px Verdana;
+	color: black;
+}
+.dxhlContent_Aqua_TabControl
+{
+	font: 8pt Verdana;
+	color: black;
+} 
+.dxhlDate_Aqua_TabControl
+{
+	color: Gray;
+	white-space: nowrap;
+}
+.dxhlHeader_Aqua_TabControl
+{
+	font: 10pt Tahoma;
+	color: #464646;
+	font-weight: bold;
+	line-height: 17px;
+}
+.dxhlDateHeader_Aqua_TabControl
+{
+	font: 10pt Tahoma;
+	color: Gray;
+	font-weight: normal;
+}
+.dxhlLeftPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: black;
+}
+.dxhlRightPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: black;
+}
+.dxhlDateLeftPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Gray;
+	white-space: nowrap;
+}
+.dxhlDateRightPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Gray;
+	white-space: nowrap;
+}
+.dxhlTailDiv_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Black;
+}
+.dxhlTailDiv_Aqua_TabControl a
+{
+	color: #1E3695;
+}
+.dxhlTailDiv_Aqua_TabControl a:hover
+{
+    text-decoration: none;
+}
+.dxhlTailDiv_Aqua_TabControl a:visited
+{
+    color: #996085;
+}
+.dxhlContent_Aqua_TabControl a.dxhl
+{
+	color: #1E3695;
+} 
+.dxhlContent_Aqua_TabControl a.dxhl:hover
+{
+    text-decoration: none;
+}
+.dxhlContent_Aqua_TabControl a.dxhl:visited
+{
+    color: #996085;
+}
+/* Disabled */
+.dxhlDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxLoadingPanel -- */
+.dxlpLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+	background-color: white;
+	border: solid 1px #9F9F9F;
+}
+.dxlpLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxlpLoadingDiv_Aqua_TabControl
+{
+	background-color: #777777;
+	opacity: 0.7;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=70);
+}
+/* -- ASPxMenu -- */
+.dxmControl_Aqua_TabControl 
+{
+	font: 9pt Tahoma;
+	color: black;
+}
+.dxmControl_Aqua_TabControl a,
+.dxmMenu_Aqua_TabControl a,
+.dxmVerticalMenu_Aqua_TabControl a,
+.dxmSubMenu_Aqua_TabControl a
+{
+	color: black;
+	text-decoration: none;
+}
+.dxmLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxmLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 6px 6px 6px 6px;
+}   
+.dxmMenu_Aqua_TabControl,
+.dxmVerticalMenu_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: #F0F0F0;
+	border: solid 1px #A8A8A8;
+	padding: 2px 2px 2px 2px;
+}
+.dxmMenuGutter_Aqua_TabControl,
+.dxmMenuRtlGutter_Aqua_TabControl
+{
+}
+
+.dxmMenuSeparator_Aqua_TabControl .dx,
+.dxmMenuFullHeightSeparator_Aqua_TabControl .dx 
+{
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+.dxmMenuSeparator_Aqua_TabControl,
+.dxmMenuFullHeightSeparator_Aqua_TabControl
+{
+	width: 1px;
+}
+
+.dxmMenuSeparator_Aqua_TabControl .dx,
+.dxmMenuFullHeightSeparator_Aqua_TabControl,
+.dxmMenuVerticalSeparator_Aqua_TabControl
+{
+	background-color: #A8A8A8;
+	width: 1px;
+}
+.dxmMenuSeparator_Aqua_TabControl .dx
+{
+	height: 13px;
+}
+.dxmMenuFullHeightSeparator_Aqua_TabControl
+{
+	display: none;
+}
+.dxmMenuVerticalSeparator_Aqua_TabControl
+{
+	width: 100%;
+	height: 1px;
+}
+
+.dxmMenuItem_Aqua_TabControl,
+.dxmMenuItemWithImage_Aqua_TabControl,
+.dxmMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItem_Aqua_TabControl,
+.dxmVerticalMenuItemWithImage_Aqua_TabControl,
+.dxmVerticalMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemWithImageWithPopOutImage_Aqua_TabControl, 
+.dxmVerticalMenuRtlItem_Aqua_TabControl,
+.dxmVerticalMenuRtlItemWithImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemWithImageWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItem_Aqua_TabControl,
+.dxmMenuLargeItemWithImage_Aqua_TabControl,
+.dxmMenuLargeItemWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItem_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItem_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	white-space: nowrap;
+}
+.dxmMenuItem_Aqua_TabControl,
+.dxmMenuItemWithImage_Aqua_TabControl
+{
+	padding: 4px 8px 5px;
+}
+.dxmMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 6px 5px 8px;
+}	
+.dxmVerticalMenuItem_Aqua_TabControl
+{
+	padding: 4px 19px 5px 8px;
+}
+.dxmVerticalMenuRtlItem_Aqua_TabControl
+{
+	padding: 4px 8px 5px 19px;
+}
+.dxmVerticalMenuItemWithImage_Aqua_TabControl
+{
+	padding: 4px 19px 5px 3px;
+}
+.dxmVerticalMenuRtlItemWithImage_Aqua_TabControl
+{
+	padding: 4px 3px 5px 19px;
+}
+.dxmVerticalMenuItemWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 6px 5px 8px;
+}
+.dxmVerticalMenuRtlItemWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 8px 5px 6px;
+}
+.dxmVerticalMenuItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 6px 5px 3px;
+}
+.dxmVerticalMenuRtlItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 3px 5px 6px;
+}
+.dxmMenuLargeItem_Aqua_TabControl,
+.dxmMenuLargeItemWithImage_Aqua_TabControl
+{
+	padding: 4px 12px 5px 11px;
+}
+.dxmMenuLargeItemWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 6px 5px 11px;
+}
+.dxmVerticalMenuLargeItem_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImage_Aqua_TabControl
+{
+	padding: 6px 12px 7px 11px;
+}
+.dxmVerticalMenuLargeRtlItem_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImage_Aqua_TabControl
+{
+	padding: 6px 11px 7px 12px;
+}
+.dxmVerticalMenuLargeItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 6px  6px 7px 11px;
+}
+.dxmVerticalMenuLargeRtlItemWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 6px  11px 7px 6px;
+}
+.dxmMenuItemDropDownButton_Aqua_TabControl,
+.dxmMenuLargeItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmMenuRtlItemDropDownButton_Aqua_TabControl,
+.dxmMenuLargeRtlItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmVerticalMenuItemDropDownButton_Aqua_TabControl,
+.dxmVerticalMenuLargeItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmVerticalMenuRtlItemDropDownButton_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmMenuItemSelected_Aqua_TabControl,
+.dxmMenuItemSelectedWithImage_Aqua_TabControl,
+.dxmMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemSelected_Aqua_TabControl,
+.dxmVerticalMenuItemSelectedWithImage_Aqua_TabControl,
+.dxmVerticalMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemSelected_Aqua_TabControl,
+.dxmVerticalMenuRtlItemSelectedWithImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemSelected_Aqua_TabControl,
+.dxmMenuLargeItemSelectedWithImage_Aqua_TabControl,
+.dxmMenuLargeItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImageSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImageSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	background-color: white;
+	border: solid 1px #888888;
+}
+.dxmMenuItemSelected_Aqua_TabControl,
+.dxmMenuItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 7px;
+}
+.dxmMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;
+}	
+.dxmVerticalMenuItemSelected_Aqua_TabControl
+{
+	padding: 3px 18px 4px 7px;
+}
+.dxmVerticalMenuRtlItemSelected_Aqua_TabControl
+{
+	padding: 3px 7px 4px 18px;
+}
+.dxmVerticalMenuItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 18px 4px 2px;
+}
+.dxmVerticalMenuRtlItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 18px;
+}
+.dxmVerticalMenuItemSelectedWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;	
+}
+.dxmVerticalMenuRtlItemSelectedWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 5px;
+}
+.dxmVerticalMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 2px;	
+}
+.dxmVerticalMenuRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 5px;	
+}
+.dxmMenuLargeItemSelected_Aqua_TabControl,
+.dxmMenuLargeItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 11px 4px 10px;
+}
+.dxmMenuLargeItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 10px;
+}
+.dxmVerticalMenuLargeItemSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 5px 11px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 11px;
+}
+.dxmVerticalMenuLargeItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 5px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 5px;
+}
+.dxmMenuItemDropDownButtonSelected_Aqua_TabControl,
+.dxmMenuLargeItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmMenuRtlItemDropDownButtonSelected_Aqua_TabControl,
+.dxmMenuLargeRtlItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuItemDropDownButtonSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuRtlItemDropDownButtonSelected_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmMenuItemChecked_Aqua_TabControl,
+.dxmMenuItemCheckedWithImage_Aqua_TabControl,
+.dxmMenuItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemChecked_Aqua_TabControl,
+.dxmVerticalMenuItemCheckedWithImage_Aqua_TabControl,
+.dxmVerticalMenuItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemChecked_Aqua_TabControl,
+.dxmVerticalMenuRtlItemCheckedWithImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemChecked_Aqua_TabControl,
+.dxmMenuLargeItemCheckedWithImage_Aqua_TabControl,
+.dxmMenuLargeItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeItemWithImageChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemWithImageChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	background-color: white;
+	border: solid 1px #888888;
+}
+.dxmMenuItemChecked_Aqua_TabControl,
+.dxmMenuItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 7px;
+}
+.dxmMenuItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;
+}	
+.dxmVerticalMenuItemChecked_Aqua_TabControl
+{
+	padding: 3px 18px 4px 7px;
+}
+.dxmVerticalMenuRtlItemChecked_Aqua_TabControl
+{
+	padding: 3px 7px 4px 18px;
+}
+.dxmVerticalMenuItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 3px 18px 4px 2px;	
+}
+.dxmVerticalMenuRtlItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 18px;	
+}
+.dxmVerticalMenuItemCheckedWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;	
+}
+.dxmVerticalMenuRtlItemCheckedWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 5px;	
+}
+.dxmVerticalMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 2px;	
+}
+.dxmVerticalMenuRtlItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 5px;	
+}
+.dxmMenuLargeItemChecked_Aqua_TabControl,
+.dxmMenuLargeItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 3px 11px 4px 10px;
+}
+.dxmMenuLargeItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 10px;
+}
+.dxmVerticalMenuLargeItemChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 5px 11px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemCheckedWithImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 11px;
+}
+.dxmVerticalMenuLargeItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 5px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 5px;
+}
+.dxmMenuItemDropDownButtonChecked_Aqua_TabControl,
+.dxmMenuLargeItemDropDownButtonChecked_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmMenuRtlItemDropDownButtonChecked_Aqua_TabControl,
+.dxmMenuLargeRtlItemDropDownButtonChecked_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuItemDropDownButtonChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeItemDropDownButtonChecked_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuRtlItemDropDownButtonChecked_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemDropDownButtonChecked_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmMenuItemHover_Aqua_TabControl,
+.dxmMenuItemHoverWithImage_Aqua_TabControl,
+.dxmMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl, 
+.dxmVerticalMenuItemHover_Aqua_TabControl,
+.dxmVerticalMenuItemHoverWithImage_Aqua_TabControl,
+.dxmVerticalMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl, 
+.dxmVerticalMenuRtlItemHover_Aqua_TabControl,
+.dxmVerticalMenuRtlItemHoverWithImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl, 
+.dxmMenuLargeItemHover_Aqua_TabControl,
+.dxmMenuLargeItemHoverWithImage_Aqua_TabControl,
+.dxmMenuLargeItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemHoverWithImageWithPopOutImage_Aqua_TabControl, 
+.dxmVerticalMenuLargeItemHover_Aqua_TabControl,
+.dxmVerticalMenuLargeItemHoverWithImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemHoverWithImageWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHover_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHoverWithImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	background-color: #CBCBCB;
+	border: solid 1px #888888;
+}
+.dxmMenuItemHover_Aqua_TabControl,
+.dxmMenuItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 7px;
+}
+.dxmMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;
+}	
+.dxmVerticalMenuItemHover_Aqua_TabControl
+{
+	padding: 3px 18px 4px 7px;
+}
+.dxmVerticalMenuRtlItemHover_Aqua_TabControl
+{
+	padding: 3px 7px 4px 18px;
+}
+.dxmVerticalMenuItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 18px 4px 2px;	
+}
+.dxmVerticalMenuRtlItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 18px;	
+}
+.dxmVerticalMenuItemHoverWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 7px;	
+}
+.dxmVerticalMenuRtlItemHoverWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 7px 4px 5px;	
+}
+.dxmVerticalMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 2px;	
+}
+.dxmVerticalMenuRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 5px;	
+}
+.dxmMenuLargeItemHover_Aqua_TabControl,
+.dxmMenuLargeItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 11px 4px 10px;
+}
+.dxmMenuLargeItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmMenuLargeItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 10px;
+}
+.dxmVerticalMenuLargeItemHover_Aqua_TabControl,
+.dxmVerticalMenuLargeItemHoverWithImage_Aqua_TabControl
+{
+	padding: 5px 11px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemHover_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHoverWithImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 11px;
+}
+.dxmVerticalMenuLargeItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 5px 6px 10px;
+}
+.dxmVerticalMenuLargeRtlItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 5px 10px 6px 5px;
+}
+.dxmMenuItemDropDownButtonHover_Aqua_TabControl,
+.dxmMenuLargeItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmMenuRtlItemDropDownButtonHover_Aqua_TabControl,
+.dxmMenuLargeRtlItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuItemDropDownButtonHover_Aqua_TabControl,
+.dxmVerticalMenuLargeItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmVerticalMenuRtlItemDropDownButtonHover_Aqua_TabControl,
+.dxmVerticalMenuLargeRtlItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmSubMenu_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+	border: solid 1px #666666;
+	padding: 1px;
+}
+.dxmSubMenuGutter_Aqua_TabControl,
+.dxmSubMenuRtlGutter_Aqua_TabControl
+{
+	background-color: #E0E0E0;
+}
+.dxmSubMenuSeparator_Aqua_TabControl
+{
+	background-color: #A8A8A8;
+	width: 100%;
+	height: 1px;
+}
+.dxmSubMenuItem_Aqua_TabControl,
+.dxmSubMenuItemWithImage_Aqua_TabControl,
+.dxmSubMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemWithImageWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItem_Aqua_TabControl,
+.dxmSubMenuRtlItemWithImage_Aqua_TabControl,
+.dxmSubMenuRtlItemWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	white-space: nowrap;
+}
+.dxmSubMenuItem_Aqua_TabControl,
+.dxmSubMenuItemWithImage_Aqua_TabControl
+{
+	padding: 4px 19px 5px 3px;
+}
+.dxmSubMenuRtlItem_Aqua_TabControl,
+.dxmSubMenuRtlItemWithImage_Aqua_TabControl
+{
+	padding: 4px 3px 5px 19px;
+}
+.dxmSubMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 6px 5px 3px;
+}
+.dxmSubMenuRtlItemWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 4px 3px 5px 6px;
+}
+.dxmSubMenuItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmSubMenuRtlItemDropDownButton_Aqua_TabControl
+{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.dxmSubMenuItemSelected_Aqua_TabControl,
+.dxmSubMenuItemSelectedWithImage_Aqua_TabControl,
+.dxmSubMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemSelected_Aqua_TabControl,
+.dxmSubMenuRtlItemSelectedWithImage_Aqua_TabControl,
+.dxmSubMenuRtlItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	background-color: #D8D8D8;
+	border: solid 1px #888888;
+}
+.dxmSubMenuItemSelected_Aqua_TabControl,
+.dxmSubMenuItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 18px 4px 2px;
+}
+.dxmSubMenuRtlItemSelected_Aqua_TabControl,
+.dxmSubMenuRtlItemSelectedWithImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 18px;
+}
+.dxmSubMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 2px;
+}
+.dxmSubMenuRtlItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemSelectedWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 5px;
+}
+.dxmSubMenuItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmSubMenuRtlItemDropDownButtonSelected_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmSubMenuItemChecked_Aqua_TabControl,
+.dxmSubMenuItemCheckedWithImage_Aqua_TabControl,
+.dxmSubMenuItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+.dxmSubMenuRtlItemChecked_Aqua_TabControl,
+.dxmSubMenuRtlItemCheckedWithImage_Aqua_TabControl,
+.dxmSubMenuRtlItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemCheckedWithImageWithPopOutImage_Aqua_TabControl
+{
+}
+.dxmSubMenuItemDropDownButtonChecked_Aqua_TabControl
+{
+}
+.dxmSubMenuRtlItemDropDownButtonChecked_Aqua_TabControl
+{
+}
+.dxmSubMenuItemHover_Aqua_TabControl,
+.dxmSubMenuItemHoverWithImage_Aqua_TabControl,
+.dxmSubMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemHover_Aqua_TabControl,
+.dxmSubMenuRtlItemHoverWithImage_Aqua_TabControl,
+.dxmSubMenuRtlItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	background-color: #F2F2F2;
+	border: solid 1px #888888;
+}
+.dxmSubMenuItemHover_Aqua_TabControl,
+.dxmSubMenuItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 18px 4px 2px;
+}
+.dxmSubMenuRtlItemHover_Aqua_TabControl,
+.dxmSubMenuRtlItemHoverWithImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 18px;
+}
+.dxmSubMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 5px 4px 2px;
+}
+.dxmSubMenuRtlItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmSubMenuRtlItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+	padding: 3px 2px 4px 5px;
+}
+.dxmSubMenuItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmSubMenuRtlItemDropDownButtonHover_Aqua_TabControl
+{
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.dxmSubMenuBorderCorrector_Aqua_TabControl
+{
+    position: absolute;
+    border: 0px;
+    padding: 0px;
+}
+
+.dxmMenuItemSpacing_Aqua_TabControl,
+.dxmMenuLargeItemSpacing_Aqua_TabControl,
+.dxmMenuItemSeparatorSpacing_Aqua_TabControl,
+.dxmMenuLargeItemSeparatorSpacing_Aqua_TabControl
+{
+	width: 2px;	
+}
+.dxmVerticalMenuItemSpacing_Aqua_TabControl,
+.dxmVerticalMenuItemSeparatorSpacing_Aqua_TabControl
+{
+	height: 1px;
+}
+.dxmVerticalMenuLargeItemSpacing_Aqua_TabControl,
+.dxmVerticalMenuLargeItemSeparatorSpacing_Aqua_TabControl
+{
+	height: 2px;
+}
+.dxmSubMenuItemSpacing_Aqua_TabControl,
+.dxmSubMenuItemSeparatorSpacing_Aqua_TabControl 
+{
+	height: 1px;
+}
+
+.dxmMenuItemLeftImageSpacing_Aqua_TabControl
+{
+	padding-right: 4px;
+}
+.dxmMenuItemRightImageSpacing_Aqua_TabControl
+{
+	padding-left: 4px;
+}
+.dxmVerticalMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmVerticalMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmSubMenuItemImageSpacing_Aqua_TabControl
+{
+	width: 1px;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	border-left-width: 0px !important;
+	border-right-width: 0px !important;
+}
+.dxmVerticalMenuItemLeftImageSpacing_Aqua_TabControl div,
+.dxmVerticalMenuItemRightImageSpacing_Aqua_TabControl div
+{
+	width: 4px;
+	height: 1px;
+}
+.dxmMenuItemTopImageSpacing_Aqua_TabControl,
+.dxmVerticalMenuItemTopImageSpacing_Aqua_TabControl
+{
+	margin-bottom: 4px;
+}
+.dxmMenuItemBottomImageSpacing_Aqua_TabControl,
+.dxmVerticalMenuItemBottomImageSpacing_Aqua_TabControl
+{
+	margin-top: 4px;
+}
+.dxmSubMenuItemImageSpacing_Aqua_TabControl div
+{
+	width: 7px;
+	height: 1px;
+}
+
+.dxmScrollUpButton_Aqua_TabControl,
+.dxmScrollDownButton_Aqua_TabControl
+{
+    border: solid 1px #888888;
+    background-color: #E0E0E0;
+    cursor: pointer;
+    font-size: 0px;
+    padding: 1px;
+    text-align: center;
+}
+.dxmScrollUpButton_Aqua_TabControl
+{
+    margin-bottom: 1px;
+}
+.dxmScrollDownButton_Aqua_TabControl
+{
+    margin-top: 1px;
+}
+.dxmScrollButtonHover_Aqua_TabControl
+{
+    background-color: #F2F2F2;
+}
+.dxmScrollButtonPressed_Aqua_TabControl
+{
+    background-color: #D8D8D8;
+}
+.dxmScrollButtonDisabled_Aqua_TabControl
+{
+    cursor: default;
+}
+.dxmScrollArea_Aqua_TabControl
+{
+    overflow: hidden;
+    position: relative;
+}
+
+/* Disabled */
+.dxmDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/*                             */
+/* -- ASPxMenu Toolbar mode -- */
+/*                             */
+
+td.dxmtb.dxmMenu_Aqua_TabControl
+{
+    padding: 2px;
+}
+
+.dxmtb .dxmMenuItem_Aqua_TabControl,
+.dxmtb .dxmMenuItemWithImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemWithImageWithPopOutImage_Aqua_TabControl
+{
+    padding: 4px 5px 5px 5px;
+}
+
+.dxmtb .dxmMenuItemSelected_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemChecked_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemHover_Aqua_TabControl,
+.dxmtb .dxmMenuItemHoverWithImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemHoverWithPopOutImage_Aqua_TabControl,
+.dxmtb .dxmMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl
+{
+    padding: 3px 4px 4px 4px;
+}
+.dxmtb .dxmMenuItemHoverWithImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemLeftImageSpacing_Aqua_TabControl
+{
+    padding-right: 5px;
+}
+.dxmtb .dxmMenuItemHoverWithImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemHoverWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemSelectedWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemCheckedWithImageWithPopOutImage_Aqua_TabControl.dxmMenuItemRightImageSpacing_Aqua_TabControl
+{
+    padding-left: 5px;
+}
+.dxmtb .dxmMenuItemSpacing_Aqua_TabControl,
+.dxmtb .dxmMenuItemSeparatorSpacing_Aqua_TabControl
+{
+	width: 2px;
+}
+
+/*                     */
+/* -- ASPxMenu Lite -- */
+/*                     */
+.dxm-rtl
+{
+	direction: ltr;
+}
+.dxm-rtl .dxm-content
+{
+	direction: rtl;
+}
+
+.dxm-ltr .dxm-main,
+.dxm-ltr .dxm-horizontal ul.dx 
+{
+	float: left;
+}
+.dxm-rtl .dxm-main,
+.dxm-rtl .dxm-horizontal ul.dx 
+{
+	float: right;	
+}
+.dxm-popup 
+{
+	position: relative;
+}
+ul.dx 
+{
+	list-style: none none outside;
+	margin: 0;
+	padding: 0;
+	
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+.dxm-rtl ul.dx 
+{
+	background-position: right top;
+}
+.dxm-image,
+.dxm-pImage 
+{
+	border-width: 0px;
+	vertical-align: top;
+}
+.dxm-popOut,
+.dxm-spacing,
+.dxm-separator,
+.dxm-separator b 
+{
+	font-size: 0px;
+	line-height: 0px;
+	display: block;
+}
+
+.dxm-ltr .dxm-horizontal .dxm-item,
+.dxm-ltr .dxm-horizontal .dxm-spacing,
+.dxm-ltr .dxm-horizontal .dxm-separator,
+.dxm-ltr .dxm-content
+{
+    float: left;
+}
+.dxm-rtl .dxm-horizontal .dxm-item,
+.dxm-rtl .dxm-horizontal .dxm-spacing,
+.dxm-rtl .dxm-horizontal .dxm-separator,
+.dxm-rtl .dxm-content
+{
+    float: right;    
+}
+
+.dxm-vertical .dxm-image-r .dxm-popOut
+{
+	float: left;
+}
+.dxm-vertical .dxm-image-l .dxm-popOut
+{
+	float: right;
+}
+
+.dxm-ltr .dxm-horizontal .dxm-popOut
+{
+    float: left;
+}
+.dxm-ltr .dxm-vertical .dxm-image-t .dxm-popOut,
+.dxm-ltr .dxm-vertical .dxm-image-b .dxm-popOut,
+.dxm-ltr .dxm-popup .dxm-popOut 
+{
+	float: right;
+}
+
+.dxm-rtl .dxm-horizontal .dxm-popOut
+{
+    float: right;
+}
+.dxm-rtl .dxm-vertical .dxm-image-t .dxm-popOut,
+.dxm-rtl .dxm-vertical .dxm-image-b .dxm-popOut,
+.dxm-rtl .dxm-popup .dxm-popOut 
+{
+	float: left;
+}
+
+.dxm-ie7 .dxm-vertical ul.dx,
+.dxm-ie7 .dxm-popup ul.dx 
+{
+	height: 1%;
+}
+.dxm-ie7 .dxm-vertical .dxm-item,
+.dxm-ie7 .dxm-popup .dxm-item 
+{
+	margin-bottom: -2px;
+}
+.dxm-ie7 .dxm-vertical .dxm-spacing,
+.dxm-ie7 .dxm-popup .dxm-spacing 
+{
+	margin-bottom: -1px;
+}
+.dxm-ie7 .dxm-vertical .dxm-item,
+.dxm-ie7 .dxm-vertical .dxm-spacing,
+.dxm-ie7 .dxm-vertical .dxm-separator,
+.dxm-ie7 .dxm-popup .dxm-item,
+.dxm-ie7 .dxm-popup .dxm-spacing,
+.dxm-ie7 .dxm-popup .dxm-separator 
+{
+	zoom: 1;
+}
+.dxm-vertical .dxm-separator b,
+.dxm-popup .dxm-separator b 
+{
+	margin: 0px auto;
+}
+.dxm-ie7 .dxm-vertical .dxm-separator b,
+.dxm-ie7 .dxm-popup .dxm-separator b 
+{
+	margin: 0px;
+}
+.dxm-ie7 .dxm-vertical .dxm-separator,
+.dxm-ie7 .dxm-popup .dxm-separator 
+{
+	text-align: center;
+}
+/* Horizontal align = Center */
+.dxm-haCenter 
+{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    overflow: hidden;
+}
+.dxm-haCenter .dxm-haWrapper,
+.dxm-haCenter .dxm-content 
+{
+    position: relative;
+}
+.dxm-ltr .dxm-image-l .dxm-haCenter .dxm-haWrapper,
+.dxm-ltr .dxm-image-t .dxm-haCenter .dxm-haWrapper,
+.dxm-ltr .dxm-image-b .dxm-haCenter .dxm-haWrapper
+{
+    float: left;
+    left: 50%;
+}
+.dxm-rtl .dxm-image-l .dxm-haCenter .dxm-haWrapper,
+.dxm-rtl .dxm-image-t .dxm-haCenter .dxm-haWrapper,
+.dxm-rtl .dxm-image-b .dxm-haCenter .dxm-haWrapper
+{
+    float: right;
+    right: 50%;
+}
+.dxm-ltr .dxm-image-l .dxm-haCenter .dxm-content,
+.dxm-ltr .dxm-image-t .dxm-haCenter .dxm-content,
+.dxm-ltr .dxm-image-b .dxm-haCenter .dxm-content 
+{
+    left: -50%;
+}
+.dxm-rtl .dxm-image-l .dxm-haCenter .dxm-content,
+.dxm-rtl .dxm-image-t .dxm-haCenter .dxm-content,
+.dxm-rtl .dxm-image-b .dxm-haCenter .dxm-content 
+{
+    right: -50%;
+}
+.dxm-ltr .dxm-image-r .dxm-haCenter .dxm-haWrapper 
+{
+    float: right;
+    right: 50%;
+}
+.dxm-rtl .dxm-image-r .dxm-haCenter .dxm-haWrapper 
+{
+    float: left;
+    left: 50%;
+}
+.dxm-ltr .dxm-image-r .dxm-haCenter .dxm-content 
+{
+    right: -50%;
+}
+.dxm-rtl .dxm-image-r .dxm-haCenter .dxm-content 
+{
+    left: -50%;
+}
+
+/* Appearance */
+.dxmLite_Aqua_TabControl .dxm-main 
+{
+	border: solid 1px #A8A8A8;
+    background-color: #F0F0F0;
+    padding: 2px;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dxmLite_Aqua_TabControl .dxm-vertical 
+{
+	width: 150px;
+}
+
+.dxmLite_Aqua_TabControl .dxm-popup 
+{
+	border: solid 1px #666666;
+	background-color: white;
+	padding: 1px;
+}
+
+.dxmBC 
+{
+	background-color: white;
+}
+
+.dxmLite_Aqua_TabControl ul.dx 
+{
+	font: 9pt Tahoma;
+}
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-gutter 
+{
+	background-image: url('<%=WebResource("DevExpress.Web.Images.mPopupBack.gif")%>');
+}
+
+.dxmLite_Aqua_TabControl .dxm-item 
+{
+	cursor: default;
+}
+
+.dxmLite_Aqua_TabControl .dxm-image-t .dxm-item,
+.dxmLite_Aqua_TabControl .dxm-image-b .dxm-item,
+.dxmLite_Aqua_TabControl .dxm-content 
+{
+	text-align: center;
+	white-space: nowrap;
+}
+
+.dxmLite_Aqua_TabControl,
+.dxmLite_Aqua_TabControl .dxm-content a.dx 
+{
+	color: Black;
+}
+.dxmLite_Aqua_TabControl .dxm-disabled,
+.dxmLite_Aqua_TabControl .dxm-disabled .dxm-content a.dx 
+{
+	color: #acacac;
+}
+
+.dxmLite_Aqua_TabControl .dxm-content a.dx 
+{
+	text-decoration: none;
+}
+
+.dxmLite_Aqua_TabControl .dxm-item 
+{
+	border-width: 1px;
+}
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-popOut,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-image-l .dxm-popOut
+{
+	border-width: 0 0 0 1px;
+}
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-image-r .dxm-popOut,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popOut
+{
+	border-width: 0 1px 0 0;
+}
+.dxmLite_Aqua_TabControl .dxm-item,
+.dxmLite_Aqua_TabControl .dxm-popOut 
+{
+	border-color: transparent;
+	border-style: solid;
+}
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-image
+{
+	float: left;
+}
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-image
+{	
+	float: right;
+}
+
+/* Checked, Selected, Hovered */
+.dxmLite_Aqua_TabControl .dxm-main .dxm-checked,
+.dxmLite_Aqua_TabControl .dxm-selected,
+.dxmLite_Aqua_TabControl .dxm-hovered,
+.dxmLite_Aqua_TabControl .dxm-main .dxm-dropDownMode.dxm-checked .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-dropDownMode.dxm-selected .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-dropDownMode.dxm-hovered .dxm-popOut 
+{
+	border-color: #888888;
+}
+.dxmLite_Aqua_TabControl .dxm-main .dxm-checked,
+.dxmLite_Aqua_TabControl .dxm-main .dxm-selected 
+{
+	background-color: white;
+}
+.dxmLite_Aqua_TabControl .dxm-main .dxm-hovered 
+{
+	background-color: #CBCBCB;
+}
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-selected 
+{
+	background-color: #D8D8D8;
+}
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-hovered 
+{
+	background-color: #F2F2F2;
+}
+
+/* Content */
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-content 
+{
+	padding: 3px 7px 4px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-content 
+{
+	padding: 3px 11px 4px 10px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t.dxm-noImages .dxm-item .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b.dxm-noImages .dxm-item .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-noImage .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-noImage .dxm-content {
+    padding: 4px 11px 5px 10px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-subMenu .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-subMenu .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-subMenu .dxm-content 
+{
+	padding-right: 3px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-dropDownMode .dxm-content 
+{
+	padding-right: 4px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-subMenu .dxm-content 
+{
+	padding-left: 3px;
+	padding-right: 5px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-dropDownMode .dxm-content 
+{
+	padding-left: 4px;
+	padding-right: 5px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-dropDownMode .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-dropDownMode .dxm-content 
+{
+	padding-right: 8px;
+}
+
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-content 
+{
+	padding: 3px 18px 4px 2px;
+}
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-content,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-content,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-content 
+{
+	padding: 3px 2px 4px 18px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-noSubMenu .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-subMenu .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-dropDownMode .dxm-content 
+{
+	padding-right: 5px;
+	padding-left: 14px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-content 
+{
+	padding: 5px 10px 6px;
+}
+
+/* Image */
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-image,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-hasText .dxm-image
+{
+	margin-right: 5px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-image,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-hasText .dxm-image
+{
+	margin-left: 5px;
+}
+.dxmLite_Aqua_TabControl .dxm-image-t .dxm-image 
+{
+	margin-bottom: 4px;
+}
+.dxmLite_Aqua_TabControl .dxm-image-b .dxm-image 
+{
+	margin-top: 4px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-image 
+{
+	margin-right: 7px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-image 
+{
+	margin-left: 7px;
+}
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-popup .dxm-image 
+{
+	margin-right: 12px;
+}
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-image 
+{
+	margin-left: 12px;
+}
+
+/* Image replacement */
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l.dxm-noImages .dxm-content,
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r.dxm-noImages .dxm-content  
+{
+	padding-left: 7px;
+}
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l.dxm-noImages .dxm-content,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r.dxm-noImages .dxm-content  
+{
+	padding-right: 7px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-noImage 
+{
+	padding-left: 21px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-noImage 
+{
+	padding-right: 21px;
+}
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-popup .dxm-gutter.dxm-noImages .dxm-item,
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-popup .dxm-noImage 
+{
+	padding-left: 26px;
+}
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-gutter.dxm-noImages .dxm-item,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-noImage 
+{
+	padding-right: 26px;
+}
+
+/* PopOut */
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t.dxm-noImages .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-noImage .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b.dxm-noImages .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-noImage .dxm-popOut 
+{
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-popOut 
+{
+	padding-top: 27px;
+	padding-bottom: 27px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-l .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-popOut 
+{
+	padding-right: 5px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-r .dxm-popOut 
+{
+	padding-left: 7px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-dropDownMode .dxm-popOut 
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-popOut 
+{
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t.dxm-noImages .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-noImage .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b.dxm-noImages .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-noImage .dxm-popOut 
+{
+	padding-top: 8px;
+	padding-bottom: 9px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-popOut 
+{
+	padding-top: 26px;
+	padding-bottom: 27px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-popOut 
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/* PopOut replacement */
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-noSubMenu,
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-noSubMenu,
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-noSubMenu,
+.dxm-ltr.dxmLite_Aqua_TabControl .dxm-popup .dxm-noSubMenu 
+{
+	padding-right: 13px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-noSubMenu,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-noSubMenu,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-noSubMenu,
+.dxm-rtl.dxmLite_Aqua_TabControl .dxm-popup .dxm-noSubMenu 
+{
+	padding-left: 13px;
+}
+
+/* Spacings */
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-spacing 
+{
+	width: 2px;
+	height: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-spacing,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-spacing,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-spacing 
+{
+	height: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-spacing,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-spacing 
+{
+	height: 2px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-separator 
+{
+	margin: 0px 2px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-separator,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-separator,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-separator 
+{
+	margin: 1px 0px;
+}
+.dxm-ie7.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-l .dxm-separator,
+.dxm-ie7.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-r .dxm-separator,
+.dxm-ie7.dxmLite_Aqua_TabControl .dxm-popup .dxm-separator 
+{
+	margin-top: 0px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-separator,
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-separator 
+{
+	margin: 2px 0px;
+}
+.dxm-ie7.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-t .dxm-separator,
+.dxm-ie7.dxmLite_Aqua_TabControl .dxm-vertical .dxm-image-b .dxm-separator 
+{
+	margin-top: 1px;
+}
+
+/* Separator */
+.dxmLite_Aqua_TabControl .dxm-separator b 
+{
+	background-color: #A8A8A8;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-separator b 
+{
+	height: 13px;
+	width: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-vertical .dxm-separator b,
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-separator b 
+{
+	height: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-separator b,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t.dxm-noImages .dxm-separator b,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b.dxm-noImages .dxm-separator b  
+{
+	margin-top: 6px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-t .dxm-separator b,
+.dxmLite_Aqua_TabControl .dxm-horizontal .dxm-image-b .dxm-separator b 
+{
+	margin-top: 23px;
+}
+.dxmLite_Aqua_TabControl .dxm-popup .dxm-gutter .dxm-separator 
+{
+	padding-left: 29px;
+}
+/* Scroll elements */
+.dxmLite_Aqua_TabControl .dxm-scrollUpBtn, 
+.dxmLite_Aqua_TabControl .dxm-scrollDownBtn
+{
+    border: solid 1px #888888;
+    background-color: #E0E0E0;
+    cursor: pointer;
+    font-size: 0px;
+    padding: 1px;
+    text-align: center;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollUpBtn
+{
+    margin-bottom: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollDownBtn
+{
+    margin-top: 1px;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollBtnHovered
+{
+    background-color: #F2F2F2;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollBtnPressed
+{
+    background-color: #D8D8D8;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollBtnDisabled
+{
+    cursor: default;
+}
+.dxmLite_Aqua_TabControl .dxm-scrollArea
+{
+    overflow: hidden;
+    position: relative;
+}
+
+/*                                  */
+/* -- ASPxMenu Lite Toolbar mode -- */
+/*                                  */
+.dxmLite_Aqua_TabControl .dxm-main.dxmtb {
+    padding: 2px;
+}
+/* has image */
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-subMenu .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-subMenu .dxm-content
+{
+	padding: 4px 4px 4px;
+}
+/* no image */
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-subMenu.dxm-noImage .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-subMenu.dxm-noImage .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l.dxm-noImages .dxm-item .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r.dxm-noImages .dxm-item .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-noImage .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-noImage .dxm-content
+{
+	padding: 4px 4px 5px;
+}
+/* dd has image */
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-dropDownMode .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-dropDownMode .dxm-content 
+{
+	padding: 4px 5px 4px 4px;
+}
+/* dd no image */
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-dropDownMode.dxm-noImage .dxm-content,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-dropDownMode.dxm-noImage .dxm-content 
+{
+	padding: 4px 4px 5px;
+}
+
+.dxmLite_Aqua_TabControl .dxmtb.dxm-popup .dxm-content
+{
+	padding-top: 4px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-content .dxm-image,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-content .dxm-image
+{
+	margin-top: -1px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-image {
+	margin-right: 0px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-image {
+	margin-left: 0px;
+}
+.dxmLite_Aqua_TabControl .dxm-popup.dxmtb .dxm-image {
+	margin-right: 10px;
+	margin-top: -1px;
+}
+.dxmLite_Aqua_TabControl.dxm-rtl .dxm-popup.dxmtb .dxm-image {
+	margin-right: 0px;
+}
+
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-l .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-image-r .dxm-popOut,
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-dropDownMode .dxm-popOut {
+    padding: 10px 3px;
+}
+
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-spacing {
+	width: 4px;
+	height: 23px;
+}
+.dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-separator {
+	margin: 0px 2px;
+	height: 23px;
+}
+
+/* -- ASPxNavBar -- */
+.dxnbControl_Aqua_TabControl 
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+}
+.dxnbControl_Aqua_TabControl td.dxnbCtrl_Aqua_TabControl
+{
+    padding: 11px;
+}
+.dxnbControl_Aqua_TabControl a
+{
+	color: #1E3695;
+}
+.dxnbLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxnbLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}   
+.dxnbGroupHeader_Aqua_TabControl
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	background-color: #E0E0E0;
+	border: solid 1px #A8A8A8;
+	padding: 4px 10px 4px 10px;
+}
+.dxnbGroupHeader_Aqua_TabControl table.dxnb
+{
+	font: bold 9pt Tahoma;
+	color: black;
+}
+.dxnbGroupHeader_Aqua_TabControl td.dxnb
+{
+	white-space: nowrap;
+}
+.dxnbGroupHeaderCollapsed_Aqua_TabControl
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	background-color: #E0E0E0;
+	border: solid 1px #A8A8A8;
+	padding: 4px 10px 4px 10px;
+}
+.dxnbGroupHeaderCollapsed_Aqua_TabControl table.dxnb
+{
+	font: bold 9pt Tahoma;
+	color: black;
+}
+.dxnbGroupHeaderCollapsed_Aqua_TabControl td.dxnb
+{
+	white-space: nowrap;
+}
+.dxnbGroupContent_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #1E3695;
+	border: solid 1px #A8A8A8;
+	padding: 5px 5px 5px 5px;
+}
+.dxnbItem_Aqua_TabControl,
+.dxnbLargeItem_Aqua_TabControl,
+.dxnbBulletItem_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #1E3695;
+}
+.dxnbItem_Aqua_TabControl
+{
+	padding-top: 4px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.dxnbLargeItem_Aqua_TabControl
+{
+	padding-top: 6px;
+	padding-right: 12px;
+	padding-bottom: 7px;
+	padding-left: 12px;
+}
+.dxnbBulletItem_Aqua_TabControl
+{
+	margin-bottom: 9px;
+}
+.dxnbItemSelected_Aqua_TabControl,
+.dxnbLargeItemSelected_Aqua_TabControl,
+.dxnbBulletItemSelected_Aqua_TabControl
+{
+	background-color: #D8D8D8;
+	border: solid 1px #888888;
+}
+.dxnbItemSelected_Aqua_TabControl
+{
+	padding-top: 3px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+}
+.dxnbLargeItemSelected_Aqua_TabControl
+{
+	padding-top: 5px;
+	padding-right: 11px;
+	padding-bottom: 6px;
+	padding-left: 11px;
+}
+.dxnbItemHover_Aqua_TabControl,
+.dxnbLargeItemHover_Aqua_TabControl,
+.dxnbBulletItemHover_Aqua_TabControl
+{
+	background-color: #F2F2F2;
+	border: solid 1px #888888;
+}
+.dxnbItemHover_Aqua_TabControl
+{
+	padding-top: 3px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+}
+.dxnbLargeItemHover_Aqua_TabControl
+{
+	padding-top: 5px;
+	padding-right: 11px;
+	padding-bottom: 6px;
+	padding-left: 11px;
+}
+.dxnbGroupHeader_Aqua_TabControl,
+.dxnbGroupHeaderCollapsed_Aqua_TabControl
+{
+    text-align: left;
+}
+.dxnbItem_Aqua_TabControl,
+.dxnbItemHover_Aqua_TabControl,
+.dxnbItemSelected_Aqua_TabControl,
+.dxnbBulletItem_Aqua_TabControl,
+.dxnbBulletItemHover_Aqua_TabControl,
+.dxnbBulletItemSelected_Aqua_TabControl
+{
+    text-align: left;
+}
+.dxnbLargeItem_Aqua_TabControl,
+.dxnbLargeItemHover_Aqua_TabControl,
+.dxnbLargeItemSelected_Aqua_TabControl
+{
+    text-align: center;
+}
+.dxnbGroupHeaderHover_Aqua_TabControl
+{
+}
+.dxnbGroupHeaderCollapsedHover_Aqua_TabControl
+{
+}
+/* Spacings */
+.dxnbGroupSpacing_Aqua_TabControl,
+.dxnbItemSpacing_Aqua_TabControl
+{
+	width: 100%;
+	height: 1px;
+}
+.dxnbGroupSpacing_Aqua_TabControl 
+{
+	height: 13px;
+}
+.dxnbImgCellLeft_Aqua_TabControl 
+{
+	padding-right: 4px;	
+}
+.dxnbImgCellRight_Aqua_TabControl
+{
+	padding-left: 4px;	
+}
+.dxnbLargeItemImgTop_Aqua_TabControl
+{
+	margin-bottom: 3px;
+}
+.dxnbLargeItemImgBottom_Aqua_TabControl
+{
+	margin-top: 3px;
+} 
+/* Disabled */
+.dxnbDisabled_Aqua_TabControl,
+.dxnbDisabled_Aqua_TabControl table.dxnb
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxNavBar Lite -- */
+.dxnbLite_Aqua_TabControl 
+{
+    color: Black;
+    background: white;    
+	font: 9pt Tahoma;
+	list-style: none none outside;
+    margin: 0;         
+    padding: 11px;  
+    float: left;
+    width: 200px;
+}
+.dxnbLite_Aqua_TabControl a
+{
+	color: #1E3695;
+}
+.dxnbLite_Aqua_TabControl .dxnb-gr 
+{
+	margin-bottom: 13px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-header,
+.dxnbLite_Aqua_TabControl .dxnb-headerCollapsed 
+{
+	background: #E0E0E0;
+	border: solid 1px #A8A8A8;
+	font-weight: bold;	
+	overflow: hidden;
+    padding: 4px 10px;
+	cursor: pointer;
+	clear: both;
+}
+.dxnbLite_Aqua_TabControl .dxnb-content 
+{
+    list-style: none none outside;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+	border: solid 1px #A8A8A8;
+	border-top-width: 0;
+}
+.dxnb-noHeads .dxnb-content
+{
+	border-top-width: 1px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-item,
+.dxnbLite_Aqua_TabControl .dxnb-large,
+.dxnbLite_Aqua_TabControl .dxnb-bullet 
+{
+	color: #1E3695;
+    clear: both;
+    overflow: hidden;
+    cursor: default;
+}
+.dxnbLite_Aqua_TabControl .dxnb-item,
+.dxnbLite_Aqua_TabControl .dxnb-large,
+.dxnbLite_Aqua_TabControl .dxnb-tmpl
+{
+	margin-bottom: 1px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-item
+{
+	padding: 4px 5px 5px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-large
+{
+	padding: 6px 12px 7px; 
+}
+.dxnbLite_Aqua_TabControl .dxnb-bullet,
+.dxnbLite_Aqua_TabControl .dxnb-bulletHover,
+.dxnbLite_Aqua_TabControl .dxnb-bulletSelected 
+{
+    padding: 0 5px;
+    overflow: visible;
+    margin-bottom: 9px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-itemSelected,
+.dxnbLite_Aqua_TabControl .dxnb-itemHover
+{
+	padding: 3px 4px 4px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-largeSelected,
+.dxnbLite_Aqua_TabControl .dxnb-largeHover
+{
+	padding: 5px 11px 6px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-itemSelected,
+.dxnbLite_Aqua_TabControl .dxnb-largeSelected
+{
+	background-color: #D8D8D8;
+	border: solid 1px #888888;
+}
+.dxnbLite_Aqua_TabControl .dxnb-itemHover,
+.dxnbLite_Aqua_TabControl .dxnb-largeHover
+{
+	background-color: #F2F2F2;
+	border: solid 1px #888888;
+}
+.dxnbLite_Aqua_TabControl .dxnb-header,
+.dxnbLite_Aqua_TabControl .dxnb-headerCollapsed, 
+.dxnbLite_Aqua_TabControl .dxnb-item,
+.dxnbLite_Aqua_TabControl .dxnb-itemHover,
+.dxnbLite_Aqua_TabControl .dxnb-itemSelected,
+.dxnbLite_Aqua_TabControl .dxnb-bullet,
+.dxnbLite_Aqua_TabControl .dxnb-bulletHover,
+.dxnbLite_Aqua_TabControl .dxnb-bulletSelected
+{
+    text-align: left;
+}
+.dxnbLite_Aqua_TabControl .dxnb-large,
+.dxnbLite_Aqua_TabControl .dxnb-largeHover,
+.dxnbLite_Aqua_TabControl .dxnb-largeSelected
+{
+    text-align: center;
+}
+.dxnbLite_Aqua_TabControl .dxnb-headerHover
+{
+}
+.dxnbLite_Aqua_TabControl .dxnb-headerCollapsedHover
+{
+}
+.dxnbLite_Aqua_TabControl .dxnb-last
+{
+	margin-bottom: 0;
+}
+.dxnbLite_Aqua_TabControl .dxnb-btn,
+.dxnbLite_Aqua_TabControl .dxnb-btnLeft,
+.dxnbLite_Aqua_TabControl .dxnb-img
+{
+	border-width: 0;
+}
+
+.dxnbLite_Aqua_TabControl .dxnb-btn
+{
+	float: right;
+	margin-left: 4px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-btnLeft 
+{
+	float: left;
+	margin-right: 4px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-img
+{
+	margin:0 4px 0 0;
+	float: left;
+}
+.dxnbLite_Aqua_TabControl .dxnb-right .dxnb-item .dxnb-img,
+.dxnbLite_Aqua_TabControl .dxnb-rtlHeader .dxnb-img
+{
+	float: right;
+	margin: 0 0 0 4px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-top .dxnb-large .dxnb-img
+{
+	margin-bottom: 3px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-bottom .dxnb-large .dxnb-img
+{
+	margin-top: 3px;
+}
+.dxnbLite_Aqua_TabControl .dxnb-large .dxnb-img
+{
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dxnbLiteDisabled_Aqua_TabControl,
+.dxnbLite_Aqua_TabControl .dxnbLiteDisabled_Aqua_TabControl,
+.dxnbLiteDisabled_Aqua_TabControl a,
+.dxnbLiteDisabled_Aqua_TabControl .dxnb-item,
+.dxnbLiteDisabled_Aqua_TabControl .dxnb-large,
+.dxnbLiteDisabled_Aqua_TabControl .dxnb-bullet,
+.dxnbLiteDisabled_Aqua_TabControl .dxnb-header,
+.dxnbLiteDisabled_Aqua_TabControl .dxnb-headerCollapsed 
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxNewsControl -- */
+.dxncControl_Aqua_TabControl
+{
+	font: 10px Tahoma;
+	color: black;
+	background-color: White;
+}
+.dxncControl_Aqua_TabControl td.dxncCtrl_Aqua_TabControl
+{
+	padding: 18px 18px 18px 18px;
+}
+.dxncLoadingPanel_Aqua_TabControl
+{
+	border: solid 1px #9F9F9F;
+	background-color: white;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxncLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxncContent_Aqua_TabControl
+{
+}
+.dxncPagerPanel_Aqua_TabControl
+{
+	padding: 0px 3px 0px 3px;
+}
+.dxncItem_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	vertical-align: top;
+	border-bottom: solid 1px #A8A8A8;
+	padding: 12px 8px 12px 8px;
+}
+.dxncEmptyItem_Aqua_TabControl
+{
+	font: 10px Tahoma;
+	vertical-align: top;
+	padding: 12px 12px 12px 14px;
+}
+.dxncBackToTop_Aqua_TabControl
+{
+	font: 10px Tahoma;
+	color: #404040;
+}
+.dxncBackToTop_Aqua_TabControl a
+{
+	font: 10px Tahoma;
+	color: #0d45b7;
+}
+.dxncBackToTop_Aqua_TabControl a:hover
+{
+	font: 10px Tahoma;
+	color: #5494ea;
+}
+.dxncBackToTop_Aqua_TabControl a:visited
+{
+	font: 10px Tahoma;
+	color: #ab59a6;
+}
+
+/* Headline */
+.dxncItemContent_Aqua_TabControl
+{
+	font: 8pt Verdana;
+	color: black;
+} 
+.dxncItemDate_Aqua_TabControl
+{
+	color: Gray;
+	white-space: nowrap;
+}
+.dxncItemHeader_Aqua_TabControl
+{
+	font: 10pt Tahoma;
+	color: #464646;
+	font-weight: bold;
+	line-height: 17px;
+}
+.dxncItemHeader_Aqua_TabControl .dxncItemDate_Aqua_TabControl
+{
+	font: 10pt Tahoma;
+	color: Gray;
+	font-weight: normal;
+}
+.dxncItemLeftPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: black;
+}
+.dxncItemRightPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: black;
+}
+.dxncItemDateLeftPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Gray;
+	white-space: nowrap;
+}
+.dxncItemDateRightPanel_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Gray;
+	white-space: nowrap;
+}
+.dxncItemTailDiv_Aqua_TabControl
+{
+	font: 10px Verdana;
+	color: Black;
+}
+.dxncItemTailDiv_Aqua_TabControl a
+{
+	color: #1E3695;
+}
+.dxncItemTailDiv_Aqua_TabControl a:hover
+{
+    text-decoration: none;
+}
+.dxncItemTailDiv_Aqua_TabControl a:visited
+{
+    color: #996085;
+}
+.dxncItemContent_Aqua_TabControl a.dxhl
+{
+	color: #1E3695;
+} 
+.dxncItemContent_Aqua_TabControl a.dxhl:hover
+{
+    text-decoration: none;
+}
+.dxncItemContent_Aqua_TabControl a.dxhl:visited
+{
+    color: #996085;
+}
+.dxncEmptyData_Aqua_TabControl
+{
+    color: Gray;
+}
+/* Disabled */
+.dxncDisabled_Aqua_TabControl,
+.dxncDisabled_Aqua_TabControl a,
+.dxncDisabled_Aqua_TabControl a:hover
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxPager -- */
+.dxpControl_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+}
+.dxpControl_Aqua_TabControl td.dxpCtrl_Aqua_TabControl 
+{
+    padding: 5px 2px 5px 2px;
+}
+.dxpButton_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #394EA2;
+	text-decoration: underline;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+.dxpButton_Aqua_TabControl a
+{
+	font: 9pt Tahoma;
+	color: #394EA2;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+.dxpDisabledButton_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	text-decoration: none;
+}
+.dxpPageNumber_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #394EA2;
+	text-decoration: underline;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1px 5px 0px 5px;
+}
+.dxpPageNumber_Aqua_TabControl a
+{
+	font: 9pt Tahoma;
+	color: #394EA2;
+	text-decoration: underline;
+}
+.dxpCurrentPageNumber_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 1px 3px 0px 3px;
+	white-space: nowrap;
+}
+.dxpSummary_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1px 4px 0px 4px;
+}
+.dxpSeparator_Aqua_TabControl
+{
+	background-color: #CCCCCC;
+}
+/* Disabled */
+.dxpDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	border-color: #808080;
+	cursor: default;
+}
+
+/* -- ASPxPager Lite -- */
+
+.dxpLite_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	padding: 5px 2px;
+	float: left;
+}
+
+.dxpLite_Aqua_TabControl .dxp-summary,
+.dxpLite_Aqua_TabControl .dxp-sep,
+.dxpLite_Aqua_TabControl .dxp-button,
+.dxpLite_Aqua_TabControl .dxp-num,
+.dxpLite_Aqua_TabControl .dxp-current,
+.dxpLite_Aqua_TabControl .dxp-ellip
+{
+	display: block;	
+	float: left;
+	margin-left: 4px;
+	font-weight: normal;
+}
+.dxpLite_Aqua_TabControl .dxp-lead
+{
+	margin-left: 0 !important;
+}
+
+.dxpLite_Aqua_TabControl a
+{
+	color: #394EA2;
+	text-decoration: underline;
+}
+
+.dxpLite_Aqua_TabControl .dxp-button
+{
+	color: #394EA2;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: underline;	
+}
+.dxpLite_Aqua_TabControl .dxp-button img
+{
+	border: 0;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.dxpLite_Aqua_TabControl .dxp-wideButton
+{
+	padding: 0 5px;
+}
+.dxpLite_Aqua_TabControl .dxp-disabledButton
+{
+	text-decoration: none;
+	color: #acacac;
+	cursor: default;	
+}
+
+.dxpLite_Aqua_TabControl .dxp-num
+{
+	color: #394EA2;
+	text-decoration: underline;	
+	padding: 2px 5px 1px;
+	cursor: pointer;
+}
+
+.dxpLite_Aqua_TabControl .dxp-current
+{
+	color: Black;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px 3px 1px;	
+	cursor: text;
+}
+
+.dxpLite_Aqua_TabControl .dxp-summary,
+.dxpLite_Aqua_TabControl .dxp-ellip
+{
+	white-space: nowrap;
+	padding: 2px 4px 1px;
+}
+
+.dxpLite_Aqua_TabControl .dxp-sep
+{
+	background: #cccccc;
+    width: 1px;
+    height: 11px;
+    margin-top: 5px;
+}
+
+.dxpLiteDisabled_Aqua_TabControl,
+.dxpLiteDisabled_Aqua_TabControl a,
+.dxpLiteDisabled_Aqua_TabControl .dxp-summary,
+.dxpLiteDisabled_Aqua_TabControl .dxp-sep, 
+.dxpLiteDisabled_Aqua_TabControl .dxp-button,
+.dxpLiteDisabled_Aqua_TabControl .dxp-num,
+.dxpLiteDisabled_Aqua_TabControl .dxp-current,
+.dxpLiteDisabled_Aqua_TabControl .dxp-ellip
+{
+	color: #acacac;
+	border-color: #808080;
+	cursor: default;
+}
+
+
+/* -- ASPxPopupControl -- */
+.dxpcControl_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+	border: solid 1px #8B8B8B;
+    width: 200px;
+}
+.dxpcControl_Aqua_TabControl a
+{
+	color: #1E3695;
+}
+.dxpcCloseButton_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	padding: 1px 1px 1px 1px;
+}
+.dxpcCloseButtonHover_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+}
+.dxpcContent_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #010000;
+	white-space: normal;
+	vertical-align:top;
+}
+.dxpcContentPaddings_Aqua_TabControl 
+{
+    padding: 9px 12px 9px 12px;
+}
+.dxpcFooter_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #858585;
+	background-color: #F3F3F3;
+	border-top: solid 1px #E0E0E0;
+}
+.dxpcFooter_Aqua_TabControl td.dxpc
+{
+	font: 9pt Tahoma;
+	color: #858585;
+	white-space: nowrap;
+	padding: 6px 12px 8px 12px;
+}
+.dxpcHeader_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #404040;
+	background-color: #DCDCDC;
+	border-bottom: solid 1px #C9C9C9;	
+}
+.dxpcHeader_Aqua_TabControl td.dxpc
+{
+	font: 9pt Tahoma;
+	color: #404040;
+	white-space: nowrap;
+}
+.dxpcModalBackground_Aqua_TabControl
+{
+	background-color: #777777;
+	opacity: 0.7;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=70);
+}
+.dxpcLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+	background-color: white;
+	border: solid 1px #9F9F9F;
+}
+.dxpcLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxpcLoadingDiv_Aqua_TabControl
+{
+	background-color: Gray;
+	opacity: 0.01;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+
+
+
+/* Disabled */
+.dxpcDisabled_Aqua_TabControl
+{
+	color: #808080;
+	cursor: default;
+}
+
+/* -- ASPxPopupControl Lite -- */
+.dxpcLite_Aqua_TabControl,
+.dxdpLite_Aqua_TabControl  
+{   
+    width: 200px;
+    left: 0;
+    top: 0;
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    border-spacing: 0;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-mainDiv,
+.dxdpLite_Aqua_TabControl .dxpc-mainDiv
+{
+    position: relative;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-mainDiv,
+.dxpcLite_Aqua_TabControl.dxpc-mainDiv,
+.dxdpLite_Aqua_TabControl .dxpc-mainDiv,
+.dxdpLite_Aqua_TabControl.dxpc-mainDiv  
+{
+    top: 0;
+    left: 0;
+    font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+	border: solid 1px #8B8B8B;
+}
+
+.dxpcLite_Aqua_TabControl a,
+.dxdpLite_Aqua_TabControl a  
+{
+    color: #1E3695;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-link,
+.dxdpLite_Aqua_TabControl .dxpc-link
+{
+    float: left;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-link,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-link
+{
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl a .dxpc-headerText,
+.dxpcLite_Aqua_TabControl a .dxpc-footerText,
+.dxdpLite_Aqua_TabControl a .dxpc-headerText,
+.dxdpLite_Aqua_TabControl a .dxpc-footerText
+{
+    cursor: pointer;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-closeBtn,
+.dxdpLite_Aqua_TabControl .dxpc-closeBtn  
+{
+    font: 9pt Tahoma;
+	color: black;
+	padding: 1px 1px 1px 1px;
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl  .dxpc-closeBtn,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl  .dxpc-closeBtn  
+{
+    float: left;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-closeBtnHover,
+.dxdpLite_Aqua_TabControl .dxpc-closeBtnHover
+{
+    font: 9pt Tahoma;
+	color: black;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-header,
+.dxdpLite_Aqua_TabControl .dxpc-header 
+{
+    font: 9pt Tahoma;
+	color: #404040;
+	background-color: #DCDCDC;
+	border-bottom: solid 1px #C9C9C9;	
+    padding: 2px 2px 2px 12px;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-header,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-header  
+{
+    padding: 2px 12px 2px 2px;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-headerText,
+.dxdpLite_Aqua_TabControl .dxpc-headerText
+{
+	white-space: nowrap;
+    float: left;
+    margin-top: 1px;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-headerText,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-headerText
+{
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-headerImg,
+.dxdpLite_Aqua_TabControl .dxpc-headerImg
+{
+    float: left;
+    margin: 0 4px 0 0;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-headerImg,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-headerImg
+{
+    float: right;
+    margin: 0 0 0 4px;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-expandableDiv,
+.dxdpLite_Aqua_TabControl .dxpc-expandableDiv 
+{
+	float: left;
+	overflow: hidden;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-expandableDiv,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-expandableDiv 
+{
+	float: right;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-content,
+.dxdpLite_Aqua_TabControl .dxpc-content
+{
+    color: #010000;
+    font: 9pt Tahoma;
+	white-space: normal;
+    padding: 9px 12px 9px 12px;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-footer,
+.dxdpLite_Aqua_TabControl .dxpc-footer
+{
+	color: #858585;
+	background-color: #F3F3F3;
+	border-top: solid 1px #E0E0E0;
+    font: 9pt Tahoma;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-footerContent,
+.dxdpLite_Aqua_TabControl .dxpc-footerContent
+{
+    float: left;
+    margin: 0;
+    padding: 6px 12px 8px 12px;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerContent,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerContent
+{
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-footerText,
+.dxdpLite_Aqua_TabControl .dxpc-footerText
+{
+    white-space: nowrap;
+    float: left;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerText,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerText
+{
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-footerImg,
+.dxdpLite_Aqua_TabControl .dxpc-footerImg
+{
+    float: left;
+    margin: -1px 4px 0 0;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerImg,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-footerImg
+{
+    float: right;
+    margin: -1px 0 0 4px;
+}
+
+.dxpcLite_Aqua_TabControl .dxpc-sizeGrip,
+.dxdpLite_Aqua_TabControl .dxpc-sizeGrip
+{
+    float: right;
+}
+
+.dxpcLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-sizeGrip,
+.dxdpLite_Aqua_TabControl.dxRtl_Aqua_TabControl .dxpc-sizeGrip
+{
+    float: left;
+}
+
+.dxpcModalBackLite_Aqua_TabControl,
+.dxdpModalBackLite_Aqua_TabControl
+{
+    background-color: #777777;
+	opacity: 0.7;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=70);
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.dxpcLiteDisabled_Aqua_TabControl,
+.dxdpLiteDisabled_Aqua_TabControl
+{
+	color: #808080;
+	cursor: default;
+}
+
+/* -- ASPxRoundPanel -- */
+.dxrpControl_Aqua_TabControl td.dxrp,
+.dxrpControlGB_Aqua_TabControl td.dxrp
+{
+	font-size: 9pt;
+	font-family: Tahoma, Verdana, Arial;
+	color: #000000;	
+}
+/* Header */
+.dxrpControl_Aqua_TabControl .dxrpHeader_Aqua_TabControl,
+.dxrpControl_Aqua_TabControl .dxrpHeader_Aqua_TabControl td.dxrp,
+.dxrpControlGB_Aqua_TabControl span.dxrpHeader_Aqua_TabControl
+{
+    font-size: 9pt;
+	font-family: Tahoma, Verdana, Arial;    
+	color: #313131;
+}
+.dxrpControl_Aqua_TabControl .dxrpHeader_Aqua_TabControl
+{
+    background-color: #DEDEDE;
+	border-bottom: 1px solid #C6C6C6;
+}
+.dxrpControl_Aqua_TabControl .dxrpHI,
+.dxrpControl_Aqua_TabControl .dxrpHeader_Aqua_TabControl,
+.dxrpControl_Aqua_TabControl .dxrpHeader_Aqua_TabControl td.dxrp
+{
+	vertical-align: top;
+	white-space: nowrap;
+}
+/* Header image */
+.dxrpControl_Aqua_TabControl .dxrpHI
+{
+    padding-right: 4px;
+}
+.dxrpControl_Aqua_TabControl .dxrpHIR
+{
+    padding-left: 4px;
+}
+/* Content */
+.dxrpControl_Aqua_TabControl .dxrpcontent,
+.dxrpControlGB_Aqua_TabControl .dxrpcontent
+{
+	vertical-align: top;
+}
+.dxrpControl_Aqua_TabControl .dxrpcontent
+{
+    background-color: #F7F7F7;
+}
+/* Edges */
+.dxrpControl_Aqua_TabControl .dxrpTE,
+.dxrpControl_Aqua_TabControl .dxrpHLE, 
+.dxrpControl_Aqua_TabControl .dxrpHRE
+{
+	background-color: #DEDEDE;
+}
+.dxrpControl_Aqua_TabControl .dxrpLE,
+.dxrpControl_Aqua_TabControl .dxrpRE,
+.dxrpControl_Aqua_TabControl .dxrpBE,
+.dxrpControl_Aqua_TabControl .dxrpNHTE
+{
+	background-color: #F7F7F7;
+}
+.dxrpControl_Aqua_TabControl .dxrpTE,
+.dxrpControl_Aqua_TabControl .dxrpNHTE,
+.dxrpControlGB_Aqua_TabControl .dxrpNHTE
+{
+	border-top: 1px solid #8B8B8B;
+}
+.dxrpControl_Aqua_TabControl .dxrpLE,
+.dxrpControl_Aqua_TabControl .dxrpHLE,
+.dxrpControlGB_Aqua_TabControl .dxrpLE,
+.dxrpControlGB_Aqua_TabControl .dxrpHLE
+{
+	border-left: 1px solid #8B8B8B;
+}
+.dxrpControl_Aqua_TabControl .dxrpRE,
+.dxrpControl_Aqua_TabControl .dxrpHRE,
+.dxrpControlGB_Aqua_TabControl .dxrpRE
+{
+	border-right: 1px solid #8B8B8B;
+}
+.dxrpControl_Aqua_TabControl .dxrpHLE,
+.dxrpControl_Aqua_TabControl .dxrpHRE
+{
+	border-bottom: 1px solid #C6C6C6;
+}
+.dxrpControl_Aqua_TabControl .dxrpBE,
+.dxrpControlGB_Aqua_TabControl .dxrpBE
+{
+	border-bottom: 1px solid #8B8B8B;
+}
+.dxrpControlGB_Aqua_TabControl .dxrpcontent,
+.dxrpControlGB_Aqua_TabControl .dxrpHeader_Aqua_TabControl,
+.dxrpControlGB_Aqua_TabControl .dxrpLE,
+.dxrpControlGB_Aqua_TabControl .dxrpRE,
+.dxrpControlGB_Aqua_TabControl .dxrpBE,
+.dxrpControlGB_Aqua_TabControl .dxrpNHTE
+{
+	background-color: White;
+}
+/* Disabled */
+.dxrpDisabled_Aqua_TabControl,
+.dxrpDisabled_Aqua_TabControl td.dxrp
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxSiteMapControl -- */
+.dxsmControl_Aqua_TabControl a:hover
+{
+    text-decoration:none!important;
+}
+.dxsmControl_Aqua_TabControl a:visited
+{
+    color:#996085!important;
+}
+
+.dxsmControl_Aqua_TabControl 
+{	
+	color: #1E3695;
+	background-color: white;
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 11px;
+	border: Solid 1px #A8A8A8;
+}
+/* - Category Level - */
+.dxsmCategoryLevel_Aqua_TabControl,
+.dxsmCategoryLevel_Aqua_TabControl a
+{
+    color: #1E3695;    
+    font-weight: bold;
+    font-size: 13.5pt;
+    font-family: Verdana;
+    text-decoration: none;
+}
+.dxsmCategoryLevel_Aqua_TabControl
+{
+    white-space: nowrap;
+    padding: 0px 0px 5px 0px;
+}
+.dxsmCategoryLevel_Aqua_TabControl
+{
+    border-bottom: solid 1px #B8B8B8;    
+}
+ /*flow layout*/
+.dxsmLevelCategoryFlow_Aqua_TabControl,
+.dxsmLevelCategoryFlow_Aqua_TabControl a
+{
+    color: #1E3695;    
+    font-weight: bold;
+    font-size: 13.5pt;
+    font-family: Tahoma, Verdana, Arial;	
+	text-decoration: underline;
+}
+/* - Level 0 - */
+.dxsmLevel0_Aqua_TabControl,
+.dxsmLevel0_Aqua_TabControl a,
+.dxsmLevel0Categorized_Aqua_TabControl a,
+.dxsmLevel0Categorized_Aqua_TabControl
+{
+    color: #1E3695;    
+    font-weight: bold;
+    font-size: 9pt;
+    font-family: Verdana;
+    text-decoration: none;
+}
+.dxsmLevel0_Aqua_TabControl,
+.dxsmLevel0Categorized_Aqua_TabControl
+{
+    white-space: nowrap;
+    padding: 0px 0px 2px 0px;
+}
+.dxsmLevel0_Aqua_TabControl
+{
+    border-bottom:solid 1px #B8B8B8;
+    padding: 0px 0px 5px 0px;
+}
+ /*flow layout*/
+.dxsmLevel0Flow_Aqua_TabControl,
+.dxsmLevel0Flow_Aqua_TabControl a,
+.dxsmLevel0CategorizedFlow_Aqua_TabControl a,
+.dxsmLevel0CategorizedFlow_Aqua_TabControl
+{
+    color: #1E3695;    
+    font-family: Tahoma, Verdana, Arial;	
+    font-weight: bold;
+    font-size: 9pt;
+	text-decoration: underline;
+}
+.dxsmLevel0Flow_Aqua_TabControl
+{
+    padding: 0px 0px 0px 0px;    
+}
+.dxsmLevel0Flow_Aqua_TabControl
+{
+    text-decoration: none;    
+}
+
+/* - Level 1 - */
+.dxsmLevel1_Aqua_TabControl,
+.dxsmLevel1_Aqua_TabControl a,
+.dxsmLevel1Categorized_Aqua_TabControl a,
+.dxsmLevel1Categorized_Aqua_TabControl
+{    
+    font-family: Tahoma;
+    color: #3C55B9;  
+    font-size: 9pt;
+    text-decoration: none;    
+}
+.dxsmLevel1_Aqua_TabControl,
+.dxsmLevel1Categorized_Aqua_TabControl
+{
+    white-space: nowrap;  
+    padding: 0px 0px 0px 0px;
+}
+
+/*flow layout*/
+.dxsmLevel1Flow_Aqua_TabControl,
+.dxsmLevel1Flow_Aqua_TabControl a,
+.dxsmLevel1CategorizedFlow_Aqua_TabControl,
+.dxsmLevel1CategorizedFlow_Aqua_TabControl a
+{    
+    color: #3C55B9;    
+    font-family: Tahoma, Verdana, Arial;	
+    font-size: 9pt;
+	text-decoration: underline;
+}
+.dxsmLevel1Flow_Aqua_TabControl
+{
+    text-decoration: none;
+    padding: 0px 0px 0px 0px;
+}
+
+/* - Level 2 - */
+.dxsmLevel2_Aqua_TabControl,
+.dxsmLevel2_Aqua_TabControl a,
+.dxsmLevel2Categorized_Aqua_TabControl a,
+.dxsmLevel2Categorized_Aqua_TabControl
+{    
+    font-size: 8pt;
+    font-family: Tahoma;
+    color: #5078DC;
+    text-decoration: none;    
+}
+.dxsmLevel2_Aqua_TabControl,
+.dxsmLevel2Categorized_Aqua_TabControl
+{
+    white-space:nowrap;
+    padding: 0px 0px 0px 0px;    
+}
+/*flow layout*/
+.dxsmLevel2Flow_Aqua_TabControl,
+.dxsmLevel2Flow_Aqua_TabControl a
+{
+    color: #5078DC;
+    font-size: 8pt;    
+    font-family: Tahoma, Verdana, Arial;	
+	text-decoration:underline;    
+}
+.dxsmLevel2Flow_Aqua_TabControl
+{
+    padding: 0px 0px 0px 0px;
+}
+/* - Level 3 - */
+.dxsmLevel3_Aqua_TabControl,
+.dxsmLevel3_Aqua_TabControl a
+{    
+    font-size: 7pt;
+    font-family: Tahoma;
+    color: #999999;
+    text-decoration: none;
+}
+.dxsmLevel3_Aqua_TabControl
+{
+    white-space: nowrap;        
+    padding: 0px 0px 0px 0px;    
+}
+/*flow layout*/
+.dxsmLevel3Flow_Aqua_TabControl,
+.dxsmLevel3Flow_Aqua_TabControl a
+{    
+    color: #999999;
+    font-size: 7pt;
+    font-family: Tahoma, Verdana, Arial;	
+	text-decoration: underline;    
+}
+/* - Level 4 - */
+.dxsmLevel4_Aqua_TabControl,
+.dxsmLevel4_Aqua_TabControl a
+{    
+    font-size: 6pt;
+    font-family: Tahoma;
+    color: #A8A8A8;
+    text-decoration: none;
+}
+.dxsmLevel4_Aqua_TabControl
+{
+    white-space: nowrap;
+    padding: 0px 0px 0px 0px;    
+}
+/*flow layout*/
+.dxsmLevel4Flow_Aqua_TabControl,
+.dxsmLevel4Flow_Aqua_TabControl a
+{
+    color: #A8A8A8;
+    font-family: Tahoma, Verdana, Arial;	
+    font-size: 6pt;
+	text-decoration: underline;        
+}
+.dxsmLevel4Flow_Aqua_TabControl
+{
+    padding: 0px 0px 0px 0px;        
+}
+/* - Other Levels - */
+.dxsmLevelOther_Aqua_TabControl
+{    
+    font-size: 9px;
+    font-family: Tahoma;
+    color: #A8A8A8;
+    text-decoration: none;
+}
+.dxsmLevelOther_Aqua_TabControl
+{
+    white-space:nowrap;
+    padding: 0px 0px 0px 0px;            
+}
+/*flow layout*/
+.dxsmLevelOtherFlow_Aqua_TabControl,
+.dxsmLevelOtherFlow_Aqua_TabControl a
+{
+    color: #A8A8A8;
+    font-family: Tahoma, Verdana, Arial;	
+    font-size: 9pt;
+	text-decoration: underline;            
+}
+/* Disabled */
+.dxsmDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxTabControl, ASPxPageControl -- */
+.dxtcControl_Aqua_TabControl 
+{
+	font: 9pt Tahoma;
+	color: black;
+}
+.dxtcLoadingPanel_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxtcLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+
+/* Tab Hyperlink*/
+.dxtcTab_Aqua_TabControl a,
+.dxtcTabWithTabPositionLeft_Aqua_TabControl a,
+.dxtcTabWithTabPositionBottom_Aqua_TabControl a,
+.dxtcTabWithTabPositionRight_Aqua_TabControl a,
+.dxtcActiveTab_Aqua_TabControl a,
+.dxtcActiveTabWithTabPositionBottom_Aqua_TabControl a,
+.dxtcActiveTabWithTabPositionLeft_Aqua_TabControl a,
+.dxtcActiveTabWithTabPositionRight_Aqua_TabControl a,
+.dxtcTabHover_Aqua_TabControl a,
+.dxtcTabHoverWithTabPositionBottom_Aqua_TabControl a,
+.dxtcTabHoverWithTabPositionLeft_Aqua_TabControl a,
+.dxtcTabHoverWithTabPositionRight_Aqua_TabControl a
+{
+	text-decoration: none;
+	color: black;    
+}
+
+.dxtcActiveTab_Aqua_TabControl,
+.dxtcActiveTabWithTabPositionBottom_Aqua_TabControl,
+.dxtcActiveTabWithTabPositionLeft_Aqua_TabControl,
+.dxtcActiveTabWithTabPositionRight_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	border: solid 1px #A8A8A8;
+	padding: 3px 12px 4px 12px;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.dxtcActiveTabWithTabPositionLeft_Aqua_TabControl,
+.dxtcActiveTabWithTabPositionRight_Aqua_TabControl
+{
+	padding: 3px 13px 4px 12px;
+}
+/* Active Tab */
+.dxtcActiveTab_Aqua_TabControl table.dxtc,
+.dxtcActiveTabWithTabPositionBottom_Aqua_TabControl table.dxtc,
+.dxtcActiveTabWithTabPositionLeft_Aqua_TabControl table.dxtc,
+.dxtcActiveTabWithTabPositionRight_Aqua_TabControl table.dxtc
+{
+	font: 9pt Tahoma;
+	color: black;    
+}
+.dxtcActiveTab_Aqua_TabControl td.dxtc,
+.dxtcActiveTabWithTabPositionBottom_Aqua_TabControl td.dxtc,
+.dxtcActiveTabWithTabPositionLeft_Aqua_TabControl td.dxtc,
+.dxtcActiveTabWithTabPositionRight_Aqua_TabControl td.dxtc
+{
+	white-space: nowrap;
+    background-color: transparent!important;
+    background-image: url('')!important;
+    border-width: 0px!important;
+    padding: 0px!important;
+}
+.dxtcActiveTabHover_Aqua_TabControl
+{
+	background-color: white;
+}
+/* Tab */
+.dxtcTab_Aqua_TabControl,
+.dxtcTabWithTabPositionLeft_Aqua_TabControl, 
+.dxtcTabWithTabPositionBottom_Aqua_TabControl,
+.dxtcTabWithTabPositionRight_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: #E0E0E0;
+	border: solid 1px #A8A8A8;
+	padding: 3px 12px 4px 12px;
+	text-align: center;
+}
+.dxtcTab_Aqua_TabControl table.dxtc,
+.dxtcTabWithTabPositionBottom_Aqua_TabControl table.dxtc, 
+.dxtcTabWithTabPositionLeft_Aqua_TabControl table.dxtc,
+.dxtcTabWithTabPositionRight_Aqua_TabControl table.dxtc
+{
+	font: 9pt Tahoma;
+	color: black;    
+}
+.dxtcTab_Aqua_TabControl td.dxtc,
+.dxtcTabWithTabPositionBottom_Aqua_TabControl td.dxtc, 
+.dxtcTabWithTabPositionLeft_Aqua_TabControl td.dxtc,
+.dxtcTabWithTabPositionRight_Aqua_TabControl td.dxtc
+{
+	white-space: nowrap;
+    background-color: transparent!important;
+    background-image: url('')!important;
+    border-width: 0px!important;
+    padding: 0px!important;
+}
+.dxtcTabWithTabPositionBottom_Aqua_TabControl
+{
+}
+.dxtcTabWithTabPositionLeft_Aqua_TabControl
+{
+}
+.dxtcTabWithTabPositionRight_Aqua_TabControl
+{
+}
+/* Hover */
+.dxtcTabHover_Aqua_TabControl,
+.dxtcTabHoverWithTabPositionBottom_Aqua_TabControl,
+.dxtcTabHoverWithTabPositionLeft_Aqua_TabControl,
+.dxtcTabHoverWithTabPositionRight_Aqua_TabControl
+{
+	background-color: #F2F2F2;
+}
+.dxtcPageContent_Aqua_TabControl,
+.dxtcPageContentWithTabPositionBottom_Aqua_TabControl, 
+.dxtcPageContentWithTabPositionLeft_Aqua_TabControl,
+.dxtcPageContentWithTabPositionRight_Aqua_TabControl,
+.dxtcPageContentWithoutTabs_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+	vertical-align: top;
+}
+.dxtcContent_Aqua_TabControl,
+.dxtcContentWithTabPositionBottom_Aqua_TabControl,
+.dxtcContentWithTabPositionLeft_Aqua_TabControl,
+.dxtcContentWithTabPositionRight_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: black;
+	border: solid 1px #A8A8A8;
+	background-color: white;
+	vertical-align: top;
+}
+.dxtcControl_Aqua_TabControl td.dxtcTabsCell_Aqua_TabControl,
+.dxtcControl_Aqua_TabControl td.dxtcTabsCellWithTabPositionBottom_Aqua_TabControl,
+.dxtcControl_Aqua_TabControl td.dxtcTabsCellWithTabPositionLeft_Aqua_TabControl,
+.dxtcControl_Aqua_TabControl td.dxtcTabsCellWithTabPositionRight_Aqua_TabControl 
+{
+}
+/* Scrolling */
+.dxtcScrollButtonCell_Aqua_TabControl 
+{
+	border: none;
+	width: 1px;
+	vertical-align: top;
+}
+.dxtcTabsCellWithTabPositionBottom_Aqua_TabControl .dxtcScrollButtonCell_Aqua_TabControl 
+{
+	vertical-align: bottom;
+}
+.dxtcScrollButtonSeparator_Aqua_TabControl,
+.dxtcScrollButtonSeparator_Aqua_TabControl div 
+{
+	height: 1px;
+	width: 1px;
+}
+.dxtcScrollButtonIndent_Aqua_TabControl, 
+.dxtcScrollButtonIndent_Aqua_TabControl div 
+{
+	height: 1px;
+	width: 5px;
+}
+.dxtcScrollButton_Aqua_TabControl 
+{
+	border: solid 1px #7F7F7F;
+	background: #E8E7E8 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnBack.gif")%>') repeat-x;
+    cursor: pointer;
+    text-align: center;
+    padding: 6px;	
+}
+.dxtcScrollButtonHover_Aqua_TabControl
+{
+	background: #F4F4F4 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnHoverBack.gif")%>') repeat-x;
+}
+.dxtcScrollButtonPressed_Aqua_TabControl
+{
+	background: #8D8D8D;
+}
+.dxtcScrollButtonDisabled_Aqua_TabControl
+{
+	cursor: default;
+	border-color: #C3C3C3;
+	background: #E6E7E8 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnDisabledBack.gif")%>') repeat-x;
+}
+/* Misc */
+.dxtcLeftAlignCell_Aqua_TabControl,
+.dxtcTabsCellWithTabPositionBottom_Aqua_TabControl .dxtcLeftAlignCell_Aqua_TabControl 
+{
+	text-align: left;
+}
+.dxtcRightAlignCell_Aqua_TabControl,
+.dxtcTabsCellWithTabPositionBottom_Aqua_TabControl .dxtcRightAlignCell_Aqua_TabControl 
+{
+	text-align: right;
+}
+/* Disabled */
+.dxtcDisabled_Aqua_TabControl,
+.dxtcDisabled_Aqua_TabControl table.dxtc
+{
+	color: #acacac;
+	cursor: default;
+}
+
+/* -- ASPxTabControl Lite -- */
+.dxtcLite_Aqua_TabControl 
+{
+	overflow: hidden;
+    float: left;
+}
+.dxtcLite_Aqua_TabControl .dxtc-strip,
+.dxtcLite_Aqua_TabControl .dxtc-wrapper 
+{
+    list-style: none outside none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    _overflow: hidden;
+}
+.dxtcLite_Aqua_TabControl .dxtc-tab,
+.dxtcLite_Aqua_TabControl .dxtc-activeTab,
+.dxtcLite_Aqua_TabControl .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl .dxtc-spacer,
+.dxtcLite_Aqua_TabControl .dxtc-rightIndent,
+.dxtcLite_Aqua_TabControl .dxtc-sbWrapper,
+.dxtcLite_Aqua_TabControl .dxtc-sbIndent,
+.dxtcLite_Aqua_TabControl .dxtc-sbSpacer
+{
+	display: block;
+    height: 21px;
+
+    margin: 0;
+}
+.dxtcLite_Aqua_TabControl .dxtc-lineBreak
+{
+	float: none;
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.dxtcLite_Aqua_TabControl .dxtc-tab,
+.dxtcLite_Aqua_TabControl .dxtc-activeTab,
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-tab.dxtc-lead,
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-activeTab.dxtc-lead,
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-tab,
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-activeTab
+{
+	border: solid 1px #A8A8A8;
+}
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-tab,
+.dxtcLite_Aqua_TabControl.dxtc-noSpacing .dxtc-activeTab
+{
+	border-left: none;
+}
+.dxtcLite_Aqua_TabControl .dxtc-tab,
+.dxtcLite_Aqua_TabControl .dxtc-activeTab
+{
+	background: #E0E0E0;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;    
+
+}
+.dxtcLite_Aqua_TabControl .dxtc-activeTab
+{
+    border-bottom: solid 1px white;
+    background: white;
+}
+.dxtcLite_Aqua_TabControl .dxtc-tab a 
+{
+	text-decoration: none;
+	color: black;  
+}
+.dxtcLite_Aqua_TabControl .dxtc-tabHover
+{
+	background: #F2F2F2;
+}
+.dxtcLite_Aqua_TabControl .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl .dxtc-spacer,
+.dxtcLite_Aqua_TabControl .dxtc-rightIndent,
+.dxtcLite_Aqua_TabControl .dxtc-sbWrapper,
+.dxtcLite_Aqua_TabControl .dxtc-sbIndent,
+.dxtcLite_Aqua_TabControl .dxtc-sbSpacer
+{
+    float: left;
+    border-width: 0;
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px #A8A8A8;
+    overflow: hidden;
+    
+    _border-top-color: #000001;
+ 	_zoom: 1;  
+	_filter:progid:DXImageTransform.Microsoft.Chroma(color=#000001);
+}
+.dxtcLite_Aqua_TabControl .dxtc-spacer
+{
+    width: 1px;
+}
+.dxtcLite_Aqua_TabControl .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl .dxtc-rightIndent
+{
+    width: 5px;
+}
+.dxtcLite_Aqua_TabControl .dxtc-link
+{
+	padding: 3px 12px 4px;
+	display: block;
+	font-size: 0;
+    text-decoration: none;
+    height: 100%;
+    _float: left;
+}
+.dxtcLite_Aqua_TabControl .dxtc-text,
+.dxtcLite_Aqua_TabControl .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl .dxtc-rightIndent
+{
+    color: #333333;    
+	font: 12px Tahoma;	
+    font-weight: normal;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.dxtcLite_Aqua_TabControl .dxtc-img
+{
+	border: none;
+	margin: 0 3px -4px 0;
+	width: 16px;
+	height: 16px;
+} 
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-img
+{
+	margin: 0 0 -4px 3px;
+}
+.dxtcLite_Aqua_TabControl .dxtc-content 
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: #FFFFFF;
+    float:left; 
+    clear:left;
+    border: solid 1px #A8A8A8;
+    overflow: hidden;
+    padding: 11px;
+    background: white;
+}
+.dxtcLite_Aqua_TabControl.dxtc-top .dxtc-content 
+{
+	border-top: none !important;
+}
+/* Rtl */
+.dxtcLite_Aqua_TabControl.dxtc-rtl,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-content,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-strip,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-wrapper,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-rightIndent,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-sbWrapper,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-sbIndent,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-sbSpacer,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-tab,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-activeTab
+{
+	float: right;
+}
+.dxtc-top.dxtc-rtl .dxtc-content,
+.dxtc-bottom.dxtc-rtl .dxtc-strip,
+.dxtc-bottom.dxtc-rtl .dxtc-wrapper
+{
+	clear: right !important;
+}
+.dxtc-left.dxtc-rtl .dxtc-strip 
+{
+	float: left;
+}
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-content,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-strip,
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-wrapper
+{
+	*float: left;
+}
+.dxtcLite_Aqua_TabControl.dxtc-rtl .dxtc-content
+{
+	*clear: left !important;
+}
+/* Scrolling */
+.dxtcLite_Aqua_TabControl .dxtc-sb          
+{	
+	background: #E8E7E8 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnBack.gif")%>') repeat-x;
+	border: solid 1px #7F7F7F;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 0;
+}
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-sb          
+{	
+	margin-top: 2px;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sbHover
+{
+	background: #F4F4F4 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnHoverBack.gif")%>') repeat-x;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sbPressed
+{
+	background: #8D8D8D;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sbDisabled
+{
+	cursor: default;
+	border-color: #C3C3C3;
+	background: #E6E7E8 url('<%=WebResource("DevExpress.Web.Images.tcScrollBtnDisabledBack.gif")%>') repeat-x;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sb img 
+{
+	border: none 0;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sbIndent
+{
+	width: 5px;
+}
+.dxtcLite_Aqua_TabControl .dxtc-sbSpacer
+{
+	width: 1px;
+}
+/* Multi-row */
+.dxtcLite_Aqua_TabControl .dxtc-n
+{
+	_display: inline;
+}
+.dxtcLiteDisabled_Aqua_TabControl,
+.dxtcLiteDisabled_Aqua_TabControl .dxtc-text,
+.dxtcLiteDisabled_Aqua_TabControl .dxtc-activeTab .dxtc-text,
+.dxtcLiteDisabled_Aqua_TabControl .dxtc-content
+{
+	color: #acacac;
+	cursor: default;
+}
+/* bottom  */
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-strip,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-wrapper
+{
+	clear: left;
+	*float: none;
+}
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-rightIndent,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-sbWrapper,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-sbIndent,
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-sbSpacer
+{
+    border-top: solid 1px #A8A8A8;
+    border-bottom: solid 1px transparent;
+    
+    _border-bottom-color: #000001;
+	_zoom: 1;
+	_filter:progid:DXImageTransform.Microsoft.Chroma(color=#000001);
+}
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-activeTab
+{
+    border-top: solid 1px white;
+    border-bottom: solid 1px #A8A8A8;
+    background: white;
+}
+.dxtcLite_Aqua_TabControl.dxtc-bottom .dxtc-content
+{
+    border: solid 1px #A8A8A8;
+    border-bottom: none !important;
+}
+/* left */
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-tab,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-activeTab,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-rightIndent
+{
+	float: none;
+	clear: none;
+	width: auto;
+	height: auto;
+	
+	*float: left;
+	*clear: both;
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-activeTab,
+.dxtc-left.dxtc-noSpacing .dxtc-tab,
+.dxtc-left.dxtc-noSpacing .dxtc-activeTab,
+.dxtc-left.dxtc-noSpacing .dxtc-tab.dxtc-lead,
+.dxtc-left.dxtc-noSpacing .dxtc-activeTab.dxtc-lead
+{
+	 border: solid 1px #A8A8A8
+}
+.dxtc-left.dxtc-noSpacing .dxtc-tab,
+.dxtc-left.dxtc-noSpacing .dxtc-activeTab
+{
+	border-top: none;
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-activeTab
+{        
+    border-right: solid 1px white;
+    background: white;  
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-rightIndent
+{
+	border: none 0;
+    border-right: solid 1px #A8A8A8;
+    border-left: solid 1px transparent;
+    width: auto;
+    
+    _border-left-color: #000001;
+	_zoom: 1;
+	_filter:progid:DXImageTransform.Microsoft.Chroma(color=#000001);	
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-rightIndent
+{
+	height: 5px;
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-spacer
+{
+	height: 1px;
+}
+.dxtcLite_Aqua_TabControl.dxtc-left .dxtc-content
+{
+    border: solid 1px #A8A8A8;
+    border-left: none !important;
+    float: left;
+    clear: none;
+}
+/* right */
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-tab,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-activeTab,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-rightIndent
+{
+	float: none;
+	clear: none;
+	width: auto;
+	height: auto;
+	
+	*float: left;
+	*clear: both;
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-activeTab,
+.dxtc-right.dxtc-noSpacing .dxtc-tab,
+.dxtc-right.dxtc-noSpacing .dxtc-activeTab,
+.dxtc-right.dxtc-noSpacing .dxtc-tab.dxtc-lead,
+.dxtc-right.dxtc-noSpacing .dxtc-activeTab.dxtc-lead
+{
+	 border: solid 1px #A8A8A8
+}
+.dxtc-right.dxtc-noSpacing .dxtc-tab,
+.dxtc-right.dxtc-noSpacing .dxtc-activeTab
+{
+	border-top: none;
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-activeTab
+{
+    border-left: solid 1px white;
+    background: white;  
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-spacer,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-rightIndent
+{
+	border: none 0;
+    border-left: solid 1px #A8A8A8;
+    border-right: solid 1px transparent;
+    
+    _border-right-color: #000001;
+	_zoom: 1;
+	_filter:progid:DXImageTransform.Microsoft.Chroma(color=#000001);
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-leftIndent,
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-rightIndent
+{
+	height: 5px;
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-spacer
+{
+	height: 1px;
+}
+.dxtcLite_Aqua_TabControl.dxtc-right .dxtc-content
+{
+    border: solid 1px #A8A8A8;
+    border-right: none !important;
+    float: left;
+    clear: none;
+}
+/* Services rules */
+.dxtcLite_Aqua_TabControl.dxtc-noTabs .dxtc-content
+{
+	border: solid 1px #A8A8A8 !important;
+}
+
+/* -- ASPxTitleIndex -- */
+.dxtiControl_Aqua_TabControl a:hover
+{
+    text-decoration: none!important;
+}
+.dxtiControl_Aqua_TabControl a:visited
+{
+    color: #996085!important;
+}
+.dxtiControl_Aqua_TabControl 
+{
+	font: 8pt Tahoma;
+	color: #1E3695;
+	background-color: white;
+	font-family: Tahoma, Arial;
+	border: Solid 1px #A8A8A8;
+}
+.dxtiLoadingPanel_Aqua_TabControl
+{
+	border: solid 1px #9F9F9F;
+	background-color: white;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxtiLoadingPanel_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+.dxtiItem_Aqua_TabControl,
+.dxtiItem_Aqua_TabControl a
+{
+	font: 9pt Tahoma; 
+	color: #0147A6;
+	text-decoration: none;	
+}
+.dxtiItem_Aqua_TabControl
+{
+	white-space: nowrap;
+}
+.dxtiGroupHeader_Aqua_TabControl,
+.dxtiGroupHeaderCategorized_Aqua_TabControl
+{
+	font: 16pt Verdana;
+	text-decoration: none;
+}
+.dxtiGroupHeader_Aqua_TabControl,
+.dxtiGroupHeaderCategorized_Aqua_TabControl
+{
+	white-space:nowrap;
+	padding: 0px 0px 3px 0px;
+}
+.dxtiGroupHeaderCategorized_Aqua_TabControl
+{
+    border-bottom: Solid 1px #C0C0C0;
+    padding-bottom: 2px;
+}
+/* - GroupHeaderText - */
+.dxtiGroupHeaderText_Aqua_TabControl
+{
+    background-color: #B4B4B4;
+    color: #FFFFFF;    
+}
+.dxtiGroupHeaderText_Aqua_TabControl
+{
+    padding: 2px 7px 2px 7px;
+}
+.dxtiGroupHeaderTextCategorized_Aqua_TabControl
+{
+    color: #666666;
+    font-size: 18pt;
+}
+.dxtiGroupHeaderTextCategorized_Aqua_TabControl
+{
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+}
+/* - FilterBox - */
+.dxtiFilterBoxInfoText_Aqua_TabControl
+{
+    font: 7pt Verdana;
+    color: #999999;
+    font-weight: normal;
+    padding-top: 0px;
+    padding-bottom: 4px;    
+}
+.dxtiFilterBoxEdit_Aqua_TabControl
+{
+    font-size
+    : 9pt;
+    width: 158px;
+    border: Solid 1px #9F9F9F;
+    padding-left: 3px;
+}
+.dxtiFilterBox_Aqua_TabControl,
+.dxtiFilterBox_Aqua_TabControl table
+{
+    color: #898989;
+    font-size: 9pt;
+    font-weight: bold;        
+}
+.dxtiFilterBox_Aqua_TabControl
+{
+    background-color: #E8E8E8;
+    padding: 15px;    
+}
+/* - IndexPanel - */
+.dxtiIndexPanel_Aqua_TabControl
+{
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+.dxtiIndexPanelItem_Aqua_TabControl,
+.dxtiIndexPanelItem_Aqua_TabControl a,
+.dxtiCurrentIndexPanelItem_Aqua_TabControl
+{
+    color: #1153AD;
+    font-family: Verdana;
+    text-decoration: none;
+}
+.dxtiIndexPanelItem_Aqua_TabControl a:hover
+{
+    color: #5494ea;
+}
+
+.dxtiIndexPanelItem_Aqua_TabControl,
+.dxtiCurrentIndexPanelItem_Aqua_TabControl
+{
+    padding: 2px 6px 2px 6px;
+}
+.dxtiCurrentIndexPanelItem_Aqua_TabControl
+{
+    color: #000000;
+    background-color: #E0E0E0;
+}
+/* - BackToTop - */
+.dxtiBackToTop_Aqua_TabControl,
+.dxtiBackToTop_Aqua_TabControl a
+{
+    font-size: 7pt;
+    text-decoration: none;
+    color: #0d45b7;
+}
+.dxtiBackToTop_Aqua_TabControl a:hover 
+{
+    color: #5494ea;    
+}
+.dxtiBackToTop_Aqua_TabControl a:visited
+{
+    color: #ab59a6;
+}
+
+.dxtiBackToTop_Aqua_TabControl
+{
+    padding: 0px 0px 12px 98px;
+}
+.dxtiBackToTopRtl_Aqua_TabControl
+{
+    padding: 0px 98px 12px 0px;
+}
+/* Disabled */
+.dxtiDisabled_Aqua_TabControl
+{
+	color: #acacac;
+	cursor: default;
+}
+/* -- ASPxUploadControl -- */
+.dxucControl_Aqua_TabControl,
+.dxucEditArea_Aqua_TabControl
+{
+    font-size: 10pt;
+    font-family: Tahoma, Verdana, Arial;    
+}
+.dxucTextBox_Aqua_TabControl
+{
+    background-color: white;
+    border: solid 1px #9f9f9f;
+    padding: 1px 2px;
+}
+.dxucTextBox_Aqua_TabControl .dxucEditArea_Aqua_TabControl
+{
+    margin: 0px;
+    background-color: white;
+}
+.dxucErrorCell_Aqua_TabControl
+{
+    font-size: 9pt;
+    font-family: Tahoma, Verdana, Arial;
+    color: Red;
+    text-align: left;
+}
+.dxucButton_Aqua_TabControl,
+.dxucButton_Aqua_TabControl a
+{
+    color: #0D45B7;
+    white-space: nowrap;
+}
+.dxucBrowseButton_Aqua_TabControl,
+.dxucBrowseButton_Aqua_TabControl a
+{
+    font-size: 9pt;
+    font-family: Tahoma, Verdana, Arial;
+    color: #000000;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.dxucBrowseButton_Aqua_TabControl
+{
+    padding: 3px 8px 4px;
+    border: solid 1px #7F7F7F;
+	background: #E0DFDF url('<%=WebResource("DevExpress.Web.Images.ucButtonBack.gif")%>') top;
+    background-repeat: repeat-x;
+}
+.dxucBrowseButtonHover_Aqua_TabControl
+{
+    border: solid 1px #606060;
+	background: #F2F2F2 url('<%=WebResource("DevExpress.Web.Images.ucButtonHoverBack.gif")%>') top;
+    background-repeat: repeat-x;
+}
+.dxucBrowseButtonPressed_Aqua_TabControl
+{
+    color: #000000;        
+	background-image: none;
+	background-color: #D5D5D5;
+}
+/* ProgressBar */
+.dxucProgressBar_Aqua_TabControl
+{
+    border: Solid 1px #696969;
+    background-color: #FFFFFF;
+}
+.dxucProgressBar_Aqua_TabControl,
+.dxucProgressBar_Aqua_TabControl td.dx
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+   	color: Black;
+}
+.dxucProgressBar_Aqua_TabControl .dxucPBMainCell_Aqua_TabControl,
+.dxucProgressBar_Aqua_TabControl td.dx
+{
+    padding: 0;
+}
+.dxucProgressBarIndicator_Aqua_TabControl 
+{
+    background-color: #E0DFDF;
+}
+/* Silverlight Plugin Link */
+.dxucSilverlightPluginLinkPanel_Aqua_TabControl {
+    font-family: Verdana;
+    font-size: 7pt;
+    color: #7d7d7d;
+    text-align: left;
+}
+.dxucSilverlightPluginLinkPanel_Aqua_TabControl td {
+    padding: 0px 3px;
+    vertical-align: middle;
+}
+.dxucSilverlightPluginLinkPanel_Aqua_TabControl a {
+    color: #0D45B7;
+}
+/* Disabled */
+.dxucDisabled_Aqua_TabControl,
+.dxucDisabled_Aqua_TabControl a
+{
+	color: #ACACAC;
+	cursor: default;
+}
+.dxucTextBoxDisabled_Aqua_TabControl
+{
+    border-color: #C3C3C3;
+}
+.dxucButtonDisabled_Aqua_TabControl,
+.dxucButtonDisabled_Aqua_TabControl a
+{
+    text-decoration: none;
+}
+.dxucBrowseButtonDisabled_Aqua_TabControl,
+.dxucBrowseButtonDisabled_Aqua_TabControl a
+{
+    border-color: #C3C3C3;
+	color: #808080;
+}
+
+/* -- ASPxSplitter -- */
+.dxsplControl_Aqua_TabControl,
+.dxsplVSeparator_Aqua_TabControl,
+.dxsplHSeparator_Aqua_TabControl
+{
+	background-color: White;
+}
+.dxsplControl_Aqua_TabControl,
+.dxsplVSeparator_Aqua_TabControl,
+.dxsplHSeparator_Aqua_TabControl,
+.dxsplPane_Aqua_TabControl,
+.dxsplPaneCollapsed_Aqua_TabControl,
+.dxsplVSeparator_Aqua_TabControl,
+.dxsplHSeparator_Aqua_TabControl,
+.dxsplVSeparatorCollapsed_Aqua_TabControl,
+.dxsplHSeparatorCollapsed_Aqua_TabControl
+{
+	border: solid 0px #8C8C8C;
+}
+.dxsplPane_Aqua_TabControl,
+.dxsplPaneCollapsed_Aqua_TabControl
+{
+	border-width: 1px;
+}
+.dxsplPaneCollapsed_Aqua_TabControl
+{
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+}
+.dxsplVSeparatorHover_Aqua_TabControl
+{
+	cursor: w-resize;
+}
+.dxsplHSeparatorHover_Aqua_TabControl
+{
+	cursor: n-resize;
+}
+.dxsplVSeparatorCollapsed_Aqua_TabControl
+{
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+.dxsplHSeparatorCollapsed_Aqua_TabControl
+{
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+.dxsplVSeparatorCollapsed_Aqua_TabControl,
+.dxsplHSeparatorCollapsed_Aqua_TabControl
+{
+	cursor: default !important;
+}
+.dxsplVSeparatorButton_Aqua_TabControl
+{
+	cursor: pointer;
+	padding: 5px 0px;
+}
+.dxsplHSeparatorButton_Aqua_TabControl
+{
+	cursor: pointer;
+	padding: 0px 5px;
+}
+.dxsplVSeparatorHover_Aqua_TabControl,
+.dxsplHSeparatorHover_Aqua_TabControl,
+.dxsplVSeparatorButtonHover_Aqua_TabControl,
+.dxsplHSeparatorButtonHover_Aqua_TabControl
+{
+	background-color: #DCDCDC;
+}
+.dxsplResizingPointer_Aqua_TabControl
+{
+	background-image: url('<%=WebResource("DevExpress.Web.Images.splResizingPointer.gif")%>');
+	background-repeat: repeat;
+}
+.dxsplResizingPointer_Aqua_TabControl,
+.dxsplS
+{
+	font-size: 0px;
+	line-height: 0px;
+}
+.dxsplLCC,
+.dxsplCC,
+.dxsplS
+{
+	overflow: hidden;
+}
+.dxsplLCC,
+.dxsplCC,
+.dxsplP
+{
+	width: 100%;
+	height: 100%;
+} 
+.dxsplLCC
+{
+	padding: 8px 8px 8px 8px;
+}
+
+/* -- ASPxTreeView -- */
+.dxtvControl_Aqua_TabControl
+{
+	float: left;
+}
+.dxtvControl_Aqua_TabControl li 
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 9pt;
+	overflow-y: hidden;	
+}
+
+
+.dxtvControl_Aqua_TabControl ul 
+{
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+	overflow-y: hidden;
+}
+
+.dxtvControl_Aqua_TabControl a {
+	color: black;
+	text-decoration: none;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ln
+{
+	background-image: url('<%=WebResource("DevExpress.Web.Images.tvLine.gif")%>');
+	background-repeat: repeat-y;
+	vertical-align: top;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-nd
+{
+    margin-top: 1px;
+	float: left;
+    padding: 1px;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	color: Black;
+    outline: 0 none;    
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-elbNoLn,
+.dxtvControl_Aqua_TabControl .dxtv-elb
+{
+	width: 26px;
+	height: 21px;
+	vertical-align: top;
+	float: left;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-elb
+{
+	background-image: url('<%=WebResource("DevExpress.Web.Images.tvElbow.gif")%>');
+	background-repeat:no-repeat;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-btn 
+{
+	margin-left: 10px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-subnd 
+{
+	margin-left: 22px;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndImg 
+{
+	padding-left: 5px;
+	float: left;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndTxt 
+{
+	padding: 4px;
+	float: left;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndChk
+{
+	padding: 0;
+	float: left;
+	vertical-align: middle;
+    cursor: default;
+    margin: 4px 3px 3px 6px;
+    /*for IE6-7*/
+    *margin: 4px 0 0 6px;
+}
+  
+.dxtvControl_Aqua_TabControl .dxtv-ndTmpl
+{
+	float: left;
+	white-space: nowrap;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndSel,
+.dxtvControl_Aqua_TabControl .dxtv-ndHov 
+{
+	border: solid 1px #888888;
+	padding: 0;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndSel
+{
+	background-color: #D8D8D8;
+	cursor: default;
+}
+
+.dxtv-ndSel .dxtv-ndTxt,
+.dxtv-ndSel .dxtv-ndImg
+{
+	cursor: default;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-ndHov 
+{
+	background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.dxtv-ndHov .dxtv-ndTxt,
+.dxtv-ndHov .dxtv-ndImg
+{
+	cursor: pointer;
+}
+
+.dxtvControl_Aqua_TabControl .dxtv-clr,
+.dxtvControl_Aqua_TabControl .dxtv-clrIE7
+{
+	clear:both;
+	font-size:0;
+	height:0;
+	visibility:hidden;
+	width:0;
+    display:block;
+} 
+
+.dxtvControl_Aqua_TabControl .dxtv-clr
+{
+    line-height:0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl,
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-nd, 
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-elbNoLn,
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-elb,
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndTxt, 
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndImg, 
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndChk,
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndTmpl
+{
+    float: right;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-elb,
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ln 
+{
+    background-position: right top;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-elb
+{
+    background-image: url('<%=WebResource("DevExpress.Web.Images.tvElbowRtl.gif")%>');
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-btn 
+{
+    margin: 5px 10px 0 0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-subnd 
+{
+    margin: 0 22px 0 0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndImg 
+{
+    padding: 0 5px 0 0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl.OperaRtlFix .dxtv-btn
+{
+    margin: 5px 10px 0 0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl .dxtv-ndChk
+{
+    margin: 4px 6px 3px 3px;
+    /*for IE6-7*/
+    *margin: 4px 6px 0 0;
+}
+
+.dxtvControl_Aqua_TabControl.dxtvRtl_Aqua_TabControl.OperaRtlFix .dxtv-subnd 
+{
+    overflow-x: hidden;
+}
+
+.dxtvDisabled_Aqua_TabControl,
+.dxtvControl_Aqua_TabControl .dxtvDisabled_Aqua_TabControl,
+.dxtvDisabled_Aqua_TabControl a,
+.dxtvDisabled_Aqua_TabControl .dxtv-ndTxt,
+.dxtvDisabled_Aqua_TabControl .dxtv-ndImg,
+.dxtvDisabled_Aqua_TabControl .dxtv-btn,
+.dxtvDisabled_Aqua_TabControl .dxtv-nd
+{
+	color: #acacac;
+	cursor: default;
+} 
+
+.dxtvLoadingPanelWithContent_Aqua_TabControl
+{
+	font: 9pt Tahoma;
+	color: #303030;
+	background:#FFFFFF;
+	border:1px solid #D6D6D6;
+}
+.dxtvLoadingPanelWithContent_Aqua_TabControl td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+
+/* ASPxFileManager */
+.dxfmControl_Aqua_TabControl 
+{
+	font-size: 9pt;
+	font-family: Tahoma;
+	outline: 0px;
+}
+.dxfmDisabled_Aqua_TabControl
+{
+	color:#ACACAC;
+}
+
+/* FileManager - Splitter */
+.dxfmControl_Aqua_TabControl .dxsplControl_Aqua_TabControl
+{
+	border-width: 1px;
+	border-color: #7F7F7F;
+}
+.dxfmControl_Aqua_TabControl .dxsplPane_Aqua_TabControl
+{
+	border-width: 0px;
+	background-color: White;
+}
+.dxfmControl_Aqua_TabControl .dxsplLCC {
+	outline-width: 0px;
+	padding: 4px;
+}
+.dxfmControl_Aqua_TabControl .dxsplVSeparator_Aqua_TabControl
+{
+	width:3px;
+	background: url('<%=WebResource("DevExpress.Web.Images.fmSplitterSeparator.gif")%>') right;
+	background-repeat:repeat-y;
+	border: 0px;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxsplVSeparator_Aqua_TabControl
+{
+	background-position: left;
+}
+.dxfmControl_Aqua_TabControl .dxsplHSeparator_Aqua_TabControl
+{
+    border: 0px;
+	background-color: #E0E0E0;
+}
+
+/* FileManager - TreeView */
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl 
+{
+	margin-left: -5px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxtv-nd .dxtv-ndTxt 
+{
+	padding-left: 1px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxtv-nd 
+{
+	padding-left: 3px;
+	margin-bottom: 0px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxfm-folderSI
+{
+	border: dotted 1px #888888;
+	padding: 0px 0px 0px 2px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxtv-ndHov
+{
+	padding-left: 2px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxtv-ndSel
+{
+	padding-left: 2px;
+}
+.dxfmControl_Aqua_TabControl .dxtvControl_Aqua_TabControl .dxtv-ndImg
+{
+	padding: 0px;
+	margin-right: 3px;
+	margin-top: 2px;
+}
+
+/* FileManager - File */
+.dxfmControl_Aqua_TabControl .dxfm-file 
+{
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	
+	padding: 5px;
+	margin: 5px;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-file 
+{
+	float: right;
+}
+.dxfmDisabled_Aqua_TabControl .dxfm-file
+{
+	cursor: default;
+}
+.dxfmControl_Aqua_TabControl .dxfm-fileSI
+{
+	border: dotted 1px #888888;
+}
+.dxfmControl_Aqua_TabControl .dxfm-fileSA
+{
+	background-color: #D8D8D8;
+	border: solid 1px #888888;
+}
+.dxfmControl_Aqua_TabControl .dxfm-fileH
+{
+	background: #F2F2F2;
+    border: solid 1px #888888;
+}
+.dxfmControl_Aqua_TabControl .dxfm-content
+{
+	overflow: hidden;
+}
+.dxfmControl_Aqua_TabControl .dxfm-content div
+{
+	overflow: hidden;
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+}
+.dxfmControl_Aqua_TabControl .dxfm-content div
+{
+	height: 18px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-content .dxfm-highlight
+{
+	background:none repeat scroll 0 0 #CFCFCF;
+	color:#333333;
+	font-weight: bold;
+}
+
+/* FileManager - Toolbar */
+.dxfmControl_Aqua_TabControl .dxfm-toolbar
+{
+	background-color: #F3F3F3;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar.dxsplPane_Aqua_TabControl table.dxfm
+{
+	width: 100%;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar.dxsplPane_Aqua_TabControl .dxfm-filter
+{
+	text-align: right;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-toolbar.dxsplPane_Aqua_TabControl .dxfm-filter 
+{
+	text-align: left;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar.dxsplPane_Aqua_TabControl .dxfm-filter input
+{
+    border: 1px solid #9F9F9F;
+	margin: 4px 4px 0px 3px;
+	width: 130px;
+	height: 16px;
+	font: 9pt Tahoma;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar.dxsplPane_Aqua_TabControl .dxfm-path input
+{
+    border: 1px solid #9F9F9F;
+	width: 230px;
+	height: 16px;
+	font: 9pt Tahoma;
+}
+
+/* FileManager - Toolbar - Light */
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxsplLCC 
+{
+	padding: 5px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxm-main
+{
+	margin-top: 0px;
+    border-width: 0px;
+    background-color: transparent;
+    background-image: none;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxm-horizontal.dxmtb .dxm-separator 
+{
+	margin: 0px 11px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxfm-path 
+{
+	padding-left: 1px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxfm-path input
+{
+	margin: 1px 8px 0px 4px;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxfm-path input 
+{
+	margin: 1px 4px 0px 8px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmLite_Aqua_TabControl .dxm-item .dxm-content 
+{
+	padding-top: 4px;
+}
+
+/* FileManager - Toolbar - Classic */
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl
+{
+	border-width: 0px;
+	background-color: #F3F3F3;
+	background-image: none;
+	padding-top: 1px;
+	padding-left: 3px;
+	display: inline-block;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxmMenuSeparator_Aqua_TabControl 
+{
+	padding: 0px 11px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxmMenuItemSeparatorSpacing_Aqua_TabControl 
+{
+	width: 1px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxmMenuItemSpacing_Aqua_TabControl 
+{
+	width: 0px;
+	display: block;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxmMenuItem_Aqua_TabControl.dxfm-path 
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 3px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxmMenuItem_Aqua_TabControl
+{
+	padding-top: 1px;
+	padding-left: 3px;
+	background-image: none;
+	background-color: transparent;
+}
+.dxfmControl_Aqua_TabControl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxfm-path input
+{
+	margin: 0px 8px 0px 4px;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-toolbar .dxmMenu_Aqua_TabControl .dxfm-path input
+{
+	margin: 0px 4px 0px 8px;
+}
+
+/* FileManager - UploadPanel */
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel
+{
+	background-color: #F3F3F3;
+	text-align: right;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-uploadPanel
+{
+	text-align: left;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl table.dxfm-uploadPanelTable
+{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 1px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl table.dxfm-uploadPanelTable .dxucControl_Aqua_TabControl 
+{
+    margin-top: 4px;
+	margin-right: 10px;
+}
+.dxfmControl_Aqua_TabControl.dxfm-rtl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl table.dxfm-uploadPanelTable .dxucControl_Aqua_TabControl 
+{
+	margin-right: 0px;
+	margin-left: 10px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl table.dxfm-uploadPanelTable td.dxfm-uploadPanelTableBCell a 
+{
+	color: #1B3F91;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl table.dxfm-uploadPanelTable td.dxfm-uploadPanelTableBCell a.dxfm-uploadDisable
+{
+	color: #777777;
+	cursor: default;
+}
+
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl .dxucTextBox_Aqua_TabControl {
+    padding: 0px 2px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl .dxucBrowseButton_Aqua_TabControl {
+    padding: 2px 8px 3px;
+}
+.dxfmControl_Aqua_TabControl .dxfm-uploadPanel.dxsplPane_Aqua_TabControl .dxucSilverlightPluginLinkPanel_Aqua_TabControl {
+    margin-top: -8px;
+}
+
+/* FileManager - Create, Rename input */
+.dxfmControl_Aqua_TabControl .dxfm-cInput,
+.dxfmControl_Aqua_TabControl .dxfm-rInput
+{
+    border: solid 1px #9f9f9f;
+	padding: 1px;
+	font: 9pt Tahoma;
+	outline-width: 0px;
+	margin:0px;
+}
+
+/* FileManager - LoadingPanel */
+.dxfmControl_Aqua_TabControl .dxfmLoadingPanel_Aqua_TabControl 
+{
+	background-color:white;
+	border:1px solid #9F9F9F;
+	color:#303030;
+	font:9pt Tahoma;
+}
+.dxfmControl_Aqua_TabControl .dxfmLoadingPanel_Aqua_TabControl td.dx {
+	padding:12px;
+	text-align:center;
+	white-space:nowrap;
+}
+
+/* FileManager - Move PopupControl */
+.dxfmControl_Aqua_TabControl .dxpcContentPaddings_Aqua_TabControl 
+{
+	padding: 5px 0px 0px 0px;
+	background-color: White;
+}
+.dxfmControl_Aqua_TabControl .dxpcContent_Aqua_TabControl .dxfm-mpFoldersC 
+{
+	overflow:auto;
+	padding: 0px 0px 20px 5px;
+}
+.dxfmControl_Aqua_TabControl .dxpcContent_Aqua_TabControl .dxfm-mpButtonC
+{
+	margin-top: 20px;
+	background-color: #F3F3F3;
+	border-top: 1px solid #E0E0E0;
+	padding: 10px;
+	text-align: right;
+	padding: 10px 15px 10px 10px;
+}
+.dxfmControl_Aqua_TabControl .dxpcContent_Aqua_TabControl .dxfm-mpButtonC a 
+{
+	margin-left: 12px;
+	color: #1B3F91;
+}
+

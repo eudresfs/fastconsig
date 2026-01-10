@@ -1,0 +1,7 @@
+D:\devrosil\fastconsig\CP.FastConsig.Util\bin\Debug\CP.FastConsig.Util.dll
+D:\devrosil\fastconsig\CP.FastConsig.Util\bin\Debug\CP.FastConsig.Util.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Util\bin\Debug\CP.FastConsig.Common.dll
+D:\devrosil\fastconsig\CP.FastConsig.Util\bin\Debug\CP.FastConsig.Common.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Util\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.Util\obj\Debug\CP.FastConsig.Util.dll
+D:\devrosil\fastconsig\CP.FastConsig.Util\obj\Debug\CP.FastConsig.Util.pdb

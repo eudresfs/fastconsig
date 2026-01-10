@@ -1,0 +1,13 @@
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Facade.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Facade.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.BLL.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Common.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.DAL.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Util.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.BLL.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Common.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.DAL.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Facade\bin\Debug\CP.FastConsig.Util.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Facade\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.Facade\obj\Debug\CP.FastConsig.Facade.dll
+D:\devrosil\fastconsig\CP.FastConsig.Facade\obj\Debug\CP.FastConsig.Facade.pdb

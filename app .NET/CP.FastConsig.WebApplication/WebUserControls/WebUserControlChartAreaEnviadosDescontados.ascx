@@ -1,0 +1,3 @@
+﻿<%@ Control ClassName="WebUserControlChartAreaEnviadosDescontados" Language="C#" AutoEventWireup="true" CodeBehind="WebUserControlChartAreaEnviadosDescontados.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlChartAreaEnviadosDescontados" %>
+<asp:PlaceHolder ID="PlaceHolderGrafico" runat="server"></asp:PlaceHolder>
+<div id="containerArea" style="height:250px; margin:0; clear:both"></div>

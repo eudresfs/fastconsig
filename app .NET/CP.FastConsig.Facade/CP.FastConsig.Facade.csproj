@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BFF6FD8-9F91-411D-ABF7-17F86B069E27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP.FastConsig.Facade</RootNamespace>
+    <AssemblyName>CP.FastConsig.Facade</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FachadaAgentesEdicao.cs" />
+    <Compile Include="FachadaCoeficientesEmprestimo.cs" />
+    <Compile Include="FachadaImportacao.cs" />
+    <Compile Include="FachadaIndicesNegocios.cs" />
+    <Compile Include="FachadaInformarSaldoDevedor.cs" />
+    <Compile Include="FachadaPerfisEdicao.cs" />
+    <Compile Include="FachadaPerfis.cs" />
+    <Compile Include="FachadaAuditoria.cs" />
+    <Compile Include="FachadaExportacao.cs" />
+    <Compile Include="FachadaGeral.cs" />
+    <Compile Include="FachadaReajustarContratos.cs" />
+    <Compile Include="FachadaSolicitacao.cs" />
+    <Compile Include="FachadaSuspensoes.cs" />
+    <Compile Include="FachadaConfirmarQuitacao.cs" />
+    <Compile Include="FachadaFluxo.cs" />
+    <Compile Include="FachadaAnaliseInadimplencia.cs" />
+    <Compile Include="FachadaAverbacoes.cs" />
+    <Compile Include="FachadaCentralSimulacao.cs" />
+    <Compile Include="FachadaDashBoardConsignante.cs" />
+    <Compile Include="FachadaDashBoardConsignataria.cs" />
+    <Compile Include="FachadaFluxoAprovacao.cs" />
+    <Compile Include="FachadaGerencial.cs" />
+    <Compile Include="FachadaImpactoAlteracoesFuncionarios.cs" />
+    <Compile Include="FachadaInformarQuitacao.cs" />
+    <Compile Include="FachadaPermissoesAcesso.cs" />
+    <Compile Include="FachadaConciliacao.cs" />
+    <Compile Include="FachadaDashBoard.cs" />
+    <Compile Include="FachadaGerenciarAverbacao.cs" />
+    <Compile Include="FachadaMaster.cs" />
+    <Compile Include="FachadaBloqueioUsuario.cs" />
+    <Compile Include="FachadaConsignatarias.cs" />
+    <Compile Include="FachadaConsignatariasEdicao.cs" />
+    <Compile Include="FachadaContatos.cs" />
+    <Compile Include="FachadaContatosEdicao.cs" />
+    <Compile Include="FachadaDefault.cs" />
+    <Compile Include="FachadaFuncionariosAutorizacoes.cs" />
+    <Compile Include="FachadaFuncionariosAutorizacoesEdicao.cs" />
+    <Compile Include="FachadaFuncionariosConsulta.cs" />
+    <Compile Include="FachadaLogin.cs" />
+    <Compile Include="FachadaResultadoBusca.cs" />
+    <Compile Include="FachadaServicos.cs" />
+    <Compile Include="FachadaServicosEdicao.cs" />
+    <Compile Include="FachadaSimulacaoCompraDivida.cs" />
+    <Compile Include="FachadaSimulacaoEmprestimo.cs" />
+    <Compile Include="FachadaSubMenu.cs" />
+    <Compile Include="FachadaTermoAverbacao.cs" />
+    <Compile Include="FachadaUsuario.cs" />
+    <Compile Include="FachadaUsuariosPermissoes.cs" />
+    <Compile Include="FachadaUsuariosPermissoesEdicao.cs" />
+    <Compile Include="FachadaVolumeAverbacoes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CP.FastConsig.BLL\CP.FastConsig.BLL.csproj">
+      <Project>{B68F87CC-8B5B-492A-BD55-40D616880BE7}</Project>
+      <Name>CP.FastConsig.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Common\CP.FastConsig.Common.csproj">
+      <Project>{60EB6FEE-A3E0-4506-974A-D6E15D8AA372}</Project>
+      <Name>CP.FastConsig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.DAL\CP.FastConsig.DAL.csproj">
+      <Project>{4C3324BB-A106-4CF4-A6CC-9EB1BE4DD249}</Project>
+      <Name>CP.FastConsig.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Util\CP.FastConsig.Util.csproj">
+      <Project>{704936C1-EAB8-4763-B4B5-B0A8DC46EB83}</Project>
+      <Name>CP.FastConsig.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

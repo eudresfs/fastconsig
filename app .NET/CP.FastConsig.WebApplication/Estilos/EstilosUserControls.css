@@ -1,0 +1,315 @@
+﻿/* Estilos para  os UsersControls */
+
+/* Estilos para o Gridview do Asp.NET Tool Kit */
+ 
+ .HeaderGridListaUsuarios
+ {
+     background-color:#2ba5c9;
+     height:25px;     
+ }
+ 
+  .HeaderGridListaUsuarios th
+ {     
+     text-align:left;
+     padding:5px;
+     color:#ffffff;     
+ }
+ 
+ .HeaderGridListaUsuarios a
+ {     
+     color:#ffffff;
+     text-decoration:none;  
+     font-size:12px;
+ }
+ 
+ 
+ .LinhaListaUsuarios
+ {
+     background-color:Red;
+     height:25px;
+     padding:5px;
+     border-top:1px solid #a3c0e8;
+     border-bottom:1px solid #a3c0e8;      
+     cursor: pointer;     
+ }
+ 
+ .LinhaListaUsuarios:hover
+ {
+     background-color:#cde4eb;
+     border-top:1px solid #e6e6e6;   
+     border-bottom:1px solid #e6e6e6; 
+     
+ }
+ 
+ .LinhaAlternadaListaUsuarios
+ {
+     background-color:#ffffff;
+     height:25px;
+     padding:5px;
+     border-top:1px solid #a3c0e8;
+     border-bottom:1px solid #a3c0e8;      
+     cursor: pointer;
+     
+ }
+  
+ .LinhaAlternadaListaUsuarios:hover
+ {     
+     background-color:#cde4eb;
+     border-top:1px solid #e6e6e6;   
+     border-bottom:1px solid #e6e6e6;  
+     
+ }
+ 
+ .LinhaListaUsuarios
+ {     
+     background-color:#f4f4f4;
+     height:25px;
+     padding:5px;     
+     
+ }
+ 
+  .LinhaAlternadaListaUsuarios
+ {     
+     background-color:#ffffff;
+     height:25px;
+     padding:5px;    
+     
+ }
+
+
+  .LinhaListaUsuarios td, .LinhaAlternadaListaUsuarios td {padding:5px;}
+ 
+ 
+ .PaginadorEstilos
+ {
+     background-color:#f4f4f4;   
+     height:25px;
+     padding:5px;
+     font-size:11px;     
+ }
+ 
+ .PaginadorEstilos a
+ {
+     text-decoration:none;
+     color:#004D63;     
+ }
+ 
+  .PaginadorEstilos a:hover {text-decoration:underline;}
+  .PaginadorEstilos TD {padding:2px;}
+ 
+ .EstilosGridView
+ {
+     border:1px solid #a3c0e8;
+     margin-top:8px;            
+ }
+ 
+ .EstilosGridViewResultadoPesquisa {border:1px solid #a3c0e8;}
+ 
+#TituloNovoUsuario
+ {
+     
+   background-color:#2ba5c9;
+   padding:10px;
+   color:#ffffff; 
+     
+ }
+ 
+ .TabelaModal TD
+ {
+     padding:3px;
+     background-color:#eff9fc;     
+ }
+ 
+  .TabelaModalConsignataria TD
+ {
+     padding:3px;
+     background-color:#ffffff;
+     
+ }
+ 
+
+ /* Estilos para o User Control Resultado da Busca */
+ 
+ .TituloResultadoBusca
+ {
+    font-size:12px;
+    font-weight:bold;   
+     
+ }
+ 
+ /*.BoxImagemTemplateField
+ {
+    Width:65px;
+    text-align:center;    
+     
+ }*/
+ 
+  caption
+ {
+     text-align:left;
+     padding:5px;
+     font-size:11px;
+     font-weight:bold;
+ }
+ 
+ 
+ /* Estilos para o menu dinâmico do user control Configurações */
+ 
+ /*.MenuConfiguracoes
+ {
+     
+    padding:10px;     
+     
+ }
+ 
+.MenuConfiguracoes
+ {
+	padding: 0;
+	list-style-type: none; 
+	margin: 0;
+	width: 640px;
+	height: 140px; 
+	padding-top: 0px
+}
+
+.Menuconfiguracoes li
+{
+	width: 150px;
+	float: left; 
+	margin-right: 7px
+}
+
+.Menuconfiguracoes li a
+ {
+	width: 150px;
+	display: block;
+	height: 140px; 
+	text-decoration: none;
+}*/
+
+
+/*
+.menuLista ul
+{
+	padding: 0;
+	list-style-type: none;
+	margin:0;
+	width: 800px;
+	height: 140px;
+    line-height:140px;
+    margin:0 auto;
+
+
+}
+.menuLista ul li
+ {
+	width: 200px;
+	float: left;
+	margin-right: 5px;
+    height:140px;
+   
+}
+.menuLista ul li a
+ {
+	width: 200px; 
+	display: block; 
+	height: 140px; 
+	text-decoration: none;
+}
+
+*/
+
+.MenuConfiguracoesBtn 
+{
+    float:left;
+    padding-right:5px;
+    padding-bottom:5px;
+    text-align:center;
+    color:#004d63;
+    
+}
+
+
+/* Estilos para o user control WebUserControlFuncionarios_Consulta..ascx */
+
+#DivDadosPessoais
+{
+   float:left;
+   width:49.5%;     
+}
+
+#DivDadosFuncionais
+{
+    width:49.1%;
+    float:left;
+    margin-left:10px;    
+}
+
+.DivImagem
+{
+    
+    float:left;
+    margin-top:5px;
+    padding-top:10px;
+    width:22%;
+    margin-right:3px;
+    text-align:center;      
+    
+}
+
+.DivTabelaDadosPessoais
+{
+    float:left;
+    width:77%;    
+    
+}
+
+.TabelaDadosPessoaisFuncionais TD {padding:4px;}
+
+/* Fim  -- Estilos para o user control WebUserControlFuncionarios_Consulta..ascx */
+
+
+/* Web User Control Funcionários */
+
+#DivBusca
+{
+  background-color:#ffffff;
+  padding:15px;
+  height:50px;
+  border:1px solid #a3c0e8;   
+    
+}
+
+#DivBusca2
+{
+  background-color:#ffffff;
+  margin-top:10px;
+  padding:15px;
+  height:50px;
+  border:1px solid #6CCFE9;     
+    
+}
+
+#TituloPesquisa
+{
+    font-size:16px;
+    display:inline;
+    margin-bottom:5px;     
+}
+
+
+.float-divider
+{
+    float:left;
+    margin-left:10px; 
+    margin-bottom:10px;   
+}
+
+
+.TextBoxBuscaFuncionario table
+{
+    background:none;
+    border:none;
+    outline:none;    
+}
+

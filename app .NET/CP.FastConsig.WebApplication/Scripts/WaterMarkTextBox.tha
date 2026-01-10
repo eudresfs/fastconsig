@@ -1,0 +1,7 @@
+﻿<script language='javascript' type='text/javascript'>
+
+  jQuery(function($){
+    $("#clientIdTextBox").Watermark("#textoWaterMark");
+  });
+
+</script>

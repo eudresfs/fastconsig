@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CorGraficoMargemDisponivel" xml:space="preserve">
+    <value>#FFF3025C</value>
+  </data>
+  <data name="CorGraficoMargemTotal" xml:space="preserve">
+    <value>#FFCAEAF2</value>
+  </data>
+  <data name="IconeBancos" xml:space="preserve">
+    <value>IconeGerencial.png</value>
+  </data>
+  <data name="IconeConfigurar" xml:space="preserve">
+    <value>IconeConfiguracoes.png</value>
+  </data>
+  <data name="IconeConsignatarias" xml:space="preserve">
+    <value>IconeConsignataria.png</value>
+  </data>
+  <data name="IconeAverbacaos" xml:space="preserve">
+    <value>IconeContrato.png</value>
+  </data>
+  <data name="IconeDashBoard" xml:space="preserve">
+    <value>IconeDash.png</value>
+  </data>
+  <data name="IconeFuncionarios" xml:space="preserve">
+    <value>IconeFuncionario.png</value>
+  </data>
+  <data name="IconeGerencial" xml:space="preserve">
+    <value>IconeGerencial.png</value>
+  </data>
+  <data name="IconeGerenciarAverbacao" xml:space="preserve">
+    <value>IconeContrato.png</value>
+  </data>
+  <data name="IconeImportarExportar" xml:space="preserve">
+    <value>IconeImpExp.png</value>
+  </data>
+  <data name="IconeMensagens" xml:space="preserve">
+    <value>IconeMensagens.png</value>
+  </data>
+  <data name="IdEmpresaConsignante" xml:space="preserve">
+    <value>1022</value>
+  </data>
+  <data name="NomeArquivoScriptChartBarra" xml:space="preserve">
+    <value>ChartBarra</value>
+  </data>
+  <data name="NomeArquivoScriptChartPizza" xml:space="preserve">
+    <value>ChartPizza</value>
+  </data>
+  <data name="NomeWebUserControlBanco" xml:space="preserve">
+    <value>WebUserControlBanco</value>
+  </data>
+  <data name="NomeWebUserControlBloqueioUsuario" xml:space="preserve">
+    <value>WebUserControlBloqueioUsuario</value>
+  </data>
+  <data name="NomeWebUserControlConfigurar" xml:space="preserve">
+    <value>WebUserControlConfigurar</value>
+  </data>
+  <data name="NomeWebUserControlConsignatarias" xml:space="preserve">
+    <value>WebUserControlConsignatarias</value>
+  </data>
+  <data name="NomeWebUserControlConsignatariasEdicao" xml:space="preserve">
+    <value>WebUserControlConsignatariasEdicao</value>
+  </data>
+  <data name="NomeWebUserControlContatosEdicao" xml:space="preserve">
+    <value>WebUserControlContatosEdicao</value>
+  </data>
+  <data name="NomeWebUserControlAverbacao" xml:space="preserve">
+    <value>WebUserControlAverbacao</value>
+  </data>
+  <data name="NomeWebUserControlAverbacaos" xml:space="preserve">
+    <value>WebUserControlAverbacaos</value>
+  </data>
+  <data name="NomeWebUserControlAverbacaoSuspenderBloquear" xml:space="preserve">
+    <value>WebUserControlAverbacaoSuspenderBloquear</value>
+  </data>
+  <data name="NomeWebUserControlDashBoard" xml:space="preserve">
+    <value>WebUserControlDashBoard</value>
+  </data>
+  <data name="NomeWebUserControlFuncAutorizacoes" xml:space="preserve">
+    <value>WebUserControlFuncionariosAutorizacoes</value>
+  </data>
+  <data name="NomeWebUserControlFuncHistorico" xml:space="preserve">
+    <value>WebUserControlFuncionariosHistorico</value>
+  </data>
+  <data name="NomeWebUserControlFuncionarios" xml:space="preserve">
+    <value>WebUserControlFuncionarios</value>
+  </data>
+  <data name="NomeWebUserControlFuncionariosAutorizacoesEdicao" xml:space="preserve">
+    <value>WebUserControlFuncionariosAutorizacoesEdicao</value>
+  </data>
+  <data name="NomeWebUserControlFuncionariosConsulta" xml:space="preserve">
+    <value>WebUserControlFuncionariosConsulta</value>
+  </data>
+  <data name="NomeWebUserControlGerencial" xml:space="preserve">
+    <value>WebUserControlGerencial</value>
+  </data>
+  <data name="NomeWebUserControlGerenciarAverbacaoConsulta" xml:space="preserve">
+    <value>WebUserControlGerenciarAverbacaoConsulta</value>
+  </data>
+  <data name="NomeWebUserControlImportacao" xml:space="preserve">
+    <value>WebUserControlImportacao</value>
+  </data>
+  <data name="NomeWebUserControlImportarExportar" xml:space="preserve">
+    <value>WebUserControlImportarExportar</value>
+  </data>
+  <data name="NomeWebUserControlMensagens" xml:space="preserve">
+    <value>WebUserControlMensagens</value>
+  </data>
+  <data name="NomeWebUserControlProdutosEdicao" xml:space="preserve">
+    <value>WebUserControlProdutosEdicao</value>
+  </data>
+  <data name="NomeWebUserControlSimulacaoCompraDivida" xml:space="preserve">
+    <value>WebUserControlSimulacaoCompraDivida</value>
+  </data>
+  <data name="NomeWebUserControlSimulacaoEmprestimo" xml:space="preserve">
+    <value>WebUserControlSimulacaoEmprestimo</value>
+  </data>
+  <data name="NomeWebUserControlSubMenu" xml:space="preserve">
+    <value>WebUserControlSubMenu</value>
+  </data>
+  <data name="NomeWebUserControlUsuario" xml:space="preserve">
+    <value>WebUserControlUsuario</value>
+  </data>
+  <data name="NomeWebUserControlUsuariosPermissoes" xml:space="preserve">
+    <value>WebUserControlUsuariosPermissoes</value>
+  </data>
+  <data name="NomeWebUserControlUsuariosPermissoesEdicao" xml:space="preserve">
+    <value>WebUserControlUsuariosPermissoesEdicao</value>
+  </data>
+  <data name="TituloSimulacaoCompraDivida" xml:space="preserve">
+    <value>Simulação de Compra de Dívida</value>
+  </data>
+  <data name="NomeArquivoScriptChartLinha" xml:space="preserve">
+    <value>ChartLinha</value>
+  </data>
+  <data name="NomeArquivoScriptChartBarraColocacaoConvenio" xml:space="preserve">
+    <value>ChartBarraColocacaoConvenio</value>
+  </data>
+  <data name="NomeArquivoScriptChartBarraUtilizacaoMargem" xml:space="preserve">
+    <value>ChartBarraUtilizacaoMargem</value>
+  </data>
+  <data name="NomeArquivoScriptChartLinhaColocacaoConvenio" xml:space="preserve">
+    <value>ChartLinhaColocacaoConvenio</value>
+  </data>
+  <data name="NomeArquivoScriptChartPizzaMargemPorProduto" xml:space="preserve">
+    <value>ChartPizzaMargemPorProduto</value>
+  </data>
+  <data name="NomeArquivoScriptChartBarraSimulacaoEmprestimo" xml:space="preserve">
+    <value>ChartBarraSimulacaoEmprestimo</value>
+  </data>
+  <data name="NomeArquivoScriptChartPizzaConciliacao" xml:space="preserve">
+    <value>ChartPizzaConciliacao</value>
+  </data>
+  <data name="NomeArquivoScriptAlerta" xml:space="preserve">
+    <value>Alerta</value>
+  </data>
+  <data name="NomeArquivoScriptChartBarraImpactoAlteracoesFuncionarios" xml:space="preserve">
+    <value>ChartBarraImpactoAlteracoesFuncionarios</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapse" xml:space="preserve">
+    <value>ExpandCollapse</value>
+  </data>
+  <data name="NomeArquivoScriptChartAreaVolumeInadimplencia" xml:space="preserve">
+    <value>ChartAreaVolumeInadimplencia</value>
+  </data>
+  <data name="NomeArquivoScriptChartPizzaInadimplenciaGeral" xml:space="preserve">
+    <value>ChartPizzaInadimplenciaGeral</value>
+  </data>
+  <data name="NomeWebUserControlDashBoardConsignataria" xml:space="preserve">
+    <value>WebUserControlDashBoardConsignataria</value>
+  </data>
+  <data name="NomeWebUserControlDashBoardConsignante" xml:space="preserve">
+    <value>WebUserControlDashBoardConsignante</value>
+  </data>
+  <data name="NomeArquivoScriptChartAreaEnviadosDescontados" xml:space="preserve">
+    <value>ChartAreaEnviadosDescontados</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapse2" xml:space="preserve">
+    <value>ExpandCollapse2</value>
+  </data>
+  <data name="IconeCentralSimulacao" xml:space="preserve">
+    <value>IconeCentralSimulacao.png</value>
+  </data>
+  <data name="NomeWebUserControlCentralSimulacao" xml:space="preserve">
+    <value>WebUserControlCentralSimulacao</value>
+  </data>
+  <data name="NomeArquivoScriptChartLinhaRanking" xml:space="preserve">
+    <value>ChartLinhaRanking</value>
+  </data>
+  <data name="NomeWebUserControlGerenciarAverbacao" xml:space="preserve">
+    <value>WebUserControlGerenciarAverbacao</value>
+  </data>
+  <data name="NomeArquivoScriptImpressao" xml:space="preserve">
+    <value>Impressao</value>
+  </data>
+  <data name="NomeArquivoScriptChartAreaVolumeInadimplenciaPercentual" xml:space="preserve">
+    <value>ChartAreaVolumeInadimplenciaPercentual</value>
+  </data>
+  <data name="NomeWebUserControlInformarSaldoDevedor" xml:space="preserve">
+    <value>WebUserControlInformarSaldoDevedor</value>
+  </data>
+  <data name="NomeWebUserControlInformarQuitacao" xml:space="preserve">
+    <value>WebUserControlInformarQuitacao</value>
+  </data>
+  <data name="NomeWebUserControlConfirmarQuitacao" xml:space="preserve">
+    <value>WebUserControlConfirmarQuitacao</value>
+  </data>
+  <data name="NomeArquivoScriptEnableCheckBoxes" xml:space="preserve">
+    <value>EnableCheckBoxes</value>
+  </data>
+  <data name="TabelaImportacaoContrato" xml:space="preserve">
+    <value>AverbacaoImportacao</value>
+  </data>
+  <data name="TabelaImportacaoFuncionario" xml:space="preserve">
+    <value>FuncionarioImportacao</value>
+  </data>
+  <data name="TabelaImportacaoPersonalizada" xml:space="preserve">
+    <value>PersonalizadoImportacao</value>
+  </data>
+  <data name="TabelaImportacaoRetornoFolha" xml:space="preserve">
+    <value>RetornoFolhaImportacao</value>
+  </data>
+  <data name="ScriptRodapePagina" xml:space="preserve">
+    <value>$('html, body').animate({scrollTop: 1000}, 800);</value>
+  </data>
+  <data name="ScriptTopoPagina" xml:space="preserve">
+    <value>$('html, body').animate({scrollTop: 0}, 800);</value>
+  </data>
+  <data name="NomeWebUserControlSuspensoesEdicao" xml:space="preserve">
+    <value>WebUserControlEmpresaSuspensoesEdicao</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapseGA" xml:space="preserve">
+    <value>ExpandCollapse_GA</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapseGA2" xml:space="preserve">
+    <value>ExpandCollapse2_GA</value>
+  </data>
+  <data name="MascaraCPF" xml:space="preserve">
+    <value>###.###.###-##</value>
+  </data>
+  <data name="NomeWebUserControlPerfis" xml:space="preserve">
+    <value>WebUserControlPerfis</value>
+  </data>
+  <data name="FormatoDataBrasil" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="NomeWebUserControlPerfisEdicao" xml:space="preserve">
+    <value>WebUserControlPerfisEdicao</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapsePerfis" xml:space="preserve">
+    <value>ExpandCollapsePerfis</value>
+  </data>
+  <data name="ArquivoScriptExpandCollapse3" xml:space="preserve">
+    <value>ExpandCollapse3</value>
+  </data>
+  <data name="NomeWebUserControlAverbacaoCancelar" xml:space="preserve">
+    <value>WebUserControlAverbacaoCancelar</value>
+  </data>
+  <data name="NomeWebUserControlAverbacaoLiquidar" xml:space="preserve">
+    <value>WebUserControlAverbacaoLiquidar</value>
+  </data>
+  <data name="NomeWebUserControlAgentesEdicao" xml:space="preserve">
+    <value>WebUserControlAgentesEdicao</value>
+  </data>
+  <data name="NomeBancoBmg" xml:space="preserve">
+    <value>BMG</value>
+  </data>
+  <data name="LoginUsuarioFastConsig" xml:space="preserve">
+    <value>fastconsig</value>
+  </data>
+  <data name="NomeBancoSantander" xml:space="preserve">
+    <value>SANTANDER</value>
+  </data>
+</root>

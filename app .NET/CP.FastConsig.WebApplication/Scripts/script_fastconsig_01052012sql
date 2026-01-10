@@ -1,0 +1,7 @@
+update recurso
+set Visivel = 1, Arquivo = 'WebUserControlMinhasAverbacoes'
+where idRecurso = 216;
+insert into EmpresaSolicitacaoTipo
+(IDEMpresaSolicitacaoTipo, Nome, Descricao, Prazo, Modulo)
+values
+(17,'Solicitação de Informações','Solicitação de Informações',0,'1;2;3');

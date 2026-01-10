@@ -1,0 +1,5 @@
+D:\devrosil\fastconsig\CP.FastConsig.ThirdParty\bin\Debug\CP.FastConsig.ThirdParty.dll
+D:\devrosil\fastconsig\CP.FastConsig.ThirdParty\bin\Debug\CP.FastConsig.ThirdParty.pdb
+D:\devrosil\fastconsig\CP.FastConsig.ThirdParty\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.ThirdParty\obj\Debug\CP.FastConsig.ThirdParty.dll
+D:\devrosil\fastconsig\CP.FastConsig.ThirdParty\obj\Debug\CP.FastConsig.ThirdParty.pdb

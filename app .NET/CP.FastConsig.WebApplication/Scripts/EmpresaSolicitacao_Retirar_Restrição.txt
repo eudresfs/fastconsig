@@ -1,0 +1,6 @@
+Segue a alteração que precisa fazer no banco de dados da produção:
+
+As seguintes Chaves Estrangeiras na tabela EMPRESASOLICITACAO retirar a restrição que deva existir na tabela associada.
+
+- FK_EmpresaSolicitacao_Averbacao -> Permitir criar solicitação sem haver uma averbação correspondente. Tabela AVERBACAO
+- FK_EmpresaSolicitacao_Empresa1 -> Permitir criar solicitação sem haver uma Empresa Solicitante. Tabela EMPRESA

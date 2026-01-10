@@ -1,0 +1,9 @@
+D:\devrosil\fastconsig\CP.FastConsig.Common\bin\Debug\CP.FastConsig.Common.dll
+D:\devrosil\fastconsig\CP.FastConsig.Common\bin\Debug\CP.FastConsig.Common.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\CP.FastConsig.Common.ResourceAuxiliar.resources
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\CP.FastConsig.Common.ResourceMensagens.resources
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\GenerateResource.read.1.tlog
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\GenerateResource.write.1.tlog
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\CP.FastConsig.Common.dll
+D:\devrosil\fastconsig\CP.FastConsig.Common\obj\Debug\CP.FastConsig.Common.pdb

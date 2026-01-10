@@ -1,0 +1,254 @@
+﻿/* Estilos para textbox, label, botão, combobox, dropdownlist */
+.TextBoxDropDownEstilos
+{    
+   width:326px;
+   height:25px;
+   line-height:25px;
+   padding-left:3px;
+   font-size:11px;
+   color:#8f8f8f;
+   border:1px solid #6ccfe9;   
+  
+}
+
+.TextBoxDropDownEstilos TD
+{
+   padding:0;
+   margin:0;      
+    
+}
+
+.ListBoxEstilos
+{    
+   width:326px;
+   height:100px;
+   line-height:25px;
+   padding-left:3px;
+   font-size:11px;
+   color:#8f8f8f;
+   border:1px solid #6ccfe9;   
+}
+
+ .BotaoBuscar
+ {
+	 width:50px;
+	 margin-left:5px;
+	 height:24px;
+	 font-size:11px;
+	 background-color:#2ba5c9;
+	 color:#ffffff;
+	 border:1px solid #02799b;
+	 font-weight:bold;     
+ }
+ 
+ .BotaoBuscar:hover
+ {
+	 background-color:#1892b6;
+	  cursor: pointer;
+ }
+ 
+ .BotaoEstiloGlobal
+ {     
+	 font-size:11px;
+	 background:transparent url(../Imagens/BgBtn.png) repeat-x top left;
+	 color:#083772;
+	 border:1px solid #a3c0e8;
+	 font-weight:bold;
+	 padding:7px;      
+ }
+ 
+ /*
+  .BotaoEstiloGlobal TD
+ {     
+	padding:7px; 
+	text-align:center;     
+ }
+ */
+ .BotaoEstiloGlobal:hover
+ {
+	 background:transparent url(../Imagens/BgBtnOver.png) repeat-x top left;
+	 cursor: pointer;
+	 color:#083772;
+ }
+ 
+  
+ .BotaoEstiloGlobalEnviarFoto
+ {     
+	 font-size:11px;
+	 background:transparent url(/Imagens/BgBtn.png) repeat-x top left;
+	 color:#083772;
+	 border:1px solid #a3c0e8;
+	 font-weight:bold; 
+	 padding-left:7px;    
+ }
+ 
+ .BotaoEstiloGlobalEnviarFoto:hover
+ {
+	 background:transparent url(/Imagens/BgBtnOver.png) repeat-x top left;
+	 cursor: pointer;
+	 color:#083772;
+ }
+   
+	 
+#BoxEntrar
+{
+   height:53px;
+   float:left; 
+   margin-top:44px;
+   padding-left:5px;	
+ }
+ 
+ .BotaoEntrar
+ {
+	 width:50px;
+	 height:22px;
+	 font-size:11px;
+	 background-color:#2ba5c9;
+	 color:#ffffff;
+	 border:1px solid #02799b;
+	 font-weight:bold;
+ }
+ 
+ .BotaoEntrar:hover
+ {
+	 background-color:#1892b6;
+	 cursor: pointer;
+ }
+ 
+.TextBoxDropDownEstilos  
+{    
+   width:326px;
+   height:27px;
+   line-height:27px;
+   padding-left:3px;
+   font-size:11px;
+   color:#121212;
+   border:1px solid #c0dfe8;   
+}
+
+.TextBoxDropDownEstilosTopoBusca  
+{  
+   line-height:22px;
+   padding-left:3px;
+   font-size:11px;
+   color:#BEBEBE;
+   border:1px solid #c0dfe8;   
+}
+
+.DropdownlistUserControl   
+{    
+   width:332px;
+   height:22px;
+   line-height:22px;
+   padding-left:3px;
+   font-size:11px;
+   color:#121212;
+   border:1px solid #c0dfe8;   
+}
+
+.DropdownlistUserControlDyn   
+{    
+   width:155px;
+   height:22px;
+   line-height:22px;
+   padding-left:3px;
+   font-size:11px;
+   color:#121212;
+   border:1px solid #c0dfe8;   
+}
+
+/* Botões Login e Senha da página de login */
+
+input#TextBoxLogin 
+{	 
+   width:190px;
+   height:30px;
+   line-height:30px;
+   padding:0 5px;
+   font-size:12px;
+   background:none;
+   border: none;		  
+}
+
+input#TextBoxSenha 
+ {	 
+   width:190px;
+   height:30px;
+   line-height:30px;
+   padding:0 5px;
+   font-size:12px;
+   background:none;
+   border: none;			
+ }
+ 
+ /* fim */
+
+ 
+ .textbox,.file,.select,.textarea{border: solid 1px #6CCFE9;padding: 3px; color:#004D63}
+ .botao{padding: 3px 5px 4px;background: url(../Imagens/BgBotao.png) center top; cursor: pointer;  border: solid 1px #6CCFE9;color: #004D63; height: 29px!important; width: auto!important}
+ .botao:hover{background: url(../Imagens/BgBotao.png) center bottom;color: #fff; border: solid 1px #fff;}
+
+ .formulario label, .formulario span{ width: 150px;float: left;clear: left;text-align: right; margin:3px 5px}
+ .formulario input[type=text], .formulario select, .formulario .dxucControl, .formulario textarea{ float: left;margin: 3px 5px; width:200px}
+ .formulario select{ width:208px}
+ .formulario textarea{ width: 250px;height: 90px; margin-bottom:10px!important}
+ .formulario input[type=submit], .formulario input[type=reset], .formulario .dxbButton{float: left; margin-right: 10px}
+ .formulario .dxbButton{background: url(../Imagens/BgBotao.png) center top; cursor: pointer;  border: solid 1px #6CCFE9;color: #004D63!important;width: auto!important;margin: 0!important; height:25px}
+ .formulario .dxbButton:hover{background: url(../Imagens/BgBotao.png) center bottom;color: #fff; border: solid 1px #fff;}
+ .formulario .dxbButton span{width:auto!important}
+ .dxbButton div.dxb{padding:6px 8px 4px!important}
+ 
+ .formulario2{ float: left; width:320px}
+ .formulario2 label, .formulario2 span{width: 200px;float: left;text-align: left; margin:4px}
+ .formulario2 img{float: left;clear: left}
+ 
+ .formulario3{ float: left; width:210px}
+ .formulario3 span{ width: 110px;margin:8px 3px;float: left;clear: left; text-align: right}
+ .formulario3 input[type=text]{ width: 80px;margin: 3px;float: left}
+ .formulario3 td.dxeErrorCell{display:none}
+ .formulario3 input[type=submit]{margin:20px}
+ 
+ .primeiroBotao{ clear: left;margin-left: 165px !important}
+ .devBtn{ width: 80px!important;height: 29px!important;clear: left; margin-right:10px}
+ 
+ .botaoSelecionado tbody tr td{background:#c3e0e9!important}
+ 
+ .compraDivida span{float: left;clear: left; margin: 2px;}
+ .compraDivida input{float: left;clear: left;}
+ .compraDivida label{ float: left; margin: 2px}
+ 
+ .checkBoxSemLabel label{display:none}
+ 
+ .TextBoxMargemDisponivel
+ {
+	 
+	 padding:0 !important
+ 
+ }
+ 
+ .TextBoxDropDownEstilosCompraDivida
+ {
+	 
+   width:320px;
+   height:27px;
+   line-height:27px;
+   padding:3px;
+   font-size:11px;
+   color:#121212;
+   border:1px solid #c0dfe8; 
+	 
+	 
+ }
+ 
+ .DropDownPesquisaAverbacao
+ {
+	 
+	  border:1px solid #c0dfe8; 
+	 
+ }
+ 
+.TextBoxSemBg
+{ 
+    background:none;
+    width:300px;
+} 

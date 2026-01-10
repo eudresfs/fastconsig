@@ -1,0 +1,212 @@
+﻿/*Estilos para Página de Login */
+
+*
+{
+	padding-bottom: 0px;
+	margin: 0px; 
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px;
+	border:0;
+}
+
+
+ html#BG
+{
+	height:100%; 
+	background-color:#042a36;    
+}
+
+body
+{
+	background-color:#042a36; 
+	font-family: "segoe ui", arial, verdana, helvetica, sans-serif;   
+	font-size: 12px;
+	height:100%;
+	color:#004D63;
+}
+
+#TopoLogin
+{
+	
+   width: 100%;
+   background:url(../Imagens/BgTopoLogin.png) repeat-x;
+   height: 111px;
+   top:0px; 	
+	
+}
+
+
+
+
+#LogoMarcaControles
+{
+	width:980px;
+	height:111px;
+	margin:0 auto;
+	background:transparent url(../Imagens/BgLogoMarcaControles.png) repeat-x top left;
+	  
+}
+
+#BoxLogomarca
+{    
+  width:475px;
+  height:111px;
+  float:left;
+  background:transparent url(../Imagens/BoxLogomarcaLogin.png) no-repeat top left;    
+}
+
+
+a#LogomarcaLogin
+{
+	width: 262px;
+	float:left;
+	margin-left:108px;
+	margin-top:15px;
+	background: url(../Imagens/LogomarcaLogin.png) no-repeat;
+	height:68px;
+	position: relative;
+	z-index: 100;
+}
+
+#Controles
+{
+    width:470px;
+    height:111px;
+    float:left;    
+}
+
+#BoxLogin
+{
+   float:left;
+   margin-top:25px; 
+   height:71px;	
+ }
+	 
+	 
+#BoxSenha
+{
+	margin-left:5px;
+	float:left; 
+	margin-top:25px;   
+	height:86px;
+ }  
+ 
+
+.TextoLoginSenha 
+{    
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+.MarginBotton
+{	
+	margin-bottom:3px;
+	margin-top:3px;
+}
+
+
+#DivLoginNormal
+ {
+	 
+	padding: 20px;
+	background-color:#daecf1;
+	border: 1px solid #02799b;
+	margin:10px;   
+ }
+ 
+ #DivLoginBanco
+ {
+	 padding: 10px;
+	 min-height:100%; 
+ 
+ }
+ 
+ .DivLoginConteudo {margin: 10px;}
+ 
+ 
+ #RodapeLogin
+ {
+	 
+   width:980px;
+   height:103px;
+   padding-top:15px;
+		 
+ }
+ 
+ #LogoCasePartnersRodape
+ {
+	
+	position:relative;     
+	float:right;
+	margin-right:75px;
+	background:url(../Imagens/LogoCasePartnersRodape.png) no-repeat;    
+	z-index:100;
+	width:143px;
+	height:79px;
+	margin-top:25px;
+	 
+ }
+ 
+#DivLoginConteudo2 {margin:10px;}
+
+ /* Estilos para o modal pop-up que retorna o usuário não logado */ 
+.dxpcHeader {background-color:#007c9f;}
+
+/* Estilos para os pop-ups controls */
+.AlturaCabecalhoPopControl {height:25px;}
+ 
+#BoxSplashLogin
+ {
+	margin:0 auto;
+	background: url(../Imagens/LoginSplash.png) no-repeat;
+	/*background-color:yellow;*/
+	height:614px;
+	width:980px;
+	/*padding-top:155px*/
+ }
+ 
+ 
+  #TextBoxDivLogin
+ {
+	 background:transparent url(../Imagens/BgTextBox.png) no-repeat;
+	 line-height:30px;
+	 height:30px;
+	 margin-top:3px;
+	 margin-bottom:4px;	 
+ }
+ 
+ #TextBoxDivSenha
+ {	 
+	 background:transparent url(../Imagens/BgTextBox.png) no-repeat;
+	 line-height:30px;
+	 margin-top:3px;
+	 height:30px;
+	 margin-bottom:4px;		  
+ }
+ 
+ #DivLogado
+ {
+   height:111px;    
+     
+ }
+ 
+ 
+ /* Estilos para o Chat e Suporte no Rodapé */
+.RodapeChatSuporte
+{
+  width:100%;
+  height:30px;
+  bottom:0;
+  position:fixed;
+ 
+}
+
+#IconeSuporteRodapeLogin
+{
+	float:right;
+	padding-left:8px;
+	padding-right:250px;
+	padding-top:3px;  
+}

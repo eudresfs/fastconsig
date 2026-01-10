@@ -1,0 +1,22 @@
+﻿<script language='javascript' type='text/javascript'>
+
+  var obj = document.getElementById("aTitulo");
+
+  $(".toggle_container").hide();
+
+  var aTitulo = obj;
+
+  $('#h2.trigger').removeAttr("onclick").unbind("click");
+
+  $("h2.trigger").click(function () {
+
+  $(this).toggleClass("active").next().slideToggle("slow", function() { $('html, body').animate({scrollTop: $(".toggle_container").height()-28}, 700);});
+
+  // $('html, body').animate({scrollTop: 1000}, 800);
+
+  if (aTitulo.innerHTML == "Mais Detalhes") aTitulo.innerHTML = "Menos Detalhes";
+  else aTitulo.innerHTML = "Mais Detalhes";
+
+  });
+
+</script>

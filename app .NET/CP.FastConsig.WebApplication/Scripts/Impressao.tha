@@ -1,0 +1,10 @@
+﻿<script language='javascript' type='text/javascript'>
+
+  var oPrint, oJan;
+  oPrint = window.document.getElementById("#id").innerHTML;
+  oJan = window.open("Impressão");
+  oJan.document.write(oPrint);
+  oJan.window.print();
+  oJan.document.close();
+
+</script>

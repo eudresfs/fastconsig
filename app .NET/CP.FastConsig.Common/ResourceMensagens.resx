@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExplicacaoOpcaoAverbacoes" xml:space="preserve">
+    <value>A carga desse arquivo consiste em atualizar os dados de Averbações para o portal.</value>
+  </data>
+  <data name="ExplicacaoOpcaoFuncionario" xml:space="preserve">
+    <value>A carga desse arquivo consiste em atualizar os dados dos funcionários para o portal.</value>
+  </data>
+  <data name="ExplicacaoOpcaoPersonalizado" xml:space="preserve">
+    <value>Importe informações de forma personalizada.</value>
+  </data>
+  <data name="ExplicacaoOpcaoRetornoFolha" xml:space="preserve">
+    <value>Importe as informações de descontos que houve na folha de pagamento.</value>
+  </data>
+  <data name="LabelGraficoMargemDisponivel" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="LabelGraficoMargemTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="LabelNomeCompleto" xml:space="preserve">
+    <value>Nome Completo</value>
+  </data>
+  <data name="LabelSelecione" xml:space="preserve">
+    <value>-- Selecione --</value>
+  </data>
+  <data name="MensagemBancoNaoCadastradoParaUsuario" xml:space="preserve">
+    <value>Não existem bancos cadastrados para este usuário!</value>
+  </data>
+  <data name="MensagemCnpjInvalido" xml:space="preserve">
+    <value>CNPJ informado é inválido!</value>
+  </data>
+  <data name="MensagemConsignatariaExistente" xml:space="preserve">
+    <value>Consignatária já existe!</value>
+  </data>
+  <data name="MensagemCpfInvalido" xml:space="preserve">
+    <value>O CPF informado é inválido!</value>
+  </data>
+  <data name="MensagemDigitarTextoPesquisa" xml:space="preserve">
+    <value>Digite um termo para pesquisa!</value>
+  </data>
+  <data name="MensagemEmailInvalido" xml:space="preserve">
+    <value>O e-mail informado é inválido!</value>
+  </data>
+  <data name="MensagemFaltaPreencherMotivo" xml:space="preserve">
+    <value>É necessário preencher o motivo!</value>
+  </data>
+  <data name="MensagemNaoExiste" xml:space="preserve">
+    <value>Não foram encontrados dados para a pesquisa solicitada!</value>
+  </data>
+  <data name="MensagemMarcarPeloMenosUmaOpcao" xml:space="preserve">
+    <value>Selecione pelo menos uma opção!</value>
+  </data>
+  <data name="MensagemMarcarUmaOpcao" xml:space="preserve">
+    <value>Selecione uma opção!</value>
+  </data>
+  <data name="MensagemMinimo5Caracteres" xml:space="preserve">
+    <value>A senha precisa conter pelo menos 5 caracteres.</value>
+  </data>
+  <data name="MensagemPreencherValorParcelaOuValorLiberado" xml:space="preserve">
+    <value>É necessário preencher o valor da parcela, ou valor liberado e a quantidade de parcelas!</value>
+  </data>
+  <data name="MensagemSelecionarArquivoUpload" xml:space="preserve">
+    <value>Selecione um arquivo para envio!</value>
+  </data>
+  <data name="MensagemSelecionarArquivoUploadImportacaoValido" xml:space="preserve">
+    <value>Escolha um arquivo nos formatos: xls, csv, txt ou xlsx.</value>
+  </data>
+  <data name="MensagemSelecionarProdutos" xml:space="preserve">
+    <value>É necessário selecionar os serviços!</value>
+  </data>
+  <data name="MensagemSenhaNaoConfere" xml:space="preserve">
+    <value>A senha digitada não confere!</value>
+  </data>
+  <data name="MensagemSenhasDiferentes" xml:space="preserve">
+    <value>As senhas digitadas não conferem!</value>
+  </data>
+  <data name="MensagemSimulacaoEmprestimoReserva" xml:space="preserve">
+    <value>Prezado usuário, você acaba de realizar uma reserva de Averbação. Em breve o banco entrará em contato com você para que a reserva seja efetivada.</value>
+  </data>
+  <data name="MensagemSimulacaoEmprestimoSemMargemSuficiente" xml:space="preserve">
+    <value>Você não tem margem suficiente para realizar esta operação!</value>
+  </data>
+  <data name="MensagemSimulacaoEmprestimoSolicitarContato" xml:space="preserve">
+    <value>Caro usuário, sua solicitação de contato foi enviado ao banco. Aguarde que logo eles entrarão em contato.</value>
+  </data>
+  <data name="MensagemSucessoJaExisteBloqueioCompleto" xml:space="preserve">
+    <value>Já existe um bloqueio completo! Ele deve ser removido antes.</value>
+  </data>
+  <data name="MensagemSucessoOperacao" xml:space="preserve">
+    <value>Operação realizada com sucesso!</value>
+  </data>
+  <data name="MensagemSucessoSalvarBloqueiosAplicacaoCompletaRemocaoAnterior" xml:space="preserve">
+    <value>Bloqueio completo efetuado! Os bloqueios parciais anteriores foram removidos.</value>
+  </data>
+  <data name="MensagemSucessoSalvarBloqueiosAplicacaoParcialComRepeticao" xml:space="preserve">
+    <value>Bloqueio parcial efetuado! Itens repetidos ignorados.</value>
+  </data>
+  <data name="MensagemTodosCamposObrigatorios" xml:space="preserve">
+    <value>Todos os campos são obrigatórios!</value>
+  </data>
+  <data name="MensagemUsuarioExistente" xml:space="preserve">
+    <value>Já existe um usuário cadastrado com este CPF!</value>
+  </data>
+  <data name="MensagemUsuarioNaoEncontrado" xml:space="preserve">
+    <value>Usuário não encontrado!</value>
+  </data>
+  <data name="MensagemUsuarioNaoPermitidoBanco" xml:space="preserve">
+    <value>Usuário não permitido para este banco!</value>
+  </data>
+  <data name="TituloAutorizacoes" xml:space="preserve">
+    <value>Autorizações</value>
+  </data>
+  <data name="TituloAviso" xml:space="preserve">
+    <value>Aviso</value>
+  </data>
+  <data name="TituloBancos" xml:space="preserve">
+    <value>Bancos</value>
+  </data>
+  <data name="TituloBloqueio" xml:space="preserve">
+    <value>Bloqueio</value>
+  </data>
+  <data name="TituloConciliacao" xml:space="preserve">
+    <value>Conciliação Mensal de Averbações</value>
+  </data>
+  <data name="TituloConfigurar" xml:space="preserve">
+    <value>Configurar</value>
+  </data>
+  <data name="TituloConsignatarias" xml:space="preserve">
+    <value>Consignatárias</value>
+  </data>
+  <data name="TituloContatos" xml:space="preserve">
+    <value>Contatos</value>
+  </data>
+  <data name="TituloAverbacaos" xml:space="preserve">
+    <value>Averbacaos</value>
+  </data>
+  <data name="TituloDashBoard" xml:space="preserve">
+    <value>Indicadores</value>
+  </data>
+  <data name="TituloDetalhe" xml:space="preserve">
+    <value>Detalhe</value>
+  </data>
+  <data name="TituloEditar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="TituloFuncionarios" xml:space="preserve">
+    <value>Funcionários</value>
+  </data>
+  <data name="TituloGerencial" xml:space="preserve">
+    <value>Gerencial</value>
+  </data>
+  <data name="TituloGerenciarAverbacao" xml:space="preserve">
+    <value>Gerenciar Averbações</value>
+  </data>
+  <data name="TituloGerenciarAverbacaosConsulta" xml:space="preserve">
+    <value>Gerenciar Averbações - Detalhe</value>
+  </data>
+  <data name="TituloHistoricos" xml:space="preserve">
+    <value>Histórico de Alterações Cadastrais</value>
+  </data>
+  <data name="TituloImportacaoAverbacoes" xml:space="preserve">
+    <value>Importação de Averbações</value>
+  </data>
+  <data name="TituloImportacaoFuncionarios" xml:space="preserve">
+    <value>Importação de Funcionários</value>
+  </data>
+  <data name="TituloImportacaoPersonalizada" xml:space="preserve">
+    <value>Importação Personalizada</value>
+  </data>
+  <data name="TituloImportacaoRetornoFolha" xml:space="preserve">
+    <value>Importação de Informações de Folha de Pagamento</value>
+  </data>
+  <data name="TituloImportarExportar" xml:space="preserve">
+    <value>Importar / Exportar</value>
+  </data>
+  <data name="TituloMensagens" xml:space="preserve">
+    <value>Mensagens</value>
+  </data>
+  <data name="TituloNovo" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="TituloPermissoesAcesso" xml:space="preserve">
+    <value>Configurar Permissões de Acesso</value>
+  </data>
+  <data name="TituloResultadoBusca" xml:space="preserve">
+    <value>Resultado da Busca</value>
+  </data>
+  <data name="TituloProdutos" xml:space="preserve">
+    <value>Serviços</value>
+  </data>
+  <data name="TituloSimulacaoCompraDivida" xml:space="preserve">
+    <value>Simulação de Compra de Dívida</value>
+  </data>
+  <data name="TituloSimulacaoEmprestimo" xml:space="preserve">
+    <value>Simulação de Empréstimo</value>
+  </data>
+  <data name="TituloUsuariosPermissoes" xml:space="preserve">
+    <value>Usuários / Permissões</value>
+  </data>
+  <data name="TituloUtilizacaoMargem" xml:space="preserve">
+    <value>Utilização de Margem</value>
+  </data>
+  <data name="TituloUtilizacaoMargemProduto" xml:space="preserve">
+    <value>Utilização de Margem por Serviço</value>
+  </data>
+  <data name="MensagemPreencherSenha" xml:space="preserve">
+    <value>É necessário atualizar sua senha!</value>
+  </data>
+  <data name="LabelMargem" xml:space="preserve">
+    <value>Margem</value>
+  </data>
+  <data name="LabelPrazoDesejado" xml:space="preserve">
+    <value>Prazo Desejado: </value>
+  </data>
+  <data name="LabelQuantoGostariaPagar" xml:space="preserve">
+    <value>Quanto gostaria de pagar?</value>
+  </data>
+  <data name="LabelValorDesejado" xml:space="preserve">
+    <value>Valor Desejado: </value>
+  </data>
+  <data name="MensagemDigitarInformacaoSolicitada" xml:space="preserve">
+    <value>Digite a informação solicitada!</value>
+  </data>
+  <data name="TituloMinhaPosicaoNoConvenio" xml:space="preserve">
+    <value>Minha Posição no Convênio</value>
+  </data>
+  <data name="TituloGraficoConciliacao" xml:space="preserve">
+    <value>Gráfico da Conciliação</value>
+  </data>
+  <data name="TituloAnaliseAverbacaos" xml:space="preserve">
+    <value>Análise de Averbações</value>
+  </data>
+  <data name="TituloAlterarMinhaSenha" xml:space="preserve">
+    <value>Alterar Minha Senha</value>
+  </data>
+  <data name="MensagemFuncNaoExiste" xml:space="preserve">
+    <value>Não existem funcionários para esta Matrícula ou CPF!</value>
+  </data>
+  <data name="TituloImpactoAlteracoesFuncionarios" xml:space="preserve">
+    <value>Impacto de Alterações de Funcionários</value>
+  </data>
+  <data name="TituloAnaliseInadimplencia" xml:space="preserve">
+    <value>Análise de Inadimplência</value>
+  </data>
+  <data name="OpcaoImportacaoAverbacoes" xml:space="preserve">
+    <value>Averbações</value>
+  </data>
+  <data name="OpcaoImportacaoFuncionarios" xml:space="preserve">
+    <value>Funcionários</value>
+  </data>
+  <data name="OpcaoImportacaoPersonalizado" xml:space="preserve">
+    <value>Personalizado</value>
+  </data>
+  <data name="OpcaoImportacaoRetornoFolha" xml:space="preserve">
+    <value>Retorno Folha</value>
+  </data>
+  <data name="TituloParametrosGerais" xml:space="preserve">
+    <value>Parâmetros Gerais</value>
+  </data>
+  <data name="ExplicacaoOpcaoAConquistar" xml:space="preserve">
+    <value>Aqui você obtém a quantidade de sobre clientes que compõe a sua carteira, bem como o total de margem livre que os mesmos possuem e por fim,  a prospectiva de negócio relacionado a esse volume de margem.</value>
+  </data>
+  <data name="ExplicacaoOpcaoConquistado" xml:space="preserve">
+    <value>Aqui você tem a informação de quantos contratos forma fechados por tipo de averbação, bem como o volume de negócio agregado à sua carteira de contratos.</value>
+  </data>
+  <data name="ExplicacaoOpcaoPerdas1" xml:space="preserve">
+    <value>Aqui você obtém duas principais informações:</value>
+  </data>
+  <data name="ExplicacaoOpcaoPerdas2" xml:space="preserve">
+    <value>1 - Perdas por Compra de Dívida, que exibe a quantidade de contratos perdidos para a concorrência e o valor subtraído da carteira.</value>
+  </data>
+  <data name="ExplicacaoOpcaoPerdas3" xml:space="preserve">
+    <value>2 – Perdas de Negócios, que exibe os funcionários que estão na minha carteira e que tinham margem livre, porém preferiram a concorrência para realizar novas averbações. Esses tipos de informações são de alto poder gerencial, tendo em vista que a partir deles podem ser tomadas medidas preventivas para o enriquecimento da carteira.</value>
+  </data>
+  <data name="LabelInformarMatriculaCpf" xml:space="preserve">
+    <value>Informe Matrícula/CPF: </value>
+  </data>
+  <data name="MensagemMatriculaCPFNaoEncontrado" xml:space="preserve">
+    <value>Matrícula/Cpf não encontrado!</value>
+  </data>
+  <data name="MensagemPreencherCampo" xml:space="preserve">
+    <value>Por favor, preencha o campo primeiro!</value>
+  </data>
+  <data name="MensagemPreencherCampoMatriculaCPF" xml:space="preserve">
+    <value>Informe a Matricula ou CPF para quem deseja fazer a simulação.</value>
+  </data>
+  <data name="TituloCentralSimulacao" xml:space="preserve">
+    <value>Central da Simulação</value>
+  </data>
+  <data name="TituloAverbacaoSuspenderBloquear" xml:space="preserve">
+    <value>Suspender/Bloquear Averbação</value>
+  </data>
+  <data name="LabelAgente" xml:space="preserve">
+    <value>-- Agente --</value>
+  </data>
+  <data name="LabelConsignataria" xml:space="preserve">
+    <value>-- Banco --</value>
+  </data>
+  <data name="LabelModulo" xml:space="preserve">
+    <value>-- Módulo --</value>
+  </data>
+  <data name="LabelSemItens" xml:space="preserve">
+    <value>-- Sem Itens --</value>
+  </data>
+  <data name="LabelSolicitacao" xml:space="preserve">
+    <value>-- Solicitação --</value>
+  </data>
+  <data name="TextoOrcamento" xml:space="preserve">
+    <value>Este documento tem por finalidade exibir as simulações realizadas pelo usuário acima mensionado, onde a mesma tem validade de _____ dias úteis. Deste modo declaramos abaixo que estamos cientes que esta simulação poderá ser contratada até _____ dias úteis por esta empresa.</value>
+  </data>
+  <data name="TituloInformarSaldoDevedor" xml:space="preserve">
+    <value>Informar Saldo Devedor</value>
+  </data>
+  <data name="MensagemCamposVazios" xml:space="preserve">
+    <value>Existe(m) campo(s) obrigatório(s) vazio(s)! </value>
+  </data>
+  <data name="MensagemDigitarValorValido" xml:space="preserve">
+    <value>Digite um valor válido!</value>
+  </data>
+  <data name="MensagemTiposValidosParaComprovante" xml:space="preserve">
+    <value>Apenas os seguintes tipos de arquivos são válidos: .PDF, .PNG, .DOC, .JPG, .JPEG.</value>
+  </data>
+  <data name="TituloAverbacaoLiquidar" xml:space="preserve">
+    <value>Liquidar Averbação</value>
+  </data>
+  <data name="MensagemFaltaCampoNome" xml:space="preserve">
+    <value>Preencha o campo NOME!</value>
+  </data>
+  <data name="MensagemFaltaCampoTelefone" xml:space="preserve">
+    <value>Preencha o campo TELEFONE!</value>
+  </data>
+  <data name="MensagemFaltamCamposNomeTelefone" xml:space="preserve">
+    <value>Preencha os campos NOME e TELEFONE!</value>
+  </data>
+  <data name="MensagemSemDadosParaImportacao" xml:space="preserve">
+    <value>Sem dados para importação!</value>
+  </data>
+  <data name="MensagemDigitarTituloCampoPersonalizado" xml:space="preserve">
+    <value>Digite um título para o campo personalizado!</value>
+  </data>
+  <data name="MensagemSelecionarItemRemocao" xml:space="preserve">
+    <value>Selecione um item para remoção!</value>
+  </data>
+  <data name="MensagemIncluirUmCampoPersonalizadoComTituloTabela" xml:space="preserve">
+    <value>É necessário adicionar pelo menos um campo personalizado e um título para a tabela!</value>
+  </data>
+  <data name="MensagemSemItensExibicao" xml:space="preserve">
+    <value>Sem itens para exibição!</value>
+  </data>
+  <data name="MensagemPrecisaPreencherSenha" xml:space="preserve">
+    <value>É necessário preencher a senha!</value>
+  </data>
+  <data name="MensagemSenhaProvisoriaSeisDigitos" xml:space="preserve">
+    <value>A senha provisória deve contar 6 dígitos!</value>
+  </data>
+  <data name="MensagemAcessoNegado" xml:space="preserve">
+    <value>Acesso Negado!</value>
+  </data>
+  <data name="MensagemBoaNoite" xml:space="preserve">
+    <value>Boa noite</value>
+  </data>
+  <data name="MensagemBoaTarde" xml:space="preserve">
+    <value>Boa tarde</value>
+  </data>
+  <data name="MensagemBomDia" xml:space="preserve">
+    <value>Bom dia</value>
+  </data>
+  <data name="TituloPermissaoAcesso" xml:space="preserve">
+    <value>Permissão de Acesso</value>
+  </data>
+  <data name="MensagemMargemInsuficiente" xml:space="preserve">
+    <value>Margem Insuficiente!</value>
+  </data>
+  <data name="ExplicacaoOpcaoDescontoFolha" xml:space="preserve">
+    <value>Baixe o arquivo de descontos para Folha de Pagamento</value>
+  </data>
+  <data name="MensagemSenhaPersonalizadaUsuario" xml:space="preserve">
+    <value>Já foi personalizada pelo usuário!</value>
+  </data>
+  <data name="MensagemFuncSituacaoInvalida" xml:space="preserve">
+    <value>Situação do Funcionário Inválida!</value>
+  </data>
+  <data name="MensagemSenhaDeveSerModificada" xml:space="preserve">
+    <value>A senha deve ser trocada!</value>
+  </data>
+  <data name="MensagemFuncBloqueado" xml:space="preserve">
+    <value>Funcionário Bloqueado para este tipo de operação!</value>
+  </data>
+  <data name="MensagemEmpresaSuspensa" xml:space="preserve">
+    <value>Empresa está Suspensa!</value>
+  </data>
+  <data name="MensagemAlerta" xml:space="preserve">
+    <value>Uma mensagem de alerta foi gerada automaticamente para a consignatária: {0}</value>
+  </data>
+  <data name="MensagemRestrinjaPesquisa" xml:space="preserve">
+    <value>Vários registros foram encontrados ( maior que 500 ). Por favor restrinja sua pesquisa, definindo mais critérios de filtro!</value>
+  </data>
+  <data name="MensagemBancoBloqueado" xml:space="preserve">
+    <value>Seu banco foi suspenso. Contate o gestor do convênio. Período: {0}. Motivo: {1}</value>
+  </data>
+  <data name="LabelIndefinido" xml:space="preserve">
+    <value>Indefinido</value>
+  </data>
+  <data name="MensagemMesInicioInvalido" xml:space="preserve">
+    <value>Competência de primeiro desconto inválida!</value>
+  </data>
+  <data name="MensagemSelecioneEmpresa" xml:space="preserve">
+    <value>Selecione uma Empresa!</value>
+  </data>
+  <data name="MensagemSelecionePerfilACopiar" xml:space="preserve">
+    <value>Selecione um Perfil a ser copiado!</value>
+  </data>
+  <data name="MensagemSelecionarConsignataria" xml:space="preserve">
+    <value>Selecione um banco!</value>
+  </data>
+  <data name="MensagemUsuarioNaoPodeSerRemovidoPorVinculo" xml:space="preserve">
+    <value>Não é possível apagar este usuário porque já existem operações vinculadas a ele. Neste caso, recomendamos que se aplique uma suspensão por tempo indeterminado.</value>
+  </data>
+  <data name="LabelTodosUsuarios" xml:space="preserve">
+    <value>-- Todos os Usuários --</value>
+  </data>
+  <data name="MensagemFuncionarioBloqueado" xml:space="preserve">
+    <value>Funcionário Bloqueado. Para maiores esclarecimentos entre em contato com o RH.</value>
+  </data>
+  <data name="TodasDescontaveisEmFolha" xml:space="preserve">
+    <value>Todas Descontavéis em Folha</value>
+  </data>
+  <data name="TodasQueDeduzemMargem" xml:space="preserve">
+    <value>Todas que Deduzem Margem</value>
+  </data>
+  <data name="TodasQueNaoDeduzemMargem" xml:space="preserve">
+    <value>Todas que Não Deduzem Margem</value>
+  </data>
+  <data name="TodasSuspensas" xml:space="preserve">
+    <value>Todas Suspensas</value>
+  </data>
+  <data name="WaterMarkTextBoxPesquisaUsuario" xml:space="preserve">
+    <value>Procurar por Nome, CPF, E-mail, Login, Perfil</value>
+  </data>
+  <data name="MensagemSelecioneFuncionario" xml:space="preserve">
+    <value>Selecione um Funcionário! Digite uma matrícula ou CPF.</value>
+  </data>
+  <data name="MensagemValorConsignadoMaiorValorContrato" xml:space="preserve">
+    <value>Valor do contrato maior que o valor consignado!</value>
+  </data>
+  <data name="MensagemExisteUsuarioCadastradoComLogin" xml:space="preserve">
+    <value>Já existe um usuário cadastrado com este login!</value>
+  </data>
+  <data name="MensagemFalhaOperacao" xml:space="preserve">
+    <value>Ocorreu falha na tentativa de realizar a operação!</value>
+  </data>
+  <data name="MensagemAnexarComprovante" xml:space="preserve">
+    <value>É obrigatório anexar o comprovante!</value>
+  </data>
+  <data name="MensagemCoeficienteJaCadastrado" xml:space="preserve">
+    <value>Já existe um coeficiente cadastrado nesta data de validade. Ela será descartada.</value>
+  </data>
+  <data name="MensagemArquivoEnviadoSucesso" xml:space="preserve">
+    <value>Arquivo enviado com sucesso!</value>
+  </data>
+  <data name="MensagemItemJaAdicionado" xml:space="preserve">
+    <value>Item já adicionado!</value>
+  </data>
+  <data name="MensagemFinalizarCadastroParaProsseguir" xml:space="preserve">
+    <value>Finalize o cadastro para prosseguir!</value>
+  </data>
+  <data name="MensagemProibidoAcessoContratoOutrosBancos" xml:space="preserve">
+    <value>Não é possível acessar contratos de outros bancos!</value>
+  </data>
+  <data name="MensagemTodosCamposObrigatoriosCadastroAgenteConsignataria" xml:space="preserve">
+    <value>Todos os campos são obrigatórios! Verifique a seção "Mais Detalhes".</value>
+  </data>
+  <data name="MensagemNaoPodeTrocarCpf" xml:space="preserve">
+    <value>Não é possível trocar o CPF!</value>
+  </data>
+  <data name="MensagemTrocaDeSenhaProvavelmenteRealizada" xml:space="preserve">
+    <value>Operação não realizada! Provavelmente a troca dos dados de acesso já foi efetuada.</value>
+  </data>
+  <data name="MensagemSenhaJaCadastrada" xml:space="preserve">
+    <value>Senha já cadastrada!</value>
+  </data>
+  <data name="LabelAtivar" xml:space="preserve">
+    <value>Ativar</value>
+  </data>
+  <data name="LabelBloquear" xml:space="preserve">
+    <value>Bloquear</value>
+  </data>
+  <data name="MensagemUsuarioBloqueado" xml:space="preserve">
+    <value>Este usuário encontra-se bloqueado!</value>
+  </data>
+  <data name="MensagemNaoFoiPossivelRealizarLogin" xml:space="preserve">
+    <value>Não foi possível realizar o login! Tente novamente.</value>
+  </data>
+  <data name="MensagemFormatoArquivoQuitacaoInvalido" xml:space="preserve">
+    <value>Arquivo inválido! Tipos suportados: .jpg, .jpeg, .pdf, .doc e .png.</value>
+  </data>
+  <data name="MensagemBrowswerNaoSuportado" xml:space="preserve">
+    <value>A versão do seu browser (Interner Explorer 6.0 ou Firefox 3 ou inferior) não é mais suportada pela Microsoft e deste modo não oferece segurança para uso pelo FastConsig. Solicitamos atualizar a versão de seu Browser.</value>
+  </data>
+  <data name="MensagemPrevencaoErroAlteracaoUsuarioFastConsigCenter" xml:space="preserve">
+    <value>Prevenção de Erro --&gt; Não foi possível atualizar usuário no FastConsigCenter: {0}</value>
+  </data>
+  <data name="MensagemPrevencaoErroInclusaoUsuarioFastConsigCenter" xml:space="preserve">
+    <value>Prevenção de Erro --&gt; Não foi possível inserir usuário no FastConsigCenter: {0}</value>
+  </data>
+  <data name="MensagemSucessoOperacaoArquivoImportacaoEnviado" xml:space="preserve">
+    <value>Arquivo enviado com sucesso! Agora você poderá configurar como os dados serão importados!</value>
+  </data>
+  <data name="MensagemDigitarNomeLayout" xml:space="preserve">
+    <value>Digite um nome para o Layout!</value>
+  </data>
+  <data name="MensagemFiltrosCarregadosSucesso" xml:space="preserve">
+    <value>Filtros carregados com sucesso!</value>
+  </data>
+  <data name="MensagemJaExisteBloqueioParaEstaData" xml:space="preserve">
+    <value>Já existe um bloqueio configurado para esta data!</value>
+  </data>
+  <data name="MensagemAprovado" xml:space="preserve">
+    <value>Aprovação realizada com sucesso!</value>
+  </data>
+  <data name="MensagemDesaprovado" xml:space="preserve">
+    <value>Desaprovação realizada com sucesso!</value>
+  </data>
+</root>

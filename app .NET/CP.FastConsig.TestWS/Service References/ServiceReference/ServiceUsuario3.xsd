@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CP.FastConsig.Services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CP.FastConsig.Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2502/ServiceUsuario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="ArrayOfConsignataria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Consignataria" nillable="true" type="tns:Consignataria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConsignataria" nillable="true" type="tns:ArrayOfConsignataria" />
+  <xs:complexType name="Consignataria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IDConsignataria" type="xs:int" />
+          <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioConsignataria" nillable="true" type="tns:ArrayOfUsuarioConsignataria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Consignataria" nillable="true" type="tns:Consignataria" />
+  <xs:complexType name="ArrayOfUsuarioConsignataria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioConsignataria" nillable="true" type="tns:UsuarioConsignataria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioConsignataria" nillable="true" type="tns:ArrayOfUsuarioConsignataria" />
+  <xs:complexType name="UsuarioConsignataria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Consignataria" nillable="true" type="tns:Consignataria" />
+          <xs:element minOccurs="0" name="ConsignatariaReference" nillable="true" type="q2:EntityReferenceOfConsignatariamL5QEzPg" />
+          <xs:element minOccurs="0" name="IDConsignataria" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDUsuario" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDUsuarioConsignataria" type="xs:int" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+          <xs:element minOccurs="0" name="UsuarioReference" nillable="true" type="q2:EntityReferenceOfUsuariomL5QEzPg" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioConsignataria" nillable="true" type="tns:UsuarioConsignataria" />
+  <xs:complexType name="Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ativo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CPF" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Senha" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telefone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioConsignante" nillable="true" type="tns:ArrayOfUsuarioConsignante" />
+          <xs:element minOccurs="0" name="UsuarioConsignataria" nillable="true" type="tns:ArrayOfUsuarioConsignataria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfUsuarioConsignante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioConsignante" nillable="true" type="tns:UsuarioConsignante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioConsignante" nillable="true" type="tns:ArrayOfUsuarioConsignante" />
+  <xs:complexType name="UsuarioConsignante">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Consignante" nillable="true" type="tns:Consignante" />
+          <xs:element minOccurs="0" name="ConsignanteReference" nillable="true" type="q4:EntityReferenceOfConsignantemL5QEzPg" />
+          <xs:element minOccurs="0" name="IDConsignante" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDUsuario" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IDUsuarioConsignante" type="xs:int" />
+          <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
+          <xs:element minOccurs="0" name="UsuarioReference" nillable="true" type="q4:EntityReferenceOfUsuariomL5QEzPg" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UsuarioConsignante" nillable="true" type="tns:UsuarioConsignante" />
+  <xs:complexType name="Consignante">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BancoDados" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDConsignante" type="xs:int" />
+          <xs:element minOccurs="0" name="Identificador" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UsuarioConsignante" nillable="true" type="tns:ArrayOfUsuarioConsignante" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Consignante" nillable="true" type="tns:Consignante" />
+</xs:schema>

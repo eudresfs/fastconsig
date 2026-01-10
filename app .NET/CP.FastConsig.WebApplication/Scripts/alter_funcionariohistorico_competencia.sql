@@ -1,0 +1,1 @@
+ALTER TABLE FUNCIONARIOHISTORICO add Competencia varchar(7)

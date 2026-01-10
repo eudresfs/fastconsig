@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FastConsigCenterModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FastConsigCenterModeloStoreContainer">
+    <EntitySet Name="Consignante" EntityType="FastConsigCenterModelo.Store.Consignante" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Consignataria" EntityType="FastConsigCenterModelo.Store.Consignataria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="FastConsigCenterModelo.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioConsignante" EntityType="FastConsigCenterModelo.Store.UsuarioConsignante" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioConsignataria" EntityType="FastConsigCenterModelo.Store.UsuarioConsignataria" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UsuarioConsignante_Consignante" Association="FastConsigCenterModelo.Store.FK_UsuarioConsignante_Consignante">
+      <End Role="Consignante" EntitySet="Consignante" />
+      <End Role="UsuarioConsignante" EntitySet="UsuarioConsignante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioConsignante_Usuario" Association="FastConsigCenterModelo.Store.FK_UsuarioConsignante_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioConsignante" EntitySet="UsuarioConsignante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioConsignataria_Consignataria" Association="FastConsigCenterModelo.Store.FK_UsuarioConsignataria_Consignataria">
+      <End Role="Consignataria" EntitySet="Consignataria" />
+      <End Role="UsuarioConsignataria" EntitySet="UsuarioConsignataria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioConsignataria_Usuario" Association="FastConsigCenterModelo.Store.FK_UsuarioConsignataria_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioConsignataria" EntitySet="UsuarioConsignataria" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Consignante">
+    <Key>
+      <PropertyRef Name="IDConsignante" />
+    </Key>
+    <Property Name="IDConsignante" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+    <Property Name="BancoDados" Type="varchar" MaxLength="50" />
+    <Property Name="URL" Type="varchar" MaxLength="150" />
+    <Property Name="Tipo" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Consignataria">
+    <Key>
+      <PropertyRef Name="IDConsignataria" />
+    </Key>
+    <Property Name="IDConsignataria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IDUsuario" />
+    </Key>
+    <Property Name="IDUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="varchar" MaxLength="14" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Telefone" Type="varchar" MaxLength="20" />
+    <Property Name="Login" Type="varchar" MaxLength="50" />
+    <Property Name="Senha" Type="varchar" MaxLength="50" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="UsuarioConsignante">
+    <Key>
+      <PropertyRef Name="IDUsuarioConsignante" />
+    </Key>
+    <Property Name="IDUsuarioConsignante" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="IDConsignante" Type="int" />
+  </EntityType>
+  <EntityType Name="UsuarioConsignataria">
+    <Key>
+      <PropertyRef Name="IDUsuarioConsignataria" />
+    </Key>
+    <Property Name="IDUsuarioConsignataria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="IDConsignataria" Type="int" />
+  </EntityType>
+  <Association Name="FK_UsuarioConsignante_Consignante">
+    <End Role="Consignante" Type="FastConsigCenterModelo.Store.Consignante" Multiplicity="0..1" />
+    <End Role="UsuarioConsignante" Type="FastConsigCenterModelo.Store.UsuarioConsignante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consignante">
+        <PropertyRef Name="IDConsignante" />
+      </Principal>
+      <Dependent Role="UsuarioConsignante">
+        <PropertyRef Name="IDConsignante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioConsignante_Usuario">
+    <End Role="Usuario" Type="FastConsigCenterModelo.Store.Usuario" Multiplicity="0..1" />
+    <End Role="UsuarioConsignante" Type="FastConsigCenterModelo.Store.UsuarioConsignante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioConsignante">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioConsignataria_Consignataria">
+    <End Role="Consignataria" Type="FastConsigCenterModelo.Store.Consignataria" Multiplicity="0..1" />
+    <End Role="UsuarioConsignataria" Type="FastConsigCenterModelo.Store.UsuarioConsignataria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consignataria">
+        <PropertyRef Name="IDConsignataria" />
+      </Principal>
+      <Dependent Role="UsuarioConsignataria">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioConsignataria_Usuario">
+    <End Role="Usuario" Type="FastConsigCenterModelo.Store.Usuario" Multiplicity="0..1" />
+    <End Role="UsuarioConsignataria" Type="FastConsigCenterModelo.Store.UsuarioConsignataria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioConsignataria">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

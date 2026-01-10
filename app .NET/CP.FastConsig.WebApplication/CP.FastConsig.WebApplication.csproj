@@ -1,0 +1,1713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0C0102D-595C-46E6-8EAC-C5A9056AAC41}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP.FastConsig.WebApplication</RootNamespace>
+    <AssemblyName>CP.FastConsig.WebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DBauer.Web.UI.WebControls.DynamicControlsPlaceholder">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DBauer.Web.UI.WebControls.DynamicControlsPlaceholder.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Charts.v11.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Data.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.PivotGrid.v11.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Printing.v11.1.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Utils.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxEditors.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxGridView.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.1.Export, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxGridView.v11.1.Export.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxPivotGrid.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1.Export, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxPivotGrid.v11.1.Export.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.ASPxTreeList.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v11.1.Linq, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.Web.v11.1.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.Design, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.Extensions, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.UI, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.Web, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.Web.Design, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraCharts.v11.1.Web.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraEditors.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1.Design, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraEditors.v11.1.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraPivotGrid.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraPrinting.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DoddleReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.AbcPdf">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DoddleReport.AbcPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.iTextSharp">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DoddleReport.iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.OpenXml">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DoddleReport.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.Web">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\DoddleReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControl">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\FlashControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Intelligencia.UrlRewriter">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.Web.Runtime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\Microsoft.VisualStudio.Web.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfViewer">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Phantom">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\Phantom.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear, Version=6.0.3.151, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\CP.FastConsig.ThirdParty\Referencias\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Aqua\Chart\Loading.gif" />
+    <Content Include="App_Themes\Aqua\Chart\styles.css" />
+    <Content Include="App_Themes\Aqua\Editors\edtButtonBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtButtonBackDis.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtButtonCheckedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtCalendarButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtCalendarButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtCalendarFooterBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtCalendarHeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtDropDownBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtDropDownBackDis.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtDropDownButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtDropDownButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtProgressBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtProgressIndicatorBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinDecBtnBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinDecButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinDecButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinIncBtnBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinIncButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\edtSpinIncButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Editors\lbHeaderBackground.gif" />
+    <Content Include="App_Themes\Aqua\Editors\Loading.gif" />
+    <Content Include="App_Themes\Aqua\Editors\sprite.css" />
+    <Content Include="App_Themes\Aqua\Editors\sprite.gif" />
+    <Content Include="App_Themes\Aqua\Editors\sprite.png" />
+    <Content Include="App_Themes\Aqua\Editors\styles.css" />
+    <Content Include="App_Themes\Aqua\GridView\gvGroupPanelBackground.gif" />
+    <Content Include="App_Themes\Aqua\GridView\gvHeaderBackground.gif" />
+    <Content Include="App_Themes\Aqua\GridView\gvLoadingOnStatusBar.gif" />
+    <Content Include="App_Themes\Aqua\GridView\gvPagerBottomPanelBackground.gif" />
+    <Content Include="App_Themes\Aqua\GridView\Loading.gif" />
+    <Content Include="App_Themes\Aqua\GridView\sprite.css" />
+    <Content Include="App_Themes\Aqua\GridView\sprite.gif" />
+    <Content Include="App_Themes\Aqua\GridView\sprite.png" />
+    <Content Include="App_Themes\Aqua\GridView\styles.css" />
+    <Content Include="App_Themes\Aqua\PivotGrid\FLsprite.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\FLsprite.png" />
+    <Content Include="App_Themes\Aqua\PivotGrid\Loading.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\pcHeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\pgColumnFieldBack.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\pgHeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\pgHeaderHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\pgPagerBack.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\sprite.css" />
+    <Content Include="App_Themes\Aqua\PivotGrid\sprite.gif" />
+    <Content Include="App_Themes\Aqua\PivotGrid\sprite.png" />
+    <Content Include="App_Themes\Aqua\PivotGrid\styles.css" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\HeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineFirst.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineFirstRtl.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineLast.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineLastRtl.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineMiddle.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineMiddleRtl.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\CssImages\TreeLineRoot.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\Loading.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\sprite.css" />
+    <Content Include="App_Themes\Aqua\TreeList\sprite.gif" />
+    <Content Include="App_Themes\Aqua\TreeList\sprite.png" />
+    <Content Include="App_Themes\Aqua\TreeList\styles.css" />
+    <Content Include="App_Themes\Aqua\Web\dxpcFooterBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\fmSplitterSeparator.gif" />
+    <Content Include="App_Themes\Aqua\Web\Loading.gif" />
+    <Content Include="App_Themes\Aqua\Web\mBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mGutterRightBorder.gif" />
+    <Content Include="App_Themes\Aqua\Web\mItemBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mItemHBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mItemSBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mScrollBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mScrollSBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mSeparator.gif" />
+    <Content Include="App_Themes\Aqua\Web\mVertBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mVertHBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\mVerticalSeparator.gif" />
+    <Content Include="App_Themes\Aqua\Web\mVertSBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\nbGroupHeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\nbLoading.gif" />
+    <Content Include="App_Themes\Aqua\Web\pcHeaderBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\pcModalBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\rcMapImage.png" />
+    <Content Include="App_Themes\Aqua\Web\rpBottomEdge.gif" />
+    <Content Include="App_Themes\Aqua\Web\rpHeaderBackground.gif" />
+    <Content Include="App_Themes\Aqua\Web\rpLeftEdge.gif" />
+    <Content Include="App_Themes\Aqua\Web\rpNoHeaderTopEdge.gif" />
+    <Content Include="App_Themes\Aqua\Web\splHSeparatorBackground.png" />
+    <Content Include="App_Themes\Aqua\Web\splHSeparatorBackgroundHover.png" />
+    <Content Include="App_Themes\Aqua\Web\splResizingPointer.gif" />
+    <Content Include="App_Themes\Aqua\Web\splVSeparatorBackground.png" />
+    <Content Include="App_Themes\Aqua\Web\splVSeparatorBackgroundHover.png" />
+    <Content Include="App_Themes\Aqua\Web\sprite.css" />
+    <Content Include="App_Themes\Aqua\Web\sprite.gif" />
+    <Content Include="App_Themes\Aqua\Web\sprite.png" />
+    <Content Include="App_Themes\Aqua\Web\styles.css" />
+    <Content Include="App_Themes\Aqua\Web\tcTabBottomBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabBottomHottrackedBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabLeftBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabLeftHottrackedBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabRightBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabRightHottrackedBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabTopBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tcTabTopHottrackedBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\tvElbow.gif" />
+    <Content Include="App_Themes\Aqua\Web\tvElbowRtl.gif" />
+    <Content Include="App_Themes\Aqua\Web\tvLine.gif" />
+    <Content Include="App_Themes\Aqua\Web\tvNodeLoading.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucButtonBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucButtonDisabledBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucButtonHoverBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucButtonPressedBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucProgressBack.gif" />
+    <Content Include="App_Themes\Aqua\Web\ucProgressIndicatorBack.gif" />
+    <Content Include="ArcticExternalAll.swf" />
+    <Content Include="Arquivos\Coeficientes\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\IPSMI\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\ITAQUA\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\LOCALHOST\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\SANTOAMANCIO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\SAOMARCOS\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\TEMP\CONTEUDO.txt" />
+    <Content Include="Arquivos\Coeficientes\TREINAMENTO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\IPSMI\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\ITAQUA\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\LOCALHOST\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\SANTOAMANCIO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\SAOMARCOS\CONTEUDO.txt" />
+    <Content Include="Arquivos\Comprovantes\TREINAMENTO\CONTEUDO.txt" />
+    <Content Include="acessosvideo.aspx" />
+    <Content Include="DownloadFile.aspx" />
+    <Content Include="Arquivos\ExemploCoeficiente.png" />
+    <Content Include="Arquivos\Exportacao\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\IPSMI\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\ITAQUA\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\LOCALHOST\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\SANTOAMANCIO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\SAOMARCOS\CONTEUDO.txt" />
+    <Content Include="Arquivos\Exportacao\TREINAMENTO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\IPSMI\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\ITAQUA\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\LOCALHOST\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\SANTOAMANCIO\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\SAOMARCOS\CONTEUDO.txt" />
+    <Content Include="Arquivos\Importacao\TREINAMENTO\CONTEUDO.txt" />
+    <Content Include="Default.aspx" />
+    <Content Include="Estilos\DevExpress\GridView\styles.css" />
+    <Content Include="Estilos\DevExpress\TabControl\styles.css" />
+    <Content Include="Estilos\EstilosFormularios.css" />
+    <Content Include="Estilos\EstilosGerais.css" />
+    <Content Include="Estilos\EstilosIE.css" />
+    <Content Include="Estilos\EstilosIE7.css" />
+    <Content Include="Estilos\EstilosLogin.css" />
+    <Content Include="Estilos\EstilosMasterPage.css" />
+    <Content Include="Estilos\EstilosUserControls.css" />
+    <Content Include="Estilos\EstilosWebUserControls.css" />
+    <Content Include="Estilos\impressao.css" />
+    <Content Include="Estilos\jquery.ctNotify.css" />
+    <Content Include="Estilos\jquery.ctNotify.rounded.css" />
+    <Content Include="Estilos\jquery.ctNotify.roundedBr.css" />
+    <Content Include="Estilos\MessageBox.css" />
+    <Content Include="Estilos\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Estilos\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Estilos\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Estilos\redmond\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Estilos\SpeechBubble.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Flash\webcam.swf" />
+    <Content Include="Global.asax" />
+    <Content Include="ie-css3.htc" />
+    <Content Include="Imagens\ajax-loader.gif" />
+    <Content Include="Imagens\BackBtn.png" />
+    <Content Include="Imagens\barraDivisorLogoBanco.png" />
+    <Content Include="Imagens\BarraMenu.png" />
+    <Content Include="Imagens\BarraMenuDois.png" />
+    <Content Include="Imagens\BgBotao.png" />
+    <Content Include="Imagens\BgBtn.png" />
+    <Content Include="Imagens\BgBtnOver.png" />
+    <Content Include="Imagens\BgConteudoLiquido.png" />
+    <Content Include="Imagens\BgDivConteudoEsquerdo.png" />
+    <Content Include="Imagens\BgDivLogomarca.png" />
+    <Content Include="Imagens\BgDivTopoEsquerdo.png" />
+    <Content Include="Imagens\BgDivTopoEsquerdoDois.png" />
+    <Content Include="Imagens\BgLogoMarcaControles.png" />
+    <Content Include="Imagens\BgMenuAverbacoes.png" />
+    <Content Include="Imagens\BgMenuConfiguracoesBtn.png" />
+    <Content Include="Imagens\BgMenuConfiguracoesBtnSelecionado.png" />
+    <Content Include="Imagens\BgMenuConfiguracoesOverBtn.png" />
+    <Content Include="Imagens\BgRoundPanel.png" />
+    <Content Include="Imagens\BgTexBoxBuscaFuncionario.png" />
+    <Content Include="Imagens\BgTextBox.png" />
+    <Content Include="Imagens\bgTopoFixo.png" />
+    <Content Include="Imagens\BgTopoLogin.png" />
+    <Content Include="Imagens\BgTopoMensagemTituloPagina.png" />
+    <Content Include="Imagens\bg_form.png" />
+    <Content Include="Imagens\BotaoDois.png" />
+    <Content Include="Imagens\BotaoDoisOver.png" />
+    <Content Include="Imagens\BotaoHum.png" />
+    <Content Include="Imagens\BotaoHumOver.png" />
+    <Content Include="Imagens\BotaoQuatro.png" />
+    <Content Include="Imagens\BotaoQuatroOver.png" />
+    <Content Include="Imagens\BotaoTres.png" />
+    <Content Include="Imagens\BotaoTresOver.png" />
+    <Content Include="Imagens\BoxCabecalhoMenu.png" />
+    <Content Include="Imagens\BoxLogomarcaLogin.png" />
+    <Content Include="Imagens\BoxTituloPagina.png" />
+    <Content Include="Imagens\BtnExportar.png" />
+    <Content Include="Imagens\BtnProcurar.png" />
+    <Content Include="Imagens\BuscaBtn.png" />
+    <Content Include="Imagens\BuscaBtnOver.png" />
+    <Content Include="Imagens\business-contact.png" />
+    <Content Include="Imagens\carregadorCifrao.gif" />
+    <Content Include="Imagens\checked.png" />
+    <Content Include="Imagens\cifrao.png" />
+    <Content Include="Imagens\Clients.png" />
+    <Content Include="Imagens\CloseBtn.png" />
+    <Content Include="Imagens\CloseBtnPopUp.png" />
+    <Content Include="Imagens\collapse.jpg" />
+    <Content Include="Imagens\collapse.png" />
+    <Content Include="Imagens\ConfigBtn.png" />
+    <Content Include="Imagens\ConfigBtnOver.png" />
+    <Content Include="Imagens\ConfigBtnTop.png" />
+    <Content Include="Imagens\ConfiguracaoBtnTopoOver.png" />
+    <Content Include="Imagens\Configuracoes.png" />
+    <Content Include="Imagens\ConsigBtn.png" />
+    <Content Include="Imagens\ConsigBtnOver.png" />
+    <Content Include="Imagens\ContBtn.png" />
+    <Content Include="Imagens\ContBtnOver.png" />
+    <Content Include="Imagens\Contratos.png" />
+    <Content Include="Imagens\LogoTreinamento.png" />
+    <Content Include="Imagens\LogoSaoMarcos.png" />
+    <Content Include="Imagens\LogoSantoAmancio.png" />
+    <Content Include="Imagens\FamiliaLogin.png" />
+    <Content Include="Imagens\IconeGerenciarPerfil.png" />
+    <Content Include="Imagens\IconeSuporte.png" />
+    <Content Include="Imagens\InformarSaldoDevedor.png" />
+    <Content Include="Imagens\LogoAmancioCenter.png" />
+    <Content Include="Imagens\LogoIPSMI.png" />
+    <Content Include="Imagens\LogoIpsmiCenter.png" />
+    <Content Include="Imagens\LogoItaquaCenter.png" />
+    <Content Include="Imagens\Copy.png" />
+    <Content Include="Imagens\cross.png" />
+    <Content Include="Imagens\Dashboard.png" />
+    <Content Include="Imagens\DashboardBtn.png" />
+    <Content Include="Imagens\DashboardBtnOver.png" />
+    <Content Include="Imagens\expand.jpg" />
+    <Content Include="Imagens\expand.png" />
+    <Content Include="Imagens\Familia1.png" />
+    <Content Include="Imagens\first.png" />
+    <Content Include="Imagens\Footer.png" />
+    <Content Include="Imagens\FuncBtn.png" />
+    <Content Include="Imagens\FuncBtnOver.png" />
+    <Content Include="Imagens\Funcionarios.png" />
+    <Content Include="Imagens\GerBtn.png" />
+    <Content Include="Imagens\GerBtnOver.png" />
+    <Content Include="Imagens\GloboBtnTopo.png" />
+    <Content Include="Imagens\GloboBtnTopoOver.png" />
+    <Content Include="Imagens\GreenBall.png" />
+    <Content Include="Imagens\gtk-edit.png" />
+    <Content Include="Imagens\IconeAnaliseInadimplente.png" />
+    <Content Include="Imagens\iconeAverbar.png" />
+    <Content Include="Imagens\IconeCentralSimulacao.png" />
+    <Content Include="Imagens\IconeConfiguracoes.png" />
+    <Content Include="Imagens\IconeConsignataria.png" />
+    <Content Include="Imagens\IconeConsultarFuncionário.png" />
+    <Content Include="Imagens\IconeContrato.png" />
+    <Content Include="Imagens\IconeDash.png" />
+    <Content Include="Imagens\IconeFluxo.png" />
+    <Content Include="Imagens\IconeFluxoRefinCompra.png" />
+    <Content Include="Imagens\IconeFuncionario.png" />
+    <Content Include="Imagens\IconeGerencial.png" />
+    <Content Include="Imagens\IconeImpacatoAlteracaoFuncionario.png" />
+    <Content Include="Imagens\IconeImpExp.png" />
+    <Content Include="Imagens\IconeMargesSimulacao.png" />
+    <Content Include="Imagens\IconeMensagens.png" />
+    <Content Include="Imagens\IconeMeusDados.png" />
+    <Content Include="Imagens\IconeMinhaPosiçãoConvenio.png" />
+    <Content Include="Imagens\IconeNovaAverbacao.png" />
+    <Content Include="Imagens\IconePermissaoAcesso.png" />
+    <Content Include="Imagens\IconeReajustarContratos.png" />
+    <Content Include="Imagens\IconeSimulacaoMenu.png" />
+    <Content Include="Imagens\IconeSolicitar.png" />
+    <Content Include="Imagens\ImpExpBtn.png" />
+    <Content Include="Imagens\ImpExpBtnOver.png" />
+    <Content Include="Imagens\ImportacaoExportacao.png" />
+    <Content Include="Imagens\index.jpg" />
+    <Content Include="Imagens\Interrogacao.png" />
+    <Content Include="Imagens\last.png" />
+    <Content Include="Imagens\loader.gif" />
+    <Content Include="Imagens\loading.gif" />
+    <Content Include="Imagens\loading_bar.gif" />
+    <Content Include="Imagens\Lock.png" />
+    <Content Include="Imagens\LoginSplash.png" />
+    <Content Include="Imagens\Logo.png" />
+    <Content Include="Imagens\LogoBanco.png" />
+    <Content Include="Imagens\LogoBancoGerador.png" />
+    <Content Include="Imagens\LogoCasePartners.png" />
+    <Content Include="Imagens\LogoCasePartnersRodape.png" />
+    <Content Include="Imagens\LogoFastBank.png" />
+    <Content Include="Imagens\LogoItaqua.png" />
+    <Content Include="Imagens\LogomarcaFastConsig.png" />
+    <Content Include="Imagens\LogomarcaLogin.png" />
+    <Content Include="Imagens\LogoMarcosCenter.png" />
+    <Content Include="Imagens\LogoOrgaoPublico.png" />
+    <Content Include="Imagens\LogoSindTeste.png" />
+    <Content Include="Imagens\Logos\Bancos\BB.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_BB.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_Bmg.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_BP.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_bradesco.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_BV.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_caixa.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_CruzeiroSul.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_Itau.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_NossaCaixa.png" />
+    <Content Include="Imagens\Logos\Bancos\BIG_Santander.png" />
+    <Content Include="Imagens\Logos\Bancos\Bmg.png" />
+    <Content Include="Imagens\Logos\Bancos\BP.png" />
+    <Content Include="Imagens\Logos\Bancos\bradesco.png" />
+    <Content Include="Imagens\Logos\Bancos\BV.png" />
+    <Content Include="Imagens\Logos\Bancos\caixa.png" />
+    <Content Include="Imagens\Logos\Bancos\CruzeiroSul.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_BB.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_Bmg.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_BP.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_bradesco.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_BV.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_caixa.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_CruzeiroSul.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_Itau.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_NossaCaixa.png" />
+    <Content Include="Imagens\Logos\Bancos\FULL_Santander.png" />
+    <Content Include="Imagens\Logos\Bancos\Itau.png" />
+    <Content Include="Imagens\Logos\Bancos\NossaCaixa.png" />
+    <Content Include="Imagens\Logos\Bancos\Santander.png" />
+    <Content Include="Imagens\Logos\bradesco.png" />
+    <Content Include="Imagens\Logos\FULL_bradesco.png" />
+    <Content Include="Imagens\Logos\FULL_LogoSindTeste.png" />
+    <Content Include="Imagens\Mensagens.png" />
+    <Content Include="Imagens\MensagensBtnTopo.png" />
+    <Content Include="Imagens\MenuAlterarSenhaBtn.png" />
+    <Content Include="Imagens\MenuAnaliseAverbacoes.png" />
+    <Content Include="Imagens\MenuCentralExportacaoBtn.png" />
+    <Content Include="Imagens\MenuCentralHistoricosBtn.png" />
+    <Content Include="Imagens\MenuCentralImportacaoBtn.png" />
+    <Content Include="Imagens\MenuConsiliacaoMensal.png" />
+    <Content Include="Imagens\MenuGerenciarAverbacoes.png" />
+    <Content Include="Imagens\MenuGerenciarConsignatarias.png" />
+    <Content Include="Imagens\MenuGerenciarPerfil.png" />
+    <Content Include="Imagens\MenuImportarBtn.png" />
+    <Content Include="Imagens\MenuImportarContratos.png" />
+    <Content Include="Imagens\MenuImportarContratosSelecionado.png" />
+    <Content Include="Imagens\MenuImportarFuncionarios.png" />
+    <Content Include="Imagens\MenuImportarFuncionariosSelecionado.png" />
+    <Content Include="Imagens\MenuImportarPersonalizado.png" />
+    <Content Include="Imagens\MenuImportarPersonalizadoSelecionado.png" />
+    <Content Include="Imagens\MenuImportarRetornoFolha.png" />
+    <Content Include="Imagens\MenuImportarRetornoFolhaSelecionado.png" />
+    <Content Include="Imagens\MenuParametrosBtn.png" />
+    <Content Include="Imagens\MenuRegistrarAverbacao.png" />
+    <Content Include="Imagens\MenuRelatorioAnaliseProducao.png" />
+    <Content Include="Imagens\MenuUsuarioPermissaoBtn.png" />
+    <Content Include="Imagens\MenuVerbasEventosBtn.png" />
+    <Content Include="Imagens\Menu\DashboardBtn.png" />
+    <Content Include="Imagens\Menu\IconeAlterarMinhaSenha.png" />
+    <Content Include="Imagens\Menu\IconeAvisosAlertas.png" />
+    <Content Include="Imagens\Menu\IconeConfiguracoes.png" />
+    <Content Include="Imagens\Menu\IconeConsignataria.png" />
+    <Content Include="Imagens\Menu\IconeContrato.png" />
+    <Content Include="Imagens\Menu\IconeDash.png" />
+    <Content Include="Imagens\Menu\IconeFuncionario.png" />
+    <Content Include="Imagens\Menu\IconeGerencial.png" />
+    <Content Include="Imagens\Menu\IconeGerenciarPerfil.png" />
+    <Content Include="Imagens\Menu\IconeImpExp.png" />
+    <Content Include="Imagens\Menu\IconeInformacoesRh.png" />
+    <Content Include="Imagens\Menu\IconeMargensSimulacao.png" />
+    <Content Include="Imagens\Menu\IconeMensagens.png" />
+    <Content Include="Imagens\Menu\IconeMinhasAverbacoes.png" />
+    <Content Include="Imagens\Menu\IconeMinhasSolicitacoes.png" />
+    <Content Include="Imagens\Menu\MenuBgBtn.png" />
+    <Content Include="Imagens\Menu\MenuBgBtnOver.png" />
+    <Content Include="Imagens\Menu\MenuBtn.png" />
+    <Content Include="Imagens\Menu\MenuBtnActive.png" />
+    <Content Include="Imagens\Menu\MenuBtnOver.png" />
+    <Content Include="Imagens\minus.png" />
+    <Content Include="Imagens\Money.png" />
+    <Content Include="Imagens\Money32x32.png" />
+    <Content Include="Imagens\MsgBtn.png" />
+    <Content Include="Imagens\MsgBtnOver.png" />
+    <Content Include="Imagens\next.png" />
+    <Content Include="Imagens\NotificacaoBtnTopo.png" />
+    <Content Include="Imagens\NotificacaoBtnTopoOver.png" />
+    <Content Include="Imagens\Perfil.png" />
+    <Content Include="Imagens\Perfil2.png" />
+    <Content Include="Imagens\PerfilLogin.png" />
+    <Content Include="Imagens\photo_person.png" />
+    <Content Include="Imagens\plus.png" />
+    <Content Include="Imagens\prev.png" />
+    <Content Include="Imagens\RedBall.png" />
+    <Content Include="Imagens\SairBtn.png" />
+    <Content Include="Imagens\SairBtnOver.png" />
+    <Content Include="Imagens\SolicitarSaldoDevedor.png" />
+    <Content Include="Imagens\Sombra.png" />
+    <Content Include="Imagens\spacer.gif" />
+    <Content Include="Imagens\TextoSlogan.png" />
+    <Content Include="Imagens\tick.png" />
+    <Content Include="Imagens\trash_16x16.gif" />
+    <Content Include="Imagens\unchecked.png" />
+    <Content Include="Imagens\up.png" />
+    <Content Include="Imagens\WebCam\IPSMI\CONTEUDO.txt" />
+    <Content Include="Imagens\WebCam\ITAQUA\CONTEUDO.txt" />
+    <Content Include="Imagens\WebCam\LOCALHOST\CONTEUDO.txt" />
+    <Content Include="Imagens\WebCam\photo_person.png" />
+    <Content Include="Imagens\WebCam\TREINAMENTO\CONTEUDO.txt" />
+    <Content Include="Imagens\YellowBall.png" />
+    <Content Include="Images\AJAX.gif" />
+    <Content Include="Images\aqua-arrow.gif" />
+    <Content Include="Images\aqua-bg.gif" />
+    <Content Include="Images\ASPxRoundPanel\218308936\BottomLeftCorner.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\BottomRightCorner.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\HeaderContent.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\HeaderLeftEdge.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\HeaderRightEdge.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\NoHeaderTopLeftCorner.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\NoHeaderTopRightCorner.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\TopLeftCorner.png" />
+    <Content Include="Images\ASPxRoundPanel\218308936\TopRightCorner.png" />
+    <Content Include="Images\bg-main.png" />
+    <Content Include="Images\bg-menu-main.png" />
+    <Content Include="Images\bg-snippet-dim.png" />
+    <Content Include="Images\bg-snippet.png" />
+    <Content Include="Images\bg_body.gif" />
+    <Content Include="Images\bg_gradient-left.png" />
+    <Content Include="Images\bg_nav.gif" />
+    <Content Include="Images\bg_wrapper.gif" />
+    <Content Include="Images\body_bg.gif" />
+    <Content Include="Images\Calendar_scheduleHS.png" />
+    <Content Include="Images\collapse.jpg" />
+    <Content Include="Images\collapse_blue.jpg" />
+    <Content Include="Images\containerback.jpg" />
+    <Content Include="Images\containerback2.jpg" />
+    <Content Include="Images\cp_button.png" />
+    <Content Include="Images\danger.png" />
+    <Content Include="Images\demobottom.png" />
+    <Content Include="Images\demotop.png" />
+    <Content Include="Images\down.gif" />
+    <Content Include="Images\EmptyStar.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\expand.jpg" />
+    <Content Include="Images\expand_blue.jpg" />
+    <Content Include="Images\FilledStar.png" />
+    <Content Include="Images\HandleGrip.png" />
+    <Content Include="Images\HandleHand.png" />
+    <Content Include="Images\handle_left.gif" />
+    <Content Include="Images\handle_right.gif" />
+    <Content Include="Images\header-opened.png" />
+    <Content Include="Images\header.png" />
+    <Content Include="Images\headerbottom_img.png" />
+    <Content Include="Images\headertop_img.jpg" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\navigation_back.gif" />
+    <Content Include="Images\no.png" />
+    <Content Include="Images\ok.png" />
+    <Content Include="Images\pbrs.png" />
+    <Content Include="Images\Question.PNG" />
+    <Content Include="Images\rail_dark.gif" />
+    <Content Include="Images\rail_light.gif" />
+    <Content Include="Images\rightcoltop.gif" />
+    <Content Include="Images\samples_bg.gif" />
+    <Content Include="Images\SavedStar.png" />
+    <Content Include="Images\sidebar_header.png" />
+    <Content Include="Images\slider_h_handle_down.gif" />
+    <Content Include="Images\slider_h_handle_hover.gif" />
+    <Content Include="Images\slider_v_handle_down.gif" />
+    <Content Include="Images\slider_v_handle_hover.gif" />
+    <Content Include="Images\toolkit-arrow.gif" />
+    <Content Include="Images\toolkit-bg.gif" />
+    <Content Include="Images\up.gif" />
+    <Content Include="Images\walkthrough_bg.gif" />
+    <Content Include="Images\warning.png" />
+    <Content Include="Images\windows-arrow.gif" />
+    <Content Include="jquery-1.6.3.min.js" />
+    <Content Include="jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="jquery.history.js" />
+    <Content Include="ListaAverbacoesVinc.aspx" />
+    <Content Include="Ocorrencia.aspx" />
+    <Content Include="jquery.boxshadow.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\ChartBarra.tha" />
+    <Content Include="Scripts\ChartLinha.tha" />
+    <Content Include="Scripts\ChartPizza.tha" />
+    <Content Include="Scripts\ChartBarraColocacaoConvenio.tha" />
+    <Content Include="Scripts\ChartLinhaColocacaoConvenio.tha" />
+    <Content Include="Scripts\ChartBarraUtilizacaoMargem.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\ChartPizzaMargemPorProduto.tha" />
+    <Content Include="Scripts\ChartBarraSimulacaoEmprestimo.tha" />
+    <Content Include="Scripts\ChartPizzaConciliacao.tha" />
+    <Content Include="Scripts\Alerta.tha" />
+    <Content Include="Scripts\ChartBarraImpactoAlteracoesFuncionarios.tha" />
+    <Content Include="Scripts\ChartArea.tha" />
+    <Content Include="Scripts\ChartAreaVolumeInadimplencia.tha" />
+    <Content Include="Scripts\ChartPizzaInadimplenciaGeral.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\EnableCheckBoxes.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\ExpandCollapse.tha" />
+    <Content Include="Scripts\jquery-theme\images\info.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\jquery-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.priceformat.js" />
+    <Content Include="Scripts\ChartAreaEnviadosDescontados.tha" />
+    <Content Include="Scripts\ChartLinhaRanking.tha" />
+    <Content Include="App_Themes\Aqua\ASPxButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDockPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLabel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxListBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxUploadControl.skin" />
+    <Content Include="Scripts\ExpandCollapse2.tha" />
+    <Content Include="Scripts\ChartAreaVolumeInadimplenciaPercentual.tha" />
+    <Content Include="Scripts\Impressao.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\ExpandCollapse_GA.tha" />
+    <Content Include="Scripts\ExpandCollapse2_GA.tha" />
+    <Content Include="Scripts\ExpandCollapsePerfis.tha" />
+    <Content Include="Scripts\jquery.print.js" />
+    <Content Include="Scripts\jquery.print2.js" />
+    <Content Include="Scripts\jQueryMessageBox.js" />
+    <Content Include="Scripts\reflection.js" />
+    <Content Include="Scripts\WaterMarkTextBox.tha" />
+    <Content Include="App_Themes\Componentes\Componentes.skin" />
+    <Content Include="Conexoes.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\ExpandCollapse3.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Arquivos\ExemploCoeficiente.xlsx" />
+    <Content Include="Scripts\ChartBarraVolumeAverbacoes.tha">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\FastConsigCenterService\CP.FastConsig.WebApplication.FastConsigCenterService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastConsigCenterService\CP.FastConsig.WebApplication.FastConsigCenterService.Consignante.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastConsigCenterService\CP.FastConsig.WebApplication.FastConsigCenterService.Consignataria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastConsigCenterService\CP.FastConsig.WebApplication.FastConsigCenterService.Usuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FastConsigCenterService\configuration91.svcinfo" />
+    <None Include="Service References\FastConsigCenterService\configuration.svcinfo" />
+    <None Include="Service References\FastConsigCenterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario.wsdl" />
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario1.disco" />
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario.disco" />
+    <Content Include="Scripts\exporting.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\jquery.ctNotify.js" />
+    <Content Include="Scripts\jquery.utils.js" />
+    <Content Include="Scripts\jquery.watermarkinput.js" />
+    <Content Include="Scripts\JQueryTotal.js" />
+    <Content Include="ImageConversions.aspx" />
+    <Content Include="jquery.ba-bbq.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\mascaravalor.js" />
+    <Content Include="Scripts\utils.js" />
+    <Content Include="Estilos\DevExpress\TreeList\styles.css" />
+    <Content Include="Scripts\webtoolkit.md5.js" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="Temp\CONTEUDO.txt" />
+    <Content Include="video.aspx" />
+    <Content Include="Video.swf" />
+    <Content Include="WebUserControls\WebUserControlImprimirAposentadoria.ascx" />
+    <Content Include="WebUserControls\WebUserControlAnaliseProducao.ascx" />
+    <Content Include="WebUserControls\WebUserControlAuditoriaAcesso.ascx" />
+    <Content Include="WebUserControls\MessageBoxControl.ascx" />
+    <Content Include="WebUserControls\WebUserControlAgentesEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlAgentes.ascx" />
+    <Content Include="WebUserControls\WebUserControlAverbacaoCancelar.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartVolumeAverbacoes.ascx" />
+    <Content Include="WebUserControls\WebUserControlCoeficientesEmprestimo.ascx" />
+    <Content Include="WebUserControls\WebUserControlFuncionarioAposentar.ascx" />
+    <Content Include="WebUserControls\WebUserControlImportacaoFiltros.ascx" />
+    <Content Include="WebUserControls\WebUserControlIndicesNegocios.ascx" />
+    <Content Include="WebUserControls\WebUserControlMinhasAverbacoes.ascx" />
+    <Content Include="WebUserControls\WebUserControlPerfis.ascx" />
+    <Content Include="WebUserControls\WebUserControlPerfisEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlAuditoria.ascx" />
+    <Content Include="WebUserControls\WebUserControlExportacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlEmpresaSuspensoes.ascx" />
+    <Content Include="WebUserControls\WebUserControlEmpresaSuspensoesEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlAverbacaoLiquidar.ascx" />
+    <Content Include="WebUserControls\WebUserControlConfirmarQuitacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlDadosUsuario.ascx" />
+    <Content Include="WebUserControls\WebUserControlFluxo.ascx" />
+    <Content Include="WebUserControls\WebUserControlCentralSimulacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartAreaEnviadosDescontados.ascx" />
+    <Content Include="WebUserControls\WebUserControlAlerta.ascx" />
+    <Content Include="WebUserControls\WebUserControlAnaliseInadimplencia.ascx" />
+    <Content Include="WebUserControls\WebUserControlAverbacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlAnaliseContratos.ascx" />
+    <Content Include="WebUserControls\WebUserControlAlterarMinhaSenha.ascx" />
+    <Content Include="WebUserControls\WebUserControlAverbacaoSuspenderBloquear.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartArea.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartAreaVolumeInadimplencia.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartBarraImpactoAlteracoesFuncionarios.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartLinha.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartMinhaColocacaoConvenio.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartPizzaInadimplenciaGeral.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartRankingMinhaPosicaoConvenio.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartBarra.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartPizza.ascx" />
+    <Content Include="WebUserControls\WebUserControlDashBoardConsignante.ascx" />
+    <Content Include="WebUserControls\WebUserControlDashBoardConsignataria.ascx" />
+    <Content Include="WebUserControls\WebUserControlFluxoAprovacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlGerenciarAverbacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlGerenciarAverbacaoConsulta.ascx" />
+    <Content Include="WebUserControls\WebUserControlConfiguracaoPermissoesAcesso.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartBarra3D.ascx" />
+    <Content Include="WebUserControls\WebUserControlChartPizza3D.ascx" />
+    <Content Include="WebUserControls\WebUserControlConciliacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlFuncionariosHistorico.ascx" />
+    <Content Include="WebUserControls\WebUserControlFuncionariosAutorizacoesEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlErro.ascx" />
+    <Content Include="WebUserControls\WebUserControlBloqueioUsuario.ascx" />
+    <Content Include="WebUserControls\WebUserControlContatos.ascx" />
+    <Content Include="WebUserControls\WebUserControlContatosEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlBanco.ascx" />
+    <Content Include="WebUserControls\WebUserControlConfigurar.ascx" />
+    <Content Include="WebUserControls\WebUserControlConsignatarias.ascx" />
+    <Content Include="WebUserControls\WebUserControlConsignatariasEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlDashBoard.ascx" />
+    <Content Include="WebUserControls\WebUserControlFuncionarios.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebUserControls\WebUserControlFuncionariosAutorizacoes.ascx" />
+    <Content Include="WebUserControls\WebUserControlFuncionariosConsulta.ascx" />
+    <Content Include="WebUserControls\WebUserControlGerencial.ascx" />
+    <Content Include="WebUserControls\WebUserControlImpactoAlteracoesFuncionarios.ascx" />
+    <Content Include="WebUserControls\WebUserControlImportacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlImportarExportar.ascx" />
+    <Content Include="WebUserControls\WebUserControlInformarQuitacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlInformarSaldoDevedor.ascx" />
+    <Content Include="WebUserControls\WebUserControlMensagens.ascx" />
+    <Content Include="WebUserControls\WebUserControlReajustarContratos.ascx" />
+    <Content Include="WebUserControls\WebUserControlResultadoBusca.ascx" />
+    <Content Include="WebUserControls\WebUserControlProdutos.ascx" />
+    <Content Include="WebUserControls\WebUserControlProdutosEdicao.ascx" />
+    <Content Include="WebUserControls\WebUserControlSimulacaoCompraDivida.ascx" />
+    <Content Include="WebUserControls\WebUserControlSimulacaoEmprestimo.ascx" />
+    <Content Include="WebUserControls\WebUserControlSubMenu.ascx" />
+    <Content Include="WebUserControls\WebUserControlTermoAverbacao.ascx" />
+    <Content Include="WebUserControls\WebUserControlUsuario.ascx" />
+    <Content Include="WebUserControls\WebUserControlUsuariosPermissoes.ascx" />
+    <Content Include="WebUserControls\WebUserControlUsuariosPermissoesEdicao.ascx" />
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario1.wsdl" />
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FastConsigCenterService\ServiceUsuario54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acessosvideo.aspx.cs">
+      <DependentUpon>acessosvideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acessosvideo.aspx.designer.cs">
+      <DependentUpon>acessosvideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliar\FiltroImportacao.cs" />
+    <Compile Include="Auxiliar\RegraFiltroImportacao.cs" />
+    <Compile Include="DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliar\AbrePaginaEventArgs.cs" />
+    <Compile Include="Auxiliar\Auxiliar.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auxiliar\CustomPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auxiliar\CustomUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auxiliar\GerenciadorSessao.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionUtility.cs" />
+    <Compile Include="Geral.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListaAverbacoesVinc.aspx.cs">
+      <DependentUpon>ListaAverbacoesVinc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaAverbacoesVinc.aspx.designer.cs">
+      <DependentUpon>ListaAverbacoesVinc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ocorrencia.aspx.cs">
+      <DependentUpon>Ocorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ocorrencia.aspx.designer.cs">
+      <DependentUpon>Ocorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewMasterPrincipal.Master.cs">
+      <DependentUpon>NewMasterPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewMasterPrincipal.Master.designer.cs">
+      <DependentUpon>NewMasterPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImageConversions.aspx.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageConversions.aspx.designer.cs">
+      <DependentUpon>ImageConversions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FastConsigCenterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="video.aspx.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="video.aspx.designer.cs">
+      <DependentUpon>video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImprimirAposentadoria.ascx.cs">
+      <DependentUpon>WebUserControlImprimirAposentadoria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImprimirAposentadoria.ascx.designer.cs">
+      <DependentUpon>WebUserControlImprimirAposentadoria.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseProducao.ascx.cs">
+      <DependentUpon>WebUserControlAnaliseProducao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseProducao.ascx.designer.cs">
+      <DependentUpon>WebUserControlAnaliseProducao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAuditoriaAcesso.ascx.cs">
+      <DependentUpon>WebUserControlAuditoriaAcesso.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAuditoriaAcesso.ascx.designer.cs">
+      <DependentUpon>WebUserControlAuditoriaAcesso.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\MessageBoxControl.ascx.cs">
+      <DependentUpon>MessageBoxControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\MessageBoxControl.ascx.designer.cs">
+      <DependentUpon>MessageBoxControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAgentesEdicao.ascx.cs">
+      <DependentUpon>WebUserControlAgentesEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAgentesEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlAgentesEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAgentes.ascx.cs">
+      <DependentUpon>WebUserControlAgentes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAgentes.ascx.designer.cs">
+      <DependentUpon>WebUserControlAgentes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoCancelar.ascx.cs">
+      <DependentUpon>WebUserControlAverbacaoCancelar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoCancelar.ascx.designer.cs">
+      <DependentUpon>WebUserControlAverbacaoCancelar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartVolumeAverbacoes.ascx.cs">
+      <DependentUpon>WebUserControlChartVolumeAverbacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartVolumeAverbacoes.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartVolumeAverbacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlCoeficientesEmprestimo.ascx.cs">
+      <DependentUpon>WebUserControlCoeficientesEmprestimo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlCoeficientesEmprestimo.ascx.designer.cs">
+      <DependentUpon>WebUserControlCoeficientesEmprestimo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConciliacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlConciliacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionarioAposentar.ascx.cs">
+      <DependentUpon>WebUserControlFuncionarioAposentar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionarioAposentar.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionarioAposentar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportacaoFiltros.ascx.cs">
+      <DependentUpon>WebUserControlImportacaoFiltros.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportacaoFiltros.ascx.designer.cs">
+      <DependentUpon>WebUserControlImportacaoFiltros.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlIndicesNegocios.ascx.cs">
+      <DependentUpon>WebUserControlIndicesNegocios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlIndicesNegocios.ascx.designer.cs">
+      <DependentUpon>WebUserControlIndicesNegocios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlMinhasAverbacoes.ascx.cs">
+      <DependentUpon>WebUserControlMinhasAverbacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlMinhasAverbacoes.ascx.designer.cs">
+      <DependentUpon>WebUserControlMinhasAverbacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlPerfis.ascx.cs">
+      <DependentUpon>WebUserControlPerfis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlPerfis.ascx.designer.cs">
+      <DependentUpon>WebUserControlPerfis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlPerfisEdicao.ascx.cs">
+      <DependentUpon>WebUserControlPerfisEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlPerfisEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlPerfisEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAuditoria.ascx.cs">
+      <DependentUpon>WebUserControlAuditoria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAuditoria.ascx.designer.cs">
+      <DependentUpon>WebUserControlAuditoria.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlExportacao.ascx.cs">
+      <DependentUpon>WebUserControlExportacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlExportacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlExportacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlEmpresaSuspensoes.ascx.cs">
+      <DependentUpon>WebUserControlEmpresaSuspensoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlEmpresaSuspensoes.ascx.designer.cs">
+      <DependentUpon>WebUserControlEmpresaSuspensoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlEmpresaSuspensoesEdicao.ascx.cs">
+      <DependentUpon>WebUserControlEmpresaSuspensoesEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlEmpresaSuspensoesEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlEmpresaSuspensoesEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoLiquidar.ascx.cs">
+      <DependentUpon>WebUserControlAverbacaoLiquidar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoLiquidar.ascx.designer.cs">
+      <DependentUpon>WebUserControlAverbacaoLiquidar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlCentralSimulacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlCentralSimulacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfirmarQuitacao.ascx.cs">
+      <DependentUpon>WebUserControlConfirmarQuitacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfirmarQuitacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlConfirmarQuitacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDadosUsuario.ascx.cs">
+      <DependentUpon>WebUserControlDadosUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDadosUsuario.ascx.designer.cs">
+      <DependentUpon>WebUserControlDadosUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFluxo.ascx.cs">
+      <DependentUpon>WebUserControlFluxo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFluxo.ascx.designer.cs">
+      <DependentUpon>WebUserControlFluxo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlCentralSimulacao.ascx.cs">
+      <DependentUpon>WebUserControlCentralSimulacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartAreaEnviadosDescontados.ascx.cs">
+      <DependentUpon>WebUserControlChartAreaEnviadosDescontados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartAreaEnviadosDescontados.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartAreaEnviadosDescontados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAlerta.ascx.cs">
+      <DependentUpon>WebUserControlAlerta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAlerta.ascx.designer.cs">
+      <DependentUpon>WebUserControlAlerta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseInadimplencia.ascx.cs">
+      <DependentUpon>WebUserControlAnaliseInadimplencia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseInadimplencia.ascx.designer.cs">
+      <DependentUpon>WebUserControlAnaliseInadimplencia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacao.ascx.cs">
+      <DependentUpon>WebUserControlAverbacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlAverbacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseContratos.ascx.cs">
+      <DependentUpon>WebUserControlAnaliseContratos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAnaliseContratos.ascx.designer.cs">
+      <DependentUpon>WebUserControlAnaliseContratos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAlterarMinhaSenha.ascx.cs">
+      <DependentUpon>WebUserControlAlterarMinhaSenha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAlterarMinhaSenha.ascx.designer.cs">
+      <DependentUpon>WebUserControlAlterarMinhaSenha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoSuspenderBloquear.ascx.cs">
+      <DependentUpon>WebUserControlAverbacaoSuspenderBloquear.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlAverbacaoSuspenderBloquear.ascx.designer.cs">
+      <DependentUpon>WebUserControlAverbacaoSuspenderBloquear.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartArea.ascx.cs">
+      <DependentUpon>WebUserControlChartArea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartArea.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartArea.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartAreaVolumeInadimplencia.ascx.cs">
+      <DependentUpon>WebUserControlChartAreaVolumeInadimplencia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartAreaVolumeInadimplencia.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartAreaVolumeInadimplencia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarraImpactoAlteracoesFuncionarios.ascx.cs">
+      <DependentUpon>WebUserControlChartBarraImpactoAlteracoesFuncionarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarraImpactoAlteracoesFuncionarios.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartBarraImpactoAlteracoesFuncionarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartLinha.ascx.cs">
+      <DependentUpon>WebUserControlChartLinha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartLinha.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartLinha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartMinhaColocacaoConvenio.ascx.cs">
+      <DependentUpon>WebUserControlChartMinhaColocacaoConvenio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartMinhaColocacaoConvenio.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartMinhaColocacaoConvenio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizzaInadimplenciaGeral.ascx.cs">
+      <DependentUpon>WebUserControlChartPizzaInadimplenciaGeral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizzaInadimplenciaGeral.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartPizzaInadimplenciaGeral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartRankingMinhaPosicaoConvenio.ascx.cs">
+      <DependentUpon>WebUserControlChartRankingMinhaPosicaoConvenio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartRankingMinhaPosicaoConvenio.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartRankingMinhaPosicaoConvenio.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConsignatariasEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlConsignatariasEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoardConsignante.ascx.cs">
+      <DependentUpon>WebUserControlDashBoardConsignante.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoardConsignante.ascx.designer.cs">
+      <DependentUpon>WebUserControlDashBoardConsignante.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoardConsignataria.ascx.cs">
+      <DependentUpon>WebUserControlDashBoardConsignataria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoardConsignataria.ascx.designer.cs">
+      <DependentUpon>WebUserControlDashBoardConsignataria.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFluxoAprovacao.ascx.cs">
+      <DependentUpon>WebUserControlFluxoAprovacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFluxoAprovacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlFluxoAprovacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosAutorizacoes.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionariosAutorizacoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosAutorizacoesEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionariosAutorizacoesEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarra.ascx.cs">
+      <DependentUpon>WebUserControlChartBarra.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarra.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartBarra.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizza.ascx.cs">
+      <DependentUpon>WebUserControlChartPizza.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizza.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartPizza.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosConsulta.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionariosConsulta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosHistorico.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionariosHistorico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerenciarAverbacao.ascx.cs">
+      <DependentUpon>WebUserControlGerenciarAverbacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerenciarAverbacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlGerenciarAverbacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerenciarAverbacaoConsulta.ascx.cs">
+      <DependentUpon>WebUserControlGerenciarAverbacaoConsulta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerenciarAverbacaoConsulta.ascx.designer.cs">
+      <DependentUpon>WebUserControlGerenciarAverbacaoConsulta.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfiguracaoPermissoesAcesso.ascx.cs">
+      <DependentUpon>WebUserControlConfiguracaoPermissoesAcesso.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfiguracaoPermissoesAcesso.ascx.designer.cs">
+      <DependentUpon>WebUserControlConfiguracaoPermissoesAcesso.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarra3D.ascx.cs">
+      <DependentUpon>WebUserControlChartBarra3D.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartBarra3D.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartBarra3D.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizza3D.ascx.cs">
+      <DependentUpon>WebUserControlChartPizza3D.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlChartPizza3D.ascx.designer.cs">
+      <DependentUpon>WebUserControlChartPizza3D.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConciliacao.ascx.cs">
+      <DependentUpon>WebUserControlConciliacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosHistorico.ascx.cs">
+      <DependentUpon>WebUserControlFuncionariosHistorico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosAutorizacoesEdicao.ascx.cs">
+      <DependentUpon>WebUserControlFuncionariosAutorizacoesEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlErro.ascx.cs">
+      <DependentUpon>WebUserControlErro.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlErro.ascx.designer.cs">
+      <DependentUpon>WebUserControlErro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlBloqueioUsuario.ascx.cs">
+      <DependentUpon>WebUserControlBloqueioUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlBloqueioUsuario.ascx.designer.cs">
+      <DependentUpon>WebUserControlBloqueioUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlContatos.ascx.cs">
+      <DependentUpon>WebUserControlContatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlContatos.ascx.designer.cs">
+      <DependentUpon>WebUserControlContatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlContatosEdicao.ascx.cs">
+      <DependentUpon>WebUserControlContatosEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlContatosEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlContatosEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlBanco.ascx.cs">
+      <DependentUpon>WebUserControlBanco.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlBanco.ascx.designer.cs">
+      <DependentUpon>WebUserControlBanco.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfigurar.ascx.cs">
+      <DependentUpon>WebUserControlConfigurar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConfigurar.ascx.designer.cs">
+      <DependentUpon>WebUserControlConfigurar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConsignatarias.ascx.cs">
+      <DependentUpon>WebUserControlConsignatarias.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConsignatarias.ascx.designer.cs">
+      <DependentUpon>WebUserControlConsignatarias.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlConsignatariasEdicao.ascx.cs">
+      <DependentUpon>WebUserControlConsignatariasEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoard.ascx.cs">
+      <DependentUpon>WebUserControlDashBoard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlDashBoard.ascx.designer.cs">
+      <DependentUpon>WebUserControlDashBoard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionarios.ascx.cs">
+      <DependentUpon>WebUserControlFuncionarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionarios.ascx.designer.cs">
+      <DependentUpon>WebUserControlFuncionarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosAutorizacoes.ascx.cs">
+      <DependentUpon>WebUserControlFuncionariosAutorizacoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlFuncionariosConsulta.ascx.cs">
+      <DependentUpon>WebUserControlFuncionariosConsulta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerencial.ascx.cs">
+      <DependentUpon>WebUserControlGerencial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlGerencial.ascx.designer.cs">
+      <DependentUpon>WebUserControlGerencial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImpactoAlteracoesFuncionarios.ascx.cs">
+      <DependentUpon>WebUserControlImpactoAlteracoesFuncionarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImpactoAlteracoesFuncionarios.ascx.designer.cs">
+      <DependentUpon>WebUserControlImpactoAlteracoesFuncionarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportacao.ascx.cs">
+      <DependentUpon>WebUserControlImportacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlImportacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportarExportar.ascx.cs">
+      <DependentUpon>WebUserControlImportarExportar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlImportarExportar.ascx.designer.cs">
+      <DependentUpon>WebUserControlImportarExportar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlInformarQuitacao.ascx.cs">
+      <DependentUpon>WebUserControlInformarQuitacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlInformarQuitacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlInformarQuitacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlInformarSaldoDevedor.ascx.cs">
+      <DependentUpon>WebUserControlInformarSaldoDevedor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlInformarSaldoDevedor.ascx.designer.cs">
+      <DependentUpon>WebUserControlInformarSaldoDevedor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlMensagens.ascx.cs">
+      <DependentUpon>WebUserControlMensagens.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlMensagens.ascx.designer.cs">
+      <DependentUpon>WebUserControlMensagens.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlReajustarContratos.ascx.cs">
+      <DependentUpon>WebUserControlReajustarContratos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlReajustarContratos.ascx.designer.cs">
+      <DependentUpon>WebUserControlReajustarContratos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlResultadoBusca.ascx.cs">
+      <DependentUpon>WebUserControlResultadoBusca.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlResultadoBusca.ascx.designer.cs">
+      <DependentUpon>WebUserControlResultadoBusca.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlProdutos.ascx.cs">
+      <DependentUpon>WebUserControlProdutos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlProdutos.ascx.designer.cs">
+      <DependentUpon>WebUserControlProdutos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlProdutosEdicao.ascx.cs">
+      <DependentUpon>WebUserControlProdutosEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlProdutosEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlProdutosEdicao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSimulacaoCompraDivida.ascx.cs">
+      <DependentUpon>WebUserControlSimulacaoCompraDivida.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSimulacaoCompraDivida.ascx.designer.cs">
+      <DependentUpon>WebUserControlSimulacaoCompraDivida.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSimulacaoEmprestimo.ascx.cs">
+      <DependentUpon>WebUserControlSimulacaoEmprestimo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSimulacaoEmprestimo.ascx.designer.cs">
+      <DependentUpon>WebUserControlSimulacaoEmprestimo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSubMenu.ascx.cs">
+      <DependentUpon>WebUserControlSubMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlSubMenu.ascx.designer.cs">
+      <DependentUpon>WebUserControlSubMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlTermoAverbacao.ascx.cs">
+      <DependentUpon>WebUserControlTermoAverbacao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlTermoAverbacao.ascx.designer.cs">
+      <DependentUpon>WebUserControlTermoAverbacao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuario.ascx.cs">
+      <DependentUpon>WebUserControlUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuario.ascx.designer.cs">
+      <DependentUpon>WebUserControlUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuariosPermissoes.ascx.cs">
+      <DependentUpon>WebUserControlUsuariosPermissoes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuariosPermissoes.ascx.designer.cs">
+      <DependentUpon>WebUserControlUsuariosPermissoes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuariosPermissoesEdicao.ascx.cs">
+      <DependentUpon>WebUserControlUsuariosPermissoesEdicao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControls\WebUserControlUsuariosPermissoesEdicao.ascx.designer.cs">
+      <DependentUpon>WebUserControlUsuariosPermissoesEdicao.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CP.FastConsig.BLL\CP.FastConsig.BLL.csproj">
+      <Project>{B68F87CC-8B5B-492A-BD55-40D616880BE7}</Project>
+      <Name>CP.FastConsig.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Common\CP.FastConsig.Common.csproj">
+      <Project>{60EB6FEE-A3E0-4506-974A-D6E15D8AA372}</Project>
+      <Name>CP.FastConsig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.DAL\CP.FastConsig.DAL.csproj">
+      <Project>{4C3324BB-A106-4CF4-A6CC-9EB1BE4DD249}</Project>
+      <Name>CP.FastConsig.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Facade\CP.FastConsig.Facade.csproj">
+      <Project>{9BFF6FD8-9F91-411D-ABF7-17F86B069E27}</Project>
+      <Name>CP.FastConsig.Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Util\CP.FastConsig.Util.csproj">
+      <Project>{704936C1-EAB8-4763-B4B5-B0A8DC46EB83}</Project>
+      <Name>CP.FastConsig.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Paginas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewMasterPrincipal.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FastConsigCenterService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9997</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

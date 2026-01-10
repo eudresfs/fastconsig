@@ -1,0 +1,93 @@
+﻿/* Estilos para tags html */
+
+*
+{
+	margin: 0; 
+	padding:0;
+	border:0;
+	border:none;
+	outline:none;
+}
+
+html, body, form {height:100%;}
+html {background-color:#ffffff;}
+
+.HiddenColumn{display:none;}
+
+body
+{
+	/*font-family: "segoe ui", arial, verdana, helvetica, sans-serif; */
+	font-size: 12px;
+	font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif !important;
+	color:#083772 !important
+}
+
+legend
+{
+  padding: 0.2em 0.5em;
+  border:1px solid #a3c0e8;
+  font-size:90%;
+  text-align:right;
+  margin-left:10px;
+  background-color:#ffffff;
+}
+
+legend span{width: auto!important}
+
+/* Estilos para os links */
+
+a:link 
+{
+   text-decoration:none; 
+   color:#083772; 
+}
+
+a:visited
+{
+   text-decoration:none; 
+   color:#083772  
+}
+
+a:hover
+{
+    text-decoration:underline;     
+}
+
+a:active
+{
+   text-decoration:none; 
+   color:#083772;  
+    
+}
+
+caption
+ {
+     text-align:left;
+     font-size:11px;
+     font-weight:bold;
+ }
+ 
+.dxbButton td{text-align: center}
+ 
+fieldset{ border: 1px solid #A3C0E8; padding:10px}
+
+/* - Classes Gerais - */
+
+
+
+.divMensagemExplicacao{ width: 100%; text-align: center;background: #d2e9f0;color: #083772;padding: 20px 0; margin-bottom:20px}
+
+.mensagem{ width: auto!important; float: none!important}
+
+.colunaEsquerda{ float: left; width: 49%}
+.colunaDireita{ float: right; width: 49%}
+
+.floatLeft{float:left}
+.clearLeft{clear:left}
+.clearNone{clear:none!important}
+
+.width97Perc{width:97%!important}
+
+/* Fim - */
+
+ 

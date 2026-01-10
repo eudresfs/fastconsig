@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceUsuario" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61941/ServiceUsuario.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61941/ServiceUsuario.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61941/ServiceUsuario.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CP.FastConsig.Services" />
+      <xsd:import schemaLocation="http://localhost:61941/ServiceUsuario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:61941/ServiceUsuario.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicoUsuario_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ListarConsignatarias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarConsignatarias" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ListarConsignatarias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarConsignatariasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ListarConsignantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarConsignantes" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ListarConsignantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarConsignantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ExisteUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ExisteUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ObtemUsuarioPorLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemUsuarioPorLogin" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ObtemUsuarioPorLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemUsuarioPorLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ObtemConsignante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemConsignante" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ObtemConsignante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemConsignanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_IncluirUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_IncluirUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_AlterarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_AlterarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ExcluirUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ExcluirUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ConsignantesDoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsignantesDoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicoUsuario_ConsignantesDoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsignantesDoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicoUsuario">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/GetData" message="tns:IServicoUsuario_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/GetDataResponse" message="tns:IServicoUsuario_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/GetDataUsingDataContract" message="tns:IServicoUsuario_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/GetDataUsingDataContractResponse" message="tns:IServicoUsuario_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarConsignatarias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ListarConsignatarias" message="tns:IServicoUsuario_ListarConsignatarias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ListarConsignatariasResponse" message="tns:IServicoUsuario_ListarConsignatarias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarConsignantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ListarConsignantes" message="tns:IServicoUsuario_ListarConsignantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ListarConsignantesResponse" message="tns:IServicoUsuario_ListarConsignantes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ExisteUsuario" message="tns:IServicoUsuario_ExisteUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ExisteUsuarioResponse" message="tns:IServicoUsuario_ExisteUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtemUsuarioPorLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ObtemUsuarioPorLogin" message="tns:IServicoUsuario_ObtemUsuarioPorLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ObtemUsuarioPorLoginResponse" message="tns:IServicoUsuario_ObtemUsuarioPorLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtemConsignante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ObtemConsignante" message="tns:IServicoUsuario_ObtemConsignante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ObtemConsignanteResponse" message="tns:IServicoUsuario_ObtemConsignante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/IncluirUsuario" message="tns:IServicoUsuario_IncluirUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/IncluirUsuarioResponse" message="tns:IServicoUsuario_IncluirUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/AlterarUsuario" message="tns:IServicoUsuario_AlterarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/AlterarUsuarioResponse" message="tns:IServicoUsuario_AlterarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ExcluirUsuario" message="tns:IServicoUsuario_ExcluirUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ExcluirUsuarioResponse" message="tns:IServicoUsuario_ExcluirUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsignantesDoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicoUsuario/ConsignantesDoUsuario" message="tns:IServicoUsuario_ConsignantesDoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicoUsuario/ConsignantesDoUsuarioResponse" message="tns:IServicoUsuario_ConsignantesDoUsuario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicoUsuario" type="tns:IServicoUsuario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarConsignatarias">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ListarConsignatarias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarConsignantes">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ListarConsignantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ExisteUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtemUsuarioPorLogin">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ObtemUsuarioPorLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtemConsignante">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ObtemConsignante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/IncluirUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/AlterarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ExcluirUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsignantesDoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServicoUsuario/ConsignantesDoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceUsuario">
+    <wsdl:port name="BasicHttpBinding_IServicoUsuario" binding="tns:BasicHttpBinding_IServicoUsuario">
+      <soap:address location="http://localhost:61941/ServiceUsuario.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

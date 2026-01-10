@@ -1,0 +1,5 @@
+D:\devrosil\fastconsig\CP.FastConsig.Test\bin\Debug\CP.FastConsig.Test.dll
+D:\devrosil\fastconsig\CP.FastConsig.Test\bin\Debug\CP.FastConsig.Test.pdb
+D:\devrosil\fastconsig\CP.FastConsig.Test\obj\Debug\ResolveAssemblyReference.cache
+D:\devrosil\fastconsig\CP.FastConsig.Test\obj\Debug\CP.FastConsig.Test.dll
+D:\devrosil\fastconsig\CP.FastConsig.Test\obj\Debug\CP.FastConsig.Test.pdb

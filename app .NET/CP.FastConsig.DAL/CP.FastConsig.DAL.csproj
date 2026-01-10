@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C3324BB-A106-4CF4-A6CC-9EB1BE4DD249}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CP.FastConsig.DAL</RootNamespace>
+    <AssemblyName>CP.FastConsig.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoVideo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Assunto.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssuntoResponsavel.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Auditoria.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditoriaAcesso.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditoriaOcorrencia.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuditoriaOperacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Averbacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoAjuste.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoAjusteArquivo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoAjusteDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoAjusteTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoHistorico.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoImportacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoParcela.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoParcelaSituacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoSituacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoTipoQuitacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoTramitacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AverbacaoVinculo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Aviso.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AvisoLeitura.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conciliacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoCorteFolha.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoGrupo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoMovimento.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoMovimentoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoRepasse.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoRetorno.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacaoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContatoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contexto.cs" />
+    <Compile Include="CorteHistorico.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic.cs" />
+    <Compile Include="EFExtensions\DataExtensions.cs" />
+    <Compile Include="EFExtensions\EntityReferenceExtensions.cs" />
+    <Compile Include="EFExtensions\GlobalSuppressions.cs" />
+    <Compile Include="EFExtensions\Materializer.cs" />
+    <Compile Include="EFExtensions\Messages.Designer.cs" />
+    <Compile Include="EFExtensions\ObjectQueryExtensions.cs" />
+    <Compile Include="EFExtensions\Util.cs" />
+    <Compile Include="Empresa.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaAgenteTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaCoeficiente.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaCoeficienteDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaContato.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaContatoPerfil.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaIP.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaLogo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSituacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSolicitacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSolicitacaoQuitacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSolicitacaoSaldoDevedor.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSolicitacaoSituacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSolicitacaoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaSuspensao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaTarifada.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaUsuario.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaVinculo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades.cs" />
+    <Compile Include="Estado.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Extensao.cs" />
+    <Compile Include="Feriado.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fluxo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FluxoAprovacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FluxoAprovacaoEmpresa.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FluxoDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FluxoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FonteRecurso.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioAposenta.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioAutorizacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioAutorizacaoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioBloqueio.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioCargaDados.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioCategoria.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioHistorico.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioImportacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioMargem.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioMargemCargaDados.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioRegime.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuncionarioSituacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Funcoes.cs" />
+    <Compile Include="Importacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImportacaoAverbacaoCritica.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImportacaoLayout.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IndiceNegocioAntecipar.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IndiceNegocioRealizado.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IndiceNegocioRealizar.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mensagem.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MensagemSistema.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MensagemSistemaGerada.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloCustom\ConciliacaoResumoFolha.cs" />
+    <Compile Include="ModeloCustom\ConciliacaoResumoConciliacao.cs" />
+    <Compile Include="ModeloCustom\ConciliacaoResultadoConciliacao.cs" />
+    <Compile Include="ModeloCustom\ADescontar_E_Descontados.cs" />
+    <Compile Include="ModeloCustom\AnaliseProducao.cs" />
+    <Compile Include="ModeloCustom\IndiceNegocio.cs" />
+    <Compile Include="ModeloCustom\MargemFuncionarioHistorico.cs" />
+    <Compile Include="ModeloCustom\MenuPermissaoAcesso.cs" />
+    <Compile Include="ModeloCustom\GrupoMargem.cs" />
+    <Compile Include="ModeloCustom\Tabela.cs" />
+    <Compile Include="ModeloCustom\VolumeAverbacoes.cs" />
+    <Compile Include="ModeloFastConsig.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFastConsig.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloFastConsig.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloFastConsig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFastConsig.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NextNumero.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parametro.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parcial\Averbacao.cs" />
+    <Compile Include="Parcial\Conciliacao.cs" />
+    <Compile Include="Parcial\AverbacaoParcela.cs" />
+    <Compile Include="Parcial\Pessoa.cs" />
+    <Compile Include="Parcial\Funcionario.cs" />
+    <Compile Include="Parcial\Empresa.cs" />
+    <Compile Include="Parcial\TmpEnviadosVDescontados.cs" />
+    <Compile Include="Parcial\Usuario.cs" />
+    <Compile Include="Parcial\UsuarioPerfil.cs" />
+    <Compile Include="Perfil.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permissao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermissaoRecurso.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermissaoSistema.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermissaoUsuario.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pessoa.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Produto.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoGrupo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoTipo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProxNumero.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recurso.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositorio.cs" />
+    <Compile Include="IRepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetornoFolhaImportacao.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoPagamento.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpBoasNoticias.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpBoasNoticiasDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpColocacaoConvenio.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpEnviadosVDescontados.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpGrupoBoasNoticias.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaGeral.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaGeralDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaPadraoMargem.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaPadraoTrabalho.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaTempo.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpInadimplenciaTempoDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpIndicesNegocios.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpMasNoticias.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpMasNoticiasDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpMasNoticiasInadiplentes.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpMasNoticiasInadiplentesDetalhe.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpNaoRecuperavel.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpOcorrencias.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpRecuperavelPorFolha.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpSimulacaoCompraDivida.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TmpVolumeInadimplencia.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioPerfil.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioResponsabilidade.cs">
+      <DependentUpon>ModeloFastConsig.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModeloFastConsig.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloFastConsig.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModeloFastConsig.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFastConsig.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModeloFastConsig.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFastConsig.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EFExtensions\Messages.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CP.FastConsig.Common\CP.FastConsig.Common.csproj">
+      <Project>{60EB6FEE-A3E0-4506-974A-D6E15D8AA372}</Project>
+      <Name>CP.FastConsig.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CP.FastConsig.Util\CP.FastConsig.Util.csproj">
+      <Project>{704936C1-EAB8-4763-B4B5-B0A8DC46EB83}</Project>
+      <Name>CP.FastConsig.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Start\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

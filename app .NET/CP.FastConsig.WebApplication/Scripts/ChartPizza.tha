@@ -1,0 +1,23 @@
+﻿<script language='javascript' type='text/javascript'>
+
+$(document).ready(function () {
+
+	var chart = new Highcharts.Chart({
+
+		chart: {renderTo: 'containerPizza', plotBackgroundColor: null, plotBorderWidth: null, plotShadow: false},
+		
+		title: { text: '#titulo' },    
+			
+		subtitle: { text: '#subTitulo' },
+		
+		tooltip: {formatter: function () { return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';}},
+		
+		plotOptions: {pie: {allowPointSelect: true, cursor: 'pointer', dataLabels: { enabled: true, color: '#000000', connectorColor: '#000000', formatter: function () { return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';}}}},
+
+	series: [{type: 'pie', name: 'Série', data: [#dados]}]
+
+	});
+
+	});
+
+</script>

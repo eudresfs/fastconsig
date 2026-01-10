@@ -1,0 +1,7 @@
+CREATE TABLE [dbo].[ProxNumero]
+(
+[ID] [int] NOT NULL IDENTITY(1, 1)
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[ProxNumero] ADD CONSTRAINT [PK_ProxNumero] PRIMARY KEY CLUSTERED  ([ID]) ON [PRIMARY]
+GO

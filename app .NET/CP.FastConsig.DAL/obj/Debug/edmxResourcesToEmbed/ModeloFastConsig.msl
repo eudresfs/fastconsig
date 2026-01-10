@@ -1,0 +1,1436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CPFastConsigDALStoreContainer" CdmEntityContainer="FastConsigEntities">
+    <EntitySetMapping Name="Assunto">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Assunto">
+        <MappingFragment StoreEntitySet="Assunto">
+          <ScalarProperty Name="Interno" ColumnName="Interno" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAssunto" ColumnName="IDAssunto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssuntoResponsavel">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AssuntoResponsavel">
+        <MappingFragment StoreEntitySet="AssuntoResponsavel">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDAssunto" ColumnName="IDAssunto" />
+          <ScalarProperty Name="IDAssuntoResponsavel" ColumnName="IDAssuntoResponsavel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Auditoria">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Auditoria">
+        <MappingFragment StoreEntitySet="Auditoria">
+          <ScalarProperty Name="Browser" ColumnName="Browser" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Registro" ColumnName="Registro" />
+          <ScalarProperty Name="Chave" ColumnName="Chave" />
+          <ScalarProperty Name="Tabela" ColumnName="Tabela" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDAuditoriaOperacao" ColumnName="IDAuditoriaOperacao" />
+          <ScalarProperty Name="IDRecurso" ColumnName="IDRecurso" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="IDAuditoria" ColumnName="IDAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditoriaOperacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AuditoriaOperacao">
+        <MappingFragment StoreEntitySet="AuditoriaOperacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAuditoriaOperacao" ColumnName="IDAuditoriaOperacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoAjuste">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoAjuste">
+        <MappingFragment StoreEntitySet="AverbacaoAjuste">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+          <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+          <ScalarProperty Name="NovoValor" ColumnName="NovoValor" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDContratoAjusteTipo" ColumnName="IDContratoAjusteTipo" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDAverbacaoAjuste" ColumnName="IDAverbacaoAjuste" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoAjusteArquivo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoAjusteArquivo">
+        <MappingFragment StoreEntitySet="AverbacaoAjusteArquivo">
+          <ScalarProperty Name="Critica" ColumnName="Critica" />
+          <ScalarProperty Name="ValorAntigo" ColumnName="ValorAntigo" />
+          <ScalarProperty Name="ValorNovo" ColumnName="ValorNovo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="NumeroLinha" ColumnName="NumeroLinha" />
+          <ScalarProperty Name="IDAverbacaoAjuste" ColumnName="IDAverbacaoAjuste" />
+          <ScalarProperty Name="IDAverbacaoAjusteArquivo" ColumnName="IDAverbacaoAjusteArquivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoAjusteDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoAjusteDetalhe">
+        <MappingFragment StoreEntitySet="AverbacaoAjusteDetalhe">
+          <ScalarProperty Name="Critica" ColumnName="Critica" />
+          <ScalarProperty Name="Aplicado" ColumnName="Aplicado" />
+          <ScalarProperty Name="ValorNovo" ColumnName="ValorNovo" />
+          <ScalarProperty Name="MargemDisponivel" ColumnName="MargemDisponivel" />
+          <ScalarProperty Name="ValorAtual" ColumnName="ValorAtual" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDAverbacaoAjuste" ColumnName="IDAverbacaoAjuste" />
+          <ScalarProperty Name="IDAverbacaoAjusteDetalhe" ColumnName="IDAverbacaoAjusteDetalhe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoAjusteTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoAjusteTipo">
+        <MappingFragment StoreEntitySet="AverbacaoAjusteTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAverbacaoAjusteTipo" ColumnName="IDAverbacaoAjusteTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoHistorico">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoHistorico">
+        <MappingFragment StoreEntitySet="AverbacaoHistorico">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="CompetenciaInicial" ColumnName="CompetenciaInicial" />
+          <ScalarProperty Name="Prazo" ColumnName="Prazo" />
+          <ScalarProperty Name="ValorParcela" ColumnName="ValorParcela" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDAverbacaoHistorico" ColumnName="IDAverbacaoHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoImportacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoImportacao">
+        <MappingFragment StoreEntitySet="AverbacaoImportacao">
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="PrazoAprovacao" ColumnName="PrazoAprovacao" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Coeficiente" ColumnName="Coeficiente" />
+          <ScalarProperty Name="CompetenciaFinal" ColumnName="CompetenciaFinal" />
+          <ScalarProperty Name="CompetenciaInicial" ColumnName="CompetenciaInicial" />
+          <ScalarProperty Name="ValorDevidoTotal" ColumnName="ValorDevidoTotal" />
+          <ScalarProperty Name="ValorContratado" ColumnName="ValorContratado" />
+          <ScalarProperty Name="CET" ColumnName="CET" />
+          <ScalarProperty Name="Prazo" ColumnName="Prazo" />
+          <ScalarProperty Name="ValorDeducaoMargem" ColumnName="ValorDeducaoMargem" />
+          <ScalarProperty Name="ValorParcela" ColumnName="ValorParcela" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="MesAnoParcelaCorrente" ColumnName="MesAnoParcelaCorrente" />
+          <ScalarProperty Name="MesAnoPrimeiraParcela" ColumnName="MesAnoPrimeiraParcela" />
+          <ScalarProperty Name="ParcelaCorrente" ColumnName="ParcelaCorrente" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoParcela">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoParcela">
+        <MappingFragment StoreEntitySet="AverbacaoParcela">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="ValorDescontado" ColumnName="ValorDescontado" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="IDAverbacaoParcelaSituacao" ColumnName="IDAverbacaoParcelaSituacao" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDAverbacaoParcela" ColumnName="IDAverbacaoParcela" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoParcelaSituacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoParcelaSituacao">
+        <MappingFragment StoreEntitySet="AverbacaoParcelaSituacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAverbacaoParcelaSituacao" ColumnName="IDAverbacaoParcelaSituacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoSituacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoSituacao">
+        <MappingFragment StoreEntitySet="AverbacaoSituacao">
+          <ScalarProperty Name="Cancelavel" ColumnName="Cancelavel" />
+          <ScalarProperty Name="Liquidavel" ColumnName="Liquidavel" />
+          <ScalarProperty Name="ParaDescontoFolha" ColumnName="ParaDescontoFolha" />
+          <ScalarProperty Name="Compra" ColumnName="Compra" />
+          <ScalarProperty Name="DeduzMargem" ColumnName="DeduzMargem" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAverbacaoSituacao" ColumnName="IDAverbacaoSituacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoTipo">
+        <MappingFragment StoreEntitySet="AverbacaoTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAverbacaoTipo" ColumnName="IDAverbacaoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoTramitacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoTramitacao">
+        <MappingFragment StoreEntitySet="AverbacaoTramitacao">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDAverbacaoSituacao" ColumnName="IDAverbacaoSituacao" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDAverbacaoTramitacao" ColumnName="IDAverbacaoTramitacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoVinculo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoVinculo">
+        <MappingFragment StoreEntitySet="AverbacaoVinculo">
+          <ScalarProperty Name="IDAverbacaoPai" ColumnName="IDAverbacaoPai" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDAverbacaoVinculo" ColumnName="IDAverbacaoVinculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aviso">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Aviso">
+        <MappingFragment StoreEntitySet="Aviso">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="FiltroPerfis" ColumnName="FiltroPerfis" />
+          <ScalarProperty Name="FiltroAgentes" ColumnName="FiltroAgentes" />
+          <ScalarProperty Name="FiltroConsignantes" ColumnName="FiltroConsignantes" />
+          <ScalarProperty Name="FiltroConsignatarias" ColumnName="FiltroConsignatarias" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="SempreVisivel" ColumnName="SempreVisivel" />
+          <ScalarProperty Name="SolicitarLeitura" ColumnName="SolicitarLeitura" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="IDAviso" ColumnName="IDAviso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AvisoLeitura">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AvisoLeitura">
+        <MappingFragment StoreEntitySet="AvisoLeitura">
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDAviso" ColumnName="IDAviso" />
+          <ScalarProperty Name="IDAvisoLeitura" ColumnName="IDAvisoLeitura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conciliacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Conciliacao">
+        <MappingFragment StoreEntitySet="Conciliacao">
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="IDConciliacaoTipo" ColumnName="IDConciliacaoTipo" />
+          <ScalarProperty Name="ValorDescontado" ColumnName="ValorDescontado" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDConciliacaoRetorno" ColumnName="IDConciliacaoRetorno" />
+          <ScalarProperty Name="IDConciliacaoMovimento" ColumnName="IDConciliacaoMovimento" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="IDConciliacao" ColumnName="IDConciliacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoCorteFolha">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoCorteFolha">
+        <MappingFragment StoreEntitySet="ConciliacaoCorteFolha">
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDProdutoTipo" ColumnName="IDProdutoTipo" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="ValorParcela" ColumnName="ValorParcela" />
+          <ScalarProperty Name="IDCorteHistorico" ColumnName="IDCorteHistorico" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDAverbacaoSituacao" ColumnName="IDAverbacaoSituacao" />
+          <ScalarProperty Name="IDAverbacaoParcela" ColumnName="IDAverbacaoParcela" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="IDConciliacaoCorteFolha" ColumnName="IDConciliacaoCorteFolha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoGrupo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoGrupo">
+        <MappingFragment StoreEntitySet="ConciliacaoGrupo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConciliacaoGrupo" ColumnName="IDConciliacaoGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoMovimento">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoMovimento">
+        <MappingFragment StoreEntitySet="ConciliacaoMovimento">
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDConciliacaoRetorno" ColumnName="IDConciliacaoRetorno" />
+          <ScalarProperty Name="ValorDescontado" ColumnName="ValorDescontado" />
+          <ScalarProperty Name="ValorMovimento" ColumnName="ValorMovimento" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="IDConciliacaoMovimentoTipo" ColumnName="IDConciliacaoMovimentoTipo" />
+          <ScalarProperty Name="IDConciliacaoCorteFolha" ColumnName="IDConciliacaoCorteFolha" />
+          <ScalarProperty Name="IDConciliacaoMovimento" ColumnName="IDConciliacaoMovimento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoMovimentoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoMovimentoTipo">
+        <MappingFragment StoreEntitySet="ConciliacaoMovimentoTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConciliacaoMovimentoTipo" ColumnName="IDConciliacaoMovimentoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoRepasse">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoRepasse">
+        <MappingFragment StoreEntitySet="ConciliacaoRepasse">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="IDFonteRecurso" ColumnName="IDFonteRecurso" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="IDConciliacaoRepasse" ColumnName="IDConciliacaoRepasse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoRetorno">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoRetorno">
+        <MappingFragment StoreEntitySet="ConciliacaoRetorno">
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="ValorDescontado" ColumnName="ValorDescontado" />
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="IDConciliacaoRetorno" ColumnName="IDConciliacaoRetorno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConciliacaoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ConciliacaoTipo">
+        <MappingFragment StoreEntitySet="ConciliacaoTipo">
+          <ScalarProperty Name="IDConciliacaoGrupo" ColumnName="IDConciliacaoGrupo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConciliacaoTipo" ColumnName="IDConciliacaoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContatoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ContatoTipo">
+        <MappingFragment StoreEntitySet="ContatoTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDContatoTipo" ColumnName="IDContatoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorteHistorico">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.CorteHistorico">
+        <MappingFragment StoreEntitySet="CorteHistorico">
+          <ScalarProperty Name="DiaCorte" ColumnName="DiaCorte" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDCorteHistorico" ColumnName="IDCorteHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DiaCorte" ColumnName="DiaCorte" />
+          <ScalarProperty Name="IDContribuinteFastConsig" ColumnName="IDContribuinteFastConsig" />
+          <ScalarProperty Name="ContribuinteFastConsig" ColumnName="ContribuinteFastConsig" />
+          <ScalarProperty Name="IDUsuarioHomologacao" ColumnName="IDUsuarioHomologacao" />
+          <ScalarProperty Name="HomologacaoData" ColumnName="HomologacaoData" />
+          <ScalarProperty Name="HomologacaoRequerida" ColumnName="HomologacaoRequerida" />
+          <ScalarProperty Name="IDEmpresaAgenteTipo" ColumnName="IDEmpresaAgenteTipo" />
+          <ScalarProperty Name="ValorTarifa" ColumnName="ValorTarifa" />
+          <ScalarProperty Name="IDEmpresaTarifada" ColumnName="IDEmpresaTarifada" />
+          <ScalarProperty Name="RepasseFavorecido" ColumnName="RepasseFavorecido" />
+          <ScalarProperty Name="RepasseIDFederal" ColumnName="RepasseIDFederal" />
+          <ScalarProperty Name="RepasseConta" ColumnName="RepasseConta" />
+          <ScalarProperty Name="RepasseAgencia" ColumnName="RepasseAgencia" />
+          <ScalarProperty Name="RepasseBanco" ColumnName="RepasseBanco" />
+          <ScalarProperty Name="RepasseDia" ColumnName="RepasseDia" />
+          <ScalarProperty Name="IDUsuarioResponsavel" ColumnName="IDUsuarioResponsavel" />
+          <ScalarProperty Name="IDEmpresaSituacaoAnterior" ColumnName="IDEmpresaSituacaoAnterior" />
+          <ScalarProperty Name="IDEmpresaSituacao" ColumnName="IDEmpresaSituacao" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Fone2" ColumnName="Fone2" />
+          <ScalarProperty Name="Fone1" ColumnName="Fone1" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Fantasia" ColumnName="Fantasia" />
+          <ScalarProperty Name="RazaoSocial" ColumnName="RazaoSocial" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="ArquivoLogo" ColumnName="ArquivoLogo" />
+          <ScalarProperty Name="IDEmpresaLogo" ColumnName="IDEmpresaLogo" />
+          <ScalarProperty Name="IDEmpresaTipo" ColumnName="IDEmpresaTipo" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaAgenteTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaAgenteTipo">
+        <MappingFragment StoreEntitySet="EmpresaAgenteTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaAgenteTipo" ColumnName="IDEmpresaAgenteTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaCoeficiente">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaCoeficiente">
+        <MappingFragment StoreEntitySet="EmpresaCoeficiente">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ValidadeDias" ColumnName="ValidadeDias" />
+          <ScalarProperty Name="Carencia" ColumnName="Carencia" />
+          <ScalarProperty Name="InicioVigencia" ColumnName="InicioVigencia" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaCoeficiente" ColumnName="IDEmpresaCoeficiente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaCoeficienteDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaCoeficienteDetalhe">
+        <MappingFragment StoreEntitySet="EmpresaCoeficienteDetalhe">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Dia" ColumnName="Dia" />
+          <ScalarProperty Name="CET" ColumnName="CET" />
+          <ScalarProperty Name="Coeficiente" ColumnName="Coeficiente" />
+          <ScalarProperty Name="Prazo" ColumnName="Prazo" />
+          <ScalarProperty Name="IDEmpresaCoeficiente" ColumnName="IDEmpresaCoeficiente" />
+          <ScalarProperty Name="IDEmpresaCoeficienteDetalhe" ColumnName="IDEmpresaCoeficienteDetalhe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaContato">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaContato">
+        <MappingFragment StoreEntitySet="EmpresaContato">
+          <ScalarProperty Name="Conteudo" ColumnName="Conteudo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDContatoTipo" ColumnName="IDContatoTipo" />
+          <ScalarProperty Name="IDEmpresaContatoPerfil" ColumnName="IDEmpresaContatoPerfil" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaContato" ColumnName="IDEmpresaContato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaContatoPerfil">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaContatoPerfil">
+        <MappingFragment StoreEntitySet="EmpresaContatoPerfil">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaContatoPerfil" ColumnName="IDEmpresaContatoPerfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaIP">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaIP">
+        <MappingFragment StoreEntitySet="EmpresaIP">
+          <ScalarProperty Name="IPFim" ColumnName="IPFim" />
+          <ScalarProperty Name="IPInicio" ColumnName="IPInicio" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaIP" ColumnName="IDEmpresaIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaLogo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaLogo">
+        <MappingFragment StoreEntitySet="EmpresaLogo">
+          <ScalarProperty Name="Arquivo" ColumnName="Arquivo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaLogo" ColumnName="IDEmpresaLogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSituacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSituacao">
+        <MappingFragment StoreEntitySet="EmpresaSituacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaSituacao" ColumnName="IDEmpresaSituacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSolicitacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSolicitacao">
+        <MappingFragment StoreEntitySet="EmpresaSolicitacao">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="DataAtendimento" ColumnName="DataAtendimento" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataSolicitacao" ColumnName="DataSolicitacao" />
+          <ScalarProperty Name="IDResponsavel" ColumnName="IDResponsavel" />
+          <ScalarProperty Name="IDSolicitante" ColumnName="IDSolicitante" />
+          <ScalarProperty Name="IDEmpresaSolicitante" ColumnName="IDEmpresaSolicitante" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoOriginal" ColumnName="IDEmpresaSolicitacaoOriginal" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoSituacao" ColumnName="IDEmpresaSolicitacaoSituacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoTipo" ColumnName="IDEmpresaSolicitacaoTipo" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaSolicitacao" ColumnName="IDEmpresaSolicitacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSolicitacaoSituacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSolicitacaoSituacao">
+        <MappingFragment StoreEntitySet="EmpresaSolicitacaoSituacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoSituacao" ColumnName="IDEmpresaSolicitacaoSituacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSolicitacaoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSolicitacaoTipo">
+        <MappingFragment StoreEntitySet="EmpresaSolicitacaoTipo">
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="IDEmpresaSituacaoSuspensaoApos" ColumnName="IDEmpresaSituacaoSuspensaoApos" />
+          <ScalarProperty Name="IDEmpresaSituacaoSuspensaoAntes" ColumnName="IDEmpresaSituacaoSuspensaoAntes" />
+          <ScalarProperty Name="Prazo" ColumnName="Prazo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoTipo" ColumnName="IDEmpresaSolicitacaoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSuspensao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSuspensao">
+        <MappingFragment StoreEntitySet="EmpresaSuspensao">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="DataFinal" ColumnName="DataFinal" />
+          <ScalarProperty Name="DataInicial" ColumnName="DataInicial" />
+          <ScalarProperty Name="TipoPeriodo" ColumnName="TipoPeriodo" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDEmpresaSituacaoAnterior" ColumnName="IDEmpresaSituacaoAnterior" />
+          <ScalarProperty Name="IDEmpresaSituacaoSuspensao" ColumnName="IDEmpresaSituacaoSuspensao" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaSuspensao" ColumnName="IDEmpresaSuspensao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTarifada">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaTarifada">
+        <MappingFragment StoreEntitySet="EmpresaTarifada">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaTarifada" ColumnName="IDEmpresaTarifada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaTipo">
+        <MappingFragment StoreEntitySet="EmpresaTipo">
+          <ScalarProperty Name="Consignataria" ColumnName="Consignataria" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDEmpresaTipo" ColumnName="IDEmpresaTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaUsuario">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaUsuario">
+        <MappingFragment StoreEntitySet="EmpresaUsuario">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaUsuario" ColumnName="IDEmpresaUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaVinculo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaVinculo">
+        <MappingFragment StoreEntitySet="EmpresaVinculo">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IDEmpresaVinculada" ColumnName="IDEmpresaVinculada" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDEmpresaVinculo" ColumnName="IDEmpresaVinculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="SiglaEstado" ColumnName="SiglaEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feriado">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Feriado">
+        <MappingFragment StoreEntitySet="Feriado">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFeriado" ColumnName="IDFeriado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fluxo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Fluxo">
+        <MappingFragment StoreEntitySet="Fluxo">
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDFluxoTipo" ColumnName="IDFluxoTipo" />
+          <ScalarProperty Name="IDFluxo" ColumnName="IDFluxo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FluxoAprovacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FluxoAprovacao">
+        <MappingFragment StoreEntitySet="FluxoAprovacao">
+          <ScalarProperty Name="RequerAprovacaoFuncionario" ColumnName="RequerAprovacaoFuncionario" />
+          <ScalarProperty Name="RequerAprovacaoConsignataria" ColumnName="RequerAprovacaoConsignataria" />
+          <ScalarProperty Name="RequerAprovacaoConsignante" ColumnName="RequerAprovacaoConsignante" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDFluxoAprovacao" ColumnName="IDFluxoAprovacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FluxoAprovacaoEmpresa">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FluxoAprovacaoEmpresa">
+        <MappingFragment StoreEntitySet="FluxoAprovacaoEmpresa">
+          <ScalarProperty Name="RequerAprovacao" ColumnName="RequerAprovacao" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDFluxoAprovacaoEmpresa" ColumnName="IDFluxoAprovacaoEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FluxoDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FluxoDetalhe">
+        <MappingFragment StoreEntitySet="FluxoDetalhe">
+          <ScalarProperty Name="IDEmpresaSolicitacaoTipo" ColumnName="IDEmpresaSolicitacaoTipo" />
+          <ScalarProperty Name="IDAverbacaoSituacao" ColumnName="IDAverbacaoSituacao" />
+          <ScalarProperty Name="Ator" ColumnName="Ator" />
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="IDFluxo" ColumnName="IDFluxo" />
+          <ScalarProperty Name="IDFluxoDetalhe" ColumnName="IDFluxoDetalhe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FluxoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FluxoTipo">
+        <MappingFragment StoreEntitySet="FluxoTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFluxoTipo" ColumnName="IDFluxoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FonteRecurso">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FonteRecurso">
+        <MappingFragment StoreEntitySet="FonteRecurso">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFonteRecurso" ColumnName="IDFonteRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Funcionario">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Funcionario">
+        <MappingFragment StoreEntitySet="Funcionario">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="FonteRecurso" ColumnName="FonteRecurso" />
+          <ScalarProperty Name="MargemBase" ColumnName="MargemBase" />
+          <ScalarProperty Name="MargemBruta" ColumnName="MargemBruta" />
+          <ScalarProperty Name="NomeSituacaoFolha" ColumnName="NomeSituacaoFolha" />
+          <ScalarProperty Name="NomeRegimeFolha" ColumnName="NomeRegimeFolha" />
+          <ScalarProperty Name="NomeCargoFolha" ColumnName="NomeCargoFolha" />
+          <ScalarProperty Name="NomeSetorFolha" ColumnName="NomeSetorFolha" />
+          <ScalarProperty Name="NomeLocalFolha" ColumnName="NomeLocalFolha" />
+          <ScalarProperty Name="IDFuncionarioRegime" ColumnName="IDFuncionarioRegime" />
+          <ScalarProperty Name="IDFuncionarioSituacao" ColumnName="IDFuncionarioSituacao" />
+          <ScalarProperty Name="IDFuncionarioCategoria" ColumnName="IDFuncionarioCategoria" />
+          <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="MatriculaAntiga" ColumnName="MatriculaAntiga" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioAutorizacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioAutorizacao">
+        <MappingFragment StoreEntitySet="FuncionarioAutorizacao">
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="AutorizacaoValidade" ColumnName="AutorizacaoValidade" />
+          <ScalarProperty Name="AutorizacaoData" ColumnName="AutorizacaoData" />
+          <ScalarProperty Name="IDFuncionarioAutorizacaoTipo" ColumnName="IDFuncionarioAutorizacaoTipo" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDFuncionarioAutorizacao" ColumnName="IDFuncionarioAutorizacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioAutorizacaoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioAutorizacaoTipo">
+        <MappingFragment StoreEntitySet="FuncionarioAutorizacaoTipo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFuncionarioAutorizacaoTipo" ColumnName="IDFuncionarioAutorizacaoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioBloqueio">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioBloqueio">
+        <MappingFragment StoreEntitySet="FuncionarioBloqueio">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="Chaves" ColumnName="Chaves" />
+          <ScalarProperty Name="TipoBloqueio" ColumnName="TipoBloqueio" />
+          <ScalarProperty Name="DataDesbloqueio" ColumnName="DataDesbloqueio" />
+          <ScalarProperty Name="DataBloqueio" ColumnName="DataBloqueio" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDFuncionarioBloqueio" ColumnName="IDFuncionarioBloqueio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioCategoria">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioCategoria">
+        <MappingFragment StoreEntitySet="FuncionarioCategoria">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFuncionarioCategoria" ColumnName="IDFuncionarioCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioHistorico">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioHistorico">
+        <MappingFragment StoreEntitySet="FuncionarioHistorico">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="MargemFolhaDisponivel" ColumnName="MargemFolhaDisponivel" />
+          <ScalarProperty Name="MargemFolhaBruta" ColumnName="MargemFolhaBruta" />
+          <ScalarProperty Name="NomeSetorFolha" ColumnName="NomeSetorFolha" />
+          <ScalarProperty Name="NomeCargoFolha" ColumnName="NomeCargoFolha" />
+          <ScalarProperty Name="NomeLocalFolha" ColumnName="NomeLocalFolha" />
+          <ScalarProperty Name="NomeRegimeFolha" ColumnName="NomeRegimeFolha" />
+          <ScalarProperty Name="NomeSituacaoFolha" ColumnName="NomeSituacaoFolha" />
+          <ScalarProperty Name="IDFuncionarioRegime" ColumnName="IDFuncionarioRegime" />
+          <ScalarProperty Name="IDFuncionarioSituacao" ColumnName="IDFuncionarioSituacao" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDFuncionarioHistorico" ColumnName="IDFuncionarioHistorico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioImportacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioImportacao">
+        <MappingFragment StoreEntitySet="FuncionarioImportacao">
+          <ScalarProperty Name="Fone" ColumnName="Fone" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="NomeMae" ColumnName="NomeMae" />
+          <ScalarProperty Name="NomePai" ColumnName="NomePai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="FonteRecurso" ColumnName="FonteRecurso" />
+          <ScalarProperty Name="MargemBase" ColumnName="MargemBase" />
+          <ScalarProperty Name="MargemBruta" ColumnName="MargemBruta" />
+          <ScalarProperty Name="NomeSituacaoFolha" ColumnName="NomeSituacaoFolha" />
+          <ScalarProperty Name="NomeRegimeFolha" ColumnName="NomeRegimeFolha" />
+          <ScalarProperty Name="NomeCargoFolha" ColumnName="NomeCargoFolha" />
+          <ScalarProperty Name="NomeSetorFolha" ColumnName="NomeSetorFolha" />
+          <ScalarProperty Name="NomeLocalFolha" ColumnName="NomeLocalFolha" />
+          <ScalarProperty Name="DataAdmissao" ColumnName="DataAdmissao" />
+          <ScalarProperty Name="MatriculaAntiga" ColumnName="MatriculaAntiga" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioMargem">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioMargem">
+        <MappingFragment StoreEntitySet="FuncionarioMargem">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="MargemFolhaDisponivel" ColumnName="MargemFolhaDisponivel" />
+          <ScalarProperty Name="MargemFolha" ColumnName="MargemFolha" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDFuncionarioMargem" ColumnName="IDFuncionarioMargem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioRegime">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioRegime">
+        <MappingFragment StoreEntitySet="FuncionarioRegime">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFuncionarioRegime" ColumnName="IDFuncionarioRegime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuncionarioSituacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.FuncionarioSituacao">
+        <MappingFragment StoreEntitySet="FuncionarioSituacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDFuncionarioSituacao" ColumnName="IDFuncionarioSituacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImportacaoAverbacaoCritica">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ImportacaoAverbacaoCritica">
+        <MappingFragment StoreEntitySet="ImportacaoAverbacaoCritica">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mensagem">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Mensagem">
+        <MappingFragment StoreEntitySet="Mensagem">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pendente" ColumnName="Pendente" />
+          <ScalarProperty Name="IDMensagemOrigem" ColumnName="IDMensagemOrigem" />
+          <ScalarProperty Name="Mensagem1" ColumnName="Mensagem" />
+          <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDAssunto" ColumnName="IDAssunto" />
+          <ScalarProperty Name="IDDestinatario" ColumnName="IDDestinatario" />
+          <ScalarProperty Name="IDRemetente" ColumnName="IDRemetente" />
+          <ScalarProperty Name="IDMensagem" ColumnName="IDMensagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensagemSistema">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.MensagemSistema">
+        <MappingFragment StoreEntitySet="MensagemSistema">
+          <ScalarProperty Name="ForcarLeitura" ColumnName="ForcarLeitura" />
+          <ScalarProperty Name="DispararSMS" ColumnName="DispararSMS" />
+          <ScalarProperty Name="DispararEmail" ColumnName="DispararEmail" />
+          <ScalarProperty Name="Perfis" ColumnName="Perfis" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="TextoHTML" ColumnName="TextoHTML" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IDMensagemSistema" ColumnName="IDMensagemSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensagemSistemaGerada">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.MensagemSistemaGerada">
+        <MappingFragment StoreEntitySet="MensagemSistemaGerada">
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="MensagemLida" ColumnName="MensagemLida" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDMensagemSistema" ColumnName="IDMensagemSistema" />
+          <ScalarProperty Name="IDMensagemSistemaGerada" ColumnName="IDMensagemSistemaGerada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Modulo">
+        <MappingFragment StoreEntitySet="Modulo">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NextNumero">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.NextNumero">
+        <MappingFragment StoreEntitySet="NextNumero">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parametro">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Parametro">
+        <MappingFragment StoreEntitySet="Parametro">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Dominio" ColumnName="Dominio" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDParametro" ColumnName="IDParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permissao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Permissao">
+        <MappingFragment StoreEntitySet="Permissao">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDPermissao" ColumnName="IDPermissao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermissaoRecurso">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.PermissaoRecurso">
+        <MappingFragment StoreEntitySet="PermissaoRecurso">
+          <ScalarProperty Name="IDRecurso" ColumnName="IDRecurso" />
+          <ScalarProperty Name="IDPermissao" ColumnName="IDPermissao" />
+          <ScalarProperty Name="IDPermissaoRecurso" ColumnName="IDPermissaoRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermissaoSistema">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.PermissaoSistema">
+        <MappingFragment StoreEntitySet="PermissaoSistema">
+          <ScalarProperty Name="IDPerfil" ColumnName="IDPerfil" />
+          <ScalarProperty Name="IDRecurso" ColumnName="IDRecurso" />
+          <ScalarProperty Name="IDPermissao" ColumnName="IDPermissao" />
+          <ScalarProperty Name="IDPermissaoSistema" ColumnName="IDPermissaoSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermissaoUsuario">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.PermissaoUsuario">
+        <MappingFragment StoreEntitySet="PermissaoUsuario">
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDPerfil" ColumnName="IDPerfil" />
+          <ScalarProperty Name="IDRecurso" ColumnName="IDRecurso" />
+          <ScalarProperty Name="IDPermissao" ColumnName="IDPermissao" />
+          <ScalarProperty Name="IDPermissaoUsuario" ColumnName="IDPermissaoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="Fone" ColumnName="Fone" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="NomePai" ColumnName="NomePai" />
+          <ScalarProperty Name="NomeMae" ColumnName="NomeMae" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDPessoa" ColumnName="IDPessoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produto">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="DesativadoConsignante" ColumnName="DesativadoConsignante" />
+          <ScalarProperty Name="CarenciaMaxima" ColumnName="CarenciaMaxima" />
+          <ScalarProperty Name="PrazoMaximo" ColumnName="PrazoMaximo" />
+          <ScalarProperty Name="VerbaFolha" ColumnName="VerbaFolha" />
+          <ScalarProperty Name="Verba" ColumnName="Verba" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoGrupo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ProdutoGrupo">
+        <MappingFragment StoreEntitySet="ProdutoGrupo">
+          <ScalarProperty Name="PrazoMaximoConsignante" ColumnName="PrazoMaximoConsignante" />
+          <ScalarProperty Name="CarenciaMaximaConsignante" ColumnName="CarenciaMaximaConsignante" />
+          <ScalarProperty Name="IDProdutoGrupoCompartilha" ColumnName="IDProdutoGrupoCompartilha" />
+          <ScalarProperty Name="PrioridadeDesconto" ColumnName="PrioridadeDesconto" />
+          <ScalarProperty Name="PercentualMargemBruta" ColumnName="PercentualMargemBruta" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDConsignante" ColumnName="IDConsignante" />
+          <ScalarProperty Name="IDProdutoTipo" ColumnName="IDProdutoTipo" />
+          <ScalarProperty Name="IDProdutoGrupo" ColumnName="IDProdutoGrupo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoTipo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ProdutoTipo">
+        <MappingFragment StoreEntitySet="ProdutoTipo">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDProdutoTipo" ColumnName="IDProdutoTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProxNumero">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.ProxNumero">
+        <MappingFragment StoreEntitySet="ProxNumero">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recurso">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Recurso">
+        <MappingFragment StoreEntitySet="Recurso">
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="ParametrosAoIniciar" ColumnName="ParametrosAoIniciar" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="IDRecursoPai" ColumnName="IDRecursoPai" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+          <ScalarProperty Name="Objetivo" ColumnName="Objetivo" />
+          <ScalarProperty Name="Visivel" ColumnName="Visivel" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="Arquivo" ColumnName="Arquivo" />
+          <ScalarProperty Name="ArquivoHelp" ColumnName="ArquivoHelp" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDRecurso" ColumnName="IDRecurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetornoFolhaImportacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.RetornoFolhaImportacao">
+        <MappingFragment StoreEntitySet="RetornoFolhaImportacao">
+          <ScalarProperty Name="ValorDescontado" ColumnName="ValorDescontado" />
+          <ScalarProperty Name="ValorBruto" ColumnName="ValorBruto" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpBoasNoticias">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpBoasNoticias">
+        <MappingFragment StoreEntitySet="TmpBoasNoticias">
+          <ScalarProperty Name="Possibilidade" ColumnName="Possibilidade" />
+          <ScalarProperty Name="ValorMargem" ColumnName="ValorMargem" />
+          <ScalarProperty Name="Qtde" ColumnName="Qtde" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdGrupoBoaNoticia" ColumnName="IdGrupoBoaNoticia" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpBoasNoticiasDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpBoasNoticiasDetalhe">
+        <MappingFragment StoreEntitySet="TmpBoasNoticiasDetalhe">
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="SaldoRestante" ColumnName="SaldoRestante" />
+          <ScalarProperty Name="Possibilidade" ColumnName="Possibilidade" />
+          <ScalarProperty Name="MargemAtual" ColumnName="MargemAtual" />
+          <ScalarProperty Name="MargemAnterior" ColumnName="MargemAnterior" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="IdBoaNoticia" ColumnName="IdBoaNoticia" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpColocacaoConvenio">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpColocacaoConvenio">
+        <MappingFragment StoreEntitySet="TmpColocacaoConvenio">
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Qtde" ColumnName="Qtde" />
+          <ScalarProperty Name="IDServicoGrupo" ColumnName="IDServicoGrupo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpEnviadosVDescontados">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpEnviadosVDescontados">
+        <MappingFragment StoreEntitySet="TmpEnviadosVDescontados">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpGrupoBoasNoticias">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpGrupoBoasNoticias">
+        <MappingFragment StoreEntitySet="TmpGrupoBoasNoticias">
+          <ScalarProperty Name="Possibilidade" ColumnName="Possibilidade" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaGeral">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaGeral">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaGeral">
+          <ScalarProperty Name="Percentual" ColumnName="Percentual" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaGeralDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaGeralDetalhe">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaGeralDetalhe">
+          <ScalarProperty Name="Percentual" ColumnName="Percentual" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IDInadimplenciaGeral" ColumnName="IDInadimplenciaGeral" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaPadraoMargem">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaPadraoMargem">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaPadraoMargem">
+          <ScalarProperty Name="Percentual" ColumnName="Percentual" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaPadraoTrabalho">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaPadraoTrabalho">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaPadraoTrabalho">
+          <ScalarProperty Name="Percentual" ColumnName="Percentual" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaTempo">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaTempo">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaTempo">
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpInadimplenciaTempoDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpInadimplenciaTempoDetalhe">
+        <MappingFragment StoreEntitySet="TmpInadimplenciaTempoDetalhe">
+          <ScalarProperty Name="Proposta" ColumnName="Proposta" />
+          <ScalarProperty Name="ValorAtrasado" ColumnName="ValorAtrasado" />
+          <ScalarProperty Name="MargemNegativa" ColumnName="MargemNegativa" />
+          <ScalarProperty Name="ParcelasRestante" ColumnName="ParcelasRestante" />
+          <ScalarProperty Name="ValorParcela" ColumnName="ValorParcela" />
+          <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDInadimplenciaTempo" ColumnName="IDInadimplenciaTempo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpIndicesNegocios">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpIndicesNegocios">
+        <MappingFragment StoreEntitySet="TmpIndicesNegocios">
+          <ScalarProperty Name="DicaLucro" ColumnName="DicaLucro" />
+          <ScalarProperty Name="DicaValor" ColumnName="DicaValor" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Lucro" ColumnName="Lucro" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Margem" ColumnName="Margem" />
+          <ScalarProperty Name="Qtde" ColumnName="Qtde" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpMasNoticias">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpMasNoticias">
+        <MappingFragment StoreEntitySet="TmpMasNoticias">
+          <ScalarProperty Name="QuantidadeContratos" ColumnName="QuantidadeContratos" />
+          <ScalarProperty Name="SaldoDevedor" ColumnName="SaldoDevedor" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="DescricaoGrupo" ColumnName="DescricaoGrupo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpMasNoticiasDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpMasNoticiasDetalhe">
+        <MappingFragment StoreEntitySet="TmpMasNoticiasDetalhe">
+          <ScalarProperty Name="QtdeContratos" ColumnName="QtdeContratos" />
+          <ScalarProperty Name="SaldoDevedor" ColumnName="SaldoDevedor" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="IDMasNoticia" ColumnName="IDMasNoticia" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpMasNoticiasInadiplentes">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpMasNoticiasInadiplentes">
+        <MappingFragment StoreEntitySet="TmpMasNoticiasInadiplentes">
+          <ScalarProperty Name="Parcelas" ColumnName="Parcelas" />
+          <ScalarProperty Name="QuantidadeContrato" ColumnName="QuantidadeContrato" />
+          <ScalarProperty Name="NaoConciliado" ColumnName="NaoConciliado" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="DescricaoGrupo" ColumnName="DescricaoGrupo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpMasNoticiasInadiplentesDetalhe">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpMasNoticiasInadiplentesDetalhe">
+        <MappingFragment StoreEntitySet="TmpMasNoticiasInadiplentesDetalhe">
+          <ScalarProperty Name="QtdeParcelas" ColumnName="QtdeParcelas" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="IDMasNoticiaInadiplente" ColumnName="IDMasNoticiaInadiplente" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpOcorrencias">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpOcorrencias">
+        <MappingFragment StoreEntitySet="TmpOcorrencias">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Contratos" ColumnName="Contratos" />
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TmpVolumeInadimplencia">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TmpVolumeInadimplencia">
+        <MappingFragment StoreEntitySet="TmpVolumeInadimplencia">
+          <ScalarProperty Name="SomaParcelas" ColumnName="SomaParcelas" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UltimoAcesso" ColumnName="UltimoAcesso" />
+          <ScalarProperty Name="QtdAcessos" ColumnName="QtdAcessos" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="SenhaProvisoria" ColumnName="SenhaProvisoria" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="ApelidoLogin" ColumnName="ApelidoLogin" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="NomeCompleto" ColumnName="NomeCompleto" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioPerfil">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.UsuarioPerfil">
+        <MappingFragment StoreEntitySet="UsuarioPerfil">
+          <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDPerfil" ColumnName="IDPerfil" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDUsuarioPerfil" ColumnName="IDUsuarioPerfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioResponsabilidade">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.UsuarioResponsabilidade">
+        <MappingFragment StoreEntitySet="UsuarioResponsabilidade">
+          <ScalarProperty Name="IDEmpresaSolicitacaoTipo" ColumnName="IDEmpresaSolicitacaoTipo" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDUsuarioResponsabilidade" ColumnName="IDUsuarioResponsabilidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Perfil">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Perfil">
+        <MappingFragment StoreEntitySet="Perfil">
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDPerfil" ColumnName="IDPerfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSolicitacaoQuitacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSolicitacaoQuitacao">
+        <MappingFragment StoreEntitySet="EmpresaSolicitacaoQuitacao">
+          <ScalarProperty Name="Comprovante" ColumnName="Comprovante" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDAverbacaoTipoQuitacao" ColumnName="IDAverbacaoTipoQuitacao" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="DataQuitacao" ColumnName="DataQuitacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacao" ColumnName="IDEmpresaSolicitacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoQuitacao" ColumnName="IDEmpresaSolicitacaoQuitacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaSolicitacaoSaldoDevedor">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.EmpresaSolicitacaoSaldoDevedor">
+        <MappingFragment StoreEntitySet="EmpresaSolicitacaoSaldoDevedor">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
+          <ScalarProperty Name="NomeFavorecido" ColumnName="NomeFavorecido" />
+          <ScalarProperty Name="ContaCredito" ColumnName="ContaCredito" />
+          <ScalarProperty Name="Agencia" ColumnName="Agencia" />
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="IDTipoPagamento" ColumnName="IDTipoPagamento" />
+          <ScalarProperty Name="Validade" ColumnName="Validade" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacao" ColumnName="IDEmpresaSolicitacao" />
+          <ScalarProperty Name="IDEmpresaSolicitacaoSaldoDevedor" ColumnName="IDEmpresaSolicitacaoSaldoDevedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagamento">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.TipoPagamento">
+        <MappingFragment StoreEntitySet="TipoPagamento">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDTipoPagamento" ColumnName="IDTipoPagamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Averbacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.Averbacao">
+        <MappingFragment StoreEntitySet="Averbacao">
+          <ScalarProperty Name="ValorTroco" ColumnName="ValorTroco" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IDAverbacaoPai" ColumnName="IDAverbacaoPai" />
+          <ScalarProperty Name="PrazoAprovacao" ColumnName="PrazoAprovacao" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Coeficiente" ColumnName="Coeficiente" />
+          <ScalarProperty Name="CompetenciaFinal" ColumnName="CompetenciaFinal" />
+          <ScalarProperty Name="CompetenciaInicial" ColumnName="CompetenciaInicial" />
+          <ScalarProperty Name="ValorRefinanciado" ColumnName="ValorRefinanciado" />
+          <ScalarProperty Name="ValorDevidoTotal" ColumnName="ValorDevidoTotal" />
+          <ScalarProperty Name="ValorContratado" ColumnName="ValorContratado" />
+          <ScalarProperty Name="CET" ColumnName="CET" />
+          <ScalarProperty Name="Prazo" ColumnName="Prazo" />
+          <ScalarProperty Name="ValorDeducaoMargem" ColumnName="ValorDeducaoMargem" />
+          <ScalarProperty Name="ValorParcela" ColumnName="ValorParcela" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDAverbacaoTipo" ColumnName="IDAverbacaoTipo" />
+          <ScalarProperty Name="IDAverbacaoSituacao" ColumnName="IDAverbacaoSituacao" />
+          <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+          <ScalarProperty Name="IDAgente" ColumnName="IDAgente" />
+          <ScalarProperty Name="IDConsignataria" ColumnName="IDConsignataria" />
+          <ScalarProperty Name="IDProduto" ColumnName="IDProduto" />
+          <ScalarProperty Name="IDAverbacao" ColumnName="IDAverbacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditoriaOcorrencia">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AuditoriaOcorrencia">
+        <MappingFragment StoreEntitySet="AuditoriaOcorrencia">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDPerfil" ColumnName="IDPerfil" />
+          <ScalarProperty Name="IDEmpresa" ColumnName="IDEmpresa" />
+          <ScalarProperty Name="IDModulo" ColumnName="IDModulo" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="IDAuditoriaOcorrencia" ColumnName="IDAuditoriaOcorrencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AverbacaoTipoQuitacao">
+      <EntityTypeMapping TypeName="CP.FastConsig.DAL.AverbacaoTipoQuitacao">
+        <MappingFragment StoreEntitySet="AverbacaoTipoQuitacao">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IDAverbacaoTipoQuitacao" ColumnName="IDAverbacaoTipoQuitacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

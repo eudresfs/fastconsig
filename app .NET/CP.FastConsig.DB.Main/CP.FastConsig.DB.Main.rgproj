@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{222f412e-a796-48fe-a8fa-01282ebc8483}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyRootNamespace</RootNamespace>
+    <AssemblyName>MyAssemblyName</AssemblyName>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <Name>CP.FastConsig.DB.Main</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Functions\dbo.AnoMesCorte.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\dbo.AumentaCompetencia.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\dbo.DiminuiCompetencia.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\dbo.PadString.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RedGate.ssc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RedGateDatabaseInfo.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Storage\Full Text Catalogs\INDEXACAO.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_AlterarParcelaSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_AnaliseInadimplencia1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_AnaliseProducaoConsignados.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_ExecutarGerarMenuArvore.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_FuncAposentar.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_FuncionarioCargaDados.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_FuncionarioImpactoAlteracoes.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_GerarConciliacaoCorteFolha.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_GerarConciliacaoMovimento.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_GerarMenuArvore.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_ImportacaoAverbacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_ImportacaoAverbacao_Parcelas.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_ImportacaoAverbacao_Parcelas2.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_IndiceNegocio1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_LayoutImportacaoContrato.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_MigracaoFuncionarioMargem.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_ProcessarConciliacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP_RestauraPermissoes1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Stored Procedures\dbo.SP__FuncAposentar.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AcessoVideo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Assunto.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AssuntoResponsavel.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Auditoria.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AuditoriaAcesso.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AuditoriaOcorrencia.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AuditoriaOperacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Averbacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoAjuste.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoAjusteArquivo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoAjusteDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoAjusteTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoHistorico.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoImportacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoParcela.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoParcelaSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoTipoQuitacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoTramitacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AverbacaoVinculo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AVERBACAO_BCK_2012_1602.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Aviso.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.AvisoLeitura.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bbPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverb15022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverb16022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverb24022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverb27012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbacao18012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbacao24012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkAverbacaoImportacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbacaoimportacao15022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbacaoparc18012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbacaotram18012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbparc15022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbparcela27012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbtram24022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkaverbtramitacao27012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkconciliacaocortefolha24012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkconciliacaomovimento24012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkempresasolic27012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkempsolic16022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkfuncImportacao10022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkfuncionario10022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkfuncmargem10022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkimportacaoaverbacaocritica.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkpermusuario03022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkpessoa10022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkpessoa14022012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkpr.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bkp_20120222_0950_averbacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.BKP_funcionario_18012012.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bmgPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bpPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bradesco3Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bradesco4Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bradesco5Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bradescoPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bradPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bvPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.bvxPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.cefPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Conciliacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoCorteFolha.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoGrupo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoMovimento.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoMovimentoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoRepasse.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoRetorno.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ConciliacaoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ContatoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.CorteHistorico.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Empresa.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaAgenteTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaCoeficiente.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaCoeficienteDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaContato.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaContatoPerfil.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaIP.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaLogo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSolicitacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSolicitacaoQuitacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSolicitacaoSaldoDevedor.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSolicitacaoSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSolicitacaoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EMPRESASOLICITACAO_BCK_2012_1602.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaSuspensao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaTarifada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaUsuario.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.EmpresaVinculo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Estado.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Feriado.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FLAMENGO117520121208Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FLAMENGO11752012121526Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FLAMENGO11752012122032Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Fluxo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FluxoAprovacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FluxoAprovacaoEmpresa.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FluxoDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FluxoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FonteRecurso.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Funcionario.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioAposenta.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioAutorizacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioAutorizacaoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioBloqueio.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioCargaDados.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioCategoria.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioHistorico.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioImportacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioMargem.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioMargemCargaDados.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioRegime.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.FuncionarioSituacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.funcmargem022012Personalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.funcPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.HelloPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Importacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ImportacaoAverbacaoCritica.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ImportacaoLayout.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.IndiceNegocioAntecipar1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.IndiceNegocioRealizado1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.IndiceNegocioRealizar1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.itauokPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.itauxPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.MagnumPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.MatriculaVerbaImportacaoPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Mensagem.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.MensagemSistema.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.MensagemSistemaGerada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Modulo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.NextNumero.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Parametro.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Perfil.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Permissao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.PermissaoRecurso.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.PermissaoSistema.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.PermissaoUsuario.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.PERSONPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Pessoa.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.prev_bbPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.prev_bradescoPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.prev_funcPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.prev_nossacaixaPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.prev_prPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Produto.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ProdutoGrupo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ProdutoTipo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.ProxNumero.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Recurso.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.retorno.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.RetornoFolhaImportacao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.rrrrrPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.santanderPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.temp_correcao.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.temp_correcao2.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Tester.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TESTEVPersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TipoPagamento.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpBoasNoticias.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpBoasNoticiasDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpColocacaoConvenio.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpEnviadosVDescontados.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpGrupoBoasNoticias.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaGeral.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaGeralDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaPadraoMargem.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaPadraoTrabalho.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaTempo.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpInadimplenciaTempoDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpIndicesNegocios.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpMasNoticias.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpMasNoticiasDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpMasNoticiasInadiplentes.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpMasNoticiasInadiplentesDetalhe.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpNaoRecuperavel1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpOcorrencias.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpRecuperavelPorFolha1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpSimulacaoCompraDivida1.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.TmpVolumeInadimplencia.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.Usuario.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.UsuarioPerfil.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.UsuarioResponsabilidade.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tables\dbo.xtestePersonalizada.sql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assemblies\" />
+    <Folder Include="Database Triggers\" />
+    <Folder Include="Data\" />
+    <Folder Include="Defaults\" />
+    <Folder Include="Extended Properties\" />
+    <Folder Include="Functions\" />
+    <Folder Include="Rules\" />
+    <Folder Include="Security\" />
+    <Folder Include="Security\Asymmetric Keys\" />
+    <Folder Include="Security\Certificates\" />
+    <Folder Include="Security\Roles\" />
+    <Folder Include="Security\Schemas\" />
+    <Folder Include="Security\Symmetric Keys\" />
+    <Folder Include="Security\Users\" />
+    <Folder Include="Service Broker\" />
+    <Folder Include="Service Broker\Contracts\" />
+    <Folder Include="Service Broker\Event Notifications\" />
+    <Folder Include="Service Broker\Message Types\" />
+    <Folder Include="Service Broker\Queues\" />
+    <Folder Include="Service Broker\Remote Service Bindings\" />
+    <Folder Include="Service Broker\Routes\" />
+    <Folder Include="Service Broker\Services\" />
+    <Folder Include="Storage\" />
+    <Folder Include="Storage\Full Text Catalogs\" />
+    <Folder Include="Storage\Full Text Stoplists\" />
+    <Folder Include="Storage\Partition Functions\" />
+    <Folder Include="Storage\Partition Schemes\" />
+    <Folder Include="Stored Procedures\" />
+    <Folder Include="Synonyms\" />
+    <Folder Include="Tables\" />
+    <Folder Include="Types\" />
+    <Folder Include="Types\User-defined Data Types\" />
+    <Folder Include="Types\XML Schema Collections\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <Target Name="Build">
+  </Target>
+  <Target Name="Rebuild">
+  </Target>
+  <Target Name="Clean">
+  </Target>
+  <Target Name="GetFrameWorkPaths">
+  </Target>
+</Project>

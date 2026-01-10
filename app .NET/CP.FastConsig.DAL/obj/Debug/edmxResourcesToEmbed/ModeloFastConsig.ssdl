@@ -1,0 +1,3359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CP.FastConsig.DAL.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CPFastConsigDALStoreContainer">
+    <EntitySet Name="Assunto" EntityType="CP.FastConsig.DAL.Store.Assunto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AssuntoResponsavel" EntityType="CP.FastConsig.DAL.Store.AssuntoResponsavel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Auditoria" EntityType="CP.FastConsig.DAL.Store.Auditoria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditoriaOcorrencia" EntityType="CP.FastConsig.DAL.Store.AuditoriaOcorrencia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditoriaOperacao" EntityType="CP.FastConsig.DAL.Store.AuditoriaOperacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Averbacao" EntityType="CP.FastConsig.DAL.Store.Averbacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoAjuste" EntityType="CP.FastConsig.DAL.Store.AverbacaoAjuste" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoAjusteArquivo" EntityType="CP.FastConsig.DAL.Store.AverbacaoAjusteArquivo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoAjusteDetalhe" EntityType="CP.FastConsig.DAL.Store.AverbacaoAjusteDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoAjusteTipo" EntityType="CP.FastConsig.DAL.Store.AverbacaoAjusteTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoHistorico" EntityType="CP.FastConsig.DAL.Store.AverbacaoHistorico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoImportacao" EntityType="CP.FastConsig.DAL.Store.AverbacaoImportacao" store:Type="Tables" store:Schema="dbo" store:Name="AverbacaoImportacao">
+      <DefiningQuery>SELECT 
+      [AverbacaoImportacao].[Id] AS [Id], 
+      [AverbacaoImportacao].[Matricula] AS [Matricula], 
+      [AverbacaoImportacao].[CPF] AS [CPF], 
+      [AverbacaoImportacao].[ParcelaCorrente] AS [ParcelaCorrente], 
+      [AverbacaoImportacao].[MesAnoPrimeiraParcela] AS [MesAnoPrimeiraParcela], 
+      [AverbacaoImportacao].[MesAnoParcelaCorrente] AS [MesAnoParcelaCorrente], 
+      [AverbacaoImportacao].[Data] AS [Data], 
+      [AverbacaoImportacao].[Identificador] AS [Identificador], 
+      [AverbacaoImportacao].[Numero] AS [Numero], 
+      [AverbacaoImportacao].[ValorParcela] AS [ValorParcela], 
+      [AverbacaoImportacao].[ValorDeducaoMargem] AS [ValorDeducaoMargem], 
+      [AverbacaoImportacao].[Prazo] AS [Prazo], 
+      [AverbacaoImportacao].[CET] AS [CET], 
+      [AverbacaoImportacao].[ValorContratado] AS [ValorContratado], 
+      [AverbacaoImportacao].[ValorDevidoTotal] AS [ValorDevidoTotal], 
+      [AverbacaoImportacao].[CompetenciaInicial] AS [CompetenciaInicial], 
+      [AverbacaoImportacao].[CompetenciaFinal] AS [CompetenciaFinal], 
+      [AverbacaoImportacao].[Coeficiente] AS [Coeficiente], 
+      [AverbacaoImportacao].[Obs] AS [Obs], 
+      [AverbacaoImportacao].[PrazoAprovacao] AS [PrazoAprovacao], 
+      [AverbacaoImportacao].[Verba] AS [Verba]
+      FROM [dbo].[AverbacaoImportacao] AS [AverbacaoImportacao]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AverbacaoParcela" EntityType="CP.FastConsig.DAL.Store.AverbacaoParcela" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoParcelaSituacao" EntityType="CP.FastConsig.DAL.Store.AverbacaoParcelaSituacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoSituacao" EntityType="CP.FastConsig.DAL.Store.AverbacaoSituacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoTipo" EntityType="CP.FastConsig.DAL.Store.AverbacaoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoTipoQuitacao" EntityType="CP.FastConsig.DAL.Store.AverbacaoTipoQuitacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoTramitacao" EntityType="CP.FastConsig.DAL.Store.AverbacaoTramitacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AverbacaoVinculo" EntityType="CP.FastConsig.DAL.Store.AverbacaoVinculo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Aviso" EntityType="CP.FastConsig.DAL.Store.Aviso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AvisoLeitura" EntityType="CP.FastConsig.DAL.Store.AvisoLeitura" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Conciliacao" EntityType="CP.FastConsig.DAL.Store.Conciliacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoCorteFolha" EntityType="CP.FastConsig.DAL.Store.ConciliacaoCorteFolha" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoGrupo" EntityType="CP.FastConsig.DAL.Store.ConciliacaoGrupo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoMovimento" EntityType="CP.FastConsig.DAL.Store.ConciliacaoMovimento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoMovimentoTipo" EntityType="CP.FastConsig.DAL.Store.ConciliacaoMovimentoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoRepasse" EntityType="CP.FastConsig.DAL.Store.ConciliacaoRepasse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoRetorno" EntityType="CP.FastConsig.DAL.Store.ConciliacaoRetorno" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConciliacaoTipo" EntityType="CP.FastConsig.DAL.Store.ConciliacaoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContatoTipo" EntityType="CP.FastConsig.DAL.Store.ContatoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CorteHistorico" EntityType="CP.FastConsig.DAL.Store.CorteHistorico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Empresa" EntityType="CP.FastConsig.DAL.Store.Empresa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaAgenteTipo" EntityType="CP.FastConsig.DAL.Store.EmpresaAgenteTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaCoeficiente" EntityType="CP.FastConsig.DAL.Store.EmpresaCoeficiente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaCoeficienteDetalhe" EntityType="CP.FastConsig.DAL.Store.EmpresaCoeficienteDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaContato" EntityType="CP.FastConsig.DAL.Store.EmpresaContato" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaContatoPerfil" EntityType="CP.FastConsig.DAL.Store.EmpresaContatoPerfil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaIP" EntityType="CP.FastConsig.DAL.Store.EmpresaIP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaLogo" EntityType="CP.FastConsig.DAL.Store.EmpresaLogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSituacao" EntityType="CP.FastConsig.DAL.Store.EmpresaSituacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSolicitacao" EntityType="CP.FastConsig.DAL.Store.EmpresaSolicitacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSolicitacaoQuitacao" EntityType="CP.FastConsig.DAL.Store.EmpresaSolicitacaoQuitacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSolicitacaoSaldoDevedor" EntityType="CP.FastConsig.DAL.Store.EmpresaSolicitacaoSaldoDevedor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSolicitacaoSituacao" EntityType="CP.FastConsig.DAL.Store.EmpresaSolicitacaoSituacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSolicitacaoTipo" EntityType="CP.FastConsig.DAL.Store.EmpresaSolicitacaoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaSuspensao" EntityType="CP.FastConsig.DAL.Store.EmpresaSuspensao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaTarifada" EntityType="CP.FastConsig.DAL.Store.EmpresaTarifada" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaTipo" EntityType="CP.FastConsig.DAL.Store.EmpresaTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaUsuario" EntityType="CP.FastConsig.DAL.Store.EmpresaUsuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmpresaVinculo" EntityType="CP.FastConsig.DAL.Store.EmpresaVinculo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Estado" EntityType="CP.FastConsig.DAL.Store.Estado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Feriado" EntityType="CP.FastConsig.DAL.Store.Feriado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fluxo" EntityType="CP.FastConsig.DAL.Store.Fluxo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FluxoAprovacao" EntityType="CP.FastConsig.DAL.Store.FluxoAprovacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FluxoAprovacaoEmpresa" EntityType="CP.FastConsig.DAL.Store.FluxoAprovacaoEmpresa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FluxoDetalhe" EntityType="CP.FastConsig.DAL.Store.FluxoDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FluxoTipo" EntityType="CP.FastConsig.DAL.Store.FluxoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FonteRecurso" EntityType="CP.FastConsig.DAL.Store.FonteRecurso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcionario" EntityType="CP.FastConsig.DAL.Store.Funcionario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioAutorizacao" EntityType="CP.FastConsig.DAL.Store.FuncionarioAutorizacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioAutorizacaoTipo" EntityType="CP.FastConsig.DAL.Store.FuncionarioAutorizacaoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioBloqueio" EntityType="CP.FastConsig.DAL.Store.FuncionarioBloqueio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioCategoria" EntityType="CP.FastConsig.DAL.Store.FuncionarioCategoria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioHistorico" EntityType="CP.FastConsig.DAL.Store.FuncionarioHistorico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioImportacao" EntityType="CP.FastConsig.DAL.Store.FuncionarioImportacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioMargem" EntityType="CP.FastConsig.DAL.Store.FuncionarioMargem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioRegime" EntityType="CP.FastConsig.DAL.Store.FuncionarioRegime" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FuncionarioSituacao" EntityType="CP.FastConsig.DAL.Store.FuncionarioSituacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImportacaoAverbacaoCritica" EntityType="CP.FastConsig.DAL.Store.ImportacaoAverbacaoCritica" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mensagem" EntityType="CP.FastConsig.DAL.Store.Mensagem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MensagemSistema" EntityType="CP.FastConsig.DAL.Store.MensagemSistema" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MensagemSistemaGerada" EntityType="CP.FastConsig.DAL.Store.MensagemSistemaGerada" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulo" EntityType="CP.FastConsig.DAL.Store.Modulo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NextNumero" EntityType="CP.FastConsig.DAL.Store.NextNumero" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parametro" EntityType="CP.FastConsig.DAL.Store.Parametro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Perfil" EntityType="CP.FastConsig.DAL.Store.Perfil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Permissao" EntityType="CP.FastConsig.DAL.Store.Permissao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PermissaoRecurso" EntityType="CP.FastConsig.DAL.Store.PermissaoRecurso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PermissaoSistema" EntityType="CP.FastConsig.DAL.Store.PermissaoSistema" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PermissaoUsuario" EntityType="CP.FastConsig.DAL.Store.PermissaoUsuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoa" EntityType="CP.FastConsig.DAL.Store.Pessoa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Produto" EntityType="CP.FastConsig.DAL.Store.Produto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProdutoGrupo" EntityType="CP.FastConsig.DAL.Store.ProdutoGrupo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProdutoTipo" EntityType="CP.FastConsig.DAL.Store.ProdutoTipo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProxNumero" EntityType="CP.FastConsig.DAL.Store.ProxNumero" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Recurso" EntityType="CP.FastConsig.DAL.Store.Recurso" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RetornoFolhaImportacao" EntityType="CP.FastConsig.DAL.Store.RetornoFolhaImportacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoPagamento" EntityType="CP.FastConsig.DAL.Store.TipoPagamento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpBoasNoticias" EntityType="CP.FastConsig.DAL.Store.TmpBoasNoticias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpBoasNoticiasDetalhe" EntityType="CP.FastConsig.DAL.Store.TmpBoasNoticiasDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpColocacaoConvenio" EntityType="CP.FastConsig.DAL.Store.TmpColocacaoConvenio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpEnviadosVDescontados" EntityType="CP.FastConsig.DAL.Store.TmpEnviadosVDescontados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpGrupoBoasNoticias" EntityType="CP.FastConsig.DAL.Store.TmpGrupoBoasNoticias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaGeral" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaGeral" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaGeralDetalhe" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaGeralDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaPadraoMargem" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaPadraoMargem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaPadraoTrabalho" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaPadraoTrabalho" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaTempo" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaTempo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpInadimplenciaTempoDetalhe" EntityType="CP.FastConsig.DAL.Store.TmpInadimplenciaTempoDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpIndicesNegocios" EntityType="CP.FastConsig.DAL.Store.TmpIndicesNegocios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpMasNoticias" EntityType="CP.FastConsig.DAL.Store.TmpMasNoticias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpMasNoticiasDetalhe" EntityType="CP.FastConsig.DAL.Store.TmpMasNoticiasDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpMasNoticiasInadiplentes" EntityType="CP.FastConsig.DAL.Store.TmpMasNoticiasInadiplentes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpMasNoticiasInadiplentesDetalhe" EntityType="CP.FastConsig.DAL.Store.TmpMasNoticiasInadiplentesDetalhe" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpOcorrencias" EntityType="CP.FastConsig.DAL.Store.TmpOcorrencias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TmpVolumeInadimplencia" EntityType="CP.FastConsig.DAL.Store.TmpVolumeInadimplencia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="CP.FastConsig.DAL.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPerfil" EntityType="CP.FastConsig.DAL.Store.UsuarioPerfil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioResponsabilidade" EntityType="CP.FastConsig.DAL.Store.UsuarioResponsabilidade" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AprovacaoFluxo_ServicoGrupo" Association="CP.FastConsig.DAL.Store.FK_AprovacaoFluxo_ServicoGrupo">
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+      <End Role="FluxoAprovacao" EntitySet="FluxoAprovacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssuntoResponsavel_Assunto" Association="CP.FastConsig.DAL.Store.FK_AssuntoResponsavel_Assunto">
+      <End Role="Assunto" EntitySet="Assunto" />
+      <End Role="AssuntoResponsavel" EntitySet="AssuntoResponsavel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssuntoResponsavel_Empresa" Association="CP.FastConsig.DAL.Store.FK_AssuntoResponsavel_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="AssuntoResponsavel" EntitySet="AssuntoResponsavel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AssuntoResponsavel_Usuario" Association="CP.FastConsig.DAL.Store.FK_AssuntoResponsavel_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AssuntoResponsavel" EntitySet="AssuntoResponsavel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auditoria_AuditoriaOperacao" Association="CP.FastConsig.DAL.Store.FK_Auditoria_AuditoriaOperacao">
+      <End Role="AuditoriaOperacao" EntitySet="AuditoriaOperacao" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auditoria_Modulo" Association="CP.FastConsig.DAL.Store.FK_Auditoria_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auditoria_Recurso" Association="CP.FastConsig.DAL.Store.FK_Auditoria_Recurso">
+      <End Role="Recurso" EntitySet="Recurso" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Auditoria_Usuario" Association="CP.FastConsig.DAL.Store.FK_Auditoria_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Auditoria" EntitySet="Auditoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Aviso_Modulo" Association="CP.FastConsig.DAL.Store.FK_Aviso_Modulo">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Aviso" EntitySet="Aviso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvisoLeitura_Aviso" Association="CP.FastConsig.DAL.Store.FK_AvisoLeitura_Aviso">
+      <End Role="Aviso" EntitySet="Aviso" />
+      <End Role="AvisoLeitura" EntitySet="AvisoLeitura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AvisoLeitura_Usuario" Association="CP.FastConsig.DAL.Store.FK_AvisoLeitura_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AvisoLeitura" EntitySet="AvisoLeitura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_ContratoSituacao" Association="CP.FastConsig.DAL.Store.FK_Contrato_ContratoSituacao">
+      <End Role="AverbacaoSituacao" EntitySet="AverbacaoSituacao" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_ContratoTipo" Association="CP.FastConsig.DAL.Store.FK_Contrato_ContratoTipo">
+      <End Role="AverbacaoTipo" EntitySet="AverbacaoTipo" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Empresa" Association="CP.FastConsig.DAL.Store.FK_Contrato_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Empresa1" Association="CP.FastConsig.DAL.Store.FK_Contrato_Empresa1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Empresa2" Association="CP.FastConsig.DAL.Store.FK_Contrato_Empresa2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Funcionario" Association="CP.FastConsig.DAL.Store.FK_Contrato_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Servico" Association="CP.FastConsig.DAL.Store.FK_Contrato_Servico">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contrato_Usuario" Association="CP.FastConsig.DAL.Store.FK_Contrato_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Averbacao" EntitySet="Averbacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjuste_ContratoAjusteTipo" Association="CP.FastConsig.DAL.Store.FK_ContratoAjuste_ContratoAjusteTipo">
+      <End Role="AverbacaoAjusteTipo" EntitySet="AverbacaoAjusteTipo" />
+      <End Role="AverbacaoAjuste" EntitySet="AverbacaoAjuste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjuste_Empresa" Association="CP.FastConsig.DAL.Store.FK_ContratoAjuste_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="AverbacaoAjuste" EntitySet="AverbacaoAjuste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjuste_Servico" Association="CP.FastConsig.DAL.Store.FK_ContratoAjuste_Servico">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="AverbacaoAjuste" EntitySet="AverbacaoAjuste" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjusteArquivo_ContratoAjuste" Association="CP.FastConsig.DAL.Store.FK_ContratoAjusteArquivo_ContratoAjuste">
+      <End Role="AverbacaoAjuste" EntitySet="AverbacaoAjuste" />
+      <End Role="AverbacaoAjusteArquivo" EntitySet="AverbacaoAjusteArquivo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjusteDetalhe_Contrato" Association="CP.FastConsig.DAL.Store.FK_ContratoAjusteDetalhe_Contrato">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoAjusteDetalhe" EntitySet="AverbacaoAjusteDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjusteDetalhe_ContratoAjuste" Association="CP.FastConsig.DAL.Store.FK_ContratoAjusteDetalhe_ContratoAjuste">
+      <End Role="AverbacaoAjuste" EntitySet="AverbacaoAjuste" />
+      <End Role="AverbacaoAjusteDetalhe" EntitySet="AverbacaoAjusteDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoAjusteDetalhe_Funcionario" Association="CP.FastConsig.DAL.Store.FK_ContratoAjusteDetalhe_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="AverbacaoAjusteDetalhe" EntitySet="AverbacaoAjusteDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_ContratoConciliacaoTipo" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_ContratoConciliacaoTipo">
+      <End Role="ConciliacaoTipo" EntitySet="ConciliacaoTipo" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_ContratoMovimento" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_ContratoMovimento">
+      <End Role="ConciliacaoMovimento" EntitySet="ConciliacaoMovimento" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_ContratoRetorno" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_ContratoRetorno">
+      <End Role="ConciliacaoRetorno" EntitySet="ConciliacaoRetorno" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_Empresa" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_Funcionario" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacao_Servico" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacao_Servico">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Conciliacao" EntitySet="Conciliacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoConciliacaoTipo_ConciliacaoGrupo" Association="CP.FastConsig.DAL.Store.FK_ContratoConciliacaoTipo_ConciliacaoGrupo">
+      <End Role="ConciliacaoGrupo" EntitySet="ConciliacaoGrupo" />
+      <End Role="ConciliacaoTipo" EntitySet="ConciliacaoTipo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoCorteFolha_ContratoParcela" Association="CP.FastConsig.DAL.Store.FK_ContratoCorteFolha_ContratoParcela">
+      <End Role="AverbacaoParcela" EntitySet="AverbacaoParcela" />
+      <End Role="ConciliacaoCorteFolha" EntitySet="ConciliacaoCorteFolha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoCorteFolha_ContratoSituacao" Association="CP.FastConsig.DAL.Store.FK_ContratoCorteFolha_ContratoSituacao">
+      <End Role="AverbacaoSituacao" EntitySet="AverbacaoSituacao" />
+      <End Role="ConciliacaoCorteFolha" EntitySet="ConciliacaoCorteFolha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoCorteFolha_CorteHistorico" Association="CP.FastConsig.DAL.Store.FK_ContratoCorteFolha_CorteHistorico">
+      <End Role="CorteHistorico" EntitySet="CorteHistorico" />
+      <End Role="ConciliacaoCorteFolha" EntitySet="ConciliacaoCorteFolha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoHistorico_Contrato" Association="CP.FastConsig.DAL.Store.FK_ContratoHistorico_Contrato">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoHistorico" EntitySet="AverbacaoHistorico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoMovimento_ContratoCorteFolha" Association="CP.FastConsig.DAL.Store.FK_ContratoMovimento_ContratoCorteFolha">
+      <End Role="ConciliacaoCorteFolha" EntitySet="ConciliacaoCorteFolha" />
+      <End Role="ConciliacaoMovimento" EntitySet="ConciliacaoMovimento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoMovimento_ContratoMovimentoTipo" Association="CP.FastConsig.DAL.Store.FK_ContratoMovimento_ContratoMovimentoTipo">
+      <End Role="ConciliacaoMovimentoTipo" EntitySet="ConciliacaoMovimentoTipo" />
+      <End Role="ConciliacaoMovimento" EntitySet="ConciliacaoMovimento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoParcela_Contrato" Association="CP.FastConsig.DAL.Store.FK_ContratoParcela_Contrato">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoParcela" EntitySet="AverbacaoParcela" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoParcela_ContratoParcelaSituacao" Association="CP.FastConsig.DAL.Store.FK_ContratoParcela_ContratoParcelaSituacao">
+      <End Role="AverbacaoParcelaSituacao" EntitySet="AverbacaoParcelaSituacao" />
+      <End Role="AverbacaoParcela" EntitySet="AverbacaoParcela" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoRepasse_FonteRecurso" Association="CP.FastConsig.DAL.Store.FK_ContratoRepasse_FonteRecurso">
+      <End Role="FonteRecurso" EntitySet="FonteRecurso" />
+      <End Role="ConciliacaoRepasse" EntitySet="ConciliacaoRepasse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoRetorno_Empresa" Association="CP.FastConsig.DAL.Store.FK_ContratoRetorno_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ConciliacaoRetorno" EntitySet="ConciliacaoRetorno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoRetorno_Servico" Association="CP.FastConsig.DAL.Store.FK_ContratoRetorno_Servico">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="ConciliacaoRetorno" EntitySet="ConciliacaoRetorno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoTramitacao_Contrato" Association="CP.FastConsig.DAL.Store.FK_ContratoTramitacao_Contrato">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoTramitacao" EntitySet="AverbacaoTramitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoTramitacao_ContratoSituacao" Association="CP.FastConsig.DAL.Store.FK_ContratoTramitacao_ContratoSituacao">
+      <End Role="AverbacaoSituacao" EntitySet="AverbacaoSituacao" />
+      <End Role="AverbacaoTramitacao" EntitySet="AverbacaoTramitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoTramitacao_Empresa" Association="CP.FastConsig.DAL.Store.FK_ContratoTramitacao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="AverbacaoTramitacao" EntitySet="AverbacaoTramitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoTramitacao_Usuario" Association="CP.FastConsig.DAL.Store.FK_ContratoTramitacao_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="AverbacaoTramitacao" EntitySet="AverbacaoTramitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoVinculo_Contrato" Association="CP.FastConsig.DAL.Store.FK_ContratoVinculo_Contrato">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoVinculo" EntitySet="AverbacaoVinculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratoVinculo_Contrato1" Association="CP.FastConsig.DAL.Store.FK_ContratoVinculo_Contrato1">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="AverbacaoVinculo" EntitySet="AverbacaoVinculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_EmpresaLogo" Association="CP.FastConsig.DAL.Store.FK_Empresa_EmpresaLogo">
+      <End Role="EmpresaLogo" EntitySet="EmpresaLogo" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_EmpresaSituacao" Association="CP.FastConsig.DAL.Store.FK_Empresa_EmpresaSituacao">
+      <End Role="EmpresaSituacao" EntitySet="EmpresaSituacao" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_EmpresaSituacao1" Association="CP.FastConsig.DAL.Store.FK_Empresa_EmpresaSituacao1">
+      <End Role="EmpresaSituacao" EntitySet="EmpresaSituacao" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_EmpresaTarifada" Association="CP.FastConsig.DAL.Store.FK_Empresa_EmpresaTarifada">
+      <End Role="EmpresaTarifada" EntitySet="EmpresaTarifada" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_EmpresaTipo" Association="CP.FastConsig.DAL.Store.FK_Empresa_EmpresaTipo">
+      <End Role="EmpresaTipo" EntitySet="EmpresaTipo" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Estado" Association="CP.FastConsig.DAL.Store.FK_Empresa_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Usuario" Association="CP.FastConsig.DAL.Store.FK_Empresa_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Usuario1" Association="CP.FastConsig.DAL.Store.FK_Empresa_Usuario1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaContato_ContatoTipo" Association="CP.FastConsig.DAL.Store.FK_EmpresaContato_ContatoTipo">
+      <End Role="ContatoTipo" EntitySet="ContatoTipo" />
+      <End Role="EmpresaContato" EntitySet="EmpresaContato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaContato_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaContato_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaContato" EntitySet="EmpresaContato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaContato_EmpresaContatoPerfil" Association="CP.FastConsig.DAL.Store.FK_EmpresaContato_EmpresaContatoPerfil">
+      <End Role="EmpresaContatoPerfil" EntitySet="EmpresaContatoPerfil" />
+      <End Role="EmpresaContato" EntitySet="EmpresaContato" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaIP_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaIP_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaIP" EntitySet="EmpresaIP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_Averbacao" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_Averbacao">
+      <End Role="Averbacao" EntitySet="Averbacao" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_Empresa1" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_Empresa1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_EmpresaSolicitacaoSituacao" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_EmpresaSolicitacaoSituacao">
+      <End Role="EmpresaSolicitacaoSituacao" EntitySet="EmpresaSolicitacaoSituacao" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_EmpresaSolicitacaoTipo" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_EmpresaSolicitacaoTipo">
+      <End Role="EmpresaSolicitacaoTipo" EntitySet="EmpresaSolicitacaoTipo" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_Usuario" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacao_Usuario1" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacao_Usuario1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacaoQuitacao_EmpresaSolicitacao" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacaoQuitacao_EmpresaSolicitacao">
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+      <End Role="EmpresaSolicitacaoQuitacao" EntitySet="EmpresaSolicitacaoQuitacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSolicitacaoSaldoDevedor_EmpresaSolicitacaoSaldoDevedor" Association="CP.FastConsig.DAL.Store.FK_EmpresaSolicitacaoSaldoDevedor_EmpresaSolicitacaoSaldoDevedor">
+      <End Role="EmpresaSolicitacao" EntitySet="EmpresaSolicitacao" />
+      <End Role="EmpresaSolicitacaoSaldoDevedor" EntitySet="EmpresaSolicitacaoSaldoDevedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSuspensao_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaSuspensao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaSuspensao" EntitySet="EmpresaSuspensao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSuspensao_EmpresaSituacao" Association="CP.FastConsig.DAL.Store.FK_EmpresaSuspensao_EmpresaSituacao">
+      <End Role="EmpresaSituacao" EntitySet="EmpresaSituacao" />
+      <End Role="EmpresaSuspensao" EntitySet="EmpresaSuspensao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaSuspensao_EmpresaSituacao1" Association="CP.FastConsig.DAL.Store.FK_EmpresaSuspensao_EmpresaSituacao1">
+      <End Role="EmpresaSituacao" EntitySet="EmpresaSituacao" />
+      <End Role="EmpresaSuspensao" EntitySet="EmpresaSuspensao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaUsuario_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaUsuario_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaUsuario" EntitySet="EmpresaUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaUsuario_Usuario" Association="CP.FastConsig.DAL.Store.FK_EmpresaUsuario_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpresaUsuario" EntitySet="EmpresaUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaVinculo_Empresa" Association="CP.FastConsig.DAL.Store.FK_EmpresaVinculo_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaVinculo" EntitySet="EmpresaVinculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaVinculo_Empresa1" Association="CP.FastConsig.DAL.Store.FK_EmpresaVinculo_Empresa1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaVinculo" EntitySet="EmpresaVinculo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fluxo_FluxoTipo" Association="CP.FastConsig.DAL.Store.FK_Fluxo_FluxoTipo">
+      <End Role="FluxoTipo" EntitySet="FluxoTipo" />
+      <End Role="Fluxo" EntitySet="Fluxo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fluxo_ProdutoGrupo" Association="CP.FastConsig.DAL.Store.FK_Fluxo_ProdutoGrupo">
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+      <End Role="Fluxo" EntitySet="Fluxo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FluxoDetalhe_AverbacaoSituacao" Association="CP.FastConsig.DAL.Store.FK_FluxoDetalhe_AverbacaoSituacao">
+      <End Role="AverbacaoSituacao" EntitySet="AverbacaoSituacao" />
+      <End Role="FluxoDetalhe" EntitySet="FluxoDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FluxoDetalhe_EmpresaSolicitacaoTipo" Association="CP.FastConsig.DAL.Store.FK_FluxoDetalhe_EmpresaSolicitacaoTipo">
+      <End Role="EmpresaSolicitacaoTipo" EntitySet="EmpresaSolicitacaoTipo" />
+      <End Role="FluxoDetalhe" EntitySet="FluxoDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FluxoDetalhe_Fluxo" Association="CP.FastConsig.DAL.Store.FK_FluxoDetalhe_Fluxo">
+      <End Role="Fluxo" EntitySet="Fluxo" />
+      <End Role="FluxoDetalhe" EntitySet="FluxoDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funcionario_FuncionarioCategoria" Association="CP.FastConsig.DAL.Store.FK_Funcionario_FuncionarioCategoria">
+      <End Role="FuncionarioCategoria" EntitySet="FuncionarioCategoria" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funcionario_FuncionarioRegime" Association="CP.FastConsig.DAL.Store.FK_Funcionario_FuncionarioRegime">
+      <End Role="FuncionarioRegime" EntitySet="FuncionarioRegime" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funcionario_FuncionarioSituacao" Association="CP.FastConsig.DAL.Store.FK_Funcionario_FuncionarioSituacao">
+      <End Role="FuncionarioSituacao" EntitySet="FuncionarioSituacao" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Funcionario_Pessoa" Association="CP.FastConsig.DAL.Store.FK_Funcionario_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Funcionario" EntitySet="Funcionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioAutorizacao_Funcionario" Association="CP.FastConsig.DAL.Store.FK_FuncionarioAutorizacao_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="FuncionarioAutorizacao" EntitySet="FuncionarioAutorizacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioAutorizacao_FuncionarioAutorizacaoTipo" Association="CP.FastConsig.DAL.Store.FK_FuncionarioAutorizacao_FuncionarioAutorizacaoTipo">
+      <End Role="FuncionarioAutorizacaoTipo" EntitySet="FuncionarioAutorizacaoTipo" />
+      <End Role="FuncionarioAutorizacao" EntitySet="FuncionarioAutorizacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioBloqueio_Funcionario" Association="CP.FastConsig.DAL.Store.FK_FuncionarioBloqueio_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="FuncionarioBloqueio" EntitySet="FuncionarioBloqueio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioHistorico_Funcionario" Association="CP.FastConsig.DAL.Store.FK_FuncionarioHistorico_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="FuncionarioHistorico" EntitySet="FuncionarioHistorico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioHistorico_FuncionarioRegime" Association="CP.FastConsig.DAL.Store.FK_FuncionarioHistorico_FuncionarioRegime">
+      <End Role="FuncionarioRegime" EntitySet="FuncionarioRegime" />
+      <End Role="FuncionarioHistorico" EntitySet="FuncionarioHistorico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioHistorico_FuncionarioSituacao" Association="CP.FastConsig.DAL.Store.FK_FuncionarioHistorico_FuncionarioSituacao">
+      <End Role="FuncionarioSituacao" EntitySet="FuncionarioSituacao" />
+      <End Role="FuncionarioHistorico" EntitySet="FuncionarioHistorico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioMargem_Funcionario" Association="CP.FastConsig.DAL.Store.FK_FuncionarioMargem_Funcionario">
+      <End Role="Funcionario" EntitySet="Funcionario" />
+      <End Role="FuncionarioMargem" EntitySet="FuncionarioMargem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FuncionarioMargem_ServicoGrupo" Association="CP.FastConsig.DAL.Store.FK_FuncionarioMargem_ServicoGrupo">
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+      <End Role="FuncionarioMargem" EntitySet="FuncionarioMargem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Perfil_Empresa" Association="CP.FastConsig.DAL.Store.FK_Perfil_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Perfil" EntitySet="Perfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoRecurso_Permissao" Association="CP.FastConsig.DAL.Store.FK_PermissaoRecurso_Permissao">
+      <End Role="Permissao" EntitySet="Permissao" />
+      <End Role="PermissaoRecurso" EntitySet="PermissaoRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoRecurso_Recurso" Association="CP.FastConsig.DAL.Store.FK_PermissaoRecurso_Recurso">
+      <End Role="Recurso" EntitySet="Recurso" />
+      <End Role="PermissaoRecurso" EntitySet="PermissaoRecurso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoSistema_Permissao" Association="CP.FastConsig.DAL.Store.FK_PermissaoSistema_Permissao">
+      <End Role="Permissao" EntitySet="Permissao" />
+      <End Role="PermissaoSistema" EntitySet="PermissaoSistema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoSistema_Recurso" Association="CP.FastConsig.DAL.Store.FK_PermissaoSistema_Recurso">
+      <End Role="Recurso" EntitySet="Recurso" />
+      <End Role="PermissaoSistema" EntitySet="PermissaoSistema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoUsuario_Empresa" Association="CP.FastConsig.DAL.Store.FK_PermissaoUsuario_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PermissaoUsuario" EntitySet="PermissaoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoUsuario_Perfil" Association="CP.FastConsig.DAL.Store.FK_PermissaoUsuario_Perfil">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="PermissaoUsuario" EntitySet="PermissaoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoUsuario_Permissao" Association="CP.FastConsig.DAL.Store.FK_PermissaoUsuario_Permissao">
+      <End Role="Permissao" EntitySet="Permissao" />
+      <End Role="PermissaoUsuario" EntitySet="PermissaoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermissaoUsuario_Recurso" Association="CP.FastConsig.DAL.Store.FK_PermissaoUsuario_Recurso">
+      <End Role="Recurso" EntitySet="Recurso" />
+      <End Role="PermissaoUsuario" EntitySet="PermissaoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pessoa_Usuario" Association="CP.FastConsig.DAL.Store.FK_Pessoa_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pessoa" EntitySet="Pessoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProdutoGrupo_ProdutoGrupo" Association="CP.FastConsig.DAL.Store.FK_ProdutoGrupo_ProdutoGrupo">
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+      <End Role="ProdutoGrupo1" EntitySet="ProdutoGrupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servico_Empresa2" Association="CP.FastConsig.DAL.Store.FK_Servico_Empresa2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servico_Empresa3" Association="CP.FastConsig.DAL.Store.FK_Servico_Empresa3">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servico_ServicoGrupo" Association="CP.FastConsig.DAL.Store.FK_Servico_ServicoGrupo">
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicoGrupo_Empresa" Association="CP.FastConsig.DAL.Store.FK_ServicoGrupo_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicoGrupo_ServicoTipo" Association="CP.FastConsig.DAL.Store.FK_ServicoGrupo_ServicoTipo">
+      <End Role="ProdutoTipo" EntitySet="ProdutoTipo" />
+      <End Role="ProdutoGrupo" EntitySet="ProdutoGrupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TmpInadimplenciaTempoDetalhe_TmpInadimplenciaTempo" Association="CP.FastConsig.DAL.Store.FK_TmpInadimplenciaTempoDetalhe_TmpInadimplenciaTempo">
+      <End Role="TmpInadimplenciaTempo" EntitySet="TmpInadimplenciaTempo" />
+      <End Role="TmpInadimplenciaTempoDetalhe" EntitySet="TmpInadimplenciaTempoDetalhe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPerfil_Empresa" Association="CP.FastConsig.DAL.Store.FK_UsuarioPerfil_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioPerfil" EntitySet="UsuarioPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPerfil_Perfil" Association="CP.FastConsig.DAL.Store.FK_UsuarioPerfil_Perfil">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="UsuarioPerfil" EntitySet="UsuarioPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPerfil_Usuario" Association="CP.FastConsig.DAL.Store.FK_UsuarioPerfil_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioPerfil" EntitySet="UsuarioPerfil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioResponsabilidade_Empresa" Association="CP.FastConsig.DAL.Store.FK_UsuarioResponsabilidade_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioResponsabilidade" EntitySet="UsuarioResponsabilidade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioResponsabilidade_EmpresaSolicitacaoTipo" Association="CP.FastConsig.DAL.Store.FK_UsuarioResponsabilidade_EmpresaSolicitacaoTipo">
+      <End Role="EmpresaSolicitacaoTipo" EntitySet="EmpresaSolicitacaoTipo" />
+      <End Role="UsuarioResponsabilidade" EntitySet="UsuarioResponsabilidade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioResponsabilidade_Usuario" Association="CP.FastConsig.DAL.Store.FK_UsuarioResponsabilidade_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioResponsabilidade" EntitySet="UsuarioResponsabilidade" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Assunto">
+    <Key>
+      <PropertyRef Name="IDAssunto" />
+    </Key>
+    <Property Name="IDAssunto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Interno" Type="bit" />
+  </EntityType>
+  <EntityType Name="AssuntoResponsavel">
+    <Key>
+      <PropertyRef Name="IDAssuntoResponsavel" />
+    </Key>
+    <Property Name="IDAssuntoResponsavel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAssunto" Type="int" Nullable="false" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Auditoria">
+    <Key>
+      <PropertyRef Name="IDAuditoria" />
+    </Key>
+    <Property Name="IDAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDModulo" Type="int" Nullable="false" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="IDRecurso" Type="int" Nullable="false" />
+    <Property Name="IDAuditoriaOperacao" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="100" />
+    <Property Name="Tabela" Type="varchar" MaxLength="50" />
+    <Property Name="Chave" Type="int" />
+    <Property Name="Registro" Type="text" />
+    <Property Name="IP" Type="varchar" MaxLength="20" />
+    <Property Name="Browser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AuditoriaOcorrencia">
+    <Key>
+      <PropertyRef Name="IDAuditoriaOcorrencia" />
+    </Key>
+    <Property Name="IDAuditoriaOcorrencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="IDModulo" Type="int" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="IDPerfil" Type="int" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="Descricao" Type="varchar" MaxLength="3250" />
+  </EntityType>
+  <EntityType Name="AuditoriaOperacao">
+    <Key>
+      <PropertyRef Name="IDAuditoriaOperacao" />
+    </Key>
+    <Property Name="IDAuditoriaOperacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Averbacao">
+    <Key>
+      <PropertyRef Name="IDAverbacao" />
+    </Key>
+    <Property Name="IDAverbacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDProduto" Type="int" Nullable="false" />
+    <Property Name="IDConsignataria" Type="int" Nullable="false" />
+    <Property Name="IDAgente" Type="int" />
+    <Property Name="IDFuncionario" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoTipo" Type="int" Nullable="false" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Identificador" Type="varchar" MaxLength="20" />
+    <Property Name="Numero" Type="varchar" MaxLength="20" />
+    <Property Name="ValorParcela" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorDeducaoMargem" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Prazo" Type="int" />
+    <Property Name="CET" Type="decimal" Scale="2" />
+    <Property Name="ValorContratado" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorDevidoTotal" Type="decimal" Scale="2" />
+    <Property Name="ValorRefinanciado" Type="decimal" Scale="2" />
+    <Property Name="CompetenciaInicial" Type="varchar" MaxLength="7" />
+    <Property Name="CompetenciaFinal" Type="varchar" MaxLength="7" />
+    <Property Name="Coeficiente" Type="decimal" Scale="6" />
+    <Property Name="Obs" Type="varchar" MaxLength="500" />
+    <Property Name="PrazoAprovacao" Type="datetime" />
+    <Property Name="IDAverbacaoPai" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+    <Property Name="ValorTroco" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="AverbacaoAjuste">
+    <Key>
+      <PropertyRef Name="IDAverbacaoAjuste" />
+    </Key>
+    <Property Name="IDAverbacaoAjuste" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDConsignataria" Type="int" Nullable="false" />
+    <Property Name="IDProduto" Type="int" Nullable="false" />
+    <Property Name="IDContratoAjusteTipo" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="50" />
+    <Property Name="NovoValor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="NomeArquivo" Type="varchar" MaxLength="50" />
+    <Property Name="Situacao" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="AverbacaoAjusteArquivo">
+    <Key>
+      <PropertyRef Name="IDAverbacaoAjusteArquivo" />
+    </Key>
+    <Property Name="IDAverbacaoAjusteArquivo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacaoAjuste" Type="int" Nullable="false" />
+    <Property Name="NumeroLinha" Type="int" Nullable="false" />
+    <Property Name="Matricula" Type="varchar" MaxLength="15" />
+    <Property Name="ValorNovo" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorAntigo" Type="decimal" Scale="2" />
+    <Property Name="Critica" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="AverbacaoAjusteDetalhe">
+    <Key>
+      <PropertyRef Name="IDAverbacaoAjusteDetalhe" />
+    </Key>
+    <Property Name="IDAverbacaoAjusteDetalhe" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacaoAjuste" Type="int" Nullable="false" />
+    <Property Name="IDFuncionario" Type="int" Nullable="false" />
+    <Property Name="IDAverbacao" Type="int" Nullable="false" />
+    <Property Name="ValorAtual" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="MargemDisponivel" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorNovo" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Aplicado" Type="bit" Nullable="false" />
+    <Property Name="Critica" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="AverbacaoAjusteTipo">
+    <Key>
+      <PropertyRef Name="IDAverbacaoAjusteTipo" />
+    </Key>
+    <Property Name="IDAverbacaoAjusteTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="AverbacaoHistorico">
+    <Key>
+      <PropertyRef Name="IDAverbacaoHistorico" />
+    </Key>
+    <Property Name="IDAverbacaoHistorico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacao" Type="int" />
+    <Property Name="ValorParcela" Type="decimal" Scale="2" />
+    <Property Name="Prazo" Type="int" />
+    <Property Name="CompetenciaInicial" Type="varchar" MaxLength="7" />
+    <Property Name="Obs" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'FastConsigItaqua.dbo.AverbacaoImportacao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AverbacaoImportacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Matricula" Type="varchar" MaxLength="255" />
+    <Property Name="CPF" Type="varchar" MaxLength="255" />
+    <Property Name="ParcelaCorrente" Type="varchar" MaxLength="255" />
+    <Property Name="MesAnoPrimeiraParcela" Type="varchar" MaxLength="255" />
+    <Property Name="MesAnoParcelaCorrente" Type="varchar" MaxLength="255" />
+    <Property Name="Data" Type="varchar" MaxLength="255" />
+    <Property Name="Identificador" Type="varchar" MaxLength="255" />
+    <Property Name="Numero" Type="varchar" MaxLength="255" />
+    <Property Name="ValorParcela" Type="decimal" Scale="2" />
+    <Property Name="ValorDeducaoMargem" Type="varchar" MaxLength="255" />
+    <Property Name="Prazo" Type="int" />
+    <Property Name="CET" Type="varchar" MaxLength="255" />
+    <Property Name="ValorContratado" Type="decimal" Scale="2" />
+    <Property Name="ValorDevidoTotal" Type="decimal" Scale="2" />
+    <Property Name="CompetenciaInicial" Type="varchar" MaxLength="255" />
+    <Property Name="CompetenciaFinal" Type="varchar" MaxLength="255" />
+    <Property Name="Coeficiente" Type="varchar" MaxLength="255" />
+    <Property Name="Obs" Type="varchar" MaxLength="255" />
+    <Property Name="PrazoAprovacao" Type="varchar" MaxLength="255" />
+    <Property Name="Verba" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AverbacaoParcela">
+    <Key>
+      <PropertyRef Name="IDAverbacaoParcela" />
+    </Key>
+    <Property Name="IDAverbacaoParcela" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoParcelaSituacao" Type="int" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorDescontado" Type="decimal" Scale="2" />
+    <Property Name="Observacao" Type="varchar" MaxLength="80" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="AverbacaoParcelaSituacao">
+    <Key>
+      <PropertyRef Name="IDAverbacaoParcelaSituacao" />
+    </Key>
+    <Property Name="IDAverbacaoParcelaSituacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AverbacaoSituacao">
+    <Key>
+      <PropertyRef Name="IDAverbacaoSituacao" />
+    </Key>
+    <Property Name="IDAverbacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DeduzMargem" Type="bit" Nullable="false" />
+    <Property Name="Compra" Type="bit" />
+    <Property Name="ParaDescontoFolha" Type="bit" />
+    <Property Name="Liquidavel" Type="bit" />
+    <Property Name="Cancelavel" Type="bit" />
+  </EntityType>
+  <EntityType Name="AverbacaoTipo">
+    <Key>
+      <PropertyRef Name="IDAverbacaoTipo" />
+    </Key>
+    <Property Name="IDAverbacaoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="AverbacaoTipoQuitacao">
+    <Key>
+      <PropertyRef Name="IDAverbacaoTipoQuitacao" />
+    </Key>
+    <Property Name="IDAverbacaoTipoQuitacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="AverbacaoTramitacao">
+    <Key>
+      <PropertyRef Name="IDAverbacaoTramitacao" />
+    </Key>
+    <Property Name="IDAverbacaoTramitacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="OBS" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AverbacaoVinculo">
+    <Key>
+      <PropertyRef Name="IDAverbacaoVinculo" />
+    </Key>
+    <Property Name="IDAverbacaoVinculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAverbacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoPai" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aviso">
+    <Key>
+      <PropertyRef Name="IDAviso" />
+    </Key>
+    <Property Name="IDAviso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDModulo" Type="int" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SolicitarLeitura" Type="bit" Nullable="false" />
+    <Property Name="SempreVisivel" Type="bit" Nullable="false" />
+    <Property Name="Texto" Type="text" Nullable="false" />
+    <Property Name="FiltroConsignatarias" Type="varchar" MaxLength="500" />
+    <Property Name="FiltroConsignantes" Type="varchar" MaxLength="500" />
+    <Property Name="FiltroAgentes" Type="varchar" MaxLength="500" />
+    <Property Name="FiltroPerfis" Type="varchar" MaxLength="500" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="AvisoLeitura">
+    <Key>
+      <PropertyRef Name="IDAvisoLeitura" />
+    </Key>
+    <Property Name="IDAvisoLeitura" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDAviso" Type="int" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="IP" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Conciliacao">
+    <Key>
+      <PropertyRef Name="IDConciliacao" />
+    </Key>
+    <Property Name="IDConciliacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Competencia" Type="varchar" MaxLength="7" />
+    <Property Name="IDConciliacaoMovimento" Type="int" />
+    <Property Name="IDConciliacaoRetorno" Type="int" />
+    <Property Name="IDFuncionario" Type="int" />
+    <Property Name="IDProduto" Type="int" />
+    <Property Name="IDConsignataria" Type="int" />
+    <Property Name="Matricula" Type="varchar" MaxLength="15" />
+    <Property Name="Verba" Type="varchar" MaxLength="25" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorDescontado" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IDConciliacaoTipo" Type="int" />
+    <Property Name="Motivo" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ConciliacaoCorteFolha">
+    <Key>
+      <PropertyRef Name="IDConciliacaoCorteFolha" />
+    </Key>
+    <Property Name="IDConciliacaoCorteFolha" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Competencia" Type="varchar" MaxLength="7" />
+    <Property Name="IDAverbacaoParcela" Type="int" Nullable="false" />
+    <Property Name="IDAverbacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="IDCorteHistorico" Type="int" Nullable="false" />
+    <Property Name="ValorParcela" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Verba" Type="varchar" MaxLength="25" />
+    <Property Name="Matricula" Type="varchar" MaxLength="25" />
+    <Property Name="IDProdutoGrupo" Type="int" />
+    <Property Name="IDProdutoTipo" Type="int" />
+    <Property Name="IDConsignataria" Type="int" />
+    <Property Name="IDProduto" Type="int" />
+    <Property Name="IDFuncionario" Type="int" />
+  </EntityType>
+  <EntityType Name="ConciliacaoGrupo">
+    <Key>
+      <PropertyRef Name="IDConciliacaoGrupo" />
+    </Key>
+    <Property Name="IDConciliacaoGrupo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ConciliacaoMovimento">
+    <Key>
+      <PropertyRef Name="IDConciliacaoMovimento" />
+    </Key>
+    <Property Name="IDConciliacaoMovimento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDConciliacaoCorteFolha" Type="int" />
+    <Property Name="IDConciliacaoMovimentoTipo" Type="int" />
+    <Property Name="Competencia" Type="varchar" MaxLength="7" />
+    <Property Name="Matricula" Type="varchar" MaxLength="15" />
+    <Property Name="Verba" Type="varchar" MaxLength="20" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorMovimento" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="ValorDescontado" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IDConciliacaoRetorno" Type="int" />
+    <Property Name="IDConsignataria" Type="int" />
+  </EntityType>
+  <EntityType Name="ConciliacaoMovimentoTipo">
+    <Key>
+      <PropertyRef Name="IDConciliacaoMovimentoTipo" />
+    </Key>
+    <Property Name="IDConciliacaoMovimentoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ConciliacaoRepasse">
+    <Key>
+      <PropertyRef Name="IDConciliacaoRepasse" />
+    </Key>
+    <Property Name="IDConciliacaoRepasse" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="IDFonteRecurso" Type="int" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="Obs" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ConciliacaoRetorno">
+    <Key>
+      <PropertyRef Name="IDConciliacaoRetorno" />
+    </Key>
+    <Property Name="IDConciliacaoRetorno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Competencia" Type="varchar" MaxLength="7" />
+    <Property Name="Matricula" Type="varchar" MaxLength="15" />
+    <Property Name="Verba" Type="varchar" MaxLength="25" />
+    <Property Name="ValorDescontado" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IDConsignataria" Type="int" />
+    <Property Name="IDProduto" Type="int" />
+  </EntityType>
+  <EntityType Name="ConciliacaoTipo">
+    <Key>
+      <PropertyRef Name="IDConciliacaoTipo" />
+    </Key>
+    <Property Name="IDConciliacaoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="40" />
+    <Property Name="IDConciliacaoGrupo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContatoTipo">
+    <Key>
+      <PropertyRef Name="IDContatoTipo" />
+    </Key>
+    <Property Name="IDContatoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CorteHistorico">
+    <Key>
+      <PropertyRef Name="IDCorteHistorico" />
+    </Key>
+    <Property Name="IDCorteHistorico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="DiaCorte" Type="varchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IDEmpresa" />
+    </Key>
+    <Property Name="IDEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresaTipo" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaLogo" Type="int" />
+    <Property Name="ArquivoLogo" Type="nchar" MaxLength="10" />
+    <Property Name="CNPJ" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RazaoSocial" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="Fantasia" Type="varchar" MaxLength="80" />
+    <Property Name="Sigla" Type="varchar" MaxLength="15" />
+    <Property Name="Endereco" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Complemento" Type="varchar" MaxLength="50" />
+    <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Fone1" Type="varchar" MaxLength="15" />
+    <Property Name="Fone2" Type="varchar" MaxLength="15" />
+    <Property Name="Fax" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="80" />
+    <Property Name="Site" Type="varchar" MaxLength="80" />
+    <Property Name="IDEmpresaSituacao" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSituacaoAnterior" Type="int" />
+    <Property Name="IDUsuarioResponsavel" Type="int" />
+    <Property Name="RepasseDia" Type="int" />
+    <Property Name="RepasseBanco" Type="varchar" MaxLength="3" />
+    <Property Name="RepasseAgencia" Type="varchar" MaxLength="6" />
+    <Property Name="RepasseConta" Type="varchar" MaxLength="20" />
+    <Property Name="RepasseIDFederal" Type="varchar" MaxLength="14" />
+    <Property Name="RepasseFavorecido" Type="varchar" MaxLength="50" />
+    <Property Name="IDEmpresaTarifada" Type="int" Nullable="false" />
+    <Property Name="ValorTarifa" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="IDEmpresaAgenteTipo" Type="int" />
+    <Property Name="HomologacaoRequerida" Type="bit" />
+    <Property Name="HomologacaoData" Type="datetime" />
+    <Property Name="IDUsuarioHomologacao" Type="int" />
+    <Property Name="ContribuinteFastConsig" Type="bit" />
+    <Property Name="IDContribuinteFastConsig" Type="int" />
+    <Property Name="DiaCorte" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaAgenteTipo">
+    <Key>
+      <PropertyRef Name="IDEmpresaAgenteTipo" />
+    </Key>
+    <Property Name="IDEmpresaAgenteTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="EmpresaCoeficiente">
+    <Key>
+      <PropertyRef Name="IDEmpresaCoeficiente" />
+    </Key>
+    <Property Name="IDEmpresaCoeficiente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="InicioVigencia" Type="datetime" Nullable="false" />
+    <Property Name="Carencia" Type="int" />
+    <Property Name="ValidadeDias" Type="int" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaCoeficienteDetalhe">
+    <Key>
+      <PropertyRef Name="IDEmpresaCoeficienteDetalhe" />
+    </Key>
+    <Property Name="IDEmpresaCoeficienteDetalhe" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresaCoeficiente" Type="int" Nullable="false" />
+    <Property Name="Prazo" Type="int" Nullable="false" />
+    <Property Name="Coeficiente" Type="decimal" Nullable="false" Scale="8" />
+    <Property Name="CET" Type="decimal" Scale="3" />
+    <Property Name="Dia" Type="int" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaContato">
+    <Key>
+      <PropertyRef Name="IDEmpresaContato" />
+    </Key>
+    <Property Name="IDEmpresaContato" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaContatoPerfil" Type="int" />
+    <Property Name="IDContatoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="Titulo" Type="varchar" MaxLength="50" />
+    <Property Name="Conteudo" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpresaContatoPerfil">
+    <Key>
+      <PropertyRef Name="IDEmpresaContatoPerfil" />
+    </Key>
+    <Property Name="IDEmpresaContatoPerfil" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="EmpresaIP">
+    <Key>
+      <PropertyRef Name="IDEmpresaIP" />
+    </Key>
+    <Property Name="IDEmpresaIP" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="IPInicio" Type="varchar" MaxLength="25" />
+    <Property Name="IPFim" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="EmpresaLogo">
+    <Key>
+      <PropertyRef Name="IDEmpresaLogo" />
+    </Key>
+    <Property Name="IDEmpresaLogo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Arquivo" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpresaSituacao">
+    <Key>
+      <PropertyRef Name="IDEmpresaSituacao" />
+    </Key>
+    <Property Name="IDEmpresaSituacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="EmpresaSolicitacao">
+    <Key>
+      <PropertyRef Name="IDEmpresaSolicitacao" />
+    </Key>
+    <Property Name="IDEmpresaSolicitacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="IDFuncionario" Type="int" />
+    <Property Name="IDEmpresaSolicitacaoTipo" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSolicitacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacao" Type="int" />
+    <Property Name="IDEmpresaSolicitacaoOriginal" Type="int" />
+    <Property Name="IDEmpresaSolicitante" Type="int" />
+    <Property Name="IDSolicitante" Type="int" />
+    <Property Name="IDResponsavel" Type="int" />
+    <Property Name="DataSolicitacao" Type="datetime" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="1000" />
+    <Property Name="DataAtendimento" Type="datetime" />
+    <Property Name="Motivo" Type="varchar" MaxLength="1000" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="EmpresaSolicitacaoQuitacao">
+    <Key>
+      <PropertyRef Name="IDEmpresaSolicitacaoQuitacao" />
+    </Key>
+    <Property Name="IDEmpresaSolicitacaoQuitacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresaSolicitacao" Type="int" Nullable="false" />
+    <Property Name="DataQuitacao" Type="date" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IDAverbacaoTipoQuitacao" Type="int" Nullable="false" />
+    <Property Name="IDAverbacao" Type="int" Nullable="false" />
+    <Property Name="Observacao" Type="text" />
+    <Property Name="Comprovante" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmpresaSolicitacaoSaldoDevedor">
+    <Key>
+      <PropertyRef Name="IDEmpresaSolicitacaoSaldoDevedor" />
+    </Key>
+    <Property Name="IDEmpresaSolicitacaoSaldoDevedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresaSolicitacao" Type="int" />
+    <Property Name="IDAverbacao" Type="int" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
+    <Property Name="Validade" Type="date" />
+    <Property Name="IDTipoPagamento" Type="int" />
+    <Property Name="Identificador" Type="nchar" MaxLength="30" />
+    <Property Name="Banco" Type="nchar" MaxLength="30" />
+    <Property Name="Agencia" Type="nchar" MaxLength="10" />
+    <Property Name="ContaCredito" Type="nchar" MaxLength="20" />
+    <Property Name="NomeFavorecido" Type="nchar" MaxLength="80" />
+    <Property Name="Observacao" Type="text" />
+    <Property Name="Data" Type="date" />
+  </EntityType>
+  <EntityType Name="EmpresaSolicitacaoSituacao">
+    <Key>
+      <PropertyRef Name="IDEmpresaSolicitacaoSituacao" />
+    </Key>
+    <Property Name="IDEmpresaSolicitacaoSituacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="EmpresaSolicitacaoTipo">
+    <Key>
+      <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+    </Key>
+    <Property Name="IDEmpresaSolicitacaoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="Descricao" Type="varchar" MaxLength="250" />
+    <Property Name="Prazo" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSituacaoSuspensaoAntes" Type="int" />
+    <Property Name="IDEmpresaSituacaoSuspensaoApos" Type="int" />
+    <Property Name="Modulo" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="EmpresaSuspensao">
+    <Key>
+      <PropertyRef Name="IDEmpresaSuspensao" />
+    </Key>
+    <Property Name="IDEmpresaSuspensao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSituacaoSuspensao" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSituacaoAnterior" Type="int" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Motivo" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="TipoPeriodo" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="DataInicial" Type="datetime" />
+    <Property Name="DataFinal" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="EmpresaTarifada">
+    <Key>
+      <PropertyRef Name="IDEmpresaTarifada" />
+    </Key>
+    <Property Name="IDEmpresaTarifada" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="EmpresaTipo">
+    <Key>
+      <PropertyRef Name="IDEmpresaTipo" />
+    </Key>
+    <Property Name="IDEmpresaTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="Consignataria" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaUsuario">
+    <Key>
+      <PropertyRef Name="IDEmpresaUsuario" />
+    </Key>
+    <Property Name="IDEmpresaUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmpresaVinculo">
+    <Key>
+      <PropertyRef Name="IDEmpresaVinculo" />
+    </Key>
+    <Property Name="IDEmpresaVinculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaVinculada" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="SiglaEstado" />
+    </Key>
+    <Property Name="SiglaEstado" Type="varchar" Nullable="false" MaxLength="2" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Feriado">
+    <Key>
+      <PropertyRef Name="IDFeriado" />
+    </Key>
+    <Property Name="IDFeriado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fluxo">
+    <Key>
+      <PropertyRef Name="IDFluxo" />
+    </Key>
+    <Property Name="IDFluxo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFluxoTipo" Type="int" />
+    <Property Name="IDProdutoGrupo" Type="int" />
+  </EntityType>
+  <EntityType Name="FluxoAprovacao">
+    <Key>
+      <PropertyRef Name="IDFluxoAprovacao" />
+    </Key>
+    <Property Name="IDFluxoAprovacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="RequerAprovacaoConsignante" Type="bit" Nullable="false" />
+    <Property Name="RequerAprovacaoConsignataria" Type="bit" Nullable="false" />
+    <Property Name="RequerAprovacaoFuncionario" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FluxoAprovacaoEmpresa">
+    <Key>
+      <PropertyRef Name="IDFluxoAprovacaoEmpresa" />
+    </Key>
+    <Property Name="IDFluxoAprovacaoEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="RequerAprovacao" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FluxoDetalhe">
+    <Key>
+      <PropertyRef Name="IDFluxoDetalhe" />
+    </Key>
+    <Property Name="IDFluxoDetalhe" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFluxo" Type="int" Nullable="false" />
+    <Property Name="Ordem" Type="int" Nullable="false" />
+    <Property Name="Ator" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="IDAverbacaoSituacao" Type="int" />
+    <Property Name="IDEmpresaSolicitacaoTipo" Type="int" />
+  </EntityType>
+  <EntityType Name="FluxoTipo">
+    <Key>
+      <PropertyRef Name="IDFluxoTipo" />
+    </Key>
+    <Property Name="IDFluxoTipo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FonteRecurso">
+    <Key>
+      <PropertyRef Name="IDFonteRecurso" />
+    </Key>
+    <Property Name="IDFonteRecurso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IDFuncionario" />
+    </Key>
+    <Property Name="IDFuncionario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDPessoa" Type="int" Nullable="false" />
+    <Property Name="Matricula" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="MatriculaAntiga" Type="varchar" MaxLength="15" />
+    <Property Name="DataAdmissao" Type="datetime" />
+    <Property Name="IDConsignante" Type="int" />
+    <Property Name="IDFuncionarioCategoria" Type="int" />
+    <Property Name="IDFuncionarioSituacao" Type="int" />
+    <Property Name="IDFuncionarioRegime" Type="int" />
+    <Property Name="NomeLocalFolha" Type="varchar" MaxLength="80" />
+    <Property Name="NomeSetorFolha" Type="varchar" MaxLength="80" />
+    <Property Name="NomeCargoFolha" Type="varchar" MaxLength="80" />
+    <Property Name="NomeRegimeFolha" Type="varchar" MaxLength="80" />
+    <Property Name="NomeSituacaoFolha" Type="varchar" MaxLength="80" />
+    <Property Name="MargemBruta" Type="decimal" Scale="2" />
+    <Property Name="MargemBase" Type="decimal" Scale="2" />
+    <Property Name="FonteRecurso" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuncionarioAutorizacao">
+    <Key>
+      <PropertyRef Name="IDFuncionarioAutorizacao" />
+    </Key>
+    <Property Name="IDFuncionarioAutorizacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFuncionario" Type="int" Nullable="false" />
+    <Property Name="IDFuncionarioAutorizacaoTipo" Type="int" Nullable="false" />
+    <Property Name="AutorizacaoData" Type="datetime" Nullable="false" />
+    <Property Name="AutorizacaoValidade" Type="int" Nullable="false" />
+    <Property Name="Motivo" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="FuncionarioAutorizacaoTipo">
+    <Key>
+      <PropertyRef Name="IDFuncionarioAutorizacaoTipo" />
+    </Key>
+    <Property Name="IDFuncionarioAutorizacaoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FuncionarioBloqueio">
+    <Key>
+      <PropertyRef Name="IDFuncionarioBloqueio" />
+    </Key>
+    <Property Name="IDFuncionarioBloqueio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFuncionario" Type="int" Nullable="false" />
+    <Property Name="DataBloqueio" Type="datetime" Nullable="false" />
+    <Property Name="DataDesbloqueio" Type="datetime" />
+    <Property Name="TipoBloqueio" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Chaves" Type="varchar" MaxLength="2000" />
+    <Property Name="Motivo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FuncionarioCategoria">
+    <Key>
+      <PropertyRef Name="IDFuncionarioCategoria" />
+    </Key>
+    <Property Name="IDFuncionarioCategoria" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FuncionarioHistorico">
+    <Key>
+      <PropertyRef Name="IDFuncionarioHistorico" />
+    </Key>
+    <Property Name="IDFuncionarioHistorico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFuncionario" Type="int" />
+    <Property Name="IDFuncionarioSituacao" Type="int" />
+    <Property Name="IDFuncionarioRegime" Type="int" />
+    <Property Name="NomeSituacaoFolha" Type="varchar" MaxLength="50" />
+    <Property Name="NomeRegimeFolha" Type="varchar" MaxLength="50" />
+    <Property Name="NomeLocalFolha" Type="varchar" MaxLength="50" />
+    <Property Name="NomeCargoFolha" Type="varchar" MaxLength="50" />
+    <Property Name="NomeSetorFolha" Type="varchar" MaxLength="50" />
+    <Property Name="MargemFolhaBruta" Type="decimal" Scale="2" />
+    <Property Name="MargemFolhaDisponivel" Type="decimal" Scale="2" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FuncionarioImportacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Matricula" Type="varchar" MaxLength="255" />
+    <Property Name="MatriculaAntiga" Type="varchar" MaxLength="255" />
+    <Property Name="DataAdmissao" Type="varchar" MaxLength="255" />
+    <Property Name="NomeLocalFolha" Type="varchar" MaxLength="255" />
+    <Property Name="NomeSetorFolha" Type="varchar" MaxLength="255" />
+    <Property Name="NomeCargoFolha" Type="varchar" MaxLength="255" />
+    <Property Name="NomeRegimeFolha" Type="varchar" MaxLength="255" />
+    <Property Name="NomeSituacaoFolha" Type="varchar" MaxLength="255" />
+    <Property Name="MargemBruta" Type="varchar" MaxLength="255" />
+    <Property Name="MargemBase" Type="varchar" MaxLength="255" />
+    <Property Name="FonteRecurso" Type="varchar" MaxLength="255" />
+    <Property Name="Nome" Type="varchar" MaxLength="255" />
+    <Property Name="CPF" Type="varchar" MaxLength="255" />
+    <Property Name="RG" Type="varchar" MaxLength="255" />
+    <Property Name="DataNascimento" Type="varchar" MaxLength="255" />
+    <Property Name="Endereco" Type="varchar" MaxLength="255" />
+    <Property Name="Complemento" Type="varchar" MaxLength="255" />
+    <Property Name="Bairro" Type="varchar" MaxLength="255" />
+    <Property Name="Cidade" Type="varchar" MaxLength="255" />
+    <Property Name="Estado" Type="varchar" MaxLength="255" />
+    <Property Name="CEP" Type="varchar" MaxLength="255" />
+    <Property Name="Celular" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="NomePai" Type="varchar" MaxLength="255" />
+    <Property Name="NomeMae" Type="varchar" MaxLength="255" />
+    <Property Name="Sexo" Type="varchar" MaxLength="255" />
+    <Property Name="Fone" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FuncionarioMargem">
+    <Key>
+      <PropertyRef Name="IDFuncionarioMargem" />
+    </Key>
+    <Property Name="IDFuncionarioMargem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFuncionario" Type="int" Nullable="false" />
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="MargemFolha" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="MargemFolhaDisponivel" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FuncionarioRegime">
+    <Key>
+      <PropertyRef Name="IDFuncionarioRegime" />
+    </Key>
+    <Property Name="IDFuncionarioRegime" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FuncionarioSituacao">
+    <Key>
+      <PropertyRef Name="IDFuncionarioSituacao" />
+    </Key>
+    <Property Name="IDFuncionarioSituacao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ImportacaoAverbacaoCritica">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Mensagem">
+    <Key>
+      <PropertyRef Name="IDMensagem" />
+    </Key>
+    <Property Name="IDMensagem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDRemetente" Type="int" />
+    <Property Name="IDDestinatario" Type="int" />
+    <Property Name="IDAssunto" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" />
+    <Property Name="DataHora" Type="datetime" Nullable="false" />
+    <Property Name="Mensagem" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IDMensagemOrigem" Type="int" />
+    <Property Name="Pendente" Type="bit" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MensagemSistema">
+    <Key>
+      <PropertyRef Name="IDMensagemSistema" />
+    </Key>
+    <Property Name="IDMensagemSistema" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="50" />
+    <Property Name="Texto" Type="varchar" MaxLength="1000" />
+    <Property Name="TextoHTML" Type="varchar" MaxLength="1000" />
+    <Property Name="IDModulo" Type="int" />
+    <Property Name="Perfis" Type="varchar" MaxLength="50" />
+    <Property Name="DispararEmail" Type="bit" Nullable="false" />
+    <Property Name="DispararSMS" Type="bit" Nullable="false" />
+    <Property Name="ForcarLeitura" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MensagemSistemaGerada">
+    <Key>
+      <PropertyRef Name="IDMensagemSistemaGerada" />
+    </Key>
+    <Property Name="IDMensagemSistemaGerada" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDMensagemSistema" Type="int" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="MensagemLida" Type="bit" />
+    <Property Name="Texto" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="IDModulo" />
+    </Key>
+    <Property Name="IDModulo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="NextNumero">
+    <Key>
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Parametro">
+    <Key>
+      <PropertyRef Name="IDParametro" />
+    </Key>
+    <Property Name="IDParametro" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Valor" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Tipo" Type="varchar" MaxLength="3" />
+    <Property Name="Dominio" Type="varchar" MaxLength="150" />
+    <Property Name="Descricao" Type="nvarchar" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="IDPerfil" />
+    </Key>
+    <Property Name="IDPerfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sigla" Type="varchar" MaxLength="50" />
+    <Property Name="IDModulo" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Permissao">
+    <Key>
+      <PropertyRef Name="IDPermissao" />
+    </Key>
+    <Property Name="IDPermissao" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descricao" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PermissaoRecurso">
+    <Key>
+      <PropertyRef Name="IDPermissaoRecurso" />
+    </Key>
+    <Property Name="IDPermissaoRecurso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermissao" Type="int" Nullable="false" />
+    <Property Name="IDRecurso" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PermissaoSistema">
+    <Key>
+      <PropertyRef Name="IDPermissaoSistema" />
+    </Key>
+    <Property Name="IDPermissaoSistema" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermissao" Type="int" Nullable="false" />
+    <Property Name="IDRecurso" Type="int" Nullable="false" />
+    <Property Name="IDPerfil" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PermissaoUsuario">
+    <Key>
+      <PropertyRef Name="IDPermissaoUsuario" />
+    </Key>
+    <Property Name="IDPermissaoUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermissao" Type="int" />
+    <Property Name="IDRecurso" Type="int" />
+    <Property Name="IDPerfil" Type="int" />
+    <Property Name="IDEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IDPessoa" />
+    </Key>
+    <Property Name="IDPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="CPF" Type="varchar" Nullable="false" MaxLength="14" />
+    <Property Name="RG" Type="varchar" MaxLength="15" />
+    <Property Name="DataNascimento" Type="datetime" />
+    <Property Name="IDUsuario" Type="int" />
+    <Property Name="Endereco" Type="varchar" MaxLength="80" />
+    <Property Name="Complemento" Type="varchar" MaxLength="50" />
+    <Property Name="Bairro" Type="varchar" MaxLength="30" />
+    <Property Name="Cidade" Type="varchar" MaxLength="30" />
+    <Property Name="Estado" Type="varchar" MaxLength="2" />
+    <Property Name="CEP" Type="varchar" MaxLength="10" />
+    <Property Name="Celular" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="60" />
+    <Property Name="NomeMae" Type="varchar" MaxLength="50" />
+    <Property Name="NomePai" Type="varchar" MaxLength="50" />
+    <Property Name="Sexo" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" />
+    <Property Name="Fone" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="IDProduto" />
+    </Key>
+    <Property Name="IDProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="IDConsignataria" Type="int" Nullable="false" />
+    <Property Name="IDConsignante" Type="int" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Verba" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="VerbaFolha" Type="varchar" MaxLength="25" />
+    <Property Name="PrazoMaximo" Type="int" />
+    <Property Name="CarenciaMaxima" Type="int" />
+    <Property Name="DesativadoConsignante" Type="bit" Nullable="false" />
+    <Property Name="Ativo" Type="int" />
+  </EntityType>
+  <EntityType Name="ProdutoGrupo">
+    <Key>
+      <PropertyRef Name="IDProdutoGrupo" />
+    </Key>
+    <Property Name="IDProdutoGrupo" Type="int" Nullable="false" />
+    <Property Name="IDProdutoTipo" Type="int" Nullable="false" />
+    <Property Name="IDConsignante" Type="int" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PercentualMargemBruta" Type="smallmoney" />
+    <Property Name="PrioridadeDesconto" Type="smallint" />
+    <Property Name="IDProdutoGrupoCompartilha" Type="int" />
+    <Property Name="CarenciaMaximaConsignante" Type="int" />
+    <Property Name="PrazoMaximoConsignante" Type="int" />
+  </EntityType>
+  <EntityType Name="ProdutoTipo">
+    <Key>
+      <PropertyRef Name="IDProdutoTipo" />
+    </Key>
+    <Property Name="IDProdutoTipo" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Descricao" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ProxNumero">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Recurso">
+    <Key>
+      <PropertyRef Name="IDRecurso" />
+    </Key>
+    <Property Name="IDRecurso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ArquivoHelp" Type="varchar" MaxLength="100" />
+    <Property Name="Arquivo" Type="varchar" MaxLength="150" />
+    <Property Name="IDModulo" Type="int" />
+    <Property Name="Visivel" Type="bit" />
+    <Property Name="Objetivo" Type="varchar" MaxLength="500" />
+    <Property Name="Bloqueado" Type="bit" Nullable="false" />
+    <Property Name="Ativo" Type="int" />
+    <Property Name="IDRecursoPai" Type="int" />
+    <Property Name="Imagem" Type="varchar" MaxLength="50" />
+    <Property Name="ParametrosAoIniciar" Type="varchar" MaxLength="50" />
+    <Property Name="Ordem" Type="int" />
+  </EntityType>
+  <EntityType Name="RetornoFolhaImportacao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Matricula" Type="varchar" MaxLength="50" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" />
+    <Property Name="CPF" Type="varchar" MaxLength="50" />
+    <Property Name="Competencia" Type="varchar" MaxLength="50" />
+    <Property Name="ValorBruto" Type="varchar" MaxLength="50" />
+    <Property Name="ValorDescontado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoPagamento">
+    <Key>
+      <PropertyRef Name="IDTipoPagamento" />
+    </Key>
+    <Property Name="IDTipoPagamento" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TmpBoasNoticias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdGrupoBoaNoticia" Type="int" />
+    <Property Name="Tipo" Type="nchar" MaxLength="50" />
+    <Property Name="Qtde" Type="int" />
+    <Property Name="ValorMargem" Type="decimal" Scale="2" />
+    <Property Name="Possibilidade" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpBoasNoticiasDetalhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdBoaNoticia" Type="int" />
+    <Property Name="Cpf" Type="nchar" MaxLength="15" />
+    <Property Name="Matricula" Type="nchar" MaxLength="10" />
+    <Property Name="Nome" Type="nchar" MaxLength="80" />
+    <Property Name="MargemAnterior" Type="decimal" Scale="2" />
+    <Property Name="MargemAtual" Type="decimal" Scale="2" />
+    <Property Name="Possibilidade" Type="decimal" Scale="2" />
+    <Property Name="SaldoRestante" Type="decimal" Scale="2" />
+    <Property Name="Telefone" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TmpColocacaoConvenio">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDServicoGrupo" Type="int" />
+    <Property Name="Qtde" Type="int" />
+    <Property Name="Total" Type="numeric" Scale="2" />
+    <Property Name="Ano" Type="int" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="IDEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="TmpEnviadosVDescontados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="nchar" MaxLength="30" />
+    <Property Name="Mes" Type="nchar" MaxLength="10" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpGrupoBoasNoticias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Grupo" Type="nchar" MaxLength="30" />
+    <Property Name="Total" Type="decimal" Scale="2" />
+    <Property Name="Possibilidade" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaGeral">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="Percentual" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaGeralDetalhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDInadimplenciaGeral" Type="int" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="Percentual" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaPadraoMargem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="Percentual" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaPadraoTrabalho">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="Percentual" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaTempo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="TmpInadimplenciaTempoDetalhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDInadimplenciaTempo" Type="int" />
+    <Property Name="Nome" Type="nchar" MaxLength="80" />
+    <Property Name="CPF" Type="nchar" MaxLength="15" />
+    <Property Name="Matricula" Type="nchar" MaxLength="15" />
+    <Property Name="Situacao" Type="nchar" MaxLength="20" />
+    <Property Name="ValorParcela" Type="decimal" Scale="2" />
+    <Property Name="ParcelasRestante" Type="int" />
+    <Property Name="MargemNegativa" Type="decimal" Scale="2" />
+    <Property Name="ValorAtrasado" Type="decimal" Scale="2" />
+    <Property Name="Proposta" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TmpIndicesNegocios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Qtde" Type="int" />
+    <Property Name="Margem" Type="decimal" Scale="2" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
+    <Property Name="Lucro" Type="decimal" Scale="2" />
+    <Property Name="Descricao" Type="nchar" MaxLength="50" />
+    <Property Name="DicaValor" Type="nchar" MaxLength="100" />
+    <Property Name="DicaLucro" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TmpMasNoticias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoGrupo" Type="nchar" MaxLength="50" />
+    <Property Name="Quantidade" Type="int" />
+    <Property Name="SaldoDevedor" Type="decimal" Scale="2" />
+    <Property Name="QuantidadeContratos" Type="int" />
+  </EntityType>
+  <EntityType Name="TmpMasNoticiasDetalhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDMasNoticia" Type="int" Nullable="false" />
+    <Property Name="Cpf" Type="nchar" MaxLength="15" />
+    <Property Name="Matricula" Type="nchar" MaxLength="10" />
+    <Property Name="Nome" Type="nchar" MaxLength="80" />
+    <Property Name="Motivo" Type="nchar" MaxLength="50" />
+    <Property Name="SaldoDevedor" Type="decimal" Scale="2" />
+    <Property Name="QtdeContratos" Type="int" />
+  </EntityType>
+  <EntityType Name="TmpMasNoticiasInadiplentes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoGrupo" Type="nchar" MaxLength="50" />
+    <Property Name="Quantidade" Type="int" />
+    <Property Name="NaoConciliado" Type="decimal" Scale="2" />
+    <Property Name="QuantidadeContrato" Type="int" />
+    <Property Name="Parcelas" Type="int" />
+  </EntityType>
+  <EntityType Name="TmpMasNoticiasInadiplentesDetalhe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDMasNoticiaInadiplente" Type="int" Nullable="false" />
+    <Property Name="Cpf" Type="nchar" MaxLength="15" />
+    <Property Name="Matricula" Type="nchar" MaxLength="15" />
+    <Property Name="Nome" Type="nchar" MaxLength="80" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
+    <Property Name="QtdeParcelas" Type="int" />
+  </EntityType>
+  <EntityType Name="TmpOcorrencias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Banco" Type="nchar" MaxLength="50" />
+    <Property Name="Contratos" Type="int" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Logo" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TmpVolumeInadimplencia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Mes" Type="varchar" MaxLength="20" />
+    <Property Name="SomaParcelas" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IDUsuario" />
+    </Key>
+    <Property Name="IDUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="varchar" Nullable="false" MaxLength="14" />
+    <Property Name="NomeCompleto" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="Celular" Type="varchar" MaxLength="15" />
+    <Property Name="OBS" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="ApelidoLogin" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="SenhaProvisoria" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Ativo" Type="int" />
+    <Property Name="QtdAcessos" Type="int" Nullable="false" />
+    <Property Name="UltimoAcesso" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UsuarioPerfil">
+    <Key>
+      <PropertyRef Name="IDUsuarioPerfil" />
+    </Key>
+    <Property Name="IDUsuarioPerfil" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="IDPerfil" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Bloqueado" Type="bit" />
+  </EntityType>
+  <EntityType Name="UsuarioResponsabilidade">
+    <Key>
+      <PropertyRef Name="IDUsuarioResponsabilidade" />
+    </Key>
+    <Property Name="IDUsuarioResponsabilidade" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDUsuario" Type="int" Nullable="false" />
+    <Property Name="IDEmpresa" Type="int" Nullable="false" />
+    <Property Name="IDEmpresaSolicitacaoTipo" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AprovacaoFluxo_ServicoGrupo">
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="1" />
+    <End Role="FluxoAprovacao" Type="CP.FastConsig.DAL.Store.FluxoAprovacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Principal>
+      <Dependent Role="FluxoAprovacao">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssuntoResponsavel_Assunto">
+    <End Role="Assunto" Type="CP.FastConsig.DAL.Store.Assunto" Multiplicity="1" />
+    <End Role="AssuntoResponsavel" Type="CP.FastConsig.DAL.Store.AssuntoResponsavel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Assunto">
+        <PropertyRef Name="IDAssunto" />
+      </Principal>
+      <Dependent Role="AssuntoResponsavel">
+        <PropertyRef Name="IDAssunto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssuntoResponsavel_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="AssuntoResponsavel" Type="CP.FastConsig.DAL.Store.AssuntoResponsavel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="AssuntoResponsavel">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AssuntoResponsavel_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="AssuntoResponsavel" Type="CP.FastConsig.DAL.Store.AssuntoResponsavel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="AssuntoResponsavel">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auditoria_AuditoriaOperacao">
+    <End Role="AuditoriaOperacao" Type="CP.FastConsig.DAL.Store.AuditoriaOperacao" Multiplicity="1" />
+    <End Role="Auditoria" Type="CP.FastConsig.DAL.Store.Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AuditoriaOperacao">
+        <PropertyRef Name="IDAuditoriaOperacao" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="IDAuditoriaOperacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auditoria_Modulo">
+    <End Role="Modulo" Type="CP.FastConsig.DAL.Store.Modulo" Multiplicity="1" />
+    <End Role="Auditoria" Type="CP.FastConsig.DAL.Store.Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="IDModulo" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="IDModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auditoria_Recurso">
+    <End Role="Recurso" Type="CP.FastConsig.DAL.Store.Recurso" Multiplicity="1" />
+    <End Role="Auditoria" Type="CP.FastConsig.DAL.Store.Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recurso">
+        <PropertyRef Name="IDRecurso" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="IDRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Auditoria_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="Auditoria" Type="CP.FastConsig.DAL.Store.Auditoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Auditoria">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Aviso_Modulo">
+    <End Role="Modulo" Type="CP.FastConsig.DAL.Store.Modulo" Multiplicity="0..1" />
+    <End Role="Aviso" Type="CP.FastConsig.DAL.Store.Aviso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="IDModulo" />
+      </Principal>
+      <Dependent Role="Aviso">
+        <PropertyRef Name="IDModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvisoLeitura_Aviso">
+    <End Role="Aviso" Type="CP.FastConsig.DAL.Store.Aviso" Multiplicity="0..1" />
+    <End Role="AvisoLeitura" Type="CP.FastConsig.DAL.Store.AvisoLeitura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aviso">
+        <PropertyRef Name="IDAviso" />
+      </Principal>
+      <Dependent Role="AvisoLeitura">
+        <PropertyRef Name="IDAviso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AvisoLeitura_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="AvisoLeitura" Type="CP.FastConsig.DAL.Store.AvisoLeitura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="AvisoLeitura">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_ContratoSituacao">
+    <End Role="AverbacaoSituacao" Type="CP.FastConsig.DAL.Store.AverbacaoSituacao" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoSituacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_ContratoTipo">
+    <End Role="AverbacaoTipo" Type="CP.FastConsig.DAL.Store.AverbacaoTipo" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoTipo">
+        <PropertyRef Name="IDAverbacaoTipo" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDAverbacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDAgente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Empresa1">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Empresa2">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDAgente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Servico">
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="IDProduto" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contrato_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Averbacao">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjuste_ContratoAjusteTipo">
+    <End Role="AverbacaoAjusteTipo" Type="CP.FastConsig.DAL.Store.AverbacaoAjusteTipo" Multiplicity="1" />
+    <End Role="AverbacaoAjuste" Type="CP.FastConsig.DAL.Store.AverbacaoAjuste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoAjusteTipo">
+        <PropertyRef Name="IDAverbacaoAjusteTipo" />
+      </Principal>
+      <Dependent Role="AverbacaoAjuste">
+        <PropertyRef Name="IDContratoAjusteTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjuste_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="AverbacaoAjuste" Type="CP.FastConsig.DAL.Store.AverbacaoAjuste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="AverbacaoAjuste">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjuste_Servico">
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="1" />
+    <End Role="AverbacaoAjuste" Type="CP.FastConsig.DAL.Store.AverbacaoAjuste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="IDProduto" />
+      </Principal>
+      <Dependent Role="AverbacaoAjuste">
+        <PropertyRef Name="IDProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjusteArquivo_ContratoAjuste">
+    <End Role="AverbacaoAjuste" Type="CP.FastConsig.DAL.Store.AverbacaoAjuste" Multiplicity="1" />
+    <End Role="AverbacaoAjusteArquivo" Type="CP.FastConsig.DAL.Store.AverbacaoAjusteArquivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoAjuste">
+        <PropertyRef Name="IDAverbacaoAjuste" />
+      </Principal>
+      <Dependent Role="AverbacaoAjusteArquivo">
+        <PropertyRef Name="IDAverbacaoAjuste" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjusteDetalhe_Contrato">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="1" />
+    <End Role="AverbacaoAjusteDetalhe" Type="CP.FastConsig.DAL.Store.AverbacaoAjusteDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoAjusteDetalhe">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjusteDetalhe_ContratoAjuste">
+    <End Role="AverbacaoAjuste" Type="CP.FastConsig.DAL.Store.AverbacaoAjuste" Multiplicity="1" />
+    <End Role="AverbacaoAjusteDetalhe" Type="CP.FastConsig.DAL.Store.AverbacaoAjusteDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoAjuste">
+        <PropertyRef Name="IDAverbacaoAjuste" />
+      </Principal>
+      <Dependent Role="AverbacaoAjusteDetalhe">
+        <PropertyRef Name="IDAverbacaoAjuste" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoAjusteDetalhe_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="1" />
+    <End Role="AverbacaoAjusteDetalhe" Type="CP.FastConsig.DAL.Store.AverbacaoAjusteDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="AverbacaoAjusteDetalhe">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_ContratoConciliacaoTipo">
+    <End Role="ConciliacaoTipo" Type="CP.FastConsig.DAL.Store.ConciliacaoTipo" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoTipo">
+        <PropertyRef Name="IDConciliacaoTipo" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDConciliacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_ContratoMovimento">
+    <End Role="ConciliacaoMovimento" Type="CP.FastConsig.DAL.Store.ConciliacaoMovimento" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoMovimento">
+        <PropertyRef Name="IDConciliacaoMovimento" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDConciliacaoMovimento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_ContratoRetorno">
+    <End Role="ConciliacaoRetorno" Type="CP.FastConsig.DAL.Store.ConciliacaoRetorno" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoRetorno">
+        <PropertyRef Name="IDConciliacaoRetorno" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDConciliacaoRetorno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacao_Servico">
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="0..1" />
+    <End Role="Conciliacao" Type="CP.FastConsig.DAL.Store.Conciliacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="IDProduto" />
+      </Principal>
+      <Dependent Role="Conciliacao">
+        <PropertyRef Name="IDProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoConciliacaoTipo_ConciliacaoGrupo">
+    <End Role="ConciliacaoGrupo" Type="CP.FastConsig.DAL.Store.ConciliacaoGrupo" Multiplicity="1" />
+    <End Role="ConciliacaoTipo" Type="CP.FastConsig.DAL.Store.ConciliacaoTipo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoGrupo">
+        <PropertyRef Name="IDConciliacaoGrupo" />
+      </Principal>
+      <Dependent Role="ConciliacaoTipo">
+        <PropertyRef Name="IDConciliacaoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoCorteFolha_ContratoParcela">
+    <End Role="AverbacaoParcela" Type="CP.FastConsig.DAL.Store.AverbacaoParcela" Multiplicity="1" />
+    <End Role="ConciliacaoCorteFolha" Type="CP.FastConsig.DAL.Store.ConciliacaoCorteFolha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoParcela">
+        <PropertyRef Name="IDAverbacaoParcela" />
+      </Principal>
+      <Dependent Role="ConciliacaoCorteFolha">
+        <PropertyRef Name="IDAverbacaoParcela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoCorteFolha_ContratoSituacao">
+    <End Role="AverbacaoSituacao" Type="CP.FastConsig.DAL.Store.AverbacaoSituacao" Multiplicity="1" />
+    <End Role="ConciliacaoCorteFolha" Type="CP.FastConsig.DAL.Store.ConciliacaoCorteFolha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoSituacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Principal>
+      <Dependent Role="ConciliacaoCorteFolha">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoCorteFolha_CorteHistorico">
+    <End Role="CorteHistorico" Type="CP.FastConsig.DAL.Store.CorteHistorico" Multiplicity="1" />
+    <End Role="ConciliacaoCorteFolha" Type="CP.FastConsig.DAL.Store.ConciliacaoCorteFolha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CorteHistorico">
+        <PropertyRef Name="IDCorteHistorico" />
+      </Principal>
+      <Dependent Role="ConciliacaoCorteFolha">
+        <PropertyRef Name="IDCorteHistorico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoHistorico_Contrato">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="0..1" />
+    <End Role="AverbacaoHistorico" Type="CP.FastConsig.DAL.Store.AverbacaoHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoHistorico">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoMovimento_ContratoCorteFolha">
+    <End Role="ConciliacaoCorteFolha" Type="CP.FastConsig.DAL.Store.ConciliacaoCorteFolha" Multiplicity="0..1" />
+    <End Role="ConciliacaoMovimento" Type="CP.FastConsig.DAL.Store.ConciliacaoMovimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoCorteFolha">
+        <PropertyRef Name="IDConciliacaoCorteFolha" />
+      </Principal>
+      <Dependent Role="ConciliacaoMovimento">
+        <PropertyRef Name="IDConciliacaoCorteFolha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoMovimento_ContratoMovimentoTipo">
+    <End Role="ConciliacaoMovimentoTipo" Type="CP.FastConsig.DAL.Store.ConciliacaoMovimentoTipo" Multiplicity="0..1" />
+    <End Role="ConciliacaoMovimento" Type="CP.FastConsig.DAL.Store.ConciliacaoMovimento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConciliacaoMovimentoTipo">
+        <PropertyRef Name="IDConciliacaoMovimentoTipo" />
+      </Principal>
+      <Dependent Role="ConciliacaoMovimento">
+        <PropertyRef Name="IDConciliacaoMovimentoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoParcela_Contrato">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="1" />
+    <End Role="AverbacaoParcela" Type="CP.FastConsig.DAL.Store.AverbacaoParcela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoParcela">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoParcela_ContratoParcelaSituacao">
+    <End Role="AverbacaoParcelaSituacao" Type="CP.FastConsig.DAL.Store.AverbacaoParcelaSituacao" Multiplicity="1" />
+    <End Role="AverbacaoParcela" Type="CP.FastConsig.DAL.Store.AverbacaoParcela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoParcelaSituacao">
+        <PropertyRef Name="IDAverbacaoParcelaSituacao" />
+      </Principal>
+      <Dependent Role="AverbacaoParcela">
+        <PropertyRef Name="IDAverbacaoParcelaSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoRepasse_FonteRecurso">
+    <End Role="FonteRecurso" Type="CP.FastConsig.DAL.Store.FonteRecurso" Multiplicity="1" />
+    <End Role="ConciliacaoRepasse" Type="CP.FastConsig.DAL.Store.ConciliacaoRepasse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FonteRecurso">
+        <PropertyRef Name="IDFonteRecurso" />
+      </Principal>
+      <Dependent Role="ConciliacaoRepasse">
+        <PropertyRef Name="IDFonteRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoRetorno_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="ConciliacaoRetorno" Type="CP.FastConsig.DAL.Store.ConciliacaoRetorno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="ConciliacaoRetorno">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoRetorno_Servico">
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="0..1" />
+    <End Role="ConciliacaoRetorno" Type="CP.FastConsig.DAL.Store.ConciliacaoRetorno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="IDProduto" />
+      </Principal>
+      <Dependent Role="ConciliacaoRetorno">
+        <PropertyRef Name="IDProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoTramitacao_Contrato">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="1" />
+    <End Role="AverbacaoTramitacao" Type="CP.FastConsig.DAL.Store.AverbacaoTramitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoTramitacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoTramitacao_ContratoSituacao">
+    <End Role="AverbacaoSituacao" Type="CP.FastConsig.DAL.Store.AverbacaoSituacao" Multiplicity="1" />
+    <End Role="AverbacaoTramitacao" Type="CP.FastConsig.DAL.Store.AverbacaoTramitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoSituacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Principal>
+      <Dependent Role="AverbacaoTramitacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoTramitacao_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="AverbacaoTramitacao" Type="CP.FastConsig.DAL.Store.AverbacaoTramitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="AverbacaoTramitacao">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoTramitacao_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="AverbacaoTramitacao" Type="CP.FastConsig.DAL.Store.AverbacaoTramitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="AverbacaoTramitacao">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoVinculo_Contrato">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="1" />
+    <End Role="AverbacaoVinculo" Type="CP.FastConsig.DAL.Store.AverbacaoVinculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoVinculo">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratoVinculo_Contrato1">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="1" />
+    <End Role="AverbacaoVinculo" Type="CP.FastConsig.DAL.Store.AverbacaoVinculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="AverbacaoVinculo">
+        <PropertyRef Name="IDAverbacaoPai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_EmpresaLogo">
+    <End Role="EmpresaLogo" Type="CP.FastConsig.DAL.Store.EmpresaLogo" Multiplicity="0..1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaLogo">
+        <PropertyRef Name="IDEmpresaLogo" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDEmpresaLogo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_EmpresaSituacao">
+    <End Role="EmpresaSituacao" Type="CP.FastConsig.DAL.Store.EmpresaSituacao" Multiplicity="1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSituacao">
+        <PropertyRef Name="IDEmpresaSituacao" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDEmpresaSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_EmpresaSituacao1">
+    <End Role="EmpresaSituacao" Type="CP.FastConsig.DAL.Store.EmpresaSituacao" Multiplicity="0..1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSituacao">
+        <PropertyRef Name="IDEmpresaSituacao" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDEmpresaSituacaoAnterior" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_EmpresaTarifada">
+    <End Role="EmpresaTarifada" Type="CP.FastConsig.DAL.Store.EmpresaTarifada" Multiplicity="1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTarifada">
+        <PropertyRef Name="IDEmpresaTarifada" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDEmpresaTarifada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_EmpresaTipo">
+    <End Role="EmpresaTipo" Type="CP.FastConsig.DAL.Store.EmpresaTipo" Multiplicity="1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTipo">
+        <PropertyRef Name="IDEmpresaTipo" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDEmpresaTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Estado">
+    <End Role="Estado" Type="CP.FastConsig.DAL.Store.Estado" Multiplicity="1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="SiglaEstado" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDUsuarioResponsavel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Usuario1">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IDUsuarioHomologacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaContato_ContatoTipo">
+    <End Role="ContatoTipo" Type="CP.FastConsig.DAL.Store.ContatoTipo" Multiplicity="1" />
+    <End Role="EmpresaContato" Type="CP.FastConsig.DAL.Store.EmpresaContato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContatoTipo">
+        <PropertyRef Name="IDContatoTipo" />
+      </Principal>
+      <Dependent Role="EmpresaContato">
+        <PropertyRef Name="IDContatoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaContato_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaContato" Type="CP.FastConsig.DAL.Store.EmpresaContato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaContato">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaContato_EmpresaContatoPerfil">
+    <End Role="EmpresaContatoPerfil" Type="CP.FastConsig.DAL.Store.EmpresaContatoPerfil" Multiplicity="0..1" />
+    <End Role="EmpresaContato" Type="CP.FastConsig.DAL.Store.EmpresaContato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaContatoPerfil">
+        <PropertyRef Name="IDEmpresaContatoPerfil" />
+      </Principal>
+      <Dependent Role="EmpresaContato">
+        <PropertyRef Name="IDEmpresaContatoPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaIP_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="EmpresaIP" Type="CP.FastConsig.DAL.Store.EmpresaIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaIP">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_Averbacao">
+    <End Role="Averbacao" Type="CP.FastConsig.DAL.Store.Averbacao" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Averbacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDAverbacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_Empresa1">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresaSolicitante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_EmpresaSolicitacaoSituacao">
+    <End Role="EmpresaSolicitacaoSituacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoSituacao" Multiplicity="1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacaoSituacao">
+        <PropertyRef Name="IDEmpresaSolicitacaoSituacao" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresaSolicitacaoSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_EmpresaSolicitacaoTipo">
+    <End Role="EmpresaSolicitacaoTipo" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoTipo" Multiplicity="1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacaoTipo">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDSolicitante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacao_Usuario1">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDResponsavel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacaoQuitacao_EmpresaSolicitacao">
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="1" />
+    <End Role="EmpresaSolicitacaoQuitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoQuitacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresaSolicitacao" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacaoQuitacao">
+        <PropertyRef Name="IDEmpresaSolicitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSolicitacaoSaldoDevedor_EmpresaSolicitacaoSaldoDevedor">
+    <End Role="EmpresaSolicitacao" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacao" Multiplicity="0..1" />
+    <End Role="EmpresaSolicitacaoSaldoDevedor" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoSaldoDevedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacao">
+        <PropertyRef Name="IDEmpresaSolicitacao" />
+      </Principal>
+      <Dependent Role="EmpresaSolicitacaoSaldoDevedor">
+        <PropertyRef Name="IDEmpresaSolicitacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSuspensao_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaSuspensao" Type="CP.FastConsig.DAL.Store.EmpresaSuspensao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaSuspensao">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSuspensao_EmpresaSituacao">
+    <End Role="EmpresaSituacao" Type="CP.FastConsig.DAL.Store.EmpresaSituacao" Multiplicity="1" />
+    <End Role="EmpresaSuspensao" Type="CP.FastConsig.DAL.Store.EmpresaSuspensao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSituacao">
+        <PropertyRef Name="IDEmpresaSituacao" />
+      </Principal>
+      <Dependent Role="EmpresaSuspensao">
+        <PropertyRef Name="IDEmpresaSituacaoSuspensao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaSuspensao_EmpresaSituacao1">
+    <End Role="EmpresaSituacao" Type="CP.FastConsig.DAL.Store.EmpresaSituacao" Multiplicity="1" />
+    <End Role="EmpresaSuspensao" Type="CP.FastConsig.DAL.Store.EmpresaSuspensao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSituacao">
+        <PropertyRef Name="IDEmpresaSituacao" />
+      </Principal>
+      <Dependent Role="EmpresaSuspensao">
+        <PropertyRef Name="IDEmpresaSituacaoAnterior" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaUsuario_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaUsuario" Type="CP.FastConsig.DAL.Store.EmpresaUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaUsuario">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaUsuario_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="EmpresaUsuario" Type="CP.FastConsig.DAL.Store.EmpresaUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="EmpresaUsuario">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaVinculo_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaVinculo" Type="CP.FastConsig.DAL.Store.EmpresaVinculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaVinculo">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaVinculo_Empresa1">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaVinculo" Type="CP.FastConsig.DAL.Store.EmpresaVinculo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaVinculo">
+        <PropertyRef Name="IDEmpresaVinculada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fluxo_FluxoTipo">
+    <End Role="FluxoTipo" Type="CP.FastConsig.DAL.Store.FluxoTipo" Multiplicity="0..1" />
+    <End Role="Fluxo" Type="CP.FastConsig.DAL.Store.Fluxo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FluxoTipo">
+        <PropertyRef Name="IDFluxoTipo" />
+      </Principal>
+      <Dependent Role="Fluxo">
+        <PropertyRef Name="IDFluxoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fluxo_ProdutoGrupo">
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="0..1" />
+    <End Role="Fluxo" Type="CP.FastConsig.DAL.Store.Fluxo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Principal>
+      <Dependent Role="Fluxo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FluxoDetalhe_AverbacaoSituacao">
+    <End Role="AverbacaoSituacao" Type="CP.FastConsig.DAL.Store.AverbacaoSituacao" Multiplicity="0..1" />
+    <End Role="FluxoDetalhe" Type="CP.FastConsig.DAL.Store.FluxoDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AverbacaoSituacao">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Principal>
+      <Dependent Role="FluxoDetalhe">
+        <PropertyRef Name="IDAverbacaoSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FluxoDetalhe_EmpresaSolicitacaoTipo">
+    <End Role="EmpresaSolicitacaoTipo" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoTipo" Multiplicity="0..1" />
+    <End Role="FluxoDetalhe" Type="CP.FastConsig.DAL.Store.FluxoDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacaoTipo">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Principal>
+      <Dependent Role="FluxoDetalhe">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FluxoDetalhe_Fluxo">
+    <End Role="Fluxo" Type="CP.FastConsig.DAL.Store.Fluxo" Multiplicity="1" />
+    <End Role="FluxoDetalhe" Type="CP.FastConsig.DAL.Store.FluxoDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fluxo">
+        <PropertyRef Name="IDFluxo" />
+      </Principal>
+      <Dependent Role="FluxoDetalhe">
+        <PropertyRef Name="IDFluxo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funcionario_FuncionarioCategoria">
+    <End Role="FuncionarioCategoria" Type="CP.FastConsig.DAL.Store.FuncionarioCategoria" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioCategoria">
+        <PropertyRef Name="IDFuncionarioCategoria" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IDFuncionarioCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funcionario_FuncionarioRegime">
+    <End Role="FuncionarioRegime" Type="CP.FastConsig.DAL.Store.FuncionarioRegime" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioRegime">
+        <PropertyRef Name="IDFuncionarioRegime" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IDFuncionarioRegime" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funcionario_FuncionarioSituacao">
+    <End Role="FuncionarioSituacao" Type="CP.FastConsig.DAL.Store.FuncionarioSituacao" Multiplicity="0..1" />
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioSituacao">
+        <PropertyRef Name="IDFuncionarioSituacao" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IDFuncionarioSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Funcionario_Pessoa">
+    <End Role="Pessoa" Type="CP.FastConsig.DAL.Store.Pessoa" Multiplicity="1" />
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IDPessoa" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IDPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioAutorizacao_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="1" />
+    <End Role="FuncionarioAutorizacao" Type="CP.FastConsig.DAL.Store.FuncionarioAutorizacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="FuncionarioAutorizacao">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioAutorizacao_FuncionarioAutorizacaoTipo">
+    <End Role="FuncionarioAutorizacaoTipo" Type="CP.FastConsig.DAL.Store.FuncionarioAutorizacaoTipo" Multiplicity="1" />
+    <End Role="FuncionarioAutorizacao" Type="CP.FastConsig.DAL.Store.FuncionarioAutorizacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioAutorizacaoTipo">
+        <PropertyRef Name="IDFuncionarioAutorizacaoTipo" />
+      </Principal>
+      <Dependent Role="FuncionarioAutorizacao">
+        <PropertyRef Name="IDFuncionarioAutorizacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioBloqueio_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="1" />
+    <End Role="FuncionarioBloqueio" Type="CP.FastConsig.DAL.Store.FuncionarioBloqueio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="FuncionarioBloqueio">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioHistorico_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="0..1" />
+    <End Role="FuncionarioHistorico" Type="CP.FastConsig.DAL.Store.FuncionarioHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="FuncionarioHistorico">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioHistorico_FuncionarioRegime">
+    <End Role="FuncionarioRegime" Type="CP.FastConsig.DAL.Store.FuncionarioRegime" Multiplicity="0..1" />
+    <End Role="FuncionarioHistorico" Type="CP.FastConsig.DAL.Store.FuncionarioHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioRegime">
+        <PropertyRef Name="IDFuncionarioRegime" />
+      </Principal>
+      <Dependent Role="FuncionarioHistorico">
+        <PropertyRef Name="IDFuncionarioRegime" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioHistorico_FuncionarioSituacao">
+    <End Role="FuncionarioSituacao" Type="CP.FastConsig.DAL.Store.FuncionarioSituacao" Multiplicity="0..1" />
+    <End Role="FuncionarioHistorico" Type="CP.FastConsig.DAL.Store.FuncionarioHistorico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FuncionarioSituacao">
+        <PropertyRef Name="IDFuncionarioSituacao" />
+      </Principal>
+      <Dependent Role="FuncionarioHistorico">
+        <PropertyRef Name="IDFuncionarioSituacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioMargem_Funcionario">
+    <End Role="Funcionario" Type="CP.FastConsig.DAL.Store.Funcionario" Multiplicity="1" />
+    <End Role="FuncionarioMargem" Type="CP.FastConsig.DAL.Store.FuncionarioMargem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IDFuncionario" />
+      </Principal>
+      <Dependent Role="FuncionarioMargem">
+        <PropertyRef Name="IDFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FuncionarioMargem_ServicoGrupo">
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="1" />
+    <End Role="FuncionarioMargem" Type="CP.FastConsig.DAL.Store.FuncionarioMargem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Principal>
+      <Dependent Role="FuncionarioMargem">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Perfil_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Perfil" Type="CP.FastConsig.DAL.Store.Perfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Perfil">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoRecurso_Permissao">
+    <End Role="Permissao" Type="CP.FastConsig.DAL.Store.Permissao" Multiplicity="1" />
+    <End Role="PermissaoRecurso" Type="CP.FastConsig.DAL.Store.PermissaoRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissao">
+        <PropertyRef Name="IDPermissao" />
+      </Principal>
+      <Dependent Role="PermissaoRecurso">
+        <PropertyRef Name="IDPermissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoRecurso_Recurso">
+    <End Role="Recurso" Type="CP.FastConsig.DAL.Store.Recurso" Multiplicity="1" />
+    <End Role="PermissaoRecurso" Type="CP.FastConsig.DAL.Store.PermissaoRecurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recurso">
+        <PropertyRef Name="IDRecurso" />
+      </Principal>
+      <Dependent Role="PermissaoRecurso">
+        <PropertyRef Name="IDRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoSistema_Permissao">
+    <End Role="Permissao" Type="CP.FastConsig.DAL.Store.Permissao" Multiplicity="1" />
+    <End Role="PermissaoSistema" Type="CP.FastConsig.DAL.Store.PermissaoSistema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissao">
+        <PropertyRef Name="IDPermissao" />
+      </Principal>
+      <Dependent Role="PermissaoSistema">
+        <PropertyRef Name="IDPermissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoSistema_Recurso">
+    <End Role="Recurso" Type="CP.FastConsig.DAL.Store.Recurso" Multiplicity="1" />
+    <End Role="PermissaoSistema" Type="CP.FastConsig.DAL.Store.PermissaoSistema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recurso">
+        <PropertyRef Name="IDRecurso" />
+      </Principal>
+      <Dependent Role="PermissaoSistema">
+        <PropertyRef Name="IDRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoUsuario_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="PermissaoUsuario" Type="CP.FastConsig.DAL.Store.PermissaoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="PermissaoUsuario">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoUsuario_Perfil">
+    <End Role="Perfil" Type="CP.FastConsig.DAL.Store.Perfil" Multiplicity="0..1" />
+    <End Role="PermissaoUsuario" Type="CP.FastConsig.DAL.Store.PermissaoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IDPerfil" />
+      </Principal>
+      <Dependent Role="PermissaoUsuario">
+        <PropertyRef Name="IDPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoUsuario_Permissao">
+    <End Role="Permissao" Type="CP.FastConsig.DAL.Store.Permissao" Multiplicity="0..1" />
+    <End Role="PermissaoUsuario" Type="CP.FastConsig.DAL.Store.PermissaoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permissao">
+        <PropertyRef Name="IDPermissao" />
+      </Principal>
+      <Dependent Role="PermissaoUsuario">
+        <PropertyRef Name="IDPermissao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermissaoUsuario_Recurso">
+    <End Role="Recurso" Type="CP.FastConsig.DAL.Store.Recurso" Multiplicity="0..1" />
+    <End Role="PermissaoUsuario" Type="CP.FastConsig.DAL.Store.PermissaoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recurso">
+        <PropertyRef Name="IDRecurso" />
+      </Principal>
+      <Dependent Role="PermissaoUsuario">
+        <PropertyRef Name="IDRecurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pessoa_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="0..1" />
+    <End Role="Pessoa" Type="CP.FastConsig.DAL.Store.Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProdutoGrupo_ProdutoGrupo">
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="1" />
+    <End Role="ProdutoGrupo1" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Principal>
+      <Dependent Role="ProdutoGrupo1">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servico_Empresa2">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="IDConsignataria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servico_Empresa3">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="IDConsignante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servico_ServicoGrupo">
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="1" />
+    <End Role="Produto" Type="CP.FastConsig.DAL.Store.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="IDProdutoGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicoGrupo_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="0..1" />
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="ProdutoGrupo">
+        <PropertyRef Name="IDConsignante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicoGrupo_ServicoTipo">
+    <End Role="ProdutoTipo" Type="CP.FastConsig.DAL.Store.ProdutoTipo" Multiplicity="1" />
+    <End Role="ProdutoGrupo" Type="CP.FastConsig.DAL.Store.ProdutoGrupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoTipo">
+        <PropertyRef Name="IDProdutoTipo" />
+      </Principal>
+      <Dependent Role="ProdutoGrupo">
+        <PropertyRef Name="IDProdutoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TmpInadimplenciaTempoDetalhe_TmpInadimplenciaTempo">
+    <End Role="TmpInadimplenciaTempo" Type="CP.FastConsig.DAL.Store.TmpInadimplenciaTempo" Multiplicity="0..1" />
+    <End Role="TmpInadimplenciaTempoDetalhe" Type="CP.FastConsig.DAL.Store.TmpInadimplenciaTempoDetalhe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TmpInadimplenciaTempo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TmpInadimplenciaTempoDetalhe">
+        <PropertyRef Name="IDInadimplenciaTempo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPerfil_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="UsuarioPerfil" Type="CP.FastConsig.DAL.Store.UsuarioPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioPerfil">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPerfil_Perfil">
+    <End Role="Perfil" Type="CP.FastConsig.DAL.Store.Perfil" Multiplicity="1" />
+    <End Role="UsuarioPerfil" Type="CP.FastConsig.DAL.Store.UsuarioPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IDPerfil" />
+      </Principal>
+      <Dependent Role="UsuarioPerfil">
+        <PropertyRef Name="IDPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPerfil_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="UsuarioPerfil" Type="CP.FastConsig.DAL.Store.UsuarioPerfil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPerfil">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioResponsabilidade_Empresa">
+    <End Role="Empresa" Type="CP.FastConsig.DAL.Store.Empresa" Multiplicity="1" />
+    <End Role="UsuarioResponsabilidade" Type="CP.FastConsig.DAL.Store.UsuarioResponsabilidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IDEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioResponsabilidade">
+        <PropertyRef Name="IDEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioResponsabilidade_EmpresaSolicitacaoTipo">
+    <End Role="EmpresaSolicitacaoTipo" Type="CP.FastConsig.DAL.Store.EmpresaSolicitacaoTipo" Multiplicity="1" />
+    <End Role="UsuarioResponsabilidade" Type="CP.FastConsig.DAL.Store.UsuarioResponsabilidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaSolicitacaoTipo">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Principal>
+      <Dependent Role="UsuarioResponsabilidade">
+        <PropertyRef Name="IDEmpresaSolicitacaoTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioResponsabilidade_Usuario">
+    <End Role="Usuario" Type="CP.FastConsig.DAL.Store.Usuario" Multiplicity="1" />
+    <End Role="UsuarioResponsabilidade" Type="CP.FastConsig.DAL.Store.UsuarioResponsabilidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioResponsabilidade">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SP_ExecutarGerarMenuArvore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="IdModulo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GerarMenuArvore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="IdModulo" Type="int" Mode="In" />
+  </Function>
+</Schema>

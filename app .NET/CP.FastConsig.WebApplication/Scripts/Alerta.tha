@@ -1,0 +1,5 @@
+﻿<script language='javascript' type='text/javascript'>
+
+$.ctNotify('#mensagem', { type: '#tipo', delay: 3000, opacity: 1});
+
+</script>

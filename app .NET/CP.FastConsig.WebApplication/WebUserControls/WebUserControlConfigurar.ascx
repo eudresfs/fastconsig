@@ -1,0 +1,2 @@
+﻿<%@ Control ClassName="WebUserControlConfigurar" Language="C#" AutoEventWireup="true" CodeBehind="WebUserControlConfigurar.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlConfigurar" %>
+<div><center><br/><br/><br/><br/><a runat="server" id="LinkGerenciarUsuarios" OnServerClick="LinkGerenciarUsuarios_Click"><img id="Img5" runat="server" src="~/Imagens/Configuracoes.png" /></a></center></div>

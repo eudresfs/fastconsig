@@ -1,0 +1,2 @@
+﻿<%@ Control ClassName="WebUserControlMensagens" Language="C#" AutoEventWireup="true" CodeBehind="WebUserControlMensagens.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlMensagens" %>
+<div><center><br/><br/><br/><br/><img id="Img1" runat="server" src="~/Imagens/Mensagens.png" /></center></div>

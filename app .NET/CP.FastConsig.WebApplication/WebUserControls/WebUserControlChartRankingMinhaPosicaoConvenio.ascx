@@ -1,0 +1,3 @@
+﻿<%@ Control Language="C#" ClassName="WebUserControlChartRankingMinhaPosicaoConvenio" AutoEventWireup="true" CodeBehind="WebUserControlChartRankingMinhaPosicaoConvenio.ascx.cs" Inherits="CP.FastConsig.WebApplication.WebUserControls.WebUserControlChartRankingMinhaPosicaoConvenio" %>
+<asp:PlaceHolder ID="PlaceHolderGrafico" runat="server"></asp:PlaceHolder>
+<div id="containerLinha" style="height:290px; margin:0; clear:both"></div>

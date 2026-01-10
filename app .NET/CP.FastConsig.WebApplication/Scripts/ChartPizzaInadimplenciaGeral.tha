@@ -1,0 +1,72 @@
+﻿<script language='javascript' type='text/javascript'>
+
+	$(document).ready(function () {
+	var colors = Highcharts.getOptions().colors;
+	var chart = new Highcharts.Chart({
+
+	chart: {renderTo: 'containerPizzaGerencial', type: 'pie', plotBackgroundColor: null, plotBorderWidth: null, plotShadow: false},
+
+	title: { text: '#titulo' },
+
+	subtitle: { text: '#subTitulo' },
+
+	tooltip: {formatter: function () { return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';}},
+
+	plotOptions: {pie: {allowPointSelect: true, cursor: 'pointer',
+	point: {
+	events: {
+	click: function() {
+	var chart = this.series.chart,
+	drilldown = this.drilldown;
+	if (drilldown) { // drill down
+	chart.setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+	}
+	}
+	}
+	},
+
+	dataLabels: { enabled: true, color: '#000000', connectorColor: '#000000', formatter: function () { return '<b>' + this.point.name + '</b>: ' + this.percentage.toFixed(2) + ' %';}}}},
+		
+	series: [{data: [#dados]}]}
+		
+,
+        
+function(chart){
+        
+        chart.upper = [];
+        
+        var up = false;
+        
+        chart.setChart = function(name, categories, data, color) {
+            //chart.xAxis[0].setCategories(categories);
+            if (name === true && chart.upper.length) {
+                chart.series[0].remove();
+                chart.addSeries( chart.upper.pop() );
+                
+                if( chart.upper.length === 0 ) {
+                    $("#pie").hide('up');
+                    
+                    up = false;
+                }
+                return true;
+            }
+    
+            if (up === false) {
+               $("#pie").show().bind('click', function(){ chart.setChart(true); });
+                up = true;
+            }
+            
+            chart.upper.push( chart.series[0].options );
+            chart.series[0].remove();
+            chart.addSeries({
+                name: name,
+                data: data,
+                color: color || 'white'
+            });
+        }  		
+
+	});
+	
+});
+
+</script>

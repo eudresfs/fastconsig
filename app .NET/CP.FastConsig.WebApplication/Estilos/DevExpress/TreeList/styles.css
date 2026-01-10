@@ -1,0 +1,271 @@
+﻿.dxtlControl__Aqua_TreeList
+{
+	cursor: default;
+	font: 9pt Tahoma;
+	color: black;
+	border: none 1px #9f9f9f;
+}
+.dxtlControl__Aqua_TreeList caption
+{
+	background: #ACACAC;
+	border: solid 1px #9F9F9F;
+	border-bottom: 0;
+	color: White;
+    font-size: 15px;
+	font-weight: normal;
+	padding: 3px 3px 5px;
+	text-align: center;
+}
+
+/* Indent cells */
+.dxtlIndent__Aqua_TreeList,
+.dxtlIndentWithButton__Aqua_TreeList
+{			
+	background: white;
+	vertical-align: top;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.dxtlIndent__Aqua_TreeList
+{
+	padding: 0 11px;
+}
+.dxtlIndentWithButton__Aqua_TreeList
+{
+	padding: 5px 7px 6px;
+}
+.dxtlSelectionCell__Aqua_TreeList {
+	border: solid 1px #cfcfcf;
+}
+
+/* Tree-lines cells */
+.dxtlLineRoot__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineRoot.gif")%>');
+	background-repeat: repeat-y;	
+}
+
+.dxtlLineFirst__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineFirst.gif")%>');
+}
+.dxtlLineMiddle__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineMiddle.gif")%>');
+	
+}
+.dxtlLineLast__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineLast.gif")%>');
+	
+}
+
+.dxtlLineFirstRtl__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineFirstRtl.gif")%>');
+}
+.dxtlLineMiddleRtl__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineMiddleRtl.gif")%>');
+	
+}
+.dxtlLineLastRtl__Aqua_TreeList
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineLastRtl.gif")%>');
+	
+}
+
+/* Headers */
+.dxtlHeader__Aqua_TreeList 
+{
+	background: #dcdcdc;
+	border: solid 1px #9f9f9f;
+	padding: 4px 6px 5px;
+	font-weight: normal;
+}
+.dxtlHeader__Aqua_TreeList table.dxtl 
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader__Aqua_TreeList td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader__Aqua_TreeList,
+.dxtlHeader__Aqua_TreeList td.dxtl
+{	
+	font: 9pt Tahoma;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Nodes */
+.dxtlNode__Aqua_TreeList
+{
+	background: white;
+}
+.dxtlAltNode__Aqua_TreeList
+{
+	background: #ededeb;
+}
+.dxtlSelectedNode__Aqua_TreeList
+{
+	background: #a0a0a0;
+	color: white;
+}
+.dxtlFocusedNode__Aqua_TreeList
+{
+	background: #8d8d8d;
+    color: white;
+}
+.dxtlInlineEditNode__Aqua_TreeList
+{
+	background: white;
+}
+.dxtlEditFormDisplayNode__Aqua_TreeList
+{
+	background: white;
+}
+
+.dxtlNode__Aqua_TreeList td.dxtl, 
+.dxtlAltNode__Aqua_TreeList  td.dxtl, 
+.dxtlSelectedNode__Aqua_TreeList td.dxtl, 
+.dxtlFocusedNode__Aqua_TreeList td.dxtl,
+.dxtlEditFormDisplayNode__Aqua_TreeList td.dxtl,
+.dxtlCommandCell__Aqua_TreeList
+{
+	padding: 3px 6px 4px;
+	border: solid 1px #cfcfcf;
+	white-space: nowrap;
+	font-size: 9pt;
+	font-family: Tahoma;
+}
+.dxtlInlineEditNode__Aqua_TreeList td.dxtl
+{
+	border: solid 1px #cfcfcf;
+	padding: 1px;
+}
+
+/* Preview */
+.dxtlPreview__Aqua_TreeList
+{
+	background: #f2f2f2;
+	color: #7f7f7f;
+	padding: 14px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;	
+}
+
+/* Footers */
+.dxtlGroupFooter__Aqua_TreeList
+{
+	background-color: #E0E0E0;	
+}
+.dxtlFooter__Aqua_TreeList
+{
+	background-color: #D7D7D7;	
+}
+.dxtlGroupFooter__Aqua_TreeList td.dxtl,
+.dxtlFooter__Aqua_TreeList td.dxtl
+{
+	padding: 5px 6px 6px;
+	white-space: nowrap;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel__Aqua_TreeList 
+{
+	border-bottom: none 1px #9f9f9f;
+	padding-bottom: 2px;
+}
+.dxtlPagerBottomPanel__Aqua_TreeList 
+{	
+	border-top: none 1px #9f9f9f;
+	padding-bottom: 2px;
+}
+
+/* Editing */
+.dxtlEditForm__Aqua_TreeList 
+{
+	background: #F0F0F0;
+	border: solid 1px #D3D3D3;
+	padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption__Aqua_TreeList,
+.dxtlEditFormEditCell__Aqua_TreeList
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption__Aqua_TreeList
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError__Aqua_TreeList
+{
+	background: #FFC8C8;
+	color: #FF0000;
+	padding: 6px 10px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;		
+}
+.dxtlPopupEditForm__Aqua_TreeList
+{
+    padding: 12px;
+}
+
+/* Links */
+.dxtlControl__Aqua_TreeList a 
+{
+	color: #0d45b7;
+}
+.dxtlControl__Aqua_TreeList a:hover 
+{
+	color:  #5494ea;
+}
+.dxtlSelectedNode__Aqua_TreeList a, 
+.dxtlFocusedNode__Aqua_TreeList a 
+{
+	color: White;
+}
+.dxtlSelectedNode__Aqua_TreeList a:hover, 
+.dxtlFocusedNode__Aqua_TreeList a:hover
+{
+	color: #f0f0f0;
+} 
+.dxtlCommandCell__Aqua_TreeList a 
+{
+	margin-right: 3px;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel__Aqua_TreeList
+{
+	border: solid 1px #9F9F9F;
+	background-color: #E3E3E1;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxtlLoadingPanel__Aqua_TreeList td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxtlLoadingDiv__Aqua_TreeList
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+/* Disabled */
+.dxtlDisabled__Aqua_TreeList,
+.dxtlDisabled__Aqua_TreeList .dxtl
+{
+	color: #808080;
+	cursor: default;
+}
