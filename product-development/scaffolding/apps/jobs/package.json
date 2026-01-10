@@ -1,0 +1,41 @@
+{
+  "name": "@fastconsig/jobs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/worker.ts",
+    "build": "tsup src/worker.ts --format esm",
+    "start": "node dist/worker.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@fastconsig/database": "workspace:*",
+    "@fastconsig/shared": "workspace:*",
+    "bullmq": "^5.12.0",
+    "dayjs": "^1.11.12",
+    "exceljs": "^4.4.0",
+    "nodemailer": "^6.9.14",
+    "pdfkit": "^0.15.0",
+    "pino": "^9.3.2",
+    "pino-pretty": "^11.2.2",
+    "redis": "^4.7.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@fastconsig/config": "workspace:*",
+    "@types/node": "^22.1.0",
+    "@types/nodemailer": "^6.4.15",
+    "@vitest/coverage-v8": "^2.0.5",
+    "eslint": "^9.9.0",
+    "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
