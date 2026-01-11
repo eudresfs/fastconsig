@@ -27,7 +27,11 @@
       "Skill(bmad:bmm:workflows:workflow-status)",
       "WebSearch",
       "Bash(pnpm vite build:*)",
-      "Bash(.claude/hooks/bmad-speak.sh:*)"
+      "Bash(.claude/hooks/bmad-speak.sh:*)",
+      "Skill(bmad:bmm:workflows:check-implementation-readiness)",
+      "Skill(bmad:bmm:workflows:create-epics-and-stories)",
+      "Skill(bmad:bmm:workflows:create-architecture)",
+      "Skill(bmad:bmm:workflows:generate-project-context)"
     ]
   }
 }

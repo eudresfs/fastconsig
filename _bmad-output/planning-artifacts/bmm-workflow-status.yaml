@@ -27,7 +27,7 @@ workflow_status:
 
       - id: "product-brief"
         name: "Product Brief"
-        status: "pending"
+        status: "_bmad-output/planning-artifacts/product-brief-Fast Consig-2026-01-11.md"
         agent: "analyst"
         command: "/bmad:bmm:workflows:create-product-brief"
 
@@ -35,7 +35,7 @@ workflow_status:
     items:
       - id: "prd"
         name: "Product Requirements Document"
-        status: "product-development/current-feature/PRD.md"
+        status: "_bmad-output/planning-artifacts/prd.md"
         agent: "pm"
         command: "/bmad:bmm:workflows:create-prd"
 
@@ -49,13 +49,13 @@ workflow_status:
     items:
       - id: "create-architecture"
         name: "Architecture"
-        status: "product-development/current-feature/arquitetura-tecnica.md"
+        status: "_bmad-output/planning-artifacts/architecture.md"
         agent: "architect"
         command: "/bmad:bmm:workflows:create-architecture"
 
       - id: "create-epics-and-stories"
         name: "Epics & Stories"
-        status: "product-development/current-feature/user-stories.md"
+        status: "_bmad-output/planning-artifacts/epics.md"
         agent: "pm"
         command: "/bmad:bmm:workflows:create-epics-and-stories"
 
@@ -67,7 +67,7 @@ workflow_status:
 
       - id: "implementation-readiness"
         name: "Implementation Readiness"
-        status: "product-development/current-feature/relatorio-revisao-arquitetural.md"
+        status: "_bmad-output/planning-artifacts/implementation-readiness-report-2026-01-11.md"
         agent: "architect"
         command: "/bmad:bmm:workflows:implementation-readiness"
 
