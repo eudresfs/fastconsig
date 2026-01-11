@@ -1,4 +1,9 @@
 import { z } from 'zod'
+import dotenv from 'dotenv'
+import path from 'path'
+
+// Load environment variables from root .env
+dotenv.config({ path: path.resolve(process.cwd(), '../../.env') })
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),

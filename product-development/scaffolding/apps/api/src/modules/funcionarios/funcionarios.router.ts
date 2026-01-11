@@ -1,153 +1,284 @@
 import { router, protectedProcedure, withPermission } from '@/trpc/trpc'
+import { TRPCError } from '@trpc/server'
 import { z } from 'zod'
 import {
   funcionarioSchema,
   funcionarioUpdateSchema,
   funcionarioFiltroSchema,
 } from './funcionarios.schema'
+import * as funcionariosService from './funcionarios.service'
+import {
+  NotFoundError,
+  ConflictError,
+  BusinessError,
+} from '@/shared/errors'
+
+/**
+ * Converts service errors to TRPCError
+ */
+function handleServiceError(error: unknown): never {
+  if (error instanceof NotFoundError) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: error.message,
+    })
+  }
+
+  if (error instanceof ConflictError) {
+    throw new TRPCError({
+      code: 'CONFLICT',
+      message: error.message,
+    })
+  }
+
+  if (error instanceof BusinessError) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: error.message,
+      cause: error.details,
+    })
+  }
+
+  if (error instanceof TRPCError) {
+    throw error
+  }
+
+  throw new TRPCError({
+    code: 'INTERNAL_SERVER_ERROR',
+    message: error instanceof Error ? error.message : 'Erro interno do servidor',
+  })
+}
 
 export const funcionariosRouter = router({
+  /**
+   * Lista funcionarios com paginacao e filtros
+   */
   list: protectedProcedure
     .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
     .input(funcionarioFiltroSchema)
     .query(async ({ input, ctx }) => {
-      const { page, pageSize, search, situacao, empresaId, orderBy, orderDir } = input
-      const skip = (page - 1) * pageSize
-
-      const where = {
-        tenantId: ctx.tenantId,
-        ...(search && {
-          OR: [
-            { nome: { contains: search, mode: 'insensitive' as const } },
-            { cpf: { contains: search } },
-            { matricula: { contains: search } },
-          ],
-        }),
-        ...(situacao && { situacao }),
-        ...(empresaId && { empresaId }),
-      }
-
-      const [funcionarios, total] = await Promise.all([
-        ctx.prisma.funcionario.findMany({
-          where,
-          include: { empresa: true },
-          skip,
-          take: pageSize,
-          orderBy: { [orderBy]: orderDir },
-        }),
-        ctx.prisma.funcionario.count({ where }),
-      ])
-
-      return {
-        data: funcionarios,
-        pagination: {
-          page,
-          pageSize,
-          total,
-          totalPages: Math.ceil(total / pageSize),
-        },
+      try {
+        return await funcionariosService.listar(ctx.tenantId, input)
+      } catch (error) {
+        handleServiceError(error)
       }
     }),
 
+  /**
+   * Busca funcionario por ID com margem calculada
+   */
   getById: protectedProcedure
     .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
     .input(z.object({ id: z.number() }))
     .query(async ({ input, ctx }) => {
-      const funcionario = await ctx.prisma.funcionario.findFirst({
-        where: { id: input.id, tenantId: ctx.tenantId },
-        include: {
-          empresa: true,
-          averbacoes: {
-            orderBy: { createdAt: 'desc' },
-            take: 10,
-            include: {
-              tenantConsignataria: { include: { consignataria: true } },
-              produto: true,
-            },
-          },
-          margemHistorico: {
-            orderBy: { competencia: 'desc' },
-            take: 12,
-          },
-        },
-      })
-
-      if (!funcionario) {
-        throw new Error('Funcionario nao encontrado')
+      try {
+        return await funcionariosService.buscarPorId(ctx.tenantId, input.id)
+      } catch (error) {
+        handleServiceError(error)
       }
-
-      return funcionario
     }),
 
+  /**
+   * Busca funcionario por CPF
+   */
+  getByCpf: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
+    .input(z.object({ cpf: z.string().length(11) }))
+    .query(async ({ input, ctx }) => {
+      try {
+        const funcionario = await funcionariosService.buscarPorCpf(ctx.tenantId, input.cpf)
+
+        if (!funcionario) {
+          throw new TRPCError({
+            code: 'NOT_FOUND',
+            message: 'Funcionario nao encontrado',
+          })
+        }
+
+        return funcionario
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Busca funcionario por matricula e empresa
+   */
+  getByMatricula: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
+    .input(
+      z.object({
+        matricula: z.string().min(1),
+        empresaId: z.number().int().positive(),
+      })
+    )
+    .query(async ({ input, ctx }) => {
+      try {
+        // Query directly since service doesn't have this specific method
+        const funcionario = await ctx.prisma.funcionario.findFirst({
+          where: {
+            tenantId: ctx.tenantId,
+            matricula: input.matricula,
+            empresaId: input.empresaId,
+          },
+        })
+
+        if (!funcionario) {
+          throw new TRPCError({
+            code: 'NOT_FOUND',
+            message: 'Funcionario nao encontrado',
+          })
+        }
+
+        // Return with margin calculation
+        return await funcionariosService.buscarPorId(ctx.tenantId, funcionario.id)
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Calcula e retorna a margem do funcionario
+   */
+  getMargem: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
+    .input(z.object({ id: z.number() }))
+    .query(async ({ input, ctx }) => {
+      try {
+        const funcionario = await ctx.prisma.funcionario.findFirst({
+          where: { id: input.id, tenantId: ctx.tenantId },
+          select: { id: true, salarioBruto: true },
+        })
+
+        if (!funcionario) {
+          throw new TRPCError({
+            code: 'NOT_FOUND',
+            message: 'Funcionario nao encontrado',
+          })
+        }
+
+        return await funcionariosService.calcularMargem(
+          ctx.tenantId,
+          input.id,
+          Number(funcionario.salarioBruto)
+        )
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Verifica se funcionario tem margem disponivel para valor de parcela
+   */
+  verificarMargem: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
+    .input(
+      z.object({
+        funcionarioId: z.number().int().positive(),
+        valorParcela: z.number().positive(),
+      })
+    )
+    .query(async ({ input, ctx }) => {
+      try {
+        return await funcionariosService.verificarMargemDisponivel(
+          ctx.tenantId,
+          input.funcionarioId,
+          input.valorParcela
+        )
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Lista historico de margem do funcionario
+   */
+  getMargemHistorico: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_VISUALIZAR'))
+    .input(
+      z.object({
+        funcionarioId: z.number().int().positive(),
+        limit: z.number().int().positive().max(24).default(12),
+      })
+    )
+    .query(async ({ input, ctx }) => {
+      try {
+        return await funcionariosService.listarMargemHistorico(
+          ctx.tenantId,
+          input.funcionarioId,
+          input.limit
+        )
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Cria novo funcionario
+   */
   create: protectedProcedure
     .use(withPermission('FUNCIONARIOS_CRIAR'))
     .input(funcionarioSchema)
     .mutation(async ({ input, ctx }) => {
-      const existente = await ctx.prisma.funcionario.findFirst({
-        where: {
-          tenantId: ctx.tenantId,
-          OR: [
-            { cpf: input.cpf },
-            { empresaId: input.empresaId, matricula: input.matricula },
-          ],
-        },
-      })
-
-      if (existente) {
-        throw new Error('Ja existe um funcionario com este CPF ou matricula')
+      try {
+        return await funcionariosService.criar(ctx.tenantId, input, ctx)
+      } catch (error) {
+        handleServiceError(error)
       }
-
-      const funcionario = await ctx.prisma.funcionario.create({
-        data: {
-          ...input,
-          tenantId: ctx.tenantId,
-        },
-      })
-
-      return funcionario
     }),
 
+  /**
+   * Atualiza funcionario existente
+   */
   update: protectedProcedure
     .use(withPermission('FUNCIONARIOS_EDITAR'))
     .input(funcionarioUpdateSchema)
     .mutation(async ({ input, ctx }) => {
-      const { id, ...data } = input
-
-      const funcionario = await ctx.prisma.funcionario.findFirst({
-        where: { id, tenantId: ctx.tenantId },
-      })
-
-      if (!funcionario) {
-        throw new Error('Funcionario nao encontrado')
+      try {
+        return await funcionariosService.atualizar(ctx.tenantId, input, ctx)
+      } catch (error) {
+        handleServiceError(error)
       }
-
-      const atualizado = await ctx.prisma.funcionario.update({
-        where: { id },
-        data,
-      })
-
-      return atualizado
     }),
 
+  /**
+   * Exclui funcionario (soft delete)
+   */
   delete: protectedProcedure
     .use(withPermission('FUNCIONARIOS_EXCLUIR'))
     .input(z.object({ id: z.number() }))
     .mutation(async ({ input, ctx }) => {
-      const funcionario = await ctx.prisma.funcionario.findFirst({
-        where: { id: input.id, tenantId: ctx.tenantId },
-        include: { averbacoes: { take: 1 } },
+      try {
+        await funcionariosService.excluir(ctx.tenantId, input.id, ctx)
+        return { success: true }
+      } catch (error) {
+        handleServiceError(error)
+      }
+    }),
+
+  /**
+   * Altera situacao do funcionario
+   */
+  alterarSituacao: protectedProcedure
+    .use(withPermission('FUNCIONARIOS_EDITAR'))
+    .input(
+      z.object({
+        id: z.number().int().positive(),
+        situacao: z.enum(['ATIVO', 'INATIVO', 'AFASTADO', 'BLOQUEADO', 'APOSENTADO']),
+        motivo: z.string().optional(),
       })
-
-      if (!funcionario) {
-        throw new Error('Funcionario nao encontrado')
+    )
+    .mutation(async ({ input, ctx }) => {
+      try {
+        return await funcionariosService.alterarSituacao(
+          ctx.tenantId,
+          input.id,
+          input.situacao,
+          input.motivo,
+          ctx
+        )
+      } catch (error) {
+        handleServiceError(error)
       }
-
-      if (funcionario.averbacoes.length > 0) {
-        throw new Error('Nao e possivel excluir funcionario com averbacoes')
-      }
-
-      await ctx.prisma.funcionario.delete({ where: { id: input.id } })
-
-      return { success: true }
     }),
 })

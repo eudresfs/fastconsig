@@ -1,3 +1,4 @@
 export { useMediaQuery } from './use-media-query'
 export { useDebounce } from './use-debounce'
 export { useLocalStorage } from './use-local-storage'
+export { useToast } from './use-toast'

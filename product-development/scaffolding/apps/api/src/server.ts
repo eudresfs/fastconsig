@@ -9,10 +9,9 @@ import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify'
 import { appRouter } from './trpc/router'
 import { createContext } from './trpc/context'
 import { env } from './config/env'
-import { logger } from './config/logger'
 
 const server = Fastify({
-  logger,
+  logger: true,
 })
 
 async function main(): Promise<void> {
