@@ -4,7 +4,6 @@ import {
   getCoreRowModel,
   flexRender,
   type ColumnDef,
-  type SortingState,
 } from '@tanstack/react-table'
 import {
   Table,

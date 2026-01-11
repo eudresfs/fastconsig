@@ -1,0 +1,20 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@fastconsig/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+    devDependencies:
+      '@fastconsig/api':
+        specifier: workspace:*
+        version: link:../api
+      '@fastconsig/config':
+        specifier: workspace:*
+        version: link:../../packages/config

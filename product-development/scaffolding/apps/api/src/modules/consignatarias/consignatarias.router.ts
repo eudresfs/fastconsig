@@ -76,4 +76,16 @@ export const consignatariasRouter = router({
 
       return tabelas
     }),
+
+  listEmpresas: protectedProcedure.query(async ({ ctx }) => {
+    const empresas = await ctx.prisma.empresa.findMany({
+      where: {
+        tenantId: ctx.tenantId,
+        ativo: true,
+      },
+      orderBy: { nome: 'asc' },
+    })
+
+    return empresas
+  }),
 })

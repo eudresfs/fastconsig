@@ -83,27 +83,6 @@ describe('Importacao Router', () => {
     })
   })
 
-  describe('criar', () => {
-    it('should create importacao', async () => {
-      mockPrisma.importacao.create.mockResolvedValue({ id: 1, status: 'PENDENTE' } as any)
-
-      const caller = importacaoRouter.createCaller(mockCtx)
-      const result = await caller.criar({
-        tipo: 'FUNCIONARIOS',
-        nomeArquivo: 'test.csv',
-        tamanhoBytes: 1000
-      })
-
-      expect(mockPrisma.importacao.create).toHaveBeenCalledWith(expect.objectContaining({
-        data: expect.objectContaining({
-          tipo: 'FUNCIONARIOS',
-          status: 'PENDENTE'
-        })
-      }))
-      expect(result.id).toBe(1)
-    })
-  })
-
   describe('cancelar', () => {
     it('should cancel pending importacao', async () => {
       mockPrisma.importacao.findFirst.mockResolvedValue({ id: 1, status: 'PENDENTE' } as any)

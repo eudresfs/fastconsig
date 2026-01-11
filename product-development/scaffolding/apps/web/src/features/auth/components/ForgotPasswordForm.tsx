@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { toast } from 'sonner'
-// import { trpc } from '@/lib/trpc' // TODO: Implementar rota no backend
+import { trpc } from '@/lib/trpc'
 import { Button, Input, Label, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@fastconsig/ui'
 import { Mail, ArrowLeft, Loader2 } from 'lucide-react'
 import { Link } from '@tanstack/react-router'
@@ -25,23 +25,17 @@ export function ForgotPasswordForm(): JSX.Element {
     resolver: zodResolver(forgotPasswordSchema),
   })
 
-  // TODO: Implementar mutacao TRPC
-  // const forgotPasswordMutation = trpc.auth.forgotPassword.useMutation({
-  //   onSuccess: () => {
-  //     setIsSuccess(true)
-  //   },
-  //   onError: (error) => {
-  //     toast.error(error.message || 'Erro ao enviar e-mail de recuperacao')
-  //   },
-  // })
+  const forgotPasswordMutation = trpc.auth.recuperarSenha.useMutation({
+    onSuccess: () => {
+      setIsSuccess(true)
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Erro ao enviar e-mail de recuperacao')
+    },
+  })
 
   const onSubmit = async (data: ForgotPasswordFormData): Promise<void> => {
-    // Simular envio por enquanto
-    console.log('Solicitando recuperacao para:', data.email)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsSuccess(true)
-
-    // forgotPasswordMutation.mutate({ email: data.email })
+    forgotPasswordMutation.mutate({ email: data.email })
   }
 
   if (isSuccess) {

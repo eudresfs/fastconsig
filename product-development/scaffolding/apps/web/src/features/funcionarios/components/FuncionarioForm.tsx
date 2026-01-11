@@ -81,7 +81,7 @@ export function FuncionarioForm({
     { enabled: isEditing }
   )
 
-  const empresasQuery = trpc.consignatarias.listEmpresas.useQuery({})
+  const empresasQuery = trpc.consignatarias.listEmpresas.useQuery()
 
   // Form setup
   const {
@@ -89,7 +89,7 @@ export function FuncionarioForm({
     handleSubmit,
     control,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<FuncionarioFormData>({
     resolver: zodResolver(funcionarioFormSchema),
     defaultValues: {
@@ -104,17 +104,17 @@ export function FuncionarioForm({
       reset({
         cpf: data.cpf,
         nome: data.nome,
-        dataNascimento: data.dataNascimento
+        dataNascimento: (data.dataNascimento
           ? new Date(data.dataNascimento).toISOString().split('T')[0]
-          : '',
+          : '') as string,
         sexo: data.sexo as 'M' | 'F' | undefined,
         email: data.email || '',
         telefone: data.telefone || '',
         matricula: data.matricula,
         cargo: data.cargo || '',
-        dataAdmissao: data.dataAdmissao
+        dataAdmissao: (data.dataAdmissao
           ? new Date(data.dataAdmissao).toISOString().split('T')[0]
-          : '',
+          : '') as string,
         salarioBruto: data.salarioBruto,
         situacao: data.situacao as FuncionarioFormData['situacao'],
         empresaId: data.empresaId,
@@ -239,7 +239,7 @@ export function FuncionarioForm({
               name="sexo"
               control={control}
               render={({ field }) => (
-                <Select value={field.value} onValueChange={field.onChange}>
+                <Select value={field.value || ''} onValueChange={field.onChange}>
                   <SelectTrigger id="sexo">
                     <SelectValue placeholder="Selecione" />
                   </SelectTrigger>
@@ -332,7 +332,7 @@ export function FuncionarioForm({
                   <SelectContent>
                     {empresasQuery.data?.map((empresa) => (
                       <SelectItem key={empresa.id} value={empresa.id.toString()}>
-                        {empresa.razaoSocial}
+                        {empresa.nome}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -449,7 +449,7 @@ export function FuncionarioForm({
               name="tipoConta"
               control={control}
               render={({ field }) => (
-                <Select value={field.value} onValueChange={field.onChange}>
+                <Select value={field.value || ''} onValueChange={field.onChange}>
                   <SelectTrigger id="tipoConta">
                     <SelectValue placeholder="Selecione" />
                   </SelectTrigger>

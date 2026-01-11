@@ -1,4 +1,3 @@
-import { TRPCError } from '@trpc/server'
 import { prisma } from '@fastconsig/database/client'
 import type { Prisma, SituacaoAverbacao } from '@prisma/client'
 import type { Context } from '@/trpc/context'
@@ -14,17 +13,16 @@ import {
   BusinessError,
   MargemInsuficienteError,
 } from '@/shared/errors'
+import type { PaginatedResponse } from '@/shared/types'
 import type { AverbacaoInput, AverbacaoFiltro } from './averbacoes.schema'
 import {
   validateTransition,
   isEditableState,
-  consumesMargem,
-  isTerminalState,
   getAllowedTransitions,
   getTransitionActionName,
   ESTADOS_QUE_CONSOMEM_MARGEM,
 } from './averbacoes.state-machine'
-import { calcularMargem, verificarMargemDisponivel } from '../funcionarios/funcionarios.service'
+import { verificarMargemDisponivel } from '../funcionarios/funcionarios.service'
 
 /**
  * Averbacao with related data
@@ -81,19 +79,6 @@ export interface AverbacaoCompleta {
   createdAt: Date
   updatedAt: Date
   transicoesDisponiveis: SituacaoAverbacao[]
-}
-
-/**
- * Paginated response
- */
-export interface PaginatedResponse<T> {
-  data: T[]
-  pagination: {
-    page: number
-    pageSize: number
-    total: number
-    totalPages: number
-  }
 }
 
 /**
@@ -533,20 +518,20 @@ export async function atualizar(
   const averbacao = await prisma.averbacao.update({
     where: { id },
     data: {
-      valorTotal: input.valorTotal ?? undefined,
-      valorLiquido: input.valorLiquido ?? undefined,
-      valorParcela: input.valorParcela ?? undefined,
-      parcelasTotal: input.parcelasTotal ?? undefined,
-      taxaMensal: input.taxaMensal ?? undefined,
-      taxaAnual: input.taxaAnual ?? undefined,
-      cetMensal: input.cetMensal ?? undefined,
-      cetAnual: input.cetAnual ?? undefined,
-      iof: input.iof ?? undefined,
-      tac: input.tac ?? undefined,
-      dataContrato: input.dataContrato ?? undefined,
-      dataInicioDesconto: input.dataInicioDesconto ?? undefined,
-      dataFimDesconto: input.dataFimDesconto ?? undefined,
-      observacao: input.observacao ?? undefined,
+      ...(input.valorTotal !== undefined && { valorTotal: input.valorTotal }),
+      ...(input.valorLiquido !== undefined && { valorLiquido: input.valorLiquido }),
+      ...(input.valorParcela !== undefined && { valorParcela: input.valorParcela }),
+      ...(input.parcelasTotal !== undefined && { parcelasTotal: input.parcelasTotal }),
+      ...(input.taxaMensal !== undefined && { taxaMensal: input.taxaMensal }),
+      ...(input.taxaAnual !== undefined && { taxaAnual: input.taxaAnual }),
+      ...(input.cetMensal !== undefined && { cetMensal: input.cetMensal }),
+      ...(input.cetAnual !== undefined && { cetAnual: input.cetAnual }),
+      ...(input.iof !== undefined && { iof: input.iof }),
+      ...(input.tac !== undefined && { tac: input.tac }),
+      ...(input.dataContrato !== undefined && { dataContrato: input.dataContrato }),
+      ...(input.dataInicioDesconto !== undefined && { dataInicioDesconto: input.dataInicioDesconto }),
+      ...(input.dataFimDesconto !== undefined && { dataFimDesconto: input.dataFimDesconto }),
+      ...(input.observacao !== undefined && { observacao: input.observacao }),
     },
     include: averbacaoInclude,
   })
@@ -617,7 +602,7 @@ export async function alterarSituacao(
     updateData.dataAprovacao = new Date()
     updateData.usuarioAprovacao = { connect: { id: usuarioId } }
   } else if (novaSituacao === 'REJEITADA') {
-    updateData.motivoRejeicao = options?.motivoRejeicao
+    updateData.motivoRejeicao = options?.motivoRejeicao ?? null
   }
 
   // Update averbacao
@@ -634,7 +619,7 @@ export async function alterarSituacao(
       situacaoAnterior,
       situacaoNova: novaSituacao,
       usuarioId,
-      observacao: options?.observacao ?? options?.motivoRejeicao ?? null,
+      observacao: options?.observacao || options?.motivoRejeicao || null,
     },
   })
 
@@ -648,7 +633,7 @@ export async function alterarSituacao(
       dadosAnteriores: { situacao: situacaoAnterior },
       dadosNovos: {
         situacao: novaSituacao,
-        ...(options?.motivoRejeicao && { motivoRejeicao: options.motivoRejeicao }),
+        ...(options?.motivoRejeicao !== undefined && { motivoRejeicao: options.motivoRejeicao }),
       },
     })
   }
@@ -666,7 +651,14 @@ export async function aprovar(
   observacao?: string,
   ctx?: Context
 ): Promise<AverbacaoCompleta> {
-  return alterarSituacao(tenantId, id, 'APROVADA', usuarioId, { observacao }, ctx)
+  return alterarSituacao(
+    tenantId,
+    id,
+    'APROVADA',
+    usuarioId,
+    observacao ? { observacao } : undefined,
+    ctx
+  )
 }
 
 /**
@@ -732,7 +724,14 @@ export async function reativar(
   observacao?: string,
   ctx?: Context
 ): Promise<AverbacaoCompleta> {
-  return alterarSituacao(tenantId, id, targetState, usuarioId, { observacao }, ctx)
+  return alterarSituacao(
+    tenantId,
+    id,
+    targetState,
+    usuarioId,
+    observacao ? { observacao } : undefined,
+    ctx
+  )
 }
 
 /**

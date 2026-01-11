@@ -26,7 +26,26 @@ export const recuperarSenhaSchema = z.object({
   email: z.string().email('Email invalido'),
 })
 
+export const validarTokenSchema = z.object({
+  token: z.string().min(1, 'Token e obrigatorio'),
+})
+
+export const resetarSenhaSchema = z.object({
+  token: z.string().min(1, 'Token e obrigatorio'),
+  novaSenha: z
+    .string()
+    .min(8, 'A nova senha deve ter no minimo 8 caracteres')
+    .regex(/[0-9]/, 'A senha deve conter pelo menos um numero')
+    .regex(/[a-zA-Z]/, 'A senha deve conter pelo menos uma letra'),
+  confirmarSenha: z.string().min(1, 'Confirmacao de senha e obrigatoria'),
+}).refine((data) => data.novaSenha === data.confirmarSenha, {
+  message: 'As senhas nao conferem',
+  path: ['confirmarSenha'],
+})
+
 export type LoginInput = z.infer<typeof loginSchema>
 export type RefreshTokenInput = z.infer<typeof refreshTokenSchema>
 export type AlterarSenhaInput = z.infer<typeof alterarSenhaSchema>
 export type RecuperarSenhaInput = z.infer<typeof recuperarSenhaSchema>
+export type ValidarTokenInput = z.infer<typeof validarTokenSchema>
+export type ResetarSenhaInput = z.infer<typeof resetarSenhaSchema>

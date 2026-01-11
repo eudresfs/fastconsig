@@ -546,6 +546,7 @@ model Usuario {
   // Relacionamentos
   senhaHistorico       SenhaHistorico[]
   sessoes              Sessao[]
+  passwordResetTokens  PasswordResetToken[]
   averbacoesCriadas    Averbacao[]            @relation("AverbacaoCriacao")
   averbacaoesAprovadas Averbacao[]            @relation("AverbacaoAprovacao")
   averbacaoHistorico   AverbacaoHistorico[]
@@ -583,6 +584,22 @@ model Sessao {
   @@index([usuarioId])
   @@index([expiresAt])
   @@map("sessao")
+}
+
+model PasswordResetToken {
+  id        Int      @id @default(autoincrement())
+  usuarioId Int      @map("usuario_id")
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  token     String   @unique @db.VarChar(255)
+  expiresAt DateTime @map("expires_at")
+  usado     Boolean  @default(false)
+  usadoEm   DateTime? @map("usado_em")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([usuarioId])
+  @@index([token])
+  @@index([expiresAt])
+  @@map("password_reset_token")
 }
 
 model Perfil {

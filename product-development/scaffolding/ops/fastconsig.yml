@@ -1,0 +1,233 @@
+# FastConsig - Docker Swarm Stack
+# Stack completa: API, Web, Jobs, PostgreSQL, Redis
+
+services:
+  # ============================================================================
+  # API - Backend Fastify + tRPC
+  # ============================================================================
+  fastconsig-api:
+    image: ${OCI_REGISTRY}/fastconsig-api:${IMAGE_TAG}
+    networks:
+      - proxy_network
+      - internal
+    deploy:
+      mode: replicated
+      replicas: 2
+      placement:
+        constraints:
+          - node.labels.workload == worker
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy_network"
+        # Roteamento
+        - "traefik.http.routers.${STACK_NAME}-api.rule=Host(`${API_URL}`)"
+        - "traefik.http.routers.${STACK_NAME}-api.entrypoints=websecure"
+        - "traefik.http.routers.${STACK_NAME}-api.tls.certresolver=certresolver"
+        # Serviço
+        - "traefik.http.services.${STACK_NAME}-api.loadbalancer.server.port=3001"
+        # Health check
+        - "traefik.http.services.${STACK_NAME}-api.loadbalancer.healthcheck.path=/health"
+        - "traefik.http.services.${STACK_NAME}-api.loadbalancer.healthcheck.interval=10s"
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=3001
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@postgres:5432/${DB_NAME}
+      - REDIS_URL=redis://redis:6379
+      - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET}
+      - CORS_ORIGIN=https://${APP_URL}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3001/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    depends_on:
+      - postgres
+      - redis
+
+  # ============================================================================
+  # WEB - Frontend React SPA
+  # ============================================================================
+  fastconsig-web:
+    image: ${OCI_REGISTRY}/fastconsig-web:${IMAGE_TAG}
+    networks:
+      - proxy_network
+    deploy:
+      mode: replicated
+      replicas: 2
+      placement:
+        constraints:
+          - node.labels.workload == worker
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=proxy_network"
+        # Roteamento
+        - "traefik.http.routers.${STACK_NAME}-web.rule=Host(`${APP_URL}`)"
+        - "traefik.http.routers.${STACK_NAME}-web.entrypoints=websecure"
+        - "traefik.http.routers.${STACK_NAME}-web.tls.certresolver=certresolver"
+        # Serviço
+        - "traefik.http.services.${STACK_NAME}-web.loadbalancer.server.port=80"
+        # Headers de segurança
+        - "traefik.http.middlewares.${STACK_NAME}-web-headers.headers.customResponseHeaders.X-Frame-Options=DENY"
+        - "traefik.http.middlewares.${STACK_NAME}-web-headers.headers.customResponseHeaders.X-Content-Type-Options=nosniff"
+        - "traefik.http.middlewares.${STACK_NAME}-web-headers.headers.customResponseHeaders.Referrer-Policy=strict-origin-when-cross-origin"
+        - "traefik.http.routers.${STACK_NAME}-web.middlewares=${STACK_NAME}-web-headers"
+    environment:
+      - VITE_API_URL=https://${API_URL}
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # ============================================================================
+  # JOBS - Background Workers (BullMQ)
+  # ============================================================================
+  fastconsig-jobs:
+    image: ${OCI_REGISTRY}/fastconsig-jobs:${IMAGE_TAG}
+    networks:
+      - internal
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.workload == worker
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@postgres:5432/${DB_NAME}
+      - REDIS_URL=redis://redis:6379
+      - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+    depends_on:
+      - postgres
+      - redis
+
+  # ============================================================================
+  # POSTGRES - Banco de Dados
+  # ============================================================================
+  postgres:
+    image: postgres:18
+    networks:
+      - internal
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.workload == worker
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ============================================================================
+  # REDIS - Cache e Filas
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    networks:
+      - internal
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.workload == worker
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+# ==============================================================================
+# VOLUMES PERSISTENTES
+# ==============================================================================
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+
+# ==============================================================================
+# NETWORKS
+# ==============================================================================
+networks:
+  # Rede pública (Traefik)
+  proxy_network:
+    external: true
+
+  # Rede interna (DB, Redis, comunicação inter-serviços)
+  internal:
+    driver: overlay
+    attachable: false

@@ -37,7 +37,7 @@ export function LoginForm(): JSX.Element {
         navigate({ to: '/dashboard' })
       }
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message)
     },
   })

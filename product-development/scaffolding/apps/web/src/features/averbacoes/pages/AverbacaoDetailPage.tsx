@@ -11,7 +11,6 @@ import {
   CardTitle,
   CardDescription,
   Skeleton,
-  Separator,
   Dialog,
   DialogContent,
   DialogHeader,
@@ -25,7 +24,6 @@ import {
   X,
   Pause,
   Ban,
-  Play,
   User,
   Building2,
   FileText,
@@ -63,7 +61,7 @@ function formatPercent(value: number): string {
 }
 
 export function AverbacaoDetailPage(): JSX.Element {
-  const { id } = useParams({ from: '/_authenticated/averbacoes/$id' })
+  const { id } = useParams({ from: '/_authenticated/averbacoes_/$id' })
   const navigate = useNavigate()
   const { hasPermission } = useAuthStore()
 
@@ -84,7 +82,7 @@ export function AverbacaoDetailPage(): JSX.Element {
       averbacaoQuery.refetch()
       historicoQuery.refetch()
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao aprovar averbacao')
     },
   })
@@ -96,7 +94,7 @@ export function AverbacaoDetailPage(): JSX.Element {
       averbacaoQuery.refetch()
       historicoQuery.refetch()
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao rejeitar averbacao')
     },
   })
@@ -108,7 +106,7 @@ export function AverbacaoDetailPage(): JSX.Element {
       averbacaoQuery.refetch()
       historicoQuery.refetch()
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao suspender averbacao')
     },
   })
@@ -120,7 +118,7 @@ export function AverbacaoDetailPage(): JSX.Element {
       averbacaoQuery.refetch()
       historicoQuery.refetch()
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao cancelar averbacao')
     },
   })
@@ -132,7 +130,7 @@ export function AverbacaoDetailPage(): JSX.Element {
       averbacaoQuery.refetch()
       historicoQuery.refetch()
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao bloquear averbacao')
     },
   })

@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { useNavigate, useSearch } from '@tanstack/react-router'
+import { useNavigate } from '@tanstack/react-router'
 import { toast } from 'sonner'
 import { trpc } from '@/lib/trpc'
 import { Button, Input, Label, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@fastconsig/ui'
@@ -62,7 +62,7 @@ export function PasswordResetForm({
     { label: 'Caractere especial', valid: /[^A-Za-z0-9]/.test(novaSenha) },
   ]
 
-  const resetMutation = trpc.auth.resetPassword.useMutation({
+  const resetMutation = trpc.auth.resetarSenha.useMutation({
     onSuccess: () => {
       toast.success('Senha alterada com sucesso!')
       if (onSuccess) {
@@ -71,7 +71,7 @@ export function PasswordResetForm({
         navigate({ to: '/login' })
       }
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast.error(error.message || 'Erro ao alterar senha')
     },
   })
@@ -80,6 +80,7 @@ export function PasswordResetForm({
     resetMutation.mutate({
       token: token || '',
       novaSenha: data.novaSenha,
+      confirmarSenha: data.confirmarSenha,
     })
   }
 

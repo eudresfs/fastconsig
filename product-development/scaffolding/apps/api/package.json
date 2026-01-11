@@ -3,10 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "main": "./dist/exports.js",
+  "exports": {
+    ".": {
+      "types": "./dist/exports.d.ts",
+      "import": "./dist/exports.js"
+    }
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src/server.ts --format esm --dts",
+    "build": "tsup src/server.ts src/exports.ts --format esm --dts",
     "start": "node dist/server.js",
+    "types": "dist/exports.d.ts",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "typecheck": "tsc --noEmit",

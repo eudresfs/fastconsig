@@ -261,14 +261,14 @@ export function FuncionariosPage(): JSX.Element {
             </div>
           ) : (
             <FuncionarioTable
-              data={funcionariosQuery.data?.items ?? []}
-              totalCount={funcionariosQuery.data?.total ?? 0}
+              data={funcionariosQuery.data?.data ?? []}
+              totalCount={funcionariosQuery.data?.pagination.total ?? 0}
               page={filters.page}
               pageSize={filters.pageSize}
               onPageChange={handlePageChange}
               onSort={handleSort}
-              onEdit={canEdit ? handleEdit : undefined}
-              onDelete={canDelete ? handleDelete : undefined}
+              {...(canEdit && { onEdit: handleEdit })}
+              {...(canDelete && { onDelete: handleDelete })}
             />
           )}
         </CardContent>

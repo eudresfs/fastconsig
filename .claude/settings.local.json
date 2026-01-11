@@ -15,7 +15,19 @@
       "Bash(pnpm db:generate:*)",
       "Bash(pnpm build:*)",
       "Bash(pnpm add:*)",
-      "Bash(pnpm test:coverage:*)"
+      "Bash(pnpm test:coverage:*)",
+      "Bash(pnpm --filter @fastconsig/database prisma migrate dev:*)",
+      "Bash(npx prisma migrate:*)",
+      "Bash(DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/fastconsig_dev\" npx prisma migrate dev:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(pnpm generate:*)",
+      "Bash(pnpm run build:*)",
+      "Bash(npx vite build:*)",
+      "Bash(npx tsc:*)",
+      "Skill(bmad:bmm:workflows:workflow-status)",
+      "WebSearch",
+      "Bash(pnpm vite build:*)",
+      "Bash(.claude/hooks/bmad-speak.sh:*)"
     ]
   }
 }

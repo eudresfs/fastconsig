@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useNavigate } from '@tanstack/react-router'
 import { trpc } from '@/lib/trpc'
 import { useAuthStore } from '@/stores/auth'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
@@ -22,9 +21,8 @@ import {
   DialogTitle,
   DialogFooter,
   Label,
-  Skeleton,
 } from '@fastconsig/ui'
-import { Search, Filter, Plus, FileText } from 'lucide-react'
+import { Search, Filter, Plus } from 'lucide-react'
 import { toast } from 'sonner'
 
 type SituacaoAverbacao =
@@ -62,7 +60,6 @@ const situacaoOptions: Array<{ value: SituacaoAverbacao; label: string }> = [
 ]
 
 export function AverbacoesPage(): JSX.Element {
-  const navigate = useNavigate()
   const { hasPermission } = useAuthStore()
 
   const [filters, setFilters] = useState<AverbacaoFilters>({
@@ -162,7 +159,7 @@ export function AverbacoesPage(): JSX.Element {
   }
 
   // Stats query
-  const resumoQuery = trpc.averbacoes.getResumo.useQuery({})
+  const resumoQuery = trpc.averbacoes.getResumo.useQuery()
 
   return (
     <div className="space-y-6">

@@ -14,6 +14,7 @@ import type {
   FuncionarioUpdateInput,
   FuncionarioFiltro,
 } from './funcionarios.schema'
+import type { PaginatedResponse } from '@/shared/types'
 
 /**
  * Funcionario with calculated margin information
@@ -45,19 +46,6 @@ export interface FuncionarioWithMargem {
     utilizada: number
     disponivel: number
     percentual: number
-  }
-}
-
-/**
- * Paginated list response
- */
-export interface PaginatedResponse<T> {
-  data: T[]
-  pagination: {
-    page: number
-    pageSize: number
-    total: number
-    totalPages: number
   }
 }
 
@@ -487,24 +475,22 @@ export async function atualizar(
   const funcionario = await prisma.funcionario.update({
     where: { id },
     data: {
-      ...updateData,
-      // Only update fields that are provided
-      cpf: updateData.cpf ?? undefined,
-      nome: updateData.nome ?? undefined,
-      dataNascimento: updateData.dataNascimento ?? undefined,
-      sexo: updateData.sexo ?? undefined,
-      email: updateData.email ?? undefined,
-      telefone: updateData.telefone ?? undefined,
-      matricula: updateData.matricula ?? undefined,
-      cargo: updateData.cargo ?? undefined,
-      dataAdmissao: updateData.dataAdmissao ?? undefined,
-      salarioBruto: updateData.salarioBruto ?? undefined,
-      situacao: updateData.situacao ?? undefined,
-      banco: updateData.banco ?? undefined,
-      agencia: updateData.agencia ?? undefined,
-      conta: updateData.conta ?? undefined,
-      tipoConta: updateData.tipoConta ?? undefined,
-      empresaId: updateData.empresaId ?? undefined,
+      ...(updateData.cpf !== undefined && { cpf: updateData.cpf }),
+      ...(updateData.nome !== undefined && { nome: updateData.nome }),
+      ...(updateData.dataNascimento !== undefined && { dataNascimento: updateData.dataNascimento }),
+      ...(updateData.sexo !== undefined && { sexo: updateData.sexo }),
+      ...(updateData.email !== undefined && { email: updateData.email }),
+      ...(updateData.telefone !== undefined && { telefone: updateData.telefone }),
+      ...(updateData.matricula !== undefined && { matricula: updateData.matricula }),
+      ...(updateData.cargo !== undefined && { cargo: updateData.cargo }),
+      ...(updateData.dataAdmissao !== undefined && { dataAdmissao: updateData.dataAdmissao }),
+      ...(updateData.salarioBruto !== undefined && { salarioBruto: updateData.salarioBruto }),
+      ...(updateData.situacao !== undefined && { situacao: updateData.situacao }),
+      ...(updateData.banco !== undefined && { banco: updateData.banco }),
+      ...(updateData.agencia !== undefined && { agencia: updateData.agencia }),
+      ...(updateData.conta !== undefined && { conta: updateData.conta }),
+      ...(updateData.tipoConta !== undefined && { tipoConta: updateData.tipoConta }),
+      ...(updateData.empresaId !== undefined && { empresa: { connect: { id: updateData.empresaId } } }),
     },
   })
 
@@ -630,7 +616,7 @@ export async function alterarSituacao(
         campo: 'situacao',
         valorAnterior: situacaoAnterior,
         valorNovo: novaSituacao,
-        motivo,
+        motivo: motivo ?? null,
       },
     }),
   ])
@@ -656,7 +642,7 @@ export async function atualizarMargemHistorico(
   tenantId: number,
   funcionarioId: number,
   competencia: string,
-  ctx?: Context
+  _ctx?: Context
 ): Promise<void> {
   const funcionario = await prisma.funcionario.findFirst({
     where: withTenantFilter(tenantId, { id: funcionarioId }),

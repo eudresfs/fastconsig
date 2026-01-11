@@ -1,9 +1,17 @@
 import bcrypt from 'bcrypt'
+import crypto from 'crypto'
 import { TRPCError } from '@trpc/server'
 import { prisma } from '@fastconsig/database/client'
 import { authConfig } from '@/config/auth'
-import { type LoginInput, type AlterarSenhaInput } from './auth.schema'
+import { env } from '@/config/env'
+import {
+  type LoginInput,
+  type AlterarSenhaInput,
+  type RecuperarSenhaInput,
+  type ResetarSenhaInput,
+} from './auth.schema'
 import { logAuditAction, AuditActions } from '@/shared/middleware'
+import { emailService } from '@/shared/services'
 import type { Context } from '@/trpc/context'
 
 /**
@@ -190,18 +198,20 @@ export async function login(
     perfilId: usuario.perfilId,
   }
 
+  const accessTokenExpiry = (authConfig.accessToken.expiresIn ?? '15m') as string
   const accessToken = signToken(tokenPayload, {
-    expiresIn: authConfig.accessToken.expiresIn,
+    expiresIn: accessTokenExpiry,
   })
 
+  const refreshTokenExpiry = (authConfig.refreshToken.expiresIn ?? '7d') as string
   const refreshToken = signToken(tokenPayload, {
-    expiresIn: authConfig.refreshToken.expiresIn,
+    expiresIn: refreshTokenExpiry,
   })
 
   // Calculate refresh token expiry
   const refreshTokenExpiresAt = new Date()
-  const daysMatch = authConfig.refreshToken.expiresIn.match(/(\d+)d/)
-  const days = daysMatch ? parseInt(daysMatch[1], 10) : 7
+  const daysMatch = refreshTokenExpiry.match(/(\d+)d/)
+  const days = daysMatch && daysMatch[1] ? parseInt(daysMatch[1], 10) : 7
   refreshTokenExpiresAt.setDate(refreshTokenExpiresAt.getDate() + days)
 
   // Save session
@@ -310,18 +320,20 @@ export async function refreshToken(
     perfilId: sessao.usuario.perfilId,
   }
 
+  const newAccessTokenExpiry = (authConfig.accessToken.expiresIn ?? '15m') as string
   const newAccessToken = signToken(tokenPayload, {
-    expiresIn: authConfig.accessToken.expiresIn,
+    expiresIn: newAccessTokenExpiry,
   })
 
+  const newRefreshTokenExpiry = (authConfig.refreshToken.expiresIn ?? '7d') as string
   const newRefreshToken = signToken(tokenPayload, {
-    expiresIn: authConfig.refreshToken.expiresIn,
+    expiresIn: newRefreshTokenExpiry,
   })
 
   // Calculate new refresh token expiry
   const refreshTokenExpiresAt = new Date()
-  const daysMatch = authConfig.refreshToken.expiresIn.match(/(\d+)d/)
-  const days = daysMatch ? parseInt(daysMatch[1], 10) : 7
+  const daysMatch = newRefreshTokenExpiry.match(/(\d+)d/)
+  const days = daysMatch && daysMatch[1] ? parseInt(daysMatch[1], 10) : 7
   refreshTokenExpiresAt.setDate(refreshTokenExpiresAt.getDate() + days)
 
   // Rotate refresh token (delete old, create new)
@@ -558,6 +570,260 @@ export async function cleanupExpiredSessions(): Promise<number> {
   const result = await prisma.sessao.deleteMany({
     where: {
       expiresAt: { lt: new Date() },
+    },
+  })
+
+  return result.count
+}
+
+/**
+ * Generates a secure random token for password reset
+ */
+function generateResetToken(): string {
+  return crypto.randomBytes(32).toString('hex')
+}
+
+/**
+ * Requests password recovery by email
+ * Generates a reset token and sends email
+ */
+export async function solicitarRecuperacaoSenha(
+  input: RecuperarSenhaInput,
+  ctx?: Context
+): Promise<void> {
+  const usuario = await prisma.usuario.findUnique({
+    where: { email: input.email },
+  })
+
+  // Always return success to avoid email enumeration attacks
+  if (!usuario) {
+    return
+  }
+
+  // Check if user is active
+  if (!usuario.ativo) {
+    return
+  }
+
+  // Invalidate any existing tokens for this user
+  await prisma.passwordResetToken.updateMany({
+    where: {
+      usuarioId: usuario.id,
+      usado: false,
+      expiresAt: { gt: new Date() },
+    },
+    data: {
+      usado: true,
+      usadoEm: new Date(),
+    },
+  })
+
+  // Generate new token
+  const token = generateResetToken()
+  const expiresAt = new Date()
+  expiresAt.setHours(expiresAt.getHours() + 1) // Token expires in 1 hour
+
+  // Save token to database
+  await prisma.passwordResetToken.create({
+    data: {
+      usuarioId: usuario.id,
+      token,
+      expiresAt,
+    },
+  })
+
+  // Send password reset email
+  try {
+    await emailService.sendPasswordResetEmail(usuario.email, token, env.APP_URL)
+  } catch (error) {
+    console.error('Failed to send password reset email:', error)
+    // Don't throw error to avoid revealing if email exists
+  }
+
+  // Log audit action
+  if (ctx) {
+    await logAuditAction(ctx, {
+      entidade: 'Usuario',
+      entidadeId: usuario.id,
+      acao: AuditActions.ATUALIZAR,
+      dadosNovos: {
+        acao: 'solicitacao_recuperacao_senha',
+        timestamp: new Date().toISOString(),
+      },
+    })
+  }
+}
+
+/**
+ * Validates a password reset token
+ * Returns the user if token is valid
+ */
+export async function validarTokenRecuperacao(token: string): Promise<{
+  id: number
+  email: string
+  nome: string
+}> {
+  const resetToken = await prisma.passwordResetToken.findUnique({
+    where: { token },
+    include: {
+      usuario: {
+        select: {
+          id: true,
+          email: true,
+          nome: true,
+          ativo: true,
+        },
+      },
+    },
+  })
+
+  if (!resetToken) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'Token invalido ou expirado',
+    })
+  }
+
+  if (resetToken.usado) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'Token ja foi utilizado',
+    })
+  }
+
+  if (resetToken.expiresAt < new Date()) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'Token expirado',
+    })
+  }
+
+  if (!resetToken.usuario.ativo) {
+    throw new TRPCError({
+      code: 'FORBIDDEN',
+      message: 'Usuario inativo',
+    })
+  }
+
+  return {
+    id: resetToken.usuario.id,
+    email: resetToken.usuario.email,
+    nome: resetToken.usuario.nome,
+  }
+}
+
+/**
+ * Resets password using a valid token
+ */
+export async function resetarSenha(
+  input: ResetarSenhaInput,
+  ctx?: Context
+): Promise<void> {
+  // Validate token
+  const usuario = await validarTokenRecuperacao(input.token)
+
+  // Get full user data for password history
+  const usuarioCompleto = await prisma.usuario.findUnique({
+    where: { id: usuario.id },
+    include: {
+      senhaHistorico: {
+        orderBy: { createdAt: 'desc' },
+        take: authConfig.password.historyCount,
+      },
+    },
+  })
+
+  if (!usuarioCompleto) {
+    throw new TRPCError({
+      code: 'NOT_FOUND',
+      message: 'Usuario nao encontrado',
+    })
+  }
+
+  // Check password history
+  for (const senhaAnterior of usuarioCompleto.senhaHistorico) {
+    const senhaRepetida = await bcrypt.compare(input.novaSenha, senhaAnterior.senhaHash)
+    if (senhaRepetida) {
+      throw new TRPCError({
+        code: 'BAD_REQUEST',
+        message: `Nao e permitido reutilizar as ultimas ${authConfig.password.historyCount} senhas`,
+      })
+    }
+  }
+
+  // Also check current password
+  const mesmaQueAtual = await bcrypt.compare(input.novaSenha, usuarioCompleto.senhaHash)
+  if (mesmaQueAtual) {
+    throw new TRPCError({
+      code: 'BAD_REQUEST',
+      message: 'A nova senha deve ser diferente da senha atual',
+    })
+  }
+
+  const novaSenhaHash = await bcrypt.hash(input.novaSenha, authConfig.password.saltRounds)
+
+  // Update password and mark token as used
+  await prisma.$transaction([
+    prisma.usuario.update({
+      where: { id: usuario.id },
+      data: {
+        senhaHash: novaSenhaHash,
+        tentativasLogin: 0,
+        bloqueado: false,
+        bloqueadoAte: null,
+      },
+    }),
+    prisma.senhaHistorico.create({
+      data: {
+        usuarioId: usuario.id,
+        senhaHash: usuarioCompleto.senhaHash,
+      },
+    }),
+    prisma.passwordResetToken.update({
+      where: { token: input.token },
+      data: {
+        usado: true,
+        usadoEm: new Date(),
+      },
+    }),
+    // Invalidate all active sessions for security
+    prisma.sessao.deleteMany({
+      where: { usuarioId: usuario.id },
+    }),
+  ])
+
+  // Send confirmation email
+  try {
+    await emailService.sendPasswordChangedEmail(usuario.email, usuario.nome)
+  } catch (error) {
+    console.error('Failed to send password changed email:', error)
+  }
+
+  // Log audit action
+  if (ctx) {
+    await logAuditAction(ctx, {
+      entidade: 'Usuario',
+      entidadeId: usuario.id,
+      acao: AuditActions.ATUALIZAR,
+      dadosNovos: {
+        campo: 'senha',
+        acao: 'recuperacao_senha',
+        alteradoEm: new Date().toISOString(),
+      },
+    })
+  }
+}
+
+/**
+ * Cleans up expired password reset tokens (for scheduled job)
+ */
+export async function limparTokensExpirados(): Promise<number> {
+  const result = await prisma.passwordResetToken.deleteMany({
+    where: {
+      OR: [
+        { expiresAt: { lt: new Date() } },
+        { usado: true, usadoEm: { lt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) } }, // Used tokens older than 7 days
+      ],
     },
   })
 

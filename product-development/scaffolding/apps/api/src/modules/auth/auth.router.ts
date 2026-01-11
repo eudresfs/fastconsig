@@ -1,5 +1,12 @@
 import { router, publicProcedure, protectedProcedure } from '@/trpc/trpc'
-import { loginSchema, refreshTokenSchema, alterarSenhaSchema } from './auth.schema'
+import {
+  loginSchema,
+  refreshTokenSchema,
+  alterarSenhaSchema,
+  recuperarSenhaSchema,
+  validarTokenSchema,
+  resetarSenhaSchema,
+} from './auth.schema'
 import * as authService from './auth.service'
 
 export const authRouter = router({
@@ -99,4 +106,35 @@ export const authRouter = router({
         : null,
     }
   }),
+
+  // Password recovery endpoints
+  recuperarSenha: publicProcedure
+    .input(recuperarSenhaSchema)
+    .mutation(async ({ input, ctx }) => {
+      await authService.solicitarRecuperacaoSenha(input, ctx)
+      return {
+        success: true,
+        message: 'Se o email existir, um link de recuperacao sera enviado',
+      }
+    }),
+
+  validarToken: publicProcedure
+    .input(validarTokenSchema)
+    .query(async ({ input }) => {
+      const usuario = await authService.validarTokenRecuperacao(input.token)
+      return {
+        valid: true,
+        email: usuario.email,
+      }
+    }),
+
+  resetarSenha: publicProcedure
+    .input(resetarSenhaSchema)
+    .mutation(async ({ input, ctx }) => {
+      await authService.resetarSenha(input, ctx)
+      return {
+        success: true,
+        message: 'Senha alterada com sucesso',
+      }
+    }),
 })

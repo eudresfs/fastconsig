@@ -9,6 +9,7 @@ import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify'
 import { appRouter } from './trpc/router'
 import { createContext } from './trpc/context'
 import { env } from './config/env'
+import { importacaoUploadRoutes } from './modules/importacao/upload.route'
 
 export async function createApp(): Promise<FastifyInstance> {
   const app = Fastify({
@@ -38,6 +39,9 @@ export async function createApp(): Promise<FastifyInstance> {
       fileSize: 10 * 1024 * 1024, // 10MB
     },
   })
+
+  // Routes
+  await app.register(importacaoUploadRoutes)
 
   // tRPC
   await app.register(fastifyTRPCPlugin, {

@@ -10,7 +10,7 @@ Sistema de Gestao de Consignados - Nova Stack
 | Linguagem | TypeScript 5.5+ |
 | Frontend | React 19 + Vite + TanStack Router |
 | Backend | Fastify 5 + tRPC 11 |
-| Database | PostgreSQL 16 |
+| Database | PostgreSQL 18 |
 | ORM | Prisma |
 | Cache | Redis 7 |
 | UI | shadcn/ui + Tailwind CSS |
@@ -129,17 +129,60 @@ O sistema utiliza arquitetura de **monolito modular** com separacao clara por fe
 - `importacao` - Import/Export de arquivos
 - `auditoria` - Logs e rastreabilidade
 
+## CI/CD
+
+O projeto utiliza GitHub Actions para integração e deploy contínuo.
+
+### Workflows
+
+- **CI** (`.github/workflows/ci.yml`): Validação automática (lint, typecheck, test, build, security)
+- **Build & Deploy** (`.github/workflows/build-deploy.yml`): Build de imagens e deploy no Docker Swarm
+
+### Ambientes
+
+| Ambiente | Branch | URLs |
+|----------|--------|------|
+| Production | `main` | `app.fastconsig.com.br` / `api.fastconsig.com.br` |
+| Development | `development` | `dev-app.fastconsig.com.br` / `dev-api.fastconsig.com.br` |
+
+### Documentação
+
+- [Setup Completo de CI/CD](./docs/CICD-SETUP.md)
+- [Quick Start CI/CD](./docs/QUICK-START-CICD.md)
+
 ## Deploy
 
-O sistema e projetado para deploy em Oracle Cloud (OCI) usando Docker Compose em VMs.
+O sistema e deployado automaticamente no Docker Swarm via GitHub Actions.
+
+### Deploy Manual
 
 ```bash
-# Build das imagens
-docker build -t fastconsig-api -f docker/Dockerfile.api .
-docker build -t fastconsig-web -f docker/Dockerfile.web .
+# Definir variáveis
+export IMAGE_TAG=$(git rev-parse --short HEAD)
+export STACK_NAME="fastconsig-production"
+export OCI_REGISTRY="gru.ocir.io/grnvzpym0ltz"
+# ... outras variáveis (ver docs/CICD-SETUP.md)
 
-# Deploy com Docker Compose
-docker compose -f docker-compose.prod.yml up -d
+# Login no registry
+docker login $OCI_REGISTRY
+
+# Deploy da stack
+docker stack deploy -c ops/fastconsig.yml $STACK_NAME --with-registry-auth
+```
+
+## Testes
+
+Cobertura atual: **96%** ✅
+
+```bash
+# Rodar testes
+pnpm test
+
+# Testes com coverage
+pnpm test:coverage
+
+# Testes E2E
+pnpm test:e2e
 ```
 
 ## Licenca
