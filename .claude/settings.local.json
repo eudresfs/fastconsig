@@ -31,7 +31,24 @@
       "Skill(bmad:bmm:workflows:check-implementation-readiness)",
       "Skill(bmad:bmm:workflows:create-epics-and-stories)",
       "Skill(bmad:bmm:workflows:create-architecture)",
-      "Skill(bmad:bmm:workflows:generate-project-context)"
+      "Skill(bmad:bmm:workflows:generate-project-context)",
+      "WebFetch(domain:skiper-ui.com)",
+      "WebFetch(domain:pro.tailark.com)",
+      "WebFetch(domain:smoothui.dev)",
+      "WebFetch(domain:originui.com)",
+      "WebFetch(domain:pro.aceternity.com)",
+      "WebFetch(domain:shadcndesign.com)",
+      "WebFetch(domain:pro.cult-ui.com)",
+      "WebFetch(domain:solaceui.com)",
+      "WebFetch(domain:blocks.so)",
+      "WebFetch(domain:kibo-ui.com)",
+      "WebFetch(domain:coss.com)",
+      "WebFetch(domain:nexui.xyz)",
+      "WebFetch(domain:shadcnstudio.com)",
+      "WebFetch(domain:shadcnui-blocks.com)",
+      "WebFetch(domain:magicui.design)",
+      "WebFetch(domain:hextaui.com)",
+      "WebFetch(domain:ui.kitze.io)"
     ]
   }
 }

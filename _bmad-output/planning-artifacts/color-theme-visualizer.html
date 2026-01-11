@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Consig - Visualizador de Temas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #10b981;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+        }
+
+        .theme-ocean {
+            --primary: #0c4a6e;
+            --accent: #0ea5e9;
+            --bg: #f0f9ff;
+            --card: #ffffff;
+            --text: #0369a1;
+        }
+
+        .theme-performance {
+            --primary: #1e293b;
+            --accent: #f59e0b;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --text: #334155;
+        }
+
+        .theme-mint {
+            --primary: #064e3b;
+            --accent: #10b981;
+            --bg: #f0fdf4;
+            --card: #ffffff;
+            --text: #14532d;
+        }
+
+        body { background-color: var(--bg); color: var(--text); transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .bg-accent { background-color: var(--accent); }
+        .border-primary { border-color: var(--primary); }
+        .bg-card { background-color: var(--card); }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-12 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold">Fast Consig <span class="text-sm font-normal opacity-70">| Design Foundation</span></h1>
+                <p class="opacity-80">Selecione uma direção visual para o projeto</p>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="setTheme('theme-ocean')" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">1. Ocean Trust</button>
+                <button onclick="setTheme('theme-performance')" class="px-4 py-2 bg-slate-700 text-white rounded-lg shadow hover:bg-slate-800 transition">2. Modern Slate</button>
+                <button onclick="setTheme('theme-mint')" class="px-4 py-2 bg-emerald-700 text-white rounded-lg shadow hover:bg-emerald-800 transition">3. Clean Mint</button>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card de Margem Reativa -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-sm font-semibold opacity-60 uppercase mb-4">Margem Disponível</h3>
+                <div class="flex items-end gap-2 mb-2">
+                    <span class="text-4xl font-black tracking-tight">R$ 1.250,00</span>
+                    <span class="text-green-500 text-sm font-bold mb-1">↑ 12%</span>
+                </div>
+                <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden mt-4">
+                    <div class="bg-accent h-full w-3/4 rounded-full"></div>
+                </div>
+                <p class="text-xs mt-4 opacity-70">Última atualização: <span class="font-mono">há 2 segundos</span></p>
+            </div>
+
+            <!-- Card de Averbação Rápida -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl border border-gray-100 col-span-1 md:col-span-2">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-xl">Nova Averbação</h3>
+                    <div class="bg-primary text-white text-xs px-3 py-1 rounded-full">Passo 2 de 3</div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold opacity-60 mb-1">Valor da Parcela</label>
+                        <input type="text" value="R$ 450,00" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-accent outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold opacity-60 mb-1">Token de Autorização</label>
+                        <input type="text" placeholder="######" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-accent outline-none font-mono tracking-widest text-center">
+                    </div>
+                </div>
+                <button class="w-full mt-6 bg-primary text-white py-4 rounded-xl font-bold shadow-lg hover:scale-[1.02] active:scale-95 transition-transform">Efetivar Transação Atômica</button>
+            </div>
+
+            <!-- Lista de Divergências -->
+            <div class="bg-card p-6 rounded-2xl shadow-xl border border-gray-100 col-span-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-lg">Divergências Detectadas</h3>
+                    <button class="text-sm font-bold text-accent">Ver Todas →</button>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-4 bg-red-50 border-l-4 border-red-500 rounded-r-xl">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-red-200 flex items-center justify-center font-bold text-red-700">FC</div>
+                            <div>
+                                <p class="text-sm font-bold">Fernando Costa</p>
+                                <p class="text-xs opacity-60">Matrícula: 45902-1</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm font-black text-red-600">Diferença: R$ -120,00</p>
+                            <button class="text-[10px] uppercase font-bold text-gray-500 hover:text-primary underline">Corrigir em 1-clique</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-gray-50 border-l-4 border-gray-300 rounded-r-xl">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-700">MS</div>
+                            <div>
+                                <p class="text-sm font-bold">Mariana Silva</p>
+                                <p class="text-xs opacity-60">Matrícula: 12388-0</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm font-black text-gray-600">Diferença: R$ 0,00</p>
+                            <span class="text-[10px] uppercase font-bold text-green-600">Conciliado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="mt-12 pt-8 border-t border-gray-200 text-center text-sm opacity-50">
+            Fast Consig UX Foundation • Design System: shadcn/ui + Tailwind CSS 4
+        </footer>
+    </div>
+
+    <script>
+        function setTheme(themeName) {
+            document.body.className = 'p-8 ' + themeName;
+        }
+        // Inicializar com Ocean
+        setTheme('theme-ocean');
+    </script>
+</body>
+</html>

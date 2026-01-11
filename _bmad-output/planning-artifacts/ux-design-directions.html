@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Consig - Design Directions Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans', sans-serif; background-color: #fafaf9; color: #1c1917; }
+        .tabular { font-variant-numeric: tabular-nums; }
+        .stone-950 { background-color: #0c0a09; }
+        .stone-900 { background-color: #1c1917; }
+        .stone-100 { background-color: #f5f5f4; }
+        .stone-50 { background-color: #fafaf9; }
+
+        /* Transitions for switching directions */
+        .direction-view { display: none; transition: opacity 0.4s ease; }
+        .direction-view.active { display: block; opacity: 1; }
+
+        .card { background: white; border: 1px solid #e7e5e4; border-radius: 8px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navbar de Controle da Vitrine -->
+    <nav class="sticky top-0 z-50 bg-stone-900 text-white p-4 shadow-2xl">
+        <div class="max-w-[1600px] mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <span class="font-black text-xl tracking-tighter uppercase">Fast Consig</span>
+                <span class="text-stone-500 text-sm">Design Showcase v1.0</span>
+            </div>
+            <div class="flex gap-2 bg-stone-800 p-1 rounded-lg">
+                <button onclick="showDirection('v1')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V1: Sidebar</button>
+                <button onclick="showDirection('v2')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V2: Top-Nav</button>
+                <button onclick="showDirection('v3')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V3: Split</button>
+                <button onclick="showDirection('v4')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V4: Dark</button>
+                <button onclick="showDirection('v5')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V5: Bento</button>
+                <button onclick="showDirection('v6')" class="nav-btn px-3 py-1 rounded hover:bg-stone-700 transition text-sm">V6: Wizard</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ÁREA DE MOCKUPS -->
+    <div id="showcase-container" class="p-6 max-w-[1600px] mx-auto">
+
+        <!-- V1: SIDEBAR CLÁSSICA -->
+        <section id="v1" class="direction-view active">
+            <div class="flex gap-6 h-[800px]">
+                <aside class="w-64 stone-900 text-stone-300 p-6 rounded-2xl flex flex-col gap-8">
+                    <div class="font-bold text-white uppercase tracking-widest text-xs">Menu Principal</div>
+                    <nav class="flex flex-col gap-4">
+                        <div class="text-white font-semibold flex items-center gap-3">🏠 Dashboard</div>
+                        <div class="flex items-center gap-3">👥 Funcionários</div>
+                        <div class="flex items-center gap-3">💳 Averbações</div>
+                        <div class="flex items-center gap-3">📊 Conciliação</div>
+                    </nav>
+                    <div class="mt-auto p-4 bg-stone-800 rounded-lg">
+                        <div class="text-xs opacity-50 mb-1 uppercase">Tenant</div>
+                        <div class="text-sm font-bold text-white">Prefeitura de Curitiba</div>
+                    </div>
+                </aside>
+                <main class="flex-1 flex flex-col gap-6">
+                    <header class="flex justify-between items-center bg-white p-6 rounded-2xl border border-stone-200">
+                        <h2 class="text-2xl font-bold tracking-tight">Dashboard de Gestão</h2>
+                        <button class="bg-stone-900 text-white px-6 py-2 rounded-lg font-bold">+ Nova Averbação</button>
+                    </header>
+                    <div class="grid grid-cols-4 gap-6">
+                        <div class="card p-6"><div class="text-xs uppercase opacity-50 font-bold mb-2">Total Averbações</div><div class="text-3xl font-black tabular">R$ 4.2M</div></div>
+                        <div class="card p-6"><div class="text-xs uppercase opacity-50 font-bold mb-2">Margem Reservada</div><div class="text-3xl font-black tabular">R$ 1.8M</div></div>
+                        <div class="card p-6 border-l-4 border-amber-500"><div class="text-xs uppercase opacity-50 font-bold mb-2">Divergências</div><div class="text-3xl font-black tabular">24</div></div>
+                        <div class="card p-6"><div class="text-xs uppercase opacity-50 font-bold mb-2">Tokens Ativos</div><div class="text-3xl font-black tabular">142</div></div>
+                    </div>
+                    <div class="card flex-1 p-6">
+                        <div class="flex justify-between mb-6">
+                            <h3 class="font-bold">Últimas Atividades (Stripe-style Feed)</h3>
+                            <span class="text-stone-400 text-xs uppercase font-bold">Ver Tudo</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 p-3 hover:bg-stone-50 rounded-lg border-b border-stone-100">
+                                <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                                <div class="flex-1 text-sm"><span class="font-bold text-stone-900">Banco do Brasil</span> averbou R$ 450,00 para <span class="font-semibold text-stone-700">Marta Rocha</span></div>
+                                <div class="text-xs text-stone-400 tabular font-mono">10:32:01</div>
+                            </div>
+                            <div class="flex items-center gap-4 p-3 hover:bg-stone-50 rounded-lg border-b border-stone-100">
+                                <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
+                                <div class="flex-1 text-sm"><span class="font-bold text-stone-900">Token 2FA</span> gerado para <span class="font-semibold text-stone-700">João Silva</span> via SMS</div>
+                                <div class="text-xs text-stone-400 tabular font-mono">10:30:45</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+
+        <!-- V2: TOP NAV MODERNO -->
+        <section id="v2" class="direction-view">
+            <div class="bg-white border border-stone-200 rounded-2xl overflow-hidden min-h-[700px]">
+                <nav class="border-b border-stone-200 p-4 flex gap-8 items-center">
+                    <span class="font-black text-stone-900">FC</span>
+                    <div class="flex gap-6 text-sm font-medium">
+                        <a href="#" class="text-stone-900 border-b-2 border-stone-900 pb-4 mt-4">Visão Geral</a>
+                        <a href="#" class="text-stone-500 hover:text-stone-900 pb-4 mt-4">Pessoas</a>
+                        <a href="#" class="text-stone-500 hover:text-stone-900 pb-4 mt-4">Financeiro</a>
+                        <a href="#" class="text-stone-500 hover:text-stone-900 pb-4 mt-4">Logs</a>
+                    </div>
+                </nav>
+                <div class="p-12 max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-black tracking-tight text-stone-900">Fechamento de Janeiro</h2>
+                        <p class="text-stone-500">Total de R$ 1.240.500,00 para conciliar em 12 bancos</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="card p-8 flex flex-col items-center text-center">
+                            <div class="bg-emerald-100 text-emerald-700 w-12 h-12 rounded-full flex items-center justify-center mb-4">✔</div>
+                            <h3 class="font-bold text-xl">Conciliado</h3>
+                            <p class="text-stone-500 text-sm mb-6">480 funcionários sem divergência</p>
+                            <button class="text-stone-400 text-xs font-bold uppercase tracking-widest">Ver Listagem</button>
+                        </div>
+                        <div class="card p-8 flex flex-col items-center text-center border-l-4 border-amber-500">
+                            <div class="bg-amber-100 text-amber-700 w-12 h-12 rounded-full flex items-center justify-center mb-4">!</div>
+                            <h3 class="font-bold text-xl">Divergências</h3>
+                            <p class="text-stone-500 text-sm mb-6">12 registros aguardando ação</p>
+                            <button class="bg-stone-900 text-white px-8 py-2 rounded-lg text-sm font-bold">Resolver Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- V3: SPLIT VIEW -->
+        <section id="v3" class="direction-view">
+            <div class="grid grid-cols-12 gap-0 overflow-hidden rounded-2xl shadow-2xl border border-stone-200">
+                <div class="col-span-4 stone-100 p-8 border-r border-stone-200 min-h-[700px]">
+                    <div class="mb-12">
+                        <div class="text-xs font-bold text-stone-400 uppercase mb-4">Contexto do Servidor</div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-stone-300"></div>
+                            <div>
+                                <h3 class="text-xl font-bold">Marta Rocha</h3>
+                                <p class="text-sm opacity-60 tabular">CPF: 123.456.789-01</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between border-b border-stone-200 pb-2">
+                                <span class="text-sm opacity-50">Margem Atual</span>
+                                <span class="font-bold tabular text-stone-900">R$ 1.500,00</span>
+                            </div>
+                            <div class="flex justify-between border-b border-stone-200 pb-2">
+                                <span class="text-sm opacity-50">Margem Reservada</span>
+                                <span class="font-bold tabular text-amber-600">R$ 450,00</span>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <span class="text-sm font-bold">Disponível Real</span>
+                                <span class="font-black tabular text-emerald-600 text-lg">R$ 1.050,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-stone-200">
+                        <div class="text-[10px] font-black uppercase text-stone-400 mb-2">Nota do RH</div>
+                        <p class="text-xs italic">"Servidor autorizado para nova linha de crédito especial conforme Portaria 123/25."</p>
+                    </div>
+                </div>
+                <div class="col-span-8 bg-white p-12">
+                    <div class="max-w-md mx-auto">
+                        <h2 class="text-3xl font-black mb-2">Efetivar Averbação</h2>
+                        <p class="text-stone-400 mb-12">Insira os dados do novo contrato para reserva imediata.</p>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Número do Contrato</label>
+                                <input type="text" class="w-full bg-stone-50 border border-stone-200 p-4 rounded-xl font-mono" value="FC-2026-X992">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Valor Parcela</label>
+                                    <input type="text" class="w-full bg-stone-50 border border-stone-200 p-4 rounded-xl font-black tabular" value="R$ 300,00">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Prazo</label>
+                                    <select class="w-full bg-stone-50 border border-stone-200 p-4 rounded-xl">
+                                        <option>48 meses</option>
+                                        <option>60 meses</option>
+                                        <option>96 meses</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="pt-8">
+                                <button class="w-full bg-stone-900 text-white p-5 rounded-2xl font-black text-lg shadow-xl active:scale-95 transition-transform">Próximo: Validar Token →</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- V4: STONE DARK -->
+        <section id="v4" class="direction-view">
+            <div class="stone-950 text-white rounded-2xl p-12 min-h-[700px] border border-white/10">
+                <header class="flex justify-between items-center mb-16">
+                    <div>
+                        <div class="text-stone-500 font-bold uppercase tracking-tighter text-sm mb-1">Centro de Comando</div>
+                        <h2 class="text-4xl font-black">Audit Insight</h2>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="text-right">
+                            <div class="text-xs text-stone-500 font-bold uppercase">Estado da Rede</div>
+                            <div class="text-emerald-500 font-bold text-sm">Operacional</div>
+                        </div>
+                        <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                    </div>
+                </header>
+                <div class="grid grid-cols-12 gap-8">
+                    <div class="col-span-8 bg-white/5 border border-white/5 rounded-2xl p-8">
+                        <h3 class="font-bold text-stone-400 mb-8 uppercase text-xs tracking-widest">Atividade em Tempo Real</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-6 items-start">
+                                <div class="w-1 bg-stone-800 self-stretch rounded-full"></div>
+                                <div class="flex-1">
+                                    <p class="text-stone-300"><span class="text-white font-bold">Reserva de Margem</span> bloqueada para <span class="text-white">Carlos Magno</span></p>
+                                    <p class="text-xs text-stone-500 tabular font-mono">10:45:00 • TRANSACTION_ID: fc_88321</p>
+                                </div>
+                                <div class="bg-stone-800 px-3 py-1 rounded text-[10px] font-bold">SQL_LOCK</div>
+                            </div>
+                            <div class="flex gap-6 items-start">
+                                <div class="w-1 bg-emerald-500 self-stretch rounded-full"></div>
+                                <div class="flex-1">
+                                    <p class="text-stone-300"><span class="text-emerald-500 font-bold">Averbação Concluída</span> Banco Caixa Econômica</p>
+                                    <p class="text-xs text-stone-500 tabular font-mono">10:42:12 • VALUE: R$ 1.200,00</p>
+                                </div>
+                                <div class="bg-emerald-900/30 text-emerald-400 px-3 py-1 rounded text-[10px] font-bold">SUCCESS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-4 space-y-8">
+                        <div class="bg-amber-900/20 border border-amber-900/50 rounded-2xl p-8">
+                            <h4 class="text-amber-500 font-black text-lg mb-2">Alerta de Segurança</h4>
+                            <p class="text-amber-200/60 text-sm">3 tentativas de brute-force detectadas no tenant: <span class="font-bold">Banrisul_Main</span></p>
+                            <button class="mt-6 w-full bg-amber-500 text-amber-950 font-black py-2 rounded-lg text-sm">Analisar Origem</button>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 rounded-2xl p-8">
+                            <div class="text-xs font-bold text-stone-500 uppercase mb-4">Carga do Sistema</div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>API Latency</span><span class="tabular">12ms</span></div>
+                                    <div class="w-full h-1 bg-stone-800 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-[12%]"></div></div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-xs mb-1"><span>Worker Queue</span><span class="tabular">0</span></div>
+                                    <div class="w-full h-1 bg-stone-800 rounded-full overflow-hidden"><div class="bg-stone-500 h-full w-[0%]"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- V5: BENTO GRID -->
+        <section id="v5" class="direction-view">
+            <div class="grid grid-cols-4 grid-rows-3 gap-6 h-[800px]">
+                <div class="card col-span-2 row-span-2 p-8 flex flex-col">
+                    <h3 class="font-black text-2xl mb-8">Saúde do Tenant</h3>
+                    <div class="flex-1 flex items-center justify-center">
+                        <div class="relative w-48 h-48 rounded-full border-[16px] border-stone-100 border-t-emerald-500 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl font-black tabular">98%</div>
+                                <div class="text-[10px] uppercase font-bold text-stone-400">Conciliado</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-stone-50 rounded-xl">
+                            <div class="text-xs text-stone-400 font-bold uppercase">Esperado</div>
+                            <div class="text-xl font-bold tabular">R$ 1.2M</div>
+                        </div>
+                        <div class="p-4 bg-stone-50 rounded-xl">
+                            <div class="text-xs text-stone-400 font-bold uppercase">Confirmado</div>
+                            <div class="text-xl font-bold tabular">R$ 1.18M</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-8 col-span-2">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-stone-900">Configuração de Regras</h3>
+                            <p class="text-xs text-stone-400">Limites % por tipo de margem</p>
+                        </div>
+                        <button class="p-2 hover:bg-stone-100 rounded-lg">⚙</button>
+                    </div>
+                    <div class="mt-8 flex gap-4">
+                        <div class="bg-stone-900 text-white px-4 py-2 rounded-full text-xs font-bold tabular">Padrão: 35%</div>
+                        <div class="bg-stone-100 text-stone-900 px-4 py-2 rounded-full text-xs font-bold tabular">Cartão: 5%</div>
+                        <div class="bg-stone-100 text-stone-900 px-4 py-2 rounded-full text-xs font-bold tabular">Especial: 10%</div>
+                    </div>
+                </div>
+                <div class="card p-8 flex flex-col justify-between">
+                    <h3 class="text-xs font-black uppercase text-stone-400">Tokens SMS</h3>
+                    <div class="text-4xl font-black tabular">1.2k</div>
+                    <div class="text-emerald-600 text-xs font-bold italic">99.8% entrega</div>
+                </div>
+                <div class="card p-8 flex flex-col justify-between">
+                    <h3 class="text-xs font-black uppercase text-stone-400">Tokens Email</h3>
+                    <div class="text-4xl font-black tabular">842</div>
+                    <div class="text-amber-600 text-xs font-bold italic">2.1% reenvio</div>
+                </div>
+                <div class="card col-span-2 p-8 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl">Novo Lote CNAB</h3>
+                        <p class="text-sm text-stone-500">Arraste aqui o arquivo para processamento atômico</p>
+                    </div>
+                    <div class="w-16 h-16 bg-stone-100 border-2 border-dashed border-stone-300 rounded-2xl flex items-center justify-center text-2xl text-stone-400">
+                        ↑
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- V6: MINIMALIST WIZARD -->
+        <section id="v6" class="direction-view">
+            <div class="max-w-xl mx-auto py-24">
+                <div class="mb-12 flex justify-center gap-2">
+                    <div class="w-12 h-1 bg-stone-900 rounded-full"></div>
+                    <div class="w-12 h-1 bg-stone-900 rounded-full"></div>
+                    <div class="w-12 h-1 bg-stone-200 rounded-full"></div>
+                </div>
+                <div class="card p-12 text-center">
+                    <div class="w-20 h-20 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-8 text-3xl">🔑</div>
+                    <h2 class="text-3xl font-black mb-4">Validar Consentimento</h2>
+                    <p class="text-stone-500 mb-12 px-8">Um token de 6 dígitos foi enviado para o celular de <span class="text-stone-900 font-bold">Marta Rocha</span> (terminado em 8892).</p>
+                    <div class="flex justify-center gap-4 mb-12">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" value="4">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" value="2">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" value="9">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" placeholder="•">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" placeholder="•">
+                        <input type="text" maxlength="1" class="w-12 h-16 bg-stone-50 border border-stone-200 rounded-xl text-2xl font-black text-center focus:ring-2 focus:ring-stone-900 outline-none shadow-inner" placeholder="•">
+                    </div>
+                    <div class="space-y-4">
+                        <button class="w-full bg-stone-900 text-white p-5 rounded-2xl font-black text-lg shadow-xl hover:bg-stone-800 transition-colors">Confirmar e Averbar R$ 450,00</button>
+                        <button class="text-stone-400 font-bold text-sm uppercase tracking-widest hover:text-stone-900 transition-colors">Reenviar Token (00:45)</button>
+                    </div>
+                </div>
+                <div class="mt-8 text-center text-stone-400 text-xs flex items-center justify-center gap-2">
+                    🛡️ Conexão protegida via Clerk MFA • Criptografia AES-256
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function showDirection(id) {
+            // Desativar todas as views
+            document.querySelectorAll('.direction-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            // Ativar a selecionada
+            document.getElementById(id).classList.add('active');
+
+            // Estilizar botões
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-stone-700', 'font-bold', 'text-emerald-400');
+            });
+            event.target.classList.add('bg-stone-700', 'font-bold', 'text-emerald-400');
+        }
+
+        // Inicializar com V1
+        document.querySelector('.nav-btn').click();
+    </script>
+</body>
+</html>
