@@ -1,0 +1,32 @@
+{
+  "name": "@fast-consig/config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "eslint-preset.js",
+  "files": [
+    "eslint-preset.js",
+    "prettier-preset.js",
+    "tsconfig.base.json",
+    "tsconfig.nestjs.json",
+    "tsconfig.react.json"
+  ],
+  "exports": {
+    ".": "./eslint-preset.js",
+    "./eslint-preset": "./eslint-preset.js",
+    "./prettier-preset": "./prettier-preset.js",
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.nestjs.json": "./tsconfig.nestjs.json",
+    "./tsconfig.react.json": "./tsconfig.react.json",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1"
+  },
+  "devDependencies": {}
+}

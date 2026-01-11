@@ -6,3 +6,30 @@ _bmad-outuput
 .opencode
 .specify
 "app .NET"
+
+# Node
+node_modules
+dist
+build
+coverage
+
+# Turborepo
+.turbo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode
+.idea
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

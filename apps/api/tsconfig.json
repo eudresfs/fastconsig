@@ -1,0 +1,8 @@
+{
+  "extends": "@fast-consig/config/tsconfig.nestjs.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src",
+    "baseUrl": "./"
+  }
+}

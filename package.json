@@ -1,0 +1,17 @@
+{
+  "name": "fast-consig-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.7.3"
+  }
+}
