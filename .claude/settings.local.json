@@ -1,7 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(if not exist \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\" mkdir \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\":*)"
+      "Bash(if not exist \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\" mkdir \"C:\\\\Users\\\\eudre\\\\OneDrive\\\\Desktop\\\\Backup\\\\Projetos\\\\Fast Consig\\\\product-development\\\\current-feature\":*)",
+      "Bash(docker-compose up:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm --filter @fastconsig/database db:push:*)",
+      "Bash(pnpm --filter @fastconsig/database db:seed:*)",
+      "Bash(pnpm --filter @fastconsig/api test:*)",
+      "Bash(pnpm approve-builds:*)",
+      "Bash(pnpm --filter @fastconsig/database generate:*)",
+      "Bash(pnpm test:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm db:generate:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm test:coverage:*)"
     ]
   }
 }

@@ -62,7 +62,7 @@ export const consignatariasRouter = router({
 
   tabelasCoeficiente: protectedProcedure
     .input(z.object({ produtoId: z.number() }))
-    .query(async ({ input }) => {
+    .query(async ({ input, ctx }) => {
       const tabelas = await ctx.prisma.tabelaCoeficiente.findMany({
         where: {
           produtoId: input.produtoId,

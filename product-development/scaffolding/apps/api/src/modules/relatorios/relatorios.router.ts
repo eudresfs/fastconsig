@@ -62,8 +62,10 @@ export const relatoriosRouter = router({
         by: ['tenantConsignatariaId'],
         where: {
           tenantId: ctx.tenantId,
-          ...(input.dataInicio && { dataContrato: { gte: input.dataInicio } }),
-          ...(input.dataFim && { dataContrato: { lte: input.dataFim } }),
+          dataContrato: {
+            ...(input.dataInicio && { gte: input.dataInicio }),
+            ...(input.dataFim && { lte: input.dataFim }),
+          },
         },
         _count: { id: true },
         _sum: { valorTotal: true, valorParcela: true },
