@@ -26,6 +26,11 @@ vi.mock('@fast-consig/database', () => ({
     returning: vi.fn(),
     select: vi.fn().mockReturnThis(),
     from: vi.fn(),
+    query: {
+      tenants: {
+        findFirst: vi.fn(),
+      },
+    },
   },
   tenants: {},
   auditTrails: {},
@@ -70,6 +75,9 @@ describe('TenantsService', () => {
     };
 
     it('should create a tenant successfully (Dual-Write)', async () => {
+      // Mock Duplicate Check (No duplicate found)
+      (db.query.tenants.findFirst as any).mockResolvedValue(null);
+
       // Mock Clerk response
       const mockClerkOrg = { id: 'org_clerk_123' };
       (clerkClient.organizations.createOrganization as any).mockResolvedValue(mockClerkOrg);
@@ -115,6 +123,9 @@ describe('TenantsService', () => {
     });
 
     it('should rollback Clerk creation if DB insert fails', async () => {
+      // Mock Duplicate Check (No duplicate found)
+      (db.query.tenants.findFirst as any).mockResolvedValue(null);
+
       // Mock Clerk success
       const mockClerkOrg = { id: 'org_clerk_123' };
       (clerkClient.organizations.createOrganization as any).mockResolvedValue(mockClerkOrg);

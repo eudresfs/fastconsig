@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { CreateTenantSchema, CreateTenantInput } from "@fast-consig/shared";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import {
   Dialog,
   DialogContent,
@@ -34,11 +35,11 @@ export function CreateTenantDialog() {
       utils.tenants.list.invalidate();
       setOpen(false);
       reset();
+      toast.success("Tenant created successfully");
     },
     onError: (error) => {
       console.error("Failed to create tenant:", error);
-      // TODO: Add toast notification here
-      alert("Failed to create tenant: " + error.message);
+      toast.error("Failed to create tenant: " + error.message);
     },
   });
 

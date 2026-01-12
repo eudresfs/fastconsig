@@ -5,13 +5,15 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "scripts": {
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest run"
   },
   "dependencies": {
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@fast-consig/config": "workspace:*",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^4.0.16"
   }
 }

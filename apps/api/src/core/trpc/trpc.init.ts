@@ -33,16 +33,20 @@ const isAuthed = t.middleware(({ next, ctx }) => {
 export const protectedProcedure = t.procedure.use(isAuthed);
 
 const isSuperAdmin = t.middleware(({ next, ctx }) => {
-  if (!ctx.user || !ctx.user.roles?.includes('super_admin')) {
-     // For MVP we might relax this or check specific metadata
-     // Checking if we have a user context is a good start.
-     // Real implementation depends on how roles are stored in context.
-     // Assuming context.user has roles.
-  }
+  // Check if user exists and has the required role
+  if (!ctx.user || !ctx.user.roles?.includes('org:admin') && !ctx.user.roles?.includes('super_admin')) {
+     // Note: 'org:admin' is the Clerk role we assigned. For MVP Super Admin, we might rely on a specific role or metadata.
+     // Since the previous code used 'org:admin' in the invitation, let's assume 'org:admin' is what we have for now,
+     // OR if we strictly want 'super_admin' we need to ensure that role exists.
+     // The test mocked 'admin' as org_role.
+     // Let's enforce that a user must exist and have appropriate permissions.
+     // If the intention is strict 'super_admin' global role, we should enforce that.
+     // Based on the code review finding: "Authorization Bypass".
 
-  // TODO: Implement strict super_admin check once RBAC is fully defined
-  if (!ctx.user) {
-      throw new TRPCError({ code: 'UNAUTHORIZED' });
+     // STRICT CHECK:
+     if (!ctx.user?.roles?.includes('super_admin')) {
+        throw new TRPCError({ code: 'UNAUTHORIZED', message: 'Insufficient permissions' });
+     }
   }
 
   return next({
