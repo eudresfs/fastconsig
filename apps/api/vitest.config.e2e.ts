@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@fast-consig/shared': '../../../packages/shared/src',
+      '@fast-consig/shared': '../../packages/shared/src',
     },
   },
 });

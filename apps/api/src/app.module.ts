@@ -4,6 +4,9 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { ContextModule } from "./core/context/context.module";
 import { AuthModule } from "./core/auth/auth.module";
+import { TrpcModule } from "./core/trpc/trpc.module";
+import { AppRouter } from "./app.router";
+import { TenantsModule } from "./modules/tenants/tenants.module";
 
 @Module({
   imports: [
@@ -12,8 +15,10 @@ import { AuthModule } from "./core/auth/auth.module";
     }),
     ContextModule,
     AuthModule,
+    TrpcModule,
+    TenantsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppRouter],
 })
 export class AppModule {}
