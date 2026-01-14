@@ -10,13 +10,21 @@ const mocks = vi.hoisted(() => {
   const valuesMock = vi.fn().mockReturnValue({ returning: returningMock });
   const insertMock = vi.fn().mockReturnValue({ values: valuesMock });
 
+  const findFirstMock = vi.fn();
+
   return {
     db: {
       select: selectMock,
       insert: insertMock,
+      query: {
+        tenants: {
+          findFirst: findFirstMock
+        }
+      },
       // expose inner mocks for test manipulation
       _from: fromMock,
       _returning: returningMock,
+      _findFirst: findFirstMock,
     },
     clerk: {
       verifyToken: vi.fn(),
@@ -68,7 +76,7 @@ describe('Tenants (e2e)', () => {
         return Promise.resolve({
           sub: 'user_admin',
           org_id: 'org_admin',
-          org_role: 'admin',
+          org_role: 'super_admin',
           org_permissions: ['read:reports'],
         });
       }
@@ -129,7 +137,7 @@ describe('Tenants (e2e)', () => {
   it('/trpc/tenants.create (POST) - Success', async () => {
     const input = {
       name: 'New Tenant',
-      cnpj: '12345678000199',
+      cnpj: '33611500000119',
       slug: 'new-tenant',
       adminEmail: 'admin@new.com'
     };
@@ -145,6 +153,7 @@ describe('Tenants (e2e)', () => {
     };
 
     // Configure mock return
+    mocks.db._findFirst.mockResolvedValue(null); // No duplicate
     mocks.db._returning.mockResolvedValue([mockDbResponse]);
 
     const response = await request(app.getHttpServer())
@@ -163,5 +172,122 @@ describe('Tenants (e2e)', () => {
     // Verify mocks called
     expect(mocks.clerk.createOrganization).toHaveBeenCalled();
     expect(mocks.db.insert).toHaveBeenCalled();
+  });
+
+  it('/trpc/tenants.getConfig (GET) - Success', async () => {
+    const mockConfig = {
+      id: 'config-1',
+      tenantId: 'tenant-1',
+      standardMarginBasisPoints: 3000,
+      benefitCardMarginBasisPoints: 500,
+      payrollCutoffDay: 20,
+      minInstallmentValueCents: 1000,
+      maxInstallments: 96,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    // Mock tenant exists
+    (mocks.db.query.tenants as any) = {
+      findFirst: vi.fn().mockResolvedValue({ id: 'tenant-1' }),
+    };
+
+    // Mock config exists
+    (mocks.db.query as any).tenantConfigurations = {
+      findFirst: vi.fn().mockResolvedValue(mockConfig),
+    };
+
+    const response = await request(app.getHttpServer())
+      .get('/trpc/tenants.getConfig?input=' + encodeURIComponent(JSON.stringify({ tenantId: 'tenant-1' })))
+      .set('Authorization', 'Bearer valid_token_super_admin');
+
+    if (response.status !== 200) {
+      console.error('Get Config Error Response:', JSON.stringify(response.body, null, 2));
+    }
+    expect(response.status).toBe(200);
+    expect(response.body.result.data).toMatchObject({
+      tenantId: 'tenant-1',
+      standardMarginBasisPoints: 3000,
+    });
+  });
+
+  it('/trpc/tenants.updateConfig (POST) - Success', async () => {
+    const configInput = {
+      tenantId: 'tenant-1',
+      config: {
+        standardMarginPercent: 35,
+        benefitCardMarginPercent: 5,
+        payrollCutoffDay: 15,
+        minInstallmentValueCents: 2000,
+        maxInstallments: 60,
+      }
+    };
+
+    const mockUpdatedConfig = {
+      id: 'config-1',
+      tenantId: 'tenant-1',
+      standardMarginBasisPoints: 3500,
+      benefitCardMarginBasisPoints: 500,
+      payrollCutoffDay: 15,
+      minInstallmentValueCents: 2000,
+      maxInstallments: 60,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    // Mock tenant exists
+    (mocks.db.query.tenants as any) = {
+      findFirst: vi.fn().mockResolvedValue({ id: 'tenant-1' }),
+    };
+
+    // Mock existing config
+    (mocks.db.query as any).tenantConfigurations = {
+      findFirst: vi.fn().mockResolvedValue({ id: 'config-1', tenantId: 'tenant-1' }),
+    };
+
+    // Mock update
+    const returningMock = vi.fn().mockResolvedValue([mockUpdatedConfig]);
+    const whereMock = vi.fn().mockReturnValue({ returning: returningMock });
+    const setMock = vi.fn().mockReturnValue({ where: whereMock });
+    (mocks.db as any).update = vi.fn().mockReturnValue({ set: setMock });
+
+    const response = await request(app.getHttpServer())
+      .post('/trpc/tenants.updateConfig')
+      .set('Authorization', 'Bearer valid_token_super_admin')
+      .set('Content-Type', 'application/json')
+      .send(configInput);
+
+    if (response.status !== 200) {
+      console.error('Update Config Error Response:', JSON.stringify(response.body, null, 2));
+    }
+    expect(response.status).toBe(200);
+    expect(response.body.result.data.standardMarginBasisPoints).toBe(3500);
+  });
+
+  it('/trpc/tenants.updateConfig (POST) - Fails for non-existent tenant', async () => {
+    const configInput = {
+      tenantId: 'non-existent',
+      config: {
+        standardMarginPercent: 30,
+        benefitCardMarginPercent: 5,
+        payrollCutoffDay: 20,
+        minInstallmentValueCents: 1000,
+        maxInstallments: 96,
+      }
+    };
+
+    // Mock tenant not found
+    (mocks.db.query.tenants as any) = {
+      findFirst: vi.fn().mockResolvedValue(null),
+    };
+
+    const response = await request(app.getHttpServer())
+      .post('/trpc/tenants.updateConfig')
+      .set('Authorization', 'Bearer valid_token_super_admin')
+      .set('Content-Type', 'application/json')
+      .send(configInput);
+
+    expect(response.status).not.toBe(200);
+    expect(response.body.error).toBeDefined();
   });
 });
