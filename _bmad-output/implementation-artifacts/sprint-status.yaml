@@ -52,7 +52,7 @@ development_status:
 
   epic-2: in-progress
   2-1-employee-crud-with-rls-optimistic-lock: done
-  2-2-dynamic-margin-calculation-engine: review
+  2-2-dynamic-margin-calculation-engine: done
   2-3-bulk-employee-import: backlog
   2-4-soft-delete-safety-block: backlog
   epic-2-retrospective: optional
