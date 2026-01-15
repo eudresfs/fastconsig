@@ -19,4 +19,8 @@ export class ContextService {
   getUserId(): string | undefined {
     return this.getContext()?.userId;
   }
+
+  getIp(): string | undefined {
+    return this.getContext()?.ip;
+  }
 }

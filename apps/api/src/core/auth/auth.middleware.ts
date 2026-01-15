@@ -35,6 +35,7 @@ export class ClerkAuthMiddleware implements NestMiddleware {
         email: undefined, // Clerk JWT might not have email by default without extra config
         roles: claims.org_role ? [claims.org_role] : [],
         permissions: claims.org_permissions ? claims.org_permissions : [],
+        ip: req.headers['x-forwarded-for'] ? (req.headers['x-forwarded-for'] as string).split(',')[0] : req.socket.remoteAddress,
       };
 
       this.contextService.run(userContext, () => {

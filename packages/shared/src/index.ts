@@ -2,6 +2,8 @@ export const name = "shared";
 
 export * from "./context";
 export * from "./schemas/tenant.schema";
+export * from "./schemas/tenant-config.schema";
+export * from "./schemas/employee.schema";
 export * from "./constants";
 
 // Placeholder for shared types and DTOs

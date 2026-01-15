@@ -4,4 +4,5 @@ export interface UserContext {
   email?: string;
   roles?: string[];
   permissions?: string[];
+  ip?: string;
 }
