@@ -1,7 +1,23 @@
+import { useState } from "react";
 import { CreateTenantDialog } from "../components/CreateTenantDialog";
 import { TenantList } from "../components/TenantList";
+import { TenantDetailPage } from "./TenantDetailPage";
 
 export function AdminPage() {
+  const [selectedTenant, setSelectedTenant] = useState<{ id: string; name: string } | null>(null);
+
+  if (selectedTenant) {
+    return (
+      <div className="container mx-auto py-10">
+        <TenantDetailPage
+          tenantId={selectedTenant.id}
+          tenantName={selectedTenant.name}
+          onBack={() => setSelectedTenant(null)}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto py-10">
       <div className="flex justify-between items-center mb-8">
@@ -14,7 +30,7 @@ export function AdminPage() {
         <CreateTenantDialog />
       </div>
       <div className="bg-card rounded-lg border shadow-sm">
-        <TenantList />
+        <TenantList onSelect={(id, name) => setSelectedTenant({ id, name })} />
       </div>
     </div>
   );

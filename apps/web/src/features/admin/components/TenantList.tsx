@@ -8,9 +8,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
 
-export function TenantList() {
+interface TenantListProps {
+  onSelect: (id: string, name: string) => void;
+}
+
+export function TenantList({ onSelect }: TenantListProps) {
   const { data: tenants, isLoading, error } = trpc.tenants.list.useQuery();
 
   if (isLoading) {
@@ -31,6 +36,7 @@ export function TenantList() {
           <TableHead>Slug</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Created At</TableHead>
+          <TableHead>Actions</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -49,11 +55,16 @@ export function TenantList() {
             <TableCell>
               {format(new Date(tenant.createdAt), "dd/MM/yyyy HH:mm")}
             </TableCell>
+            <TableCell>
+              <Button variant="outline" size="sm" onClick={() => onSelect(tenant.id, tenant.name)}>
+                Manage
+              </Button>
+            </TableCell>
           </TableRow>
         ))}
         {tenants?.length === 0 && (
           <TableRow>
-            <TableCell colSpan={5} className="text-center">
+            <TableCell colSpan={6} className="text-center">
               No tenants found.
             </TableCell>
           </TableRow>

@@ -145,6 +145,51 @@ describe('TenantsService', () => {
         (configService.get as any).mockReturnValue(null);
         await expect(service.create(input)).rejects.toThrow(InternalServerErrorException);
     });
+
+    it('should rollback both Clerk and DB if admin invitation fails', async () => {
+      // Mock Duplicate Checks (No duplicates found) - now we have 2 separate checks for CNPJ and Slug
+      (db.query.tenants.findFirst as any)
+        .mockResolvedValueOnce(null)  // First call: CNPJ duplicate check
+        .mockResolvedValueOnce(null)  // Second call: Slug duplicate check
+        .mockResolvedValueOnce({ id: 'tenant_123' });  // Third call: rollback check
+
+      // Mock Clerk Org creation success
+      const mockClerkOrg = { id: 'org_clerk_123' };
+      (clerkClient.organizations.createOrganization as any).mockResolvedValue(mockClerkOrg);
+
+      // Mock DB insert success
+      const mockDbTenant = {
+        id: 'tenant_123',
+        clerkOrgId: 'org_clerk_123',
+        name: 'Test Org',
+        cnpj: '12345678000199',
+        slug: 'test-org',
+        active: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      };
+
+      const returningMock = vi.fn().mockResolvedValue([mockDbTenant]);
+      const valuesMock = vi.fn().mockReturnValue({ returning: returningMock });
+      (db.insert as any).mockReturnValue({ values: valuesMock });
+
+      // Mock admin invitation FAILURE
+      (clerkClient.organizations.createOrganizationInvitation as any).mockRejectedValue(
+        new Error('Invitation failed')
+      );
+
+      // Mock DB delete for rollback
+      const deleteSpy = vi.fn().mockResolvedValue({});
+      const whereSpy = vi.fn().mockReturnValue(deleteSpy);
+      (db.delete as any) = vi.fn().mockReturnValue({ where: whereSpy });
+
+      await expect(service.create(input)).rejects.toThrow(InternalServerErrorException);
+
+      // Verify rollback of BOTH Clerk Org and DB record
+      expect(clerkClient.organizations.deleteOrganization).toHaveBeenCalledWith('org_clerk_123');
+      expect(db.query.tenants.findFirst).toHaveBeenCalledTimes(3); // CNPJ check + Slug check + rollback check
+      expect(db.delete).toHaveBeenCalled(); // Delete DB record
+    });
   });
 
   describe('list', () => {
