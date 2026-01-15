@@ -1,24 +1,210 @@
-version: "3.8"
+# FastConsig - Docker Compose para Desenvolvimento
+# Versao: 1.0
 
 services:
+  # =============================================================================
+  # BANCO DE DADOS - PostgreSQL 18
+  # =============================================================================
   postgres:
-    image: postgres:16-alpine
-    ports:
-      - "5432:5432"
+    image: postgres:18-alpine
+    container_name: fastconsig-postgres
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: fastconsig
+      POSTGRES_USER: ${POSTGRES_USER:-fastconsig}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fastconsig_dev_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-fastconsig}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fastconsig} -d ${POSTGRES_DB:-fastconsig}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - fastconsig-network
 
+  # =============================================================================
+  # CACHE E SESSOES - Redis 7
+  # =============================================================================
   redis:
     image: redis:7-alpine
+    container_name: fastconsig-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
     ports:
-      - "6379:6379"
+      - "${REDIS_PORT:-6379}:6379"
     volumes:
       - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - fastconsig-network
 
+  # =============================================================================
+  # EMAIL - Mailpit (desenvolvimento)
+  # =============================================================================
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: fastconsig-mailpit
+    restart: unless-stopped
+    ports:
+      - "${MAILPIT_SMTP_PORT:-1025}:1025"   # SMTP
+      - "${MAILPIT_UI_PORT:-8025}:8025"     # Web UI
+    environment:
+      MP_MAX_MESSAGES: 500
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    networks:
+      - fastconsig-network
+
+  # =============================================================================
+  # API - Fastify Backend (desenvolvimento)
+  # =============================================================================
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+      target: development
+    container_name: fastconsig-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      DATABASE_URL: postgresql://${POSTGRES_USER:-fastconsig}:${POSTGRES_PASSWORD:-fastconsig_dev_2026}@postgres:5432/${POSTGRES_DB:-fastconsig}?schema=public
+      REDIS_URL: redis://redis:6379
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-dev_access_secret_change_in_production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-dev_refresh_secret_change_in_production}
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      SMTP_SECURE: "false"
+      CORS_ORIGIN: http://localhost:5173
+      LOG_LEVEL: debug
+    ports:
+      - "${API_PORT:-3001}:3001"
+    volumes:
+      - ./apps/api:/app/apps/api:cached
+      - ./packages:/app/packages:cached
+      - /app/node_modules
+      - /app/apps/api/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - fastconsig-network
+    command: pnpm --filter @fastconsig/api dev
+
+  # =============================================================================
+  # WEB - React Frontend (desenvolvimento)
+  # =============================================================================
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web
+      target: development
+    container_name: fastconsig-web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      VITE_API_URL: http://localhost:3001
+    ports:
+      - "${WEB_PORT:-5173}:5173"
+    volumes:
+      - ./apps/web:/app/apps/web:cached
+      - ./packages:/app/packages:cached
+      - /app/node_modules
+      - /app/apps/web/node_modules
+    depends_on:
+      - api
+    networks:
+      - fastconsig-network
+    command: pnpm --filter @fastconsig/web dev --host
+
+  # =============================================================================
+  # JOBS - Background Worker (desenvolvimento)
+  # =============================================================================
+  jobs:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+      target: development
+    container_name: fastconsig-jobs
+    restart: unless-stopped
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://${POSTGRES_USER:-fastconsig}:${POSTGRES_PASSWORD:-fastconsig_dev_2026}@postgres:5432/${POSTGRES_DB:-fastconsig}?schema=public
+      REDIS_URL: redis://redis:6379
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      LOG_LEVEL: debug
+    volumes:
+      - ./apps/jobs:/app/apps/jobs:cached
+      - ./packages:/app/packages:cached
+      - /app/node_modules
+      - /app/apps/jobs/node_modules
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - fastconsig-network
+    command: pnpm --filter @fastconsig/jobs dev
+
+  # =============================================================================
+  # ADMINER - Gerenciador de Banco (desenvolvimento)
+  # =============================================================================
+  adminer:
+    image: adminer:latest
+    container_name: fastconsig-adminer
+    restart: unless-stopped
+    ports:
+      - "${ADMINER_PORT:-8080}:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+      ADMINER_DESIGN: dracula
+    depends_on:
+      - postgres
+    networks:
+      - fastconsig-network
+
+  # =============================================================================
+  # REDIS COMMANDER - Gerenciador Redis (desenvolvimento)
+  # =============================================================================
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: fastconsig-redis-commander
+    restart: unless-stopped
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "${REDIS_COMMANDER_PORT:-8081}:8081"
+    depends_on:
+      - redis
+    networks:
+      - fastconsig-network
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
 volumes:
   postgres_data:
+    name: fastconsig-postgres-data
   redis_data:
+    name: fastconsig-redis-data
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+networks:
+  fastconsig-network:
+    name: fastconsig-network
+    driver: bridge

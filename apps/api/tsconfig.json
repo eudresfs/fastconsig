@@ -2,7 +2,11 @@
   "extends": "@fast-consig/config/tsconfig.nestjs.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "rootDirs": [".", "../../packages"],
+    "paths": {
+      "@fast-consig/*": ["../../packages/*/src"]
+    }
   },
   "include": ["src", "test", "vitest.config.e2e.ts"],
   "exclude": ["node_modules", "dist"]
