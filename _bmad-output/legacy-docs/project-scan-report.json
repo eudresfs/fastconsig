@@ -1,0 +1,34 @@
+{
+"workflow_version": "1.2.0",
+"timestamps": {"started": "2026-01-12T11:45:00Z", "last_updated": "2026-01-12T12:45:00Z", "completed": "2026-01-12T12:45:00Z"},
+"mode": "initial_scan",
+"scan_level": "exhaustive",
+"project_root": "C:\\Users\\eudre\\OneDrive\\Desktop\\Backup\\Projetos\\Fast Consig\\app .NET",
+"output_folder": "_bmad-output",
+"completed_steps": [
+  {"step": "step_1", "status": "completed", "timestamp": "2026-01-12T11:48:00Z", "summary": "Classified as monolith with 1 parts"},
+  {"step": "step_2", "status": "completed", "timestamp": "2026-01-12T11:50:00Z", "summary": "Found 0 existing docs"},
+  {"step": "step_3", "status": "completed", "timestamp": "2026-01-12T11:55:00Z", "summary": "Tech stack: ASP.NET WebForms on .NET 4.0"},
+  {"step": "step_4", "status": "completed", "timestamp": "2026-01-12T12:00:00Z", "summary": "Conditional analysis complete, 4 files written"},
+  {"step": "step_5", "status": "completed", "timestamp": "2026-01-12T12:05:00Z", "summary": "Source tree documented"},
+  {"step": "step_6", "status": "completed", "timestamp": "2026-01-12T12:10:00Z", "summary": "Dev/deployment guides written"},
+  {"step": "step_7", "status": "completed", "timestamp": "2026-01-12T12:12:00Z", "summary": "Integration architecture documented (N/A for monolith)"},
+  {"step": "step_8", "status": "completed", "timestamp": "2026-01-12T12:14:00Z", "summary": "Architecture docs written for 1 parts"},
+  {"step": "step_9", "status": "completed", "timestamp": "2026-01-12T12:15:00Z", "summary": "All supporting docs written"},
+  {"step": "step_10", "status": "completed", "timestamp": "2026-01-12T12:18:00Z", "summary": "Master index generated"},
+  {"step": "step_11", "status": "completed", "timestamp": "2026-01-12T12:25:00Z", "summary": "Custom docs generated: business-rules.md"},
+  {"step": "step_12", "status": "completed", "timestamp": "2026-01-12T12:30:00Z", "summary": "Refined business-rules.md"},
+  {"step": "step_13", "status": "completed", "timestamp": "2026-01-12T12:35:00Z", "summary": "Custom docs generated: critical-algorithms.md"},
+  {"step": "step_14", "status": "completed", "timestamp": "2026-01-12T12:40:00Z", "summary": "Added Data Import to business-rules.md"},
+  {"step": "step_15", "status": "completed", "timestamp": "2026-01-12T12:45:00Z", "summary": "Workflow completed successfully"}
+],
+"current_step": "completed",
+"findings": {
+  "project_classification": "Monolith (Web)",
+  "project_types": [{"part_id": "root", "project_type_id": "web", "display_name": "Web Application"}],
+  "technology_stack": "C# .NET 4.0, ASP.NET WebForms, Entity Framework 4.3.1, DevExpress 11.1, WCF",
+  "folder_count": 8
+},
+"outputs_generated": ["project-scan-report.json", "technology-stack.md", "api-contracts-root.md", "data-models-root.md", "component-inventory-root.md", "asset-inventory-root.md", "source-tree-analysis.md", "development-guide.md", "deployment-guide.md", "architecture.md", "project-overview.md", "index.md", "business-rules.md", "critical-algorithms.md"],
+"resume_instructions": "Workflow complete"
+}

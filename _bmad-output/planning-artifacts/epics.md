@@ -43,6 +43,8 @@ This document provides the complete epic and story breakdown for Fast Consig, de
 - FR25: O Gestor de RH deve conseguir cancelar ou reenviar um Token de Reserva ativo.
 - FR26: O Super Admin deve conseguir parametrizar as regras de cálculo (Limites %, Tipos de Margem) específicas para cada Tenant via interface administrativa.
 - FR27: O processamento de arquivos em lote deve suportar "Sucesso Parcial", efetivando as linhas válidas e gerando um arquivo de rejeições contendo apenas as linhas inválidas com o motivo do erro.
+- FR28: O Sistema deve emitir alertas automáticos para comportamentos anômalos de segurança (ex: múltiplas consultas de margem para o mesmo CPF em segundos vindo de IPs diferentes).
+- FR29: O Sistema deve notificar proativamente o Gestor de RH sobre anomalias de negócio (Push Intelligence), como descontos não processados ou margens negativas detectadas na folha.
 
 ### NonFunctional Requirements
 
@@ -102,12 +104,14 @@ From UX Design:
 - FR25: Epic 3 - Transactional Integrity (Token System)
 - FR26: Epic 1 - Platform Foundation & Identity (SaaS Core)
 - FR27: Epic 5 - Bulk Banking Integration (CNAB Engine)
+- FR28: Epic 1 - Platform Foundation & Identity (SaaS Core)
+- FR29: Epic 6 - Payroll Reconciliation (The Closer)
 
 ## Epic List
 
 ### Epic 1: Platform Foundation & Identity (SaaS Core)
 Establish the multi-tenant secure perimeter, audit infrastructure, and tenant configuration rules necessary for all subsequent operations.
-**FRs covered:** FR01, FR02, FR03, FR04, FR26, FR15 (Infrastructure), NFR03, NFR05, NFR06.
+**FRs covered:** FR01, FR02, FR03, FR04, FR26, FR28, FR15 (Infrastructure), NFR03, NFR05, NFR06.
 
 ### Epic 2: Employee Management (People Domain)
 Enable RH Managers to populate and maintain the employee base with automatic margin calculation based on Tenant rules.
@@ -127,11 +131,26 @@ Scale the operation by enabling Banks to process high volumes of loans via async
 
 ### Epic 6: Payroll Reconciliation (The Closer)
 Enable RH Managers to close the month efficiently by generating files and resolving divergences.
-**FRs covered:** FR19, FR20, FR21, FR16 (Reporting).
+**FRs covered:** FR19, FR20, FR21, FR29, FR16 (Reporting).
 
 ## Epic 1: Platform Foundation & Identity (SaaS Core)
 
 Establish the multi-tenant secure perimeter, audit infrastructure, and tenant configuration rules necessary for all subsequent operations.
+
+### Story 1.0: Project Foundation Setup (Turborepo Monorepo)
+
+As a Platform Architect,
+I want to initialize the project using a Turborepo monorepo structure with pnpm workspaces,
+So that I can manage the API, Web, and Workers apps with type-safety and shared code from day one.
+
+**Acceptance Criteria:**
+
+**Given** A new project initialization
+**When** I run the foundation setup
+**Then** A Turborepo monorepo should be created with apps for `api` (NestJS), `web` (React 19), and `jobs` (BullMQ)
+**And** Shared packages for `database` (Drizzle), `shared` (Zod schemas), and `ui` (shadcn) should be configured
+**And** Docker Compose should be ready for local PostgreSQL and Redis development
+**And** A GitHub Actions CI pipeline should be established with Turborepo caching enabled
 
 ### Story 1.1: Multi-tenant Clerk Integration with Context
 
@@ -191,19 +210,19 @@ So that I can trace any unauthorized activity or data leakage.
 **And** The record must include: Actor ID, Tenant ID, IP Address, Resource Affected, Action Type, and Timestamp
 **And** For mutations, the "Old Value" and "New Value" (diff) should be stored in JSON format
 
-### Story 1.5: Role-Based Access Control (RBAC) Setup
+### Story 1.6: Security Anomaly Detection (Anti-Fraud)
 
-As a Tenant Admin,
-I want to assign granular roles to my users,
-So that I can restrict sensitive operations (like Closing Payroll) to authorized personnel only.
+As a Security Officer,
+I want the system to monitor and alert on suspicious behavior (e.g., rapid margin queries for the same CPF from different IPs),
+So that I can proactively prevent fraudulent loan applications and enumeration attacks.
 
 **Acceptance Criteria:**
 
-**Given** I am creating a new user invite
-**When** I select the "Analyst" role
-**Then** The user should be created with specific permissions (e.g., `employee:read`, `loan:read`)
-**And** They should be blocked from performing restricted actions (e.g., `payroll:close`)
-**And** The implementation should use a Permission Guard that checks the user's role against the required route permission
+**Given** A sequence of margin query requests for the same CPF
+**When** The frequency exceeds the threshold (e.g., >3 queries in 1 minute from different source IPs)
+**Then** The system should trigger a "Security Anomaly" event
+**And** An alert should be sent to the System Admin and logged in the high-priority audit trail
+**And** The source IPs or user accounts should be temporarily throttled/locked depending on the risk score
 
 ## Epic 2: Employee Management (People Domain)
 
@@ -491,3 +510,17 @@ So that I can authorize the financial transfer (TED) to the institutions.
 **Then** I should see a grouping by Bank (Consignataria)
 **And** The total amount to be transferred to each bank
 **And** I should be able to export this report to PDF for the Finance Department
+
+### Story 6.4: Push Intelligence (Proactive Business Notifications)
+
+As an RH Manager,
+I want the system to proactively notify me about business anomalies (e.g., negative margins or unapplied discounts),
+So that I can resolve issues before the final payroll closing deadline.
+
+**Acceptance Criteria:**
+
+**Given** A business event occurs (e.g., a bank return file processing completes)
+**When** An anomaly is detected (e.g., a discount was rejected by the payroll system)
+**Then** The system should generate a pro-active notification in the RH Portal
+**And** An email/push alert should be sent to the assigned RH Manager
+**And** The notification should include a deep link to the "Divergence Dashboard" for immediate resolution

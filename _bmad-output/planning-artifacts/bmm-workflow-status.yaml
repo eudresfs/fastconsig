@@ -61,7 +61,7 @@ workflow_status:
 
       - id: "test-design"
         name: "Test Design"
-        status: "pending"
+        status: "_bmad-output/planning-artifacts/test-design-epic-1.md"
         agent: "tea"
         command: "/bmad:bmm:workflows:test-design"
 
