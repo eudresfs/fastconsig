@@ -1,7 +1,7 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, OnModuleDestroy } from '@nestjs/common';
 import { db } from '@fast-consig/database';
 import { tenantConfigurations } from '@fast-consig/database';
-import { eq } from 'drizzle-orm';
+import { eq, sql } from 'drizzle-orm';
 
 export interface MarginRules {
   standardMarginPercentage: number; // e.g., 0.30 (30%)
@@ -15,9 +15,10 @@ export interface MarginCalculationResult {
 }
 
 @Injectable()
-export class MarginCalculationService {
+export class MarginCalculationService implements OnModuleDestroy {
   private readonly logger = new Logger(MarginCalculationService.name);
   private marginRulesCache: Map<string, MarginRules> = new Map();
+  private cacheTimers: Map<string, NodeJS.Timeout> = new Map();
 
   /**
    * Calculate available margin based on salary and tenant rules
@@ -84,19 +85,36 @@ export class MarginCalculationService {
       return cached;
     }
 
+    // Set RLS context for multi-tenancy isolation
+    await db.execute(sql`SELECT set_config('app.current_tenant_id', ${tenantId}, TRUE)`);
+
     // Load from database
     const config = await db.query.tenantConfigurations.findFirst({
       where: (configs, { eq }) => eq(configs.tenantId, tenantId),
     });
 
+    // Convert basis points to decimal percentages
+    // Example: 3000 basis points = 30.00% = 0.30 decimal
     const marginRules: MarginRules = {
-      standardMarginPercentage: config?.standardMarginPercentage ?? 0.30, // Default 30%
-      benefitCardMarginPercentage: config?.benefitCardMarginPercentage ?? 0.05, // Default 5%
+      standardMarginPercentage: (config?.standardMarginBasisPoints ?? 3000) / 10000, // Default 30%
+      benefitCardMarginPercentage: (config?.benefitCardMarginBasisPoints ?? 500) / 10000, // Default 5%
     };
 
     // Cache for 5 minutes (300000ms)
     this.marginRulesCache.set(tenantId, marginRules);
-    setTimeout(() => this.marginRulesCache.delete(tenantId), 300000);
+
+    // Clear any existing timer for this tenant
+    const existingTimer = this.cacheTimers.get(tenantId);
+    if (existingTimer) {
+      clearTimeout(existingTimer);
+    }
+
+    // Set new timer and track it for cleanup
+    const timer = setTimeout(() => {
+      this.marginRulesCache.delete(tenantId);
+      this.cacheTimers.delete(tenantId);
+    }, 300000);
+    this.cacheTimers.set(tenantId, timer);
 
     return marginRules;
   }
@@ -107,5 +125,23 @@ export class MarginCalculationService {
    */
   clearCacheForTenant(tenantId: string): void {
     this.marginRulesCache.delete(tenantId);
+    const timer = this.cacheTimers.get(tenantId);
+    if (timer) {
+      clearTimeout(timer);
+      this.cacheTimers.delete(tenantId);
+    }
+  }
+
+  /**
+   * Lifecycle hook to clean up all timers when module is destroyed
+   * Prevents memory leaks from dangling setTimeout references
+   */
+  onModuleDestroy(): void {
+    this.logger.debug('Cleaning up margin calculation service timers');
+    for (const timer of this.cacheTimers.values()) {
+      clearTimeout(timer);
+    }
+    this.cacheTimers.clear();
+    this.marginRulesCache.clear();
   }
 }

@@ -10,26 +10,33 @@ vi.mock('@fast-consig/database', () => ({
         findFirst: vi.fn(),
       },
     },
+    execute: vi.fn(), // Add execute mock for RLS context
   },
   tenantConfigurations: {},
   eq: vi.fn(),
+  sql: vi.fn((strings, ...values) => ({ strings, values })), // Mock sql template tag
 }));
 
 describe('MarginCalculationService', () => {
   let service: MarginCalculationService;
   let mockFindFirst: any;
+  let mockExecute: any;
 
   beforeEach(() => {
     service = new MarginCalculationService();
     mockFindFirst = database.db.query.tenantConfigurations.findFirst;
+    mockExecute = database.db.execute;
 
     // Reset mock call count
     vi.clearAllMocks();
 
-    // Default mock: return 30% standard margin
+    // Mock RLS context setting (always resolves successfully)
+    mockExecute.mockResolvedValue(undefined);
+
+    // Default mock: return 30% standard margin (3000 basis points)
     mockFindFirst.mockResolvedValue({
-      standardMarginPercentage: 0.30,
-      benefitCardMarginPercentage: 0.05,
+      standardMarginBasisPoints: 3000, // 30.00%
+      benefitCardMarginBasisPoints: 500, // 5.00%
     });
   });
 

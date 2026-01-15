@@ -22,5 +22,7 @@ export const employees = pgTable('employees', {
     tenantIdIdx: index('employees_tenant_id_idx').on(table.tenantId),
     tenantCpfUnique: uniqueIndex('employees_tenant_cpf_unique').on(table.tenantId, table.cpf),
     tenantEnrollmentUnique: uniqueIndex('employees_tenant_enrollment_unique').on(table.tenantId, table.enrollmentId),
+    // Performance index for margin-based queries
+    tenantMarginIdx: index('employees_tenant_margin_idx').on(table.tenantId, table.availableMargin),
   };
 });

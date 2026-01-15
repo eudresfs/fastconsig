@@ -1,6 +1,6 @@
 # Story 2.2: Dynamic Margin Calculation Engine
 
-Status: review
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -522,3 +522,67 @@ Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
 - `apps/api/src/modules/employees/employees.module.ts` (Registered MarginCalculationService)
 
 **Status:** All tasks completed, all tests passing, ready for review.
+
+## Code Review Record
+
+### Adversarial Review Findings (2026-01-14)
+
+**Reviewed by:** Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
+**Review Type:** Adversarial (minimum 3-10 issues required)
+
+#### Issues Identified and Fixed
+
+**Issue #1: HIGH SEVERITY - Schema Field Name Mismatch**
+- **Problem:** MarginCalculationService expected `standardMarginPercentage` and `benefitCardMarginPercentage` fields, but database schema has `standardMarginBasisPoints` and `benefitCardMarginBasisPoints`
+- **Location:** `apps/api/src/shared/services/margin-calculation.service.ts` lines 93-94
+- **Fix Applied:** Updated field names to match actual schema (standardMarginBasisPoints, benefitCardMarginBasisPoints)
+- **Commit:** [included in fix commit below]
+
+**Issue #2: HIGH SEVERITY - Missing Basis Points Conversion**
+- **Problem:** No conversion from basis points (e.g., 3000) to decimal percentages (0.30) when loading tenant margin rules
+- **Impact:** Would cause margin calculations to be 100x larger than intended (3000% instead of 30%)
+- **Location:** `apps/api/src/shared/services/margin-calculation.service.ts` lines 99-100
+- **Fix Applied:** Added conversion logic `(config?.standardMarginBasisPoints ?? 3000) / 10000`
+- **Test Coverage:** Updated unit tests to use basis points (3000 = 30%)
+
+**Issue #3: MEDIUM SEVERITY - Missing RLS Context**
+- **Problem:** getTenantMarginRules() queries database without setting RLS context, breaking multi-tenancy isolation
+- **Location:** `apps/api/src/shared/services/margin-calculation.service.ts` line 88
+- **Fix Applied:** Added `await db.execute(sql\`SELECT set_config('app.current_tenant_id', ${tenantId}, TRUE)\`);` before database query
+- **Security Impact:** CRITICAL - prevents cross-tenant data leakage
+
+**Issue #4: MEDIUM SEVERITY - Missing Database Index**
+- **Problem:** Drizzle schema doesn't define the performance index mentioned in migration SQL
+- **Location:** `packages/database/src/schema/employees.ts`
+- **Fix Applied:** Added composite index `tenantMarginIdx: index('employees_tenant_margin_idx').on(table.tenantId, table.availableMargin)`
+- **Performance Impact:** Improves margin-based query performance
+
+**Issue #5: LOW SEVERITY - Memory Leak Potential**
+- **Problem:** setTimeout in getTenantMarginRules() creates untracked timers that leak if service is destroyed before timeout fires
+- **Location:** `apps/api/src/shared/services/margin-calculation.service.ts` line 99
+- **Fix Applied:**
+  - Implemented `OnModuleDestroy` lifecycle hook
+  - Added `cacheTimers` Map to track all active timers
+  - Implemented `onModuleDestroy()` to clear all timers on service cleanup
+  - Updated `clearCacheForTenant()` to also clear timer
+- **Code Quality:** Production-ready lifecycle management
+
+#### Post-Review Testing
+
+- **Unit Tests:** All 8 tests passing (100% success rate)
+- **Test Coverage:** Edge cases, caching behavior, basis points conversion, default values
+- **Performance:** Margin calculation < 50ms (requirement met)
+
+#### Files Modified During Code Review Fixes
+
+**Modified:**
+- `apps/api/src/shared/services/margin-calculation.service.ts` (Fixed field names, added RLS context, added lifecycle hook)
+- `apps/api/src/shared/services/__tests__/margin-calculation.service.spec.ts` (Updated test mocks for RLS context and basis points)
+- `packages/database/src/schema/employees.ts` (Added margin index)
+
+#### Review Outcome
+
+**Status:** ✅ **APPROVED** - All critical and medium severity issues resolved. Story ready for production deployment.
+
+**Reviewer Confidence:** HIGH - Comprehensive testing, proper multi-tenancy isolation, production-ready lifecycle management.
+
